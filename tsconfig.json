@@ -8,5 +8,6 @@
     "allowJs": true,
     "outDir": "./build",
     "allowSyntheticDefaultImports": true
+    , "strictNullChecks": true
   }
 }

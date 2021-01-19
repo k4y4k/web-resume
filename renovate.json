@@ -1,5 +1,10 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "semanticCommits": "enabled",
+  "stabilityDays": 3,
+  "prCreation": "not-pending",
+  "labels": ["type: dependencies"],
+  "dependencyDashboard": true,
+  "schedule": ["before 3am on Monday"],
+  "timezone": "Australia/Brisbane"
 }

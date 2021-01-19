@@ -33,6 +33,7 @@ steps:
     image: node
     commands:
       - yarn check-types
+      - yarn lint
 
   - name: build
     image: node:14

@@ -4,9 +4,7 @@
   "private": true,
   "description": "kayak's resume",
   "author": "kayak",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -48,6 +46,16 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.1.0",
+    "husky": ">=4",
+    "lint-staged": ">=10",
     "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,jsx,tsx}": "eslint --cache --fix && prettier --write"
   }
 }

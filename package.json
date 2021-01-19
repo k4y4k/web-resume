@@ -17,7 +17,8 @@
     "build-storybook": "build-storybook",
     "build-all": "gatsby build && build-storybook -o public/storybook",
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "lint": "yarn eslint --ignore-path .gitignore src/"
   },
   "dependencies": {
     "gatsby": "^2.26.1",
@@ -37,7 +38,16 @@
     "@storybook/addon-essentials": "^6.1.14",
     "@storybook/addon-links": "^6.1.14",
     "@storybook/react": "^6.1.14",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
     "babel-loader": "^8.2.2",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.1.0",
     "prettier": "^2.2.1"
   }
 }

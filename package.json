@@ -14,7 +14,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build-all": "gatsby build && build-storybook -o public/storybook",
-    "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write"
+    "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "gatsby": "^2.26.1",

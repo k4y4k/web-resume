@@ -4,7 +4,9 @@
   "private": true,
   "description": "kayak's resume",
   "author": "kayak",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -56,6 +58,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --cache --fix && prettier --write"
+    "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
+    "*.{js,ts,jsx,tsx,md,json,css}": "prettier --write"
   }
 }

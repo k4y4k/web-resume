@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
 
-export default function IndexRoute(props: PageProps) {
+const IndexRoute = (props: PageProps): JSX.Element => {
   return (
     <>
       <h1>Path:</h1>
@@ -9,3 +9,5 @@ export default function IndexRoute(props: PageProps) {
     </>
   )
 }
+
+export default IndexRoute

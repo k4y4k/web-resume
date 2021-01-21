@@ -18,7 +18,8 @@
     "build-all": "gatsby build && build-storybook -o public/storybook",
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "check-types": "tsc --noEmit",
-    "lint": "yarn eslint --ignore-path .gitignore src/"
+    "lint": "yarn eslint --ignore-path .gitignore src/",
+    "test": "jest --collectCoverage"
   },
   "dependencies": {
     "gatsby": "2.30.3",

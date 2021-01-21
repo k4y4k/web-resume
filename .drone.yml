@@ -29,11 +29,12 @@ steps:
     commands:
       - yarn
 
-  - name: prebuild
+  - name: test
     image: node
     commands:
       - yarn check-types
       - yarn lint
+      - yarn test
 
   - name: build
     image: node:14
@@ -54,6 +55,17 @@ steps:
       event:
         exclude:
           - pull-request
+
+  - name: coverage
+    image: plugins/codecov
+    settings:
+      required: true
+      token:
+        from_secret: codecov-token
+      paths:
+        - coverage
+      files:
+        - coverage/clover.xml
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache

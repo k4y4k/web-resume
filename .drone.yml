@@ -64,8 +64,6 @@ steps:
         from_secret: codecov-token
       paths:
         - coverage
-      files:
-        - coverage/clover.xml
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache

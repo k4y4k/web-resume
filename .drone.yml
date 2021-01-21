@@ -32,7 +32,7 @@ steps:
   - name: clone data
     image: alpine/git
     commands:
-      - from_secret: clone-data
+      - from_secret: "clone-data"
 
   - name: test
     image: node

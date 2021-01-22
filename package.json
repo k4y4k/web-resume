@@ -19,7 +19,7 @@
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "check-types": "tsc --noEmit",
     "lint": "yarn eslint --ignore-path .gitignore src/",
-    "test": "jest --collectCoverage"
+    "test": "jest --collectCoverage --verbose"
   },
   "dependencies": {
     "gatsby": "2.30.3",

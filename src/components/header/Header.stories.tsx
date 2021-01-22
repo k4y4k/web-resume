@@ -13,3 +13,6 @@ Composed.args = {
   name: 'kayak',
   subtitle: 'lead singer of kayak and the kayaks',
 }
+
+export const NoData = Template.bind({})
+NoData.args = {}

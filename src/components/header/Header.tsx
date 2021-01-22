@@ -3,15 +3,15 @@ import Name from './Name'
 import Subtitle from './Subtitle'
 
 interface HeaderProps {
-  name: string
-  subtitle: string
+  name?: string
+  subtitle?: string
 }
 
 const Header = ({ name, subtitle }: HeaderProps): JSX.Element => (
-  <div>
+  <header aria-label='header'>
     <Name name={name} />
     <Subtitle subtitle={subtitle} />
-  </div>
+  </header>
 )
 
 export default Header

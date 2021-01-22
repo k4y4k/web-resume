@@ -9,4 +9,7 @@ export default {
 const Template = (args): JSX.Element => <Name {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = { name: 'kayak  kayak' }
+Primary.args = { name: 'kayak kayak' }
+
+export const NoData = Template.bind({})
+NoData.args = {}

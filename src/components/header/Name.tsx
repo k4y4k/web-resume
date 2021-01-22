@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 interface NameProps {
-  name: string
+  // if no name specified from data, display error text
+  name?: string
 }
 
 const Name = ({ name = 'Error: No Name' }: NameProps): JSX.Element => (

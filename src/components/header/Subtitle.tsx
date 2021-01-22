@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 interface SubtitleProps {
-  subtitle: string
+  subtitle?: string
 }
 
 const Subtitle = ({

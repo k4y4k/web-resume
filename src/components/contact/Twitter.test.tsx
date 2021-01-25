@@ -18,4 +18,8 @@ describe('<Twitter />', () => {
 
     expect(twitter).not.toBeFalsy()
   })
+
+  test.todo('links to profile')
+
+  test.todo('displays logo')
 })

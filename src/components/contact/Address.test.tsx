@@ -6,7 +6,10 @@ describe('<Address />', () => {
   test('Handles no data', () => {
     render(<Address />)
 
+    const address = screen.getByTestId('address')
+
     expect(address).not.toBeFalsy()
+    expect(address).toHaveTextContent('Error: No Address')
   })
 
   describe('Is formatted correctly (AU style)', () => {

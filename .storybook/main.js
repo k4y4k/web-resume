@@ -1,9 +1,6 @@
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
-  addons: [
-    // ...
-  ],
   webpackFinal: async (config, { configType }) => {
     // storybookjs/storybook#6408 has this fix
     config.optimization = {

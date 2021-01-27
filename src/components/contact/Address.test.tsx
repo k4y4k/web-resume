@@ -22,7 +22,7 @@ describe('<Address />', () => {
           city='Example City'
           state='Example State'
           postcode={8877}
-          restrictAddress={false}
+          restrictDisplay={false}
         />
       )
       const addressContainer = document.getElementById('address') as HTMLElement
@@ -40,7 +40,7 @@ describe('<Address />', () => {
           city='Example City'
           state='Example State'
           postcode={8877}
-          restrictAddress={false}
+          restrictDisplay={false}
         />
       )
 

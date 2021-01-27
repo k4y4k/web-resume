@@ -16,18 +16,17 @@ NonRestricted.args = {
   city: 'Example City',
   state: 'Example',
   postcode: 8877,
-  restrictAddress: false,
+  restrictDisplay: false,
 }
 
-export const CI = Template.bind({})
-CI.args = {
+export const Primary = Template.bind({})
+Primary.args = {
   streetName: 'Example Rd',
   streetNum: 75,
   suburb: 'Example Suburb',
   city: 'Example City',
   state: 'Example State',
   postcode: 8877,
-  restrictAddress: true,
 }
 
 export const NoData = Template.bind({})

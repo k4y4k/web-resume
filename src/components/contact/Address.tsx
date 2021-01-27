@@ -7,7 +7,7 @@ interface AddressTypes {
   city?: string
   state?: string
   postcode?: string | number
-  restrictAddress?: boolean
+  restrictDisplay?: boolean
 }
 
 const Address = ({
@@ -18,7 +18,7 @@ const Address = ({
   state,
   postcode,
   // restrictAddress by default
-  restrictAddress = true,
+  restrictDisplay = true,
 }: AddressTypes): JSX.Element => {
   // if there isn't a 123 Example Rd-type datum, assume there's nothing else
   if (streetName === undefined && streetNum === undefined)
@@ -29,7 +29,7 @@ const Address = ({
     )
 
   // The Internet only needs the city / state
-  if (restrictAddress)
+  if (restrictDisplay)
     return (
       <div data-testid='address' id='address'>
         <p>

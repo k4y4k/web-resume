@@ -19,7 +19,15 @@ describe('<Twitter />', () => {
     expect(twitter).not.toBeFalsy()
   })
 
-  test.todo('links to profile')
+  test('links to profile in new tab', () => {
+    render(<Twitter handle='kayakSinger1' />)
+
+    const regex = /@[A-z]*/
+    const twitter = screen.getByText(regex)
+
+    expect(twitter).toHaveAttribute('href', 'https://twitter.com/kayakSinger1')
+    expect(twitter).toHaveAttribute('target', '_blank')
+  })
 
   test.todo('displays logo')
 })

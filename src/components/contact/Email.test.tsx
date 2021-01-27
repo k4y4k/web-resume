@@ -18,4 +18,13 @@ describe('<Email/>', () => {
 
     expect(email).not.toBeFalsy()
   })
+
+  test('mailto: link', () => {
+    render(<Email email='kayak@example.com' />)
+
+    const regex = /\S+@\S+\.\S+/
+    const email = screen.getByText(regex)
+
+    expect(email).toHaveAttribute('href', 'mailto:kayak@example.com')
+  })
 })

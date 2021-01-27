@@ -17,7 +17,19 @@ describe('<GitHub />', () => {
     expect(github).not.toBeFalsy()
   })
 
-  test.todo('links to profile')
+  test('links to profile', () => {
+    render(<GitHub username='octocat' />)
+    const github = screen.getByText('octocat')
+
+    expect(github).toHaveAttribute('href', 'https://github.com/octocat')
+  })
+
+  test('link opens in new tab', () => {
+    render(<GitHub username='octocat' />)
+
+    const github = screen.getByText('octocat')
+    expect(github).toHaveAttribute('target', '_blank')
+  })
 
   test.todo('displays logo')
 })

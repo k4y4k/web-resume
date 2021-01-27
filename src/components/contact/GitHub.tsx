@@ -6,6 +6,16 @@ interface GitHubTypes {
 
 const GitHub = ({
   username = 'Error: No GitHub',
-}: GitHubTypes): JSX.Element => <p>{username}</p>
+}: GitHubTypes): JSX.Element => {
+  if (username === 'Error: No GitHub') return <p>{username}</p>
+
+  return (
+    <p>
+      <a target='_blank' href={`https://github.com/${username}`}>
+        {username}
+      </a>
+    </p>
+  )
+}
 
 export default GitHub

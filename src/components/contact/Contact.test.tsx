@@ -16,6 +16,7 @@ describe('<Contact />', () => {
   describe('composes all other elements', () => {
     test('email', () => {
       render(<Contact email='kayak@example.com' />)
+
       const contactSection = screen.getByTestId('contact')
       const email = within(contactSection).getByText(/@example.com/gi)
       expect(email).not.toBeFalsy()
@@ -23,6 +24,7 @@ describe('<Contact />', () => {
 
     test('twitter', () => {
       render(<Contact twitter='kayakSinger1' />)
+
       const contactSection = screen.getByTestId('contact')
       const twitter = within(contactSection).getByText(/@kayakSinger1/gi)
       expect(twitter).not.toBeFalsy()
@@ -30,6 +32,7 @@ describe('<Contact />', () => {
 
     test('github', () => {
       render(<Contact github='octocat' />)
+
       const contactSection = screen.getByTestId('contact')
       const github = within(contactSection).getByText(/octocat/gi)
 
@@ -38,6 +41,7 @@ describe('<Contact />', () => {
 
     test('website', () => {
       render(<Contact website='example.com' />)
+
       const contactSection = screen.getByTestId('contact')
       const website = within(contactSection).getByText(/example.com/)
       expect(website).not.toBeFalsy()
@@ -45,6 +49,7 @@ describe('<Contact />', () => {
 
     test('phone', () => {
       render(<Contact restrictDisplay={false} phone='0123456789' />)
+
       const contactSection = screen.getByTestId('contact')
       const phone = within(contactSection).getByText(/[0-9]/gi)
       expect(phone).not.toBeFalsy()
@@ -61,6 +66,7 @@ describe('<Contact />', () => {
           postcode='Example Postcode'
         />
       )
+
       const contactSection = screen.getByTestId('contact')
       const address = within(contactSection).getByText(/Example City/gi)
       expect(address).not.toBeFalsy()
@@ -68,10 +74,14 @@ describe('<Contact />', () => {
 
     test('linkedin', () => {
       render(<Contact linkedin='exampledin' />)
+
       const contactSection = screen.getByTestId('contact')
       const linkedin = within(contactSection).getByText(/exampledin/)
       expect(linkedin).not.toBeFalsy()
-      expect(linkedin).toHaveAttribute('href')
+      expect(linkedin).toHaveAttribute(
+        'href',
+        'https://linkedin.com/in/exampledin'
+      )
     })
   })
 

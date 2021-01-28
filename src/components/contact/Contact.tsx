@@ -15,7 +15,6 @@ interface ContactTypes {
   website?: string
   linkedin?: string
   phone?: string
-
   streetNum?: string | number
   streetName?: string
   suburb?: string
@@ -23,6 +22,7 @@ interface ContactTypes {
   state?: string
   postcode?: string | number
 }
+
 const Contact = ({
   restrictDisplay = true,
   email,

@@ -21,14 +21,21 @@ describe('<Website />', () => {
     render(<Website url='example.com' />)
 
     const website = screen.getByText('example.com')
-    expect(website).toHaveAttribute('href')
+    expect(website).toHaveAttribute('href', 'https://example.com')
   })
 
   test('link opens in new tab', () => {
     render(<Website url='example.com' />)
 
     const website = screen.getByText('example.com')
-    expect(website).toHaveAttribute('target')
+    expect(website).toHaveAttribute('target', '_blank')
+  })
+
+  test('can handle http sites too', () => {
+    render(<Website url='example.com' proto='http://' />)
+
+    const website = screen.getByText('example.com')
+    expect(website).toHaveAttribute('href', 'http://example.com')
   })
 
   test.todo('little website icon displayed next to link')

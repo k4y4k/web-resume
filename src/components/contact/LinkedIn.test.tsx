@@ -17,7 +17,7 @@ describe('<LinkedIn />', () => {
     expect(linkedin).not.toBeFalsy()
     expect(linkedin).toHaveAttribute(
       'href',
-      'https://www.linkedin.com/in/exampledin'
+      'https://linkedin.com/in/exampledin'
     )
   })
 

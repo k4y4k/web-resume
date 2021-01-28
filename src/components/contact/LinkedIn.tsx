@@ -11,7 +11,7 @@ const LinkedIn = ({
 
   return (
     <p>
-      <a href={`https://www.linkedin.com/in/${username}`} target='_blank'>
+      <a href={`https://linkedin.com/in/${username}`} target='_blank'>
         {username}
       </a>
     </p>

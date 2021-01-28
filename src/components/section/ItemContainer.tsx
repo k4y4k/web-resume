@@ -19,12 +19,12 @@ const ItemContainer = ({
   toDate,
   details,
 }: ItemContainerTypes): JSX.Element => (
-  <>
+  <div data-testid='sectionItemContainer'>
     <Title title={title} />
     <Subtitle subtitle={subtitle} />
     <Dates from={fromDate} to={toDate} />
     <Details details={details} />
-  </>
+  </div>
 )
 
 export default ItemContainer

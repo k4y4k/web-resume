@@ -1,3 +1,6 @@
+import * as React from 'react'
+import { GlobalStyles } from 'twin.macro'
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 }
@@ -21,3 +24,12 @@ global.__BASE_PATH__ = '/'
 window.___navigate = pathname => {
   action('NavigateTo:')(pathname)
 }
+
+export const decorators = [
+  Story => (
+    <>
+      <GlobalStyles />
+      <Story />
+    </>
+  ),
+]

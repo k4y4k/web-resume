@@ -46,6 +46,15 @@ steps:
       - yarn lint
       - yarn test
 
+  - name: coverage
+    image: plugins/codecov
+    settings:
+      required: true
+      token:
+        from_secret: codecov-token
+      paths:
+        - coverage
+
   - name: build
     image: node:14
     commands:
@@ -65,15 +74,6 @@ steps:
       event:
         exclude:
           - pull-request
-
-  - name: coverage
-    image: plugins/codecov
-    settings:
-      required: true
-      token:
-        from_secret: codecov-token
-      paths:
-        - coverage
 
   - name: rebuild-cache
     image: drillster/drone-volume-cache

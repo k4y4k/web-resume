@@ -1,3 +1,5 @@
+import path from 'path'
+
 module.exports = {
   siteMetadata: {
     title: "kayak's resume",
@@ -19,6 +21,14 @@ module.exports = {
         path: './src/pages/',
       },
       __key: 'pages',
+    },
+    'gatsby-transformer-json',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, '/src/data/'),
+      },
     },
   ],
 }

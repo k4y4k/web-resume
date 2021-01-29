@@ -1,11 +1,15 @@
 import React from 'react'
-import { PageProps } from 'gatsby'
+import Header from '../components/header/Header'
 
-const IndexRoute = (props: PageProps): JSX.Element => {
+const IndexRoute = (): JSX.Element => {
+  console.log(JSON)
   return (
     <>
-      <h1>Path:</h1>
-      <p>{props.path}</p>
+      <header>
+        {' '}
+        <Header />{' '}
+      </header>
+      <main></main>
     </>
   )
 }

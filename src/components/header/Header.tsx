@@ -2,6 +2,7 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Name from './Name'
 import Subtitle from './Subtitle'
+import 'twin.macro'
 
 interface PureHeaderTypes {
   name: string
@@ -12,7 +13,7 @@ export const PureHeader = ({
   name,
   subtitle,
 }: PureHeaderTypes): JSX.Element => (
-  <header aria-label='header'>
+  <header aria-label='header' tw='uppercase'>
     <Name name={name} />
     <Subtitle subtitle={subtitle} />
   </header>

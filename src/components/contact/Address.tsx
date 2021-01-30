@@ -37,11 +37,13 @@ const Address = ({
     )
 
   return (
-    <div data-test1='address' id='address'>
+    <div data-testid='address' id='address'>
       <p>{address}</p>
-      <p>{city}</p>
       <p>
-        {region} {postalCode} {countryCode}
+        {city}, {region}
+      </p>
+      <p>
+        {postalCode} {countryCode}
       </p>
     </div>
   )

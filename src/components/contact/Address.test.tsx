@@ -32,7 +32,7 @@ describe('<Address />', () => {
       expect(address).not.toBeFalsy()
     })
 
-    test('suburb, city, state, postcode on one line', () => {
+    test('city, state on one line', () => {
       render(
         <Address
           city='Example City'
@@ -46,7 +46,7 @@ describe('<Address />', () => {
 
       const addressContainer = document.getElementById('address') as HTMLElement
       const address = within(addressContainer).getByText(
-        'Example Suburb, Example City, Example State, 8877'
+        'Example City, Example State'
       )
 
       expect(address).not.toBeFalsy()
@@ -63,7 +63,6 @@ describe('<Address />', () => {
           postalCode='8877'
           address='83 Example Rd'
           countryCode='ZZ'
-          restrictDisplay={false}
           region='Example State'
         />
       )

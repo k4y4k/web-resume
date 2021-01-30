@@ -10,12 +10,11 @@ const Template = (args): JSX.Element => <Address {...args} />
 
 export const NonRestricted = Template.bind({})
 NonRestricted.args = {
-  streetName: 'Example Rd',
-  streetNum: 75,
-  suburb: 'Example Suburb',
-  city: 'Example City',
-  state: 'Example',
-  postcode: 8877,
+  address: '2712 Broadway St',
+  postalCode: 'CA 94115',
+  city: 'San Francisco',
+  countryCode: 'US',
+  region: 'California',
   restrictDisplay: false,
 }
 

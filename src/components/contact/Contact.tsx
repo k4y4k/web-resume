@@ -14,7 +14,7 @@ interface PureContactTypes {
   email: string
   twitter: string
   github?: string
-  website?: string
+  website: string
   linkedin?: string
   phone?: string
   address: string | undefined

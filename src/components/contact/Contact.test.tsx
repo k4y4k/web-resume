@@ -8,6 +8,7 @@ describe('<Contact />', () => {
       <Contact
         address=''
         email=''
+        website=''
         twitter=''
         github=''
         linkedin=''
@@ -22,7 +23,7 @@ describe('<Contact />', () => {
       exact: false,
     })
 
-    expect(contactSectionContents).toHaveLength(7)
+    expect(contactSectionContents).toHaveLength(5)
   })
 
   describe('composes all other elements', () => {
@@ -32,6 +33,7 @@ describe('<Contact />', () => {
           email='kayak@example.com'
           address=''
           twitter=''
+          website=''
           github=''
           linkedin=''
           postalCode=''
@@ -52,6 +54,7 @@ describe('<Contact />', () => {
           address=''
           email=''
           github=''
+          website=''
           linkedin=''
           postalCode=''
           city=''
@@ -73,6 +76,7 @@ describe('<Contact />', () => {
           email=''
           twitter=''
           linkedin=''
+          website=''
           postalCode=''
           city=''
           countryCode=''
@@ -115,6 +119,7 @@ describe('<Contact />', () => {
           twitter=''
           address=''
           postalCode=''
+          website=''
           city=''
           countryCode=''
           region=''
@@ -131,20 +136,23 @@ describe('<Contact />', () => {
     test('address', () => {
       render(
         <Contact
-          address=''
           email=''
           twitter=''
+          website=''
           github=''
           linkedin=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
+          address='2712 Broadway St'
+          postalCode='CA 94115'
+          city='San Francisco'
+          countryCode='US'
+          region='California'
         />
       )
 
       const contactSection = screen.getByTestId('contact')
-      const address = within(contactSection).getByText(/Example City/gi)
+      const address = within(contactSection).getByText(
+        /San Francisco, California/gi
+      )
       expect(address).not.toBeFalsy()
     })
 
@@ -153,6 +161,7 @@ describe('<Contact />', () => {
         <Contact
           address=''
           email=''
+          website=''
           twitter=''
           github=''
           postalCode=''
@@ -194,7 +203,7 @@ describe('<Contact />', () => {
     expect(phone).not.toHaveTextContent(/\W/gi)
 
     const address = screen.getByTestId('address')
-    expect(address).toHaveTextContent('Example City, Example State')
+    expect(address).toHaveTextContent('Example City, California')
     expect(address).not.toHaveTextContent('75')
   })
 })

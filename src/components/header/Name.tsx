@@ -1,4 +1,5 @@
 import * as React from 'react'
+import 'twin.macro'
 
 interface NameProps {
   // if no name specified from data, display error text
@@ -6,7 +7,7 @@ interface NameProps {
 }
 
 const Name = ({ name = 'Error: No Name' }: NameProps): JSX.Element => (
-  <h1>{name}</h1>
+  <h1 tw='text-6xl font-black mb-2'>{name}</h1>
 )
 
 export default Name

@@ -1,27 +1,26 @@
 import * as React from 'react'
 
 interface AddressTypes {
-  streetName?: string | undefined
-  streetNum?: string | number | undefined
-  suburb?: string
-  city?: string
-  state?: string
-  postcode?: string | number
+  address: string | undefined
+  postalCode: string
+  city: string
+  countryCode: string
+  region: string
   restrictDisplay?: boolean
 }
 
 const Address = ({
-  streetName = undefined,
-  streetNum = undefined,
-  suburb,
+  address = undefined,
+  postalCode,
   city,
-  state,
-  postcode,
-  // restrictAddress by default
+  countryCode,
+  region,
+
+  // restrict showing Address by default
   restrictDisplay = true,
 }: AddressTypes): JSX.Element => {
   // if there isn't a 123 Example Rd-type datum, assume there's nothing else
-  if (streetName === undefined && streetNum === undefined)
+  if (address === undefined)
     return (
       <div data-testid='address' id='address'>
         <p>Error: No Address</p>
@@ -33,18 +32,17 @@ const Address = ({
     return (
       <div data-testid='address' id='address'>
         <p>
-          {city}, {state}
+          {city}, {region}
         </p>
       </div>
     )
 
   return (
-    <div data-testid='address' id='address'>
+    <div data-test1='address' id='address'>
+      <p>{address}</p>
+      <p>{city}</p>
       <p>
-        {streetNum} {streetName}
-      </p>
-      <p>
-        {suburb}, {city}, {state}, {postcode}
+        {region} {postalCode} {countryCode}
       </p>
     </div>
   )

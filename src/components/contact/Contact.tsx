@@ -6,8 +6,10 @@ import Website from './Website'
 import LinkedIn from './LinkedIn'
 import Phone from './Phone'
 import Address from './Address'
+import { useStaticQuery, graphql } from 'gatsby'
+import getNetworkUsernames from '../../helpers/getNetworkUsernames'
 
-interface ContactTypes {
+interface PureContactTypes {
   restrictDisplay?: boolean
   email?: string
   twitter?: string
@@ -15,15 +17,14 @@ interface ContactTypes {
   website?: string
   linkedin?: string
   phone?: string
-  streetNum?: string | number
-  streetName?: string
-  suburb?: string
-  city?: string
-  state?: string
-  postcode?: string | number
+  address: string | undefined
+  postalCode: string
+  city: string
+  countryCode: string
+  region: string
 }
 
-const Contact = ({
+export const PureContact = ({
   restrictDisplay = true,
   email,
   twitter,
@@ -31,16 +32,14 @@ const Contact = ({
   website,
   linkedin,
   phone,
-  streetNum,
-  streetName,
-  suburb,
+  address,
+  postalCode,
   city,
-  state,
-  postcode,
-}: ContactTypes): JSX.Element => {
+  countryCode,
+  region,
+}: PureContactTypes): JSX.Element => {
   return (
     <section id='contact' data-testid='contact'>
-      <p>{restrictDisplay}</p>
       <Email email={email} />
       <Twitter handle={twitter} />
       <GitHub username={github} />
@@ -49,14 +48,72 @@ const Contact = ({
       <Phone restrictDisplay={restrictDisplay} num={phone} />
       <Address
         restrictDisplay={restrictDisplay}
-        streetNum={streetNum}
-        streetName={streetName}
-        suburb={suburb}
+        address={address}
+        postalCode={postalCode}
         city={city}
-        state={state}
-        postcode={postcode}
+        countryCode={countryCode}
+        region={region}
       />
     </section>
   )
 }
+
+const Contact = (): JSX.Element => {
+  const data = useStaticQuery(graphql`
+    {
+      file(extension: { eq: "json" }, name: { eq: "data" }) {
+        childDataJson {
+          basics {
+            email
+            phone
+            website
+            location {
+              address
+              city
+              countryCode
+              postalCode
+              region
+            }
+            profiles {
+              network
+              username
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const { phone, email, website } = data?.file.childDataJson.basics
+
+  // extract list of networks
+  const { profiles } = data?.file.childDataJson.basics
+  const twitter = getNetworkUsernames(profiles, 'twitter')
+  const github = getNetworkUsernames(profiles, 'github')
+  const linkedin = getNetworkUsernames(profiles, 'linkedin')
+
+  const {
+    address,
+    city,
+    countryCode,
+    postalCode,
+    region,
+  } = data?.file.childDataJson.basics.location
+
+  const props = {
+    phone,
+    email,
+    website,
+    twitter,
+    github,
+    linkedin,
+    address,
+    city,
+    countryCode,
+    postalCode,
+    region,
+  }
+  return <PureContact {...props} />
+}
+
 export default Contact

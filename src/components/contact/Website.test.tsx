@@ -4,38 +4,31 @@ import Website from './Website'
 
 describe('<Website />', () => {
   test('handles no data', () => {
-    render(<Website />)
+    render(<Website url='' />)
 
     const website = screen.getByText('Error: No Website')
     expect(website).not.toBeFalsy()
   })
 
-  test('displays website', () => {
-    render(<Website url='example.com' />)
+  test('strips out protocol to display website', () => {
+    render(<Website url='https://example.com' />)
 
     const website = screen.getByText('example.com')
     expect(website).not.toBeFalsy()
   })
 
   test('links to website', () => {
-    render(<Website url='example.com' />)
+    render(<Website url='https://example.com' />)
 
     const website = screen.getByText('example.com')
     expect(website).toHaveAttribute('href', 'https://example.com')
   })
 
   test('link opens in new tab', () => {
-    render(<Website url='example.com' />)
+    render(<Website url='https://example.com' />)
 
     const website = screen.getByText('example.com')
     expect(website).toHaveAttribute('target', '_blank')
-  })
-
-  test('can handle http sites too', () => {
-    render(<Website url='example.com' proto='http://' />)
-
-    const website = screen.getByText('example.com')
-    expect(website).toHaveAttribute('href', 'http://example.com')
   })
 
   test.todo('little website icon displayed next to link')

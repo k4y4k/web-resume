@@ -3,15 +3,15 @@ import { screen, render } from '@testing-library/react'
 import Twitter from './Twitter'
 
 describe('<Twitter />', () => {
-  test('handles no data', () => {
-    render(<Twitter />)
+  test('usernames no data', () => {
+    render(<Twitter username='' />)
 
     const twitter = screen.getByText('Error: No Twitter')
     expect(twitter).not.toBeFalsy()
   })
 
-  test('displays twitter handle with @ in front', () => {
-    render(<Twitter handle='kayakSinger1' />)
+  test('displays twitter username with @ in front', () => {
+    render(<Twitter username='kayakSinger1' />)
 
     const regex = /@[A-z]*/
     const twitter = screen.getByText(regex)
@@ -20,7 +20,7 @@ describe('<Twitter />', () => {
   })
 
   test('links to profile in new tab', () => {
-    render(<Twitter handle='kayakSinger1' />)
+    render(<Twitter username='kayakSinger1' />)
 
     const regex = /@[A-z]*/
     const twitter = screen.getByText(regex)

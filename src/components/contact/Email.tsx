@@ -1,11 +1,11 @@
 import * as React from 'react'
 
 interface EmailTypes {
-  email?: string
+  email: string
 }
 
-const Email = ({ email = 'Error: No Email' }: EmailTypes): JSX.Element => {
-  if (email === 'Error: No Email') return <p>{email}</p>
+const Email = ({ email }: EmailTypes): JSX.Element => {
+  if (email === '') return <p>Error: No Email</p>
 
   return (
     <p>

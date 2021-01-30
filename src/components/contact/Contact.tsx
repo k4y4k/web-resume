@@ -11,8 +11,8 @@ import getNetworkUsernames from '../../helpers/getNetworkUsernames'
 
 interface PureContactTypes {
   restrictDisplay?: boolean
-  email?: string
-  twitter?: string
+  email: string
+  twitter: string
   github?: string
   website?: string
   linkedin?: string
@@ -41,7 +41,7 @@ export const PureContact = ({
   return (
     <section id='contact' data-testid='contact'>
       <Email email={email} />
-      <Twitter handle={twitter} />
+      <Twitter username={twitter} />
       <GitHub username={github} />
       <LinkedIn username={linkedin} />
       <Website url={website} />

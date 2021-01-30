@@ -4,7 +4,9 @@ import Address from './Address'
 
 describe('<Address />', () => {
   test('Handles no data', () => {
-    render(<Address />)
+    render(
+      <Address address='' postalCode='' city='' countryCode='' region='' />
+    )
 
     const address = screen.getByTestId('address')
 
@@ -16,12 +18,11 @@ describe('<Address />', () => {
     test('street name + number on one line', () => {
       render(
         <Address
-          streetName='Example Rd'
-          streetNum={75}
-          suburb='Example Suburb'
           city='Example City'
-          state='Example State'
-          postcode={8877}
+          address='75 Example Rd'
+          postalCode='PE 8888'
+          countryCode='EX'
+          region='Example State'
           restrictDisplay={false}
         />
       )
@@ -34,13 +35,12 @@ describe('<Address />', () => {
     test('suburb, city, state, postcode on one line', () => {
       render(
         <Address
-          streetName='Example Rd'
-          streetNum={75}
-          suburb='Example Suburb'
           city='Example City'
-          state='Example State'
-          postcode={8877}
+          postalCode='8877'
+          address='83 Example Rd'
+          countryCode='ZZ'
           restrictDisplay={false}
+          region='Example State'
         />
       )
 
@@ -60,8 +60,11 @@ describe('<Address />', () => {
       render(
         <Address
           city='Example City'
-          state='Example State'
-          streetName='Example Rd'
+          postalCode='8877'
+          address='83 Example Rd'
+          countryCode='ZZ'
+          restrictDisplay={false}
+          region='Example State'
         />
       )
 

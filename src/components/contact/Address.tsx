@@ -15,12 +15,11 @@ const Address = ({
   city,
   countryCode,
   region,
-
   // restrict showing Address by default
   restrictDisplay = true,
 }: AddressTypes): JSX.Element => {
   // if there isn't a 123 Example Rd-type datum, assume there's nothing else
-  if (address === undefined)
+  if (address === undefined || address === '')
     return (
       <div data-testid='address' id='address'>
         <p>Error: No Address</p>

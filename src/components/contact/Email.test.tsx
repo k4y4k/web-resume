@@ -4,7 +4,7 @@ import Email from './Email'
 
 describe('<Email/>', () => {
   test('Handles no data case properly', () => {
-    render(<Email />)
+    render(<Email email='' />)
     const email = screen.getByText('Error: No Email')
 
     expect(email).not.toBeFalsy()

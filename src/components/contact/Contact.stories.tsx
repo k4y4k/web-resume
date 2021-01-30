@@ -24,7 +24,19 @@ Primary.args = {
 }
 
 export const NoData = Template.bind({})
-NoData.args = {}
+NoData.args = {
+  email: '',
+  twitter: '',
+  github: '',
+  linkedin: '',
+  website: '',
+  phone: '',
+  address: '',
+  postalCode: '',
+  city: '',
+  countryCode: '',
+  region: '',
+}
 
 export const NotHidden = Template.bind({})
 NotHidden.args = {

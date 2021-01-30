@@ -9,10 +9,10 @@ interface profileItem {
 const getNetworkUsernames = (
   profiles: profileItem[],
   networkName: string
-): string | undefined => {
+): string => {
   const regex = new RegExp(networkName, 'i')
 
-  const res = profiles.filter((el: profileItem) => regex.test(el.network))
+  const res = profiles.filter((el: profileItem) => regex.test(el.network)) ?? ''
   return res[0]?.username
 }
 

@@ -1,10 +1,22 @@
 import * as React from 'react'
-import Contact from './Contact'
+import { PureContact as Contact } from './Contact'
 import { screen, render, within } from '@testing-library/react'
 
 describe('<Contact />', () => {
   test('handles no data', () => {
-    render(<Contact />)
+    render(
+      <Contact
+        address=''
+        email=''
+        twitter=''
+        github=''
+        linkedin=''
+        postalCode=''
+        city=''
+        countryCode=''
+        region=''
+      />
+    )
 
     const contactSectionContents = screen.getAllByText('Error', {
       exact: false,
@@ -15,7 +27,19 @@ describe('<Contact />', () => {
 
   describe('composes all other elements', () => {
     test('email', () => {
-      render(<Contact email='kayak@example.com' />)
+      render(
+        <Contact
+          email='kayak@example.com'
+          address=''
+          twitter=''
+          github=''
+          linkedin=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const email = within(contactSection).getByText(/@example.com/gi)
@@ -23,7 +47,19 @@ describe('<Contact />', () => {
     })
 
     test('twitter', () => {
-      render(<Contact twitter='kayakSinger1' />)
+      render(
+        <Contact
+          address=''
+          email=''
+          github=''
+          linkedin=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+          twitter='kayakSinger1'
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const twitter = within(contactSection).getByText(/@kayakSinger1/gi)
@@ -31,7 +67,19 @@ describe('<Contact />', () => {
     })
 
     test('github', () => {
-      render(<Contact github='octocat' />)
+      render(
+        <Contact
+          address=''
+          email=''
+          twitter=''
+          linkedin=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+          github='octocat'
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const github = within(contactSection).getByText(/octocat/gi)
@@ -40,7 +88,20 @@ describe('<Contact />', () => {
     })
 
     test('website', () => {
-      render(<Contact website='example.com' />)
+      render(
+        <Contact
+          address=''
+          email=''
+          twitter=''
+          github=''
+          linkedin=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+          website='example.com'
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const website = within(contactSection).getByText(/example.com/)
@@ -48,7 +109,19 @@ describe('<Contact />', () => {
     })
 
     test('phone', () => {
-      render(<Contact restrictDisplay={false} phone='0123456789' />)
+      render(
+        <Contact
+          email=''
+          twitter=''
+          address=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+          restrictDisplay={false}
+          phone='0123456789'
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const phone = within(contactSection).getByText(/[0-9]/gi)
@@ -58,12 +131,15 @@ describe('<Contact />', () => {
     test('address', () => {
       render(
         <Contact
-          streetName='Example Rd'
-          streetNum='75'
-          suburb='Example Suburb'
-          city='Example City'
-          state='Example State'
-          postcode='Example Postcode'
+          address=''
+          email=''
+          twitter=''
+          github=''
+          linkedin=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
         />
       )
 
@@ -73,7 +149,19 @@ describe('<Contact />', () => {
     })
 
     test('linkedin', () => {
-      render(<Contact linkedin='exampledin' />)
+      render(
+        <Contact
+          address=''
+          email=''
+          twitter=''
+          github=''
+          postalCode=''
+          city=''
+          countryCode=''
+          region=''
+          linkedin='exampledin'
+        />
+      )
 
       const contactSection = screen.getByTestId('contact')
       const linkedin = within(contactSection).getByText(/exampledin/)
@@ -94,12 +182,11 @@ describe('<Contact />', () => {
         github='octocat'
         website='example.com'
         linkedin='exampledin'
-        streetNum={75}
-        streetName='Example Rd'
-        suburb='Example Suburb'
         city='Example City'
-        state='Example State'
-        postcode={8888}
+        address='2712 Broadway St'
+        postalCode='CA 94115'
+        countryCode='US'
+        region='California'
       />
     )
 

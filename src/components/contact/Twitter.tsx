@@ -1,18 +1,16 @@
 import * as React from 'react'
 
 interface TwitterTypes {
-  handle?: string
+  username: string
 }
 
-const Twitter = ({
-  handle = 'Error: No Twitter',
-}: TwitterTypes): JSX.Element => {
-  if (handle === 'Error: No Twitter') return <p>{handle}</p>
+const Twitter = ({ username }: TwitterTypes): JSX.Element => {
+  if (username === '') return <p>Error: No Twitter</p>
 
   return (
     <p>
-      <a href={`https://twitter.com/${handle}`} target='_blank'>
-        {`@${handle}`}
+      <a href={`https://twitter.com/${username}`} target='_blank'>
+        {`@${username}`}
       </a>
     </p>
   )

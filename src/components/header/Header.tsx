@@ -13,9 +13,14 @@ export const PureHeader = ({
   name,
   subtitle,
 }: PureHeaderTypes): JSX.Element => (
-  <header aria-label='header' tw='uppercase'>
-    <Name name={name} />
-    <Subtitle subtitle={subtitle} />
+  <header
+    aria-label='header'
+    tw='bg-blue-500 h-auto uppercase p-12 text-white flex flex-row'
+  >
+    <div tw='flex-grow self-center'>
+      <Name name={name} />
+      <Subtitle subtitle={subtitle} />
+    </div>
   </header>
 )
 

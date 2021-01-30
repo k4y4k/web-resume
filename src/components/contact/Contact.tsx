@@ -4,7 +4,6 @@ import Twitter from './Twitter'
 import GitHub from './GitHub'
 import Website from './Website'
 import LinkedIn from './LinkedIn'
-import Phone from './Phone'
 import Address from './Address'
 import { useStaticQuery, graphql } from 'gatsby'
 import getNetworkUsernames from '../../helpers/getNetworkUsernames'
@@ -16,9 +15,8 @@ interface PureContactTypes {
   github?: string
   website: string
   linkedin?: string
-  phone?: string
-  address: string | undefined
-  postalCode: string
+  address?: string
+  postalCode?: string
   city: string
   countryCode: string
   region: string
@@ -31,12 +29,9 @@ export const PureContact = ({
   github,
   website,
   linkedin,
-  phone,
-  address,
-  postalCode,
   city,
-  countryCode,
   region,
+  countryCode,
 }: PureContactTypes): JSX.Element => {
   return (
     <section id='contact' data-testid='contact'>
@@ -45,14 +40,11 @@ export const PureContact = ({
       <GitHub username={github} />
       <LinkedIn username={linkedin} />
       <Website url={website} />
-      <Phone restrictDisplay={restrictDisplay} num={phone} />
       <Address
         restrictDisplay={restrictDisplay}
-        address={address}
-        postalCode={postalCode}
         city={city}
-        countryCode={countryCode}
         region={region}
+        countryCode={countryCode}
       />
     </section>
   )
@@ -65,14 +57,11 @@ const Contact = (): JSX.Element => {
         childDataJson {
           basics {
             email
-            phone
             website
             location {
-              address
               city
-              countryCode
-              postalCode
               region
+              countryCode
             }
             profiles {
               network
@@ -84,7 +73,7 @@ const Contact = (): JSX.Element => {
     }
   `)
 
-  const { phone, email, website } = data?.file.childDataJson.basics
+  const { email, website } = data?.file.childDataJson.basics
 
   // extract list of networks
   const { profiles } = data?.file.childDataJson.basics
@@ -92,26 +81,17 @@ const Contact = (): JSX.Element => {
   const github = getNetworkUsernames(profiles, 'github')
   const linkedin = getNetworkUsernames(profiles, 'linkedin')
 
-  const {
-    address,
-    city,
-    countryCode,
-    postalCode,
-    region,
-  } = data?.file.childDataJson.basics.location
+  const { city, countryCode, region } = data?.file.childDataJson.basics.location
 
   const props = {
-    phone,
     email,
     website,
     twitter,
     github,
     linkedin,
-    address,
     city,
-    countryCode,
-    postalCode,
     region,
+    countryCode,
   }
   return <PureContact {...props} />
 }

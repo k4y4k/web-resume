@@ -15,12 +15,9 @@ Primary.args = {
   github: 'k4y4k',
   linkedin: 'linkyloo',
   website: 'http://johndoe.com',
-  phone: '(912) 555-4321',
-  address: '2712 Broadway St',
-  postalCode: 'CA 94115',
   city: 'San Francisco',
-  countryCode: 'US',
   region: 'California',
+  countryCode: 'US',
 }
 
 export const NoData = Template.bind({})
@@ -30,7 +27,6 @@ NoData.args = {
   github: '',
   linkedin: '',
   website: '',
-  phone: '',
   address: '',
   postalCode: '',
   city: '',

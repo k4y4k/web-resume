@@ -23,7 +23,8 @@ describe('<Contact />', () => {
       exact: false,
     })
 
-    expect(contactSectionContents).toHaveLength(5)
+    // email, twitter, website, address
+    expect(contactSectionContents).toHaveLength(4)
   })
 
   describe('composes all other elements', () => {
@@ -112,27 +113,6 @@ describe('<Contact />', () => {
       expect(website).not.toBeFalsy()
     })
 
-    test('phone', () => {
-      render(
-        <Contact
-          email=''
-          twitter=''
-          address=''
-          postalCode=''
-          website=''
-          city=''
-          countryCode=''
-          region=''
-          restrictDisplay={false}
-          phone='0123456789'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const phone = within(contactSection).getByText(/[0-9]/gi)
-      expect(phone).not.toBeFalsy()
-    })
-
     test('address', () => {
       render(
         <Contact
@@ -187,7 +167,6 @@ describe('<Contact />', () => {
       <Contact
         email='kayak@example.com'
         twitter='kayakSinger1'
-        phone='0123456789'
         github='octocat'
         website='example.com'
         linkedin='exampledin'
@@ -199,11 +178,8 @@ describe('<Contact />', () => {
       />
     )
 
-    const phone = screen.getByTestId('phone')
-    expect(phone).not.toHaveTextContent(/\W/gi)
-
     const address = screen.getByTestId('address')
     expect(address).toHaveTextContent('Example City, California')
-    expect(address).not.toHaveTextContent('75')
+    expect(address).not.toHaveTextContent('2712')
   })
 })

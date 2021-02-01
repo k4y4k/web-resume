@@ -1,15 +1,17 @@
 import * as React from 'react'
 import dayjs from 'dayjs'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
+import 'twin.macro'
 
 interface ItemDatesTypes {
-  to?: string | undefined
-  from?: string
+  to?: string
+  from: string
 }
 
 const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
   // no dates
-  if (to === undefined && from === undefined) return <p>Error: No Item Dates</p>
+  if (to === undefined || to === '')
+    if (from === undefined || from === '') return <p>Error: No Item Dates</p>
 
   dayjs.extend(customParseFormat)
 
@@ -32,7 +34,7 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
     )
 
   return (
-    <p data-testid='sectionItemDates'>
+    <p tw='inline-block' data-testid='sectionItemDates'>
       {fromDate.format('MMM YYYY')} - {toDate.format('MMM YYYY')}
     </p>
   )

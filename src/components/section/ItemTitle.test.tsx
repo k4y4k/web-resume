@@ -4,7 +4,7 @@ import ItemTitle from './ItemTitle'
 
 describe('<ItemTitle />', () => {
   test('handles no data', () => {
-    render(<ItemTitle />)
+    render(<ItemTitle title='' />)
 
     const title = screen.getByText('Error: No Item Title')
     expect(title).not.toBeFalsy()

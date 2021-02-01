@@ -4,14 +4,14 @@ import ItemDates from './ItemDates'
 
 describe('<ItemDates />', () => {
   test('handles no dates', () => {
-    render(<ItemDates />)
+    render(<ItemDates from='' />)
 
     const sectionItemDates = screen.getByText('Error: No Item Dates')
     expect(sectionItemDates).toBeInTheDocument()
   })
 
   describe('handles badly formatted dates', () => {
-    render(<ItemDates to='2020' />)
+    render(<ItemDates from='ABCD8' to='2020' />)
     const sectionItemDates = screen.getByText('Error: Dates Not Valid')
 
     expect(sectionItemDates).toBeInTheDocument()

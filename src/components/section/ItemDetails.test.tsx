@@ -4,7 +4,7 @@ import ItemDetails from './ItemDetails'
 
 describe('<ItemDetails />', () => {
   test('no data', () => {
-    render(<ItemDetails />)
+    render(<ItemDetails details='' />)
 
     const details = screen.getByTestId('sectionItemDetails')
     expect(details).toHaveTextContent('this section intentionally left blank')

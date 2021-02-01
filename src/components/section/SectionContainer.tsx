@@ -1,15 +1,18 @@
 import * as React from 'react'
 import SectionTitle from './SectionTitle'
-import ItemContainer from './ItemContainer'
 
 interface SectionContainerTypes {
-  title?: string
+  title: string
+  children: React.ReactNode
 }
 
-const SectionContainer = ({ title }: SectionContainerTypes): JSX.Element => (
+const SectionContainer = ({
+  title,
+  children,
+}: SectionContainerTypes): JSX.Element => (
   <>
     <SectionTitle title={title} />
-    <ItemContainer />
+    {children}
   </>
 )
 

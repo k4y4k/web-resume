@@ -1,11 +1,14 @@
 import * as React from 'react'
+import 'twin.macro'
 
 interface ItemSubtitleTypes {
-  subtitle?: string
+  subtitle: string
 }
 
-const ItemSubtitle = ({
-  subtitle = 'Error: No Item Subtitle',
-}: ItemSubtitleTypes): JSX.Element => <h2>{subtitle}</h2>
+const ItemSubtitle = ({ subtitle }: ItemSubtitleTypes): JSX.Element => {
+  if (subtitle === '') return <h2>Error: No Item Subtitle</h2>
+
+  return <h2 tw='inline-block'>{subtitle}</h2>
+}
 
 export default ItemSubtitle

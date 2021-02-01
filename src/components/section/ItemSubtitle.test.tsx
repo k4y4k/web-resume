@@ -4,7 +4,7 @@ import ItemSubtitle from './ItemSubtitle'
 
 describe('<ItemSubtitle />', () => {
   test('handles no data', () => {
-    render(<ItemSubtitle />)
+    render(<ItemSubtitle subtitle='' />)
 
     const subtitle = screen.getByText('Error: No Item Subtitle')
     expect(subtitle).toBeInTheDocument()

@@ -4,7 +4,7 @@ import SectionTitle from './SectionTitle'
 
 describe('<SectionTitle />', () => {
   test('no data? no wakkas', () => {
-    render(<SectionTitle />)
+    render(<SectionTitle title='' />)
 
     const title = screen.getByText('Error: No Section Title')
     expect(title).toBeInTheDocument()

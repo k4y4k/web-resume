@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FiGlobe } from '@react-icons/all-files/fi/FiGlobe'
 
 interface WebsiteTypes {
   url: string
@@ -11,6 +12,7 @@ const Website = ({ url }: WebsiteTypes): JSX.Element => {
 
   return (
     <p>
+      <FiGlobe />{' '}
       <a href={url} target='_blank'>
         {stripped}
       </a>

@@ -4,7 +4,7 @@ import GitHub from './GitHub'
 
 describe('<GitHub />', () => {
   test('handles no data', () => {
-    render(<GitHub />)
+    render(<GitHub username='' />)
 
     const github = screen.getByText('Error: No GitHub')
     expect(github).not.toBeFalsy()

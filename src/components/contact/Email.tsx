@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FiMail } from '@react-icons/all-files/fi/FiMail'
 
 interface EmailTypes {
   email: string
@@ -9,7 +10,7 @@ const Email = ({ email }: EmailTypes): JSX.Element => {
 
   return (
     <p>
-      <a href={`mailto:${email}`}>{email}</a>
+      <FiMail /> <a href={`mailto:${email}`}>{email}</a>
     </p>
   )
 }

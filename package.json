@@ -22,6 +22,7 @@
     "test": "jest --collectCoverage --verbose"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "babel-preset-react-app": "^10.0.0",
     "dayjs": "1.10.4",
     "gatsby": "2.31.1",

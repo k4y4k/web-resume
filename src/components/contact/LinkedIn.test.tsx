@@ -4,7 +4,7 @@ import LinkedIn from './LinkedIn'
 
 describe('<LinkedIn />', () => {
   test('handles no data', () => {
-    render(<LinkedIn />)
+    render(<LinkedIn username='' />)
 
     const linkedin = screen.getByText('Error: No LinkedIn')
     expect(linkedin).not.toBeFalsy()

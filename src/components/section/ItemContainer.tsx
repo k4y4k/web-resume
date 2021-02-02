@@ -15,7 +15,7 @@ interface ItemContainerTypes {
   highlights?: string[]
 }
 
-const Seperator = tw.div`mx-3 inline-block`
+const Seperator = tw.div`mx-2 inline-block`
 
 const ItemContainer = ({
   title,

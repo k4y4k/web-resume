@@ -7,20 +7,28 @@ import LinkedIn from './LinkedIn'
 import Address from './Address'
 import { useStaticQuery, graphql } from 'gatsby'
 import getNetworkUsernames from '../../helpers/getNetworkUsernames'
+import tw, { css } from 'twin.macro'
 
 interface PureContactTypes {
   restrictDisplay?: boolean
   email: string
   twitter: string
-  github?: string
+  github: string
   website: string
-  linkedin?: string
+  linkedin: string
   address?: string
   postalCode?: string
   city: string
   countryCode: string
   region: string
 }
+
+export const ContactStyles = css`
+  ${tw`flex flex-wrap place-content-evenly bg-blue-700 text-white`}
+  p {
+    ${tw`px-2 py-1 m-2`}
+  }
+`
 
 export const PureContact = ({
   restrictDisplay = true,
@@ -34,12 +42,12 @@ export const PureContact = ({
   countryCode,
 }: PureContactTypes): JSX.Element => {
   return (
-    <section id='contact' data-testid='contact'>
-      <Email email={email} />
+    <section css={[ContactStyles]} id='contact' data-testid='contact'>
+      <Website url={website} />
       <Twitter username={twitter} />
       <GitHub username={github} />
       <LinkedIn username={linkedin} />
-      <Website url={website} />
+      <Email email={email} />
       <Address
         restrictDisplay={restrictDisplay}
         city={city}

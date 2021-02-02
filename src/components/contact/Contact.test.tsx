@@ -23,8 +23,8 @@ describe('<Contact />', () => {
       exact: false,
     })
 
-    // email, twitter, website, address
-    expect(contactSectionContents).toHaveLength(4)
+    // github, email, twitter, website, address, linkedin
+    expect(contactSectionContents).toHaveLength(6)
   })
 
   describe('composes all other elements', () => {

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
 
 interface AddressTypes {
   address?: string
@@ -36,7 +37,7 @@ const Address = ({
     return (
       <div data-testid='address' id='address'>
         <p>
-          {city}, {region}, {countryCode}
+          <FiMapPin /> {city}, {region}, {countryCode}
         </p>
       </div>
     )

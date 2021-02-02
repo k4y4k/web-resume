@@ -12,4 +12,4 @@ export const Primary = Template.bind({})
 Primary.args = { name: 'kayak kayak' }
 
 export const NoData = Template.bind({})
-NoData.args = {}
+NoData.args = { name: '' }

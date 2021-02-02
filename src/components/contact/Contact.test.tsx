@@ -1,6 +1,6 @@
 import * as React from 'react'
+import { render, screen, within } from '@testing-library/react'
 import { PureContact as Contact } from './Contact'
-import { screen, render, within } from '@testing-library/react'
 
 describe('<Contact />', () => {
   test('handles no data', () => {

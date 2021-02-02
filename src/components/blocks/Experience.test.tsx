@@ -1,5 +1,5 @@
-import { screen, render } from '@testing-library/react'
 import * as React from 'react'
+import { render, screen } from '@testing-library/react'
 import { PureExperience as Experience } from './Experience'
 
 describe('<Experience />', () => {

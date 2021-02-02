@@ -1,7 +1,7 @@
+import 'twin.macro'
 import * as React from 'react'
 import Bucket from './Bucket'
 import Title from './Title'
-import 'twin.macro'
 
 interface ComposedTypes {
   heading: string

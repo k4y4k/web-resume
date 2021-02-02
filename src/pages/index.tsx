@@ -1,10 +1,13 @@
-import React from 'react'
-import Header from '../components/header/Header'
+/* eslint-disable sort-imports */
+// they ARE sorted!
+
+import * as React from 'react'
 import { GlobalStyles } from 'twin.macro'
-import Contact from '../components/contact/Contact'
-import Experience from '../components/blocks/Experience'
 import { IconContext } from '@react-icons/all-files/lib'
+import Contact from '../components/contact/Contact'
 import Education from '../components/blocks/Education'
+import Experience from '../components/blocks/Experience'
+import Header from '../components/header/Header'
 import Skills from '../components/blocks/Skills'
 
 const IndexRoute = (): JSX.Element => {

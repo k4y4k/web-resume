@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Title from './ItemTitle'
-import Subtitle from './ItemSubtitle'
 import Dates from './ItemDates'
 import Details from './ItemDetails'
-import tw from 'twin.macro'
 import Highlights from './ItemHighlights'
+import Subtitle from './ItemSubtitle'
+import Title from './ItemTitle'
 import transformArrayToBulletPoints from '../../helpers/transformArrayToBulletPoints'
+import tw from 'twin.macro'
 
 interface ItemContainerTypes {
   // experience

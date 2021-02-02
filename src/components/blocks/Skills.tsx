@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from 'gatsby'
 import * as React from 'react'
-import SectionContainer from '../section/SectionContainer'
+import { graphql, useStaticQuery } from 'gatsby'
 import Composed from '../skills/Composed'
+import SectionContainer from '../section/SectionContainer'
 
 interface SkillsItem {
   keywords: string[]

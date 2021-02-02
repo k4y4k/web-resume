@@ -1,6 +1,6 @@
+import 'twin.macro'
 import * as React from 'react'
 import SectionTitle from './SectionTitle'
-import 'twin.macro'
 
 interface SectionContainerTypes {
   title: string

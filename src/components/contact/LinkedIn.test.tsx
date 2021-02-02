@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { screen, render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import LinkedIn from './LinkedIn'
 
 describe('<LinkedIn />', () => {

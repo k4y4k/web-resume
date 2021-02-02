@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { screen, render } from '@testing-library/react'
-import SectionContainer from './SectionContainer'
+import { render, screen } from '@testing-library/react'
 import ItemContainer from './ItemContainer'
+import SectionContainer from './SectionContainer'
 
 describe('<SectionContainer />', () => {
   test('composes title and >1  items', () => {

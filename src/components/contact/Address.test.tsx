@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { screen, render, within } from '@testing-library/react'
+import { render, screen, within } from '@testing-library/react'
 import Address from './Address'
 
 describe('<Address />', () => {

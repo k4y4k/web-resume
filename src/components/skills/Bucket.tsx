@@ -1,5 +1,5 @@
-import * as React from 'react'
 import 'twin.macro'
+import * as React from 'react'
 
 interface BucketTypes {
   skills?: string[]

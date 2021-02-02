@@ -9,5 +9,6 @@
     "outDir": "./build",
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true
-  }
+  },
+  "include": ["src/**/*", "./.eslintrc.js"]
 }

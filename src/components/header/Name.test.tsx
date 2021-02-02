@@ -4,7 +4,7 @@ import Name from './Name'
 
 describe('<Name />', () => {
   test('Handles not having any data properly', () => {
-    render(<Name />)
+    render(<Name name='' />)
 
     const name = screen.getByText('Error: No Name')
 

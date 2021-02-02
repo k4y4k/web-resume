@@ -5,10 +5,22 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-     'standard-with-typescript',
+    'standard-with-typescript',
     'prettier',
   ],
-   parserOptions: {
-    project: './tsconfig.json'
-  }
+  parserOptions: {
+    project: './tsconfig.json',
+  },
+  rules: {
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: true,
+        ignoreDeclarationSort: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: false,
+      },
+    ],
+  },
 }

@@ -1,8 +1,8 @@
+import 'twin.macro'
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Name from './Name'
 import Subtitle from './Subtitle'
-import 'twin.macro'
 
 interface PureHeaderTypes {
   name: string

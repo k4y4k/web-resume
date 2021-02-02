@@ -1,13 +1,13 @@
 import * as React from 'react'
-import Email from './Email'
-import Twitter from './Twitter'
-import GitHub from './GitHub'
-import Website from './Website'
-import LinkedIn from './LinkedIn'
-import Address from './Address'
-import { useStaticQuery, graphql } from 'gatsby'
-import getNetworkUsernames from '../../helpers/getNetworkUsernames'
+import { graphql, useStaticQuery } from 'gatsby'
 import tw, { css } from 'twin.macro'
+import Address from './Address'
+import Email from './Email'
+import getNetworkUsernames from '../../helpers/getNetworkUsernames'
+import GitHub from './GitHub'
+import LinkedIn from './LinkedIn'
+import Twitter from './Twitter'
+import Website from './Website'
 
 interface PureContactTypes {
   restrictDisplay?: boolean

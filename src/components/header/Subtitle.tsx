@@ -2,11 +2,14 @@ import * as React from 'react'
 import 'twin.macro'
 
 interface SubtitleProps {
-  subtitle?: string
+  subtitle: string | undefined
 }
 
-const Subtitle = ({
-  subtitle = 'Error: No Subtitle',
-}: SubtitleProps): JSX.Element => <h2>{subtitle}</h2>
+const Subtitle = ({ subtitle = '' }: SubtitleProps): JSX.Element => {
+  if (subtitle === '' ?? subtitle === undefined)
+    return <h2>Error: No Subtitle</h2>
+
+  return <h2>{subtitle}</h2>
+}
 
 export default Subtitle

@@ -4,17 +4,14 @@ import 'twin.macro'
 
 interface ItemDetailsTypes {
   // accepts markdown
-  details: string
+  details?: string
 }
 
 const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element => {
-  if (details === '')
+  if (details === '' || details === undefined)
     return (
       <div data-testid='sectionItemDetails'>
-        {' '}
-        <ReactMarkdown>
-          *this section intentionally left blank*
-        </ReactMarkdown>{' '}
+        <ReactMarkdown>*this section intentionally left blank*</ReactMarkdown>
       </div>
     )
 

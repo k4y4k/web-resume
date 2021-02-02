@@ -4,6 +4,7 @@ import { GlobalStyles } from 'twin.macro'
 import Contact from '../components/contact/Contact'
 import Experience from '../components/blocks/Experience'
 import { IconContext } from '@react-icons/all-files/lib'
+import Education from '../components/blocks/Education'
 
 const IndexRoute = (): JSX.Element => {
   return (
@@ -21,6 +22,7 @@ const IndexRoute = (): JSX.Element => {
       <Contact />
       <main>
         <Experience />
+        <Education />
       </main>
     </IconContext.Provider>
   )

@@ -4,7 +4,7 @@ import Subtitle from './Subtitle'
 
 describe('<Subtitle />', () => {
   test('Handles not having data', () => {
-    render(<Subtitle />)
+    render(<Subtitle subtitle='' />)
     const subtitle = screen.getByText('Error: No Subtitle')
 
     expect(subtitle).not.toBeFalsy()

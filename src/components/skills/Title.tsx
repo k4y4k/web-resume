@@ -1,11 +1,18 @@
 import * as React from 'react'
+import tw, { css } from 'twin.macro'
 
 interface TitleTypes {
-  category?: string
+  category: string
 }
 
-const Title = ({
-  category = 'Error: No Skills Category',
-}: TitleTypes): JSX.Element => <h2>{category}</h2>
+const TitleStyles = css`
+  ${tw`font-black text-xl`}
+`
 
+const Title = ({ category }: TitleTypes): JSX.Element => {
+  if (category === '')
+    return <h2 css={[TitleStyles]}>Error: No Skills Category</h2>
+
+  return <h2 css={[TitleStyles]}>{category}</h2>
+}
 export default Title

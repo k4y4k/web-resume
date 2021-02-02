@@ -4,7 +4,7 @@ import Title from './Title'
 
 describe('<Title />', () => {
   test('no data?!?!??!', () => {
-    render(<Title />)
+    render(<Title category='' />)
 
     // it's that time of night where I recklessly inline things :)
     expect(screen.getByText('Error: No Skills Category')).toBeInTheDocument()

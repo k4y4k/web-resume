@@ -5,6 +5,7 @@ import Contact from '../components/contact/Contact'
 import Experience from '../components/blocks/Experience'
 import { IconContext } from '@react-icons/all-files/lib'
 import Education from '../components/blocks/Education'
+import Skills from '../components/blocks/Skills'
 
 const IndexRoute = (): JSX.Element => {
   return (
@@ -23,6 +24,7 @@ const IndexRoute = (): JSX.Element => {
       <main>
         <Experience />
         <Education />
+        <Skills />
       </main>
     </IconContext.Provider>
   )

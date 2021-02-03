@@ -17,7 +17,6 @@ interface two {
 }
 
 export const PureExperience = ({ history }: two): JSX.Element => {
-  console.log(history.length)
   return (
     <div data-testid='experience'>
       <SectionContainer title='Experience'>

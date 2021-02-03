@@ -70,8 +70,6 @@ const ItemContainer = ({
     studyDetails = transformArrayToBulletPoints(courses)
   }
 
-  console.log({ currentIndex, collectionLength })
-
   return (
     <div
       data-testid='sectionItemContainer'

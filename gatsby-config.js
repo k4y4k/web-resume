@@ -6,12 +6,12 @@ module.exports = {
     title: "kayak's resume",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        icon: 'src/images/icon.png',
+        google: {
+          families: ['Rubik:400,900', 'Inconsolata:400,900'],
+        },
       },
     },
     'gatsby-transformer-remark',
@@ -31,6 +31,23 @@ module.exports = {
         path: path.join(__dirname, '/src/data/'),
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'img',
+        path: path.join(__dirname, 'src/images/'),
+      },
+    },
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/images/icon.png',
+      },
+    },
   ],
 }

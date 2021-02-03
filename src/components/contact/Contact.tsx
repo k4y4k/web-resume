@@ -24,7 +24,9 @@ interface PureContactTypes {
 }
 
 export const ContactStyles = css`
-  ${tw`flex flex-wrap place-content-evenly bg-blue-700 text-white`}
+  ${tw`flex flex-wrap place-content-evenly text-white`}
+  background-color: #3e1136;
+
   p {
     ${tw`px-2 py-1 m-2`}
   }

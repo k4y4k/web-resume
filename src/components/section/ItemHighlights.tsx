@@ -11,7 +11,7 @@ const Highlights = ({ highlights }: highlightTypes): JSX.Element => (
       return (
         <li
           key={i}
-          tw='bg-gray-600 text-white inline-block mr-4 mb-1 px-2 py-1 rounded-md text-sm'
+          tw='bg-black text-white inline-block mr-4 mb-1 px-2 py-1 text-sm font-mono'
         >
           {el}
         </li>

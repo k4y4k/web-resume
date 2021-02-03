@@ -17,12 +17,15 @@ interface two {
 }
 
 export const PureExperience = ({ history }: two): JSX.Element => {
+  console.log(history.length)
   return (
     <div data-testid='experience'>
       <SectionContainer title='Experience'>
         {history.map((el, i: number) => {
           return (
             <ItemContainer
+              collectionLength={history.length}
+              currentIndex={i}
               key={i}
               details={el.summary}
               fromDate={el.startDate}

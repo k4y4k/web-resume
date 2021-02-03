@@ -4,7 +4,16 @@ import ItemContainer from './ItemContainer'
 
 describe('<ItemContainer />', () => {
   test('composes all elements of a section item', () => {
-    render(<ItemContainer title='' subtitle='' fromDate='' details='' />)
+    render(
+      <ItemContainer
+        currentIndex={0}
+        collectionLength={1}
+        title=''
+        subtitle=''
+        fromDate=''
+        details=''
+      />
+    )
 
     const title = screen.getByText('Error: No Item Title')
     expect(title).toBeInTheDocument()

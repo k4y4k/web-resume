@@ -1,15 +1,18 @@
-import 'twin.macro'
 import * as React from 'react'
+import tw, { TwStyle } from 'twin.macro'
 
 interface SubtitleProps {
-  subtitle: string | undefined
+  subtitle: string
 }
 
-const Subtitle = ({ subtitle = '' }: SubtitleProps): JSX.Element => {
-  if (subtitle === '' ?? subtitle === undefined)
-    return <h2>Error: No Subtitle</h2>
+const subtitleStyles = (): Array<TwStyle | string> => [
+  tw`self-start p-2 bg-black`,
+]
 
-  return <h2>{subtitle}</h2>
+const Subtitle = ({ subtitle = '' }: SubtitleProps): JSX.Element => {
+  if (subtitle === '') return <h2 css={subtitleStyles()}>Error: No Subtitle</h2>
+
+  return <h2 css={subtitleStyles()}>{subtitle}</h2>
 }
 
 export default Subtitle

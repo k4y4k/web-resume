@@ -10,5 +10,10 @@
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true
   },
-  "include": ["src/**/*", "./.eslintrc.js"]
+  "include": [
+    "src/**/*",
+    "./.eslintrc.js",
+    "./gatsby-config.js",
+    "./tailwind.config.js"
+  ]
 }

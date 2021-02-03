@@ -11,7 +11,7 @@ import Header from '../components/header/Header'
 import Skills from '../components/blocks/Skills'
 
 const indexStyles = (): Array<TwStyle | string> => [
-  tw`min-h-screen font-sans text-white`,
+  tw`min-h-screen pb-1 font-sans text-white`,
   `
 background: #c94b4b;
 background: -webkit-linear-gradient(to bottom, #4b134f, #c94b4b);  

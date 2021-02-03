@@ -32,7 +32,6 @@ export const PureExperience = ({ history }: two): JSX.Element => {
               toDate={el.endDate}
               title={el.position}
               subtitle={el.company}
-              highlights={el.highlights}
             />
           )
         })}
@@ -50,7 +49,6 @@ const Experience = (): JSX.Element => {
           work {
             company
             endDate
-            highlights
             position
             startDate
             summary

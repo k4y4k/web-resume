@@ -2,7 +2,6 @@ import * as React from 'react'
 import tw, { TwStyle } from 'twin.macro'
 import Dates from './ItemDates'
 import Details from './ItemDetails'
-import Highlights from './ItemHighlights'
 import Subtitle from './ItemSubtitle'
 import Title from './ItemTitle'
 import transformArrayToBulletPoints from '../../helpers/transformArrayToBulletPoints'
@@ -14,7 +13,6 @@ interface ItemContainerTypes {
   fromDate: string
   toDate?: string
   details?: string
-  highlights?: string[]
 
   // education
   institution?: string
@@ -54,7 +52,6 @@ const ItemContainer = ({
   fromDate,
   toDate,
   details,
-  highlights,
   institution,
   area,
   studyType,
@@ -87,7 +84,6 @@ const ItemContainer = ({
         <Dates from={fromDate} to={toDate} />
       </div>
       <Details details={details ?? studyDetails} />
-      {highlights !== undefined && <Highlights highlights={highlights} />}
     </div>
   )
 }

@@ -28,6 +28,4 @@ describe('<LinkedIn />', () => {
     expect(linkedin).not.toBeFalsy()
     expect(linkedin).toHaveAttribute('target', '_blank')
   })
-
-  test.todo('has cute little logo')
 })

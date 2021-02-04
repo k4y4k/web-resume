@@ -28,6 +28,4 @@ describe('<Twitter />', () => {
     expect(twitter).toHaveAttribute('href', 'https://twitter.com/kayakSinger1')
     expect(twitter).toHaveAttribute('target', '_blank')
   })
-
-  test.todo('displays logo')
 })

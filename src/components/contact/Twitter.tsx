@@ -9,12 +9,9 @@ const Twitter = ({ username }: TwitterTypes): JSX.Element => {
   if (username === '') return <p>Error: No Twitter</p>
 
   return (
-    <p>
-      <FiTwitter />{' '}
-      <a href={`https://twitter.com/${username}`} target='_blank'>
-        {`@${username}`}
-      </a>
-    </p>
+    <a href={`https://twitter.com/${username}`} target='_blank'>
+      <FiTwitter /> {`@${username}`}
+    </a>
   )
 }
 

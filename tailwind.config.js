@@ -48,7 +48,7 @@ module.exports = {
         'monospace',
       ],
     },
-    extend: {},
+    extend: { colors: { deeporange: '#b53d27' } },
   },
   variants: {
     extend: {},

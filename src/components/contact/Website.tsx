@@ -6,17 +6,14 @@ interface WebsiteTypes {
 }
 
 const Website = ({ url }: WebsiteTypes): JSX.Element => {
-  if (url === '') return <a>Error: No Website</a>
+  if (url === '') return <p>Error: No Website</p>
 
   const stripped = url?.replace(/https?:\/\//i, '')
 
   return (
-    <p>
-      <FiGlobe />{' '}
-      <a href={url} target='_blank'>
-        {stripped}
-      </a>
-    </p>
+    <a href={url} target='_blank'>
+      <FiGlobe /> {stripped}
+    </a>
   )
 }
 

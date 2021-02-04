@@ -24,11 +24,12 @@ interface PureContactTypes {
 }
 
 export const ContactStyles = css`
-  ${tw`flex flex-wrap place-content-evenly text-white`}
+  ${tw`flex flex-wrap text-white place-content-evenly`}
   background-color: #3e1136;
 
+  a,
   p {
-    ${tw`px-2 py-1 m-2`}
+    ${tw`p-4 hover:bg-deeporange`}
   }
 `
 

@@ -30,6 +30,4 @@ describe('<GitHub />', () => {
     const github = screen.getByText('octocat')
     expect(github).toHaveAttribute('target', '_blank')
   })
-
-  test.todo('displays logo')
 })

@@ -24,6 +24,4 @@ describe('<Phone />', () => {
     const phone = screen.getByText('012 345 6789')
     expect(phone).not.toBeFalsy()
   })
-
-  test.todo('has cute little phone logo')
 })

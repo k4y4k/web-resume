@@ -30,6 +30,4 @@ describe('<Website />', () => {
     const website = screen.getByText('example.com')
     expect(website).toHaveAttribute('target', '_blank')
   })
-
-  test.todo('little website icon displayed next to link')
 })

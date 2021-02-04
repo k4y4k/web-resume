@@ -9,7 +9,7 @@ interface ComposedTypes {
 }
 
 const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element => (
-  <div tw='m-4 p-4'>
+  <div tw='mx-6 mb-4 p-4'>
     <Title category={heading} />
     <Bucket skills={bucket} />
   </div>

@@ -14,7 +14,7 @@ interface SkillsList {
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   return (
-    <div data-testid='skills'>
+    <div data-testid='skills' css='grid-area:skills;'>
       <SectionContainer title='Skills'>
         {skills.length > 0 &&
           skills.map(el => (

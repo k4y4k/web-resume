@@ -12,11 +12,18 @@ import Skills from '../components/blocks/Skills'
 
 const indexStyles = (): Array<TwStyle | string> => [
   tw`min-h-screen pb-1 font-sans text-white`,
-  `
-background: #c94b4b;
-background: -webkit-linear-gradient(to bottom, #4b134f, #c94b4b);  
-background: linear-gradient(to bottom, #4b134f, #c94b4b);
-  `,
+  'background: linear-gradient(to bottom, #4b134f, #c94b4b);',
+  'main { width: 75vw; margin: 0 auto; }',
+  '@media (max-width: 1023px) { main { width: 90vw; } }',
+]
+
+const mainStyles = (): Array<TwStyle | string> => [
+  tw`py-4 grid grid-rows-2`,
+  `grid-template-areas: 
+    "exed skills"
+    "exed skills";
+  grid-template-columns: 2fr 1fr;`,
+  tw`lg:block`,
 ]
 
 const IndexRoute = (): JSX.Element => {
@@ -34,7 +41,7 @@ const IndexRoute = (): JSX.Element => {
       <div css={indexStyles()}>
         <Header />
         <Contact />
-        <main>
+        <main css={mainStyles()}>
           <Experience />
           <Education />
           <Skills />

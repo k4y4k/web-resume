@@ -29,7 +29,7 @@ export const ContactStyles = css`
 
   a,
   p {
-    ${tw`p-4 hover:bg-deeporange`}
+    ${tw`p-4 hover:bg-deeporange transition-all`}
   }
 `
 

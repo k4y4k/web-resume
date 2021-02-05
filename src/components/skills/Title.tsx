@@ -7,6 +7,7 @@ interface TitleTypes {
 
 const TitleStyles = css`
   ${tw`text-2xl uppercase`}
+  ${tw`print:(text-lg font-black)`}
 `
 
 const Title = ({ category }: TitleTypes): JSX.Element => {

@@ -44,6 +44,13 @@ ItemStyleTypes): Array<TwStyle | string | any> => [
 
   // don't have bottom border on last elemeent, even if it's odd
   currentIndex + 1 === collectionLength && tw`border-none`,
+
+  tw`print:(p-0 m-0 mx-6  py-3 border-0)`,
+]
+
+const itemBylineStyles = (): Array<TwStyle | string> => [
+  tw`my-1 italic`,
+  tw`print:m-0`,
 ]
 
 const ItemContainer = ({
@@ -76,7 +83,7 @@ const ItemContainer = ({
       css={itemContainerStyles({ currentIndex, collectionLength })}
     >
       <Title title={title ?? studyTitle} />
-      <div tw='my-1 italic'>
+      <div css={itemBylineStyles()}>
         <Subtitle subtitle={subtitle ?? institution} />
         <Seperator>|</Seperator>
         <Dates from={fromDate} to={toDate} />

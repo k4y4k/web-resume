@@ -5,7 +5,10 @@ interface ItemTitleTypes {
   title: string | undefined
 }
 
-const itemTitleStyles = (): Array<TwStyle | string> => [tw`text-2xl uppercase`]
+const itemTitleStyles = (): Array<TwStyle | string> => [
+  tw`text-2xl uppercase`,
+  tw`print:text-lg font-black`,
+]
 
 const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element => {
   if (title === '' || title === undefined)

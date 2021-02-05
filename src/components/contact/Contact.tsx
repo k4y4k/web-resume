@@ -25,11 +25,12 @@ interface PureContactTypes {
 
 export const ContactStyles = css`
   ${tw`flex flex-wrap text-white place-content-evenly`}
-  background-color: #3e1136;
+  background-color: #2b0e26;
 
   a,
   p {
     ${tw`p-4 hover:bg-deeporange transition-all`}
+    ${tw`print:p-2`}
   }
 `
 

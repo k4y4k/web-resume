@@ -1,5 +1,5 @@
-import 'twin.macro'
 import * as React from 'react'
+import tw, { TwStyle } from 'twin.macro'
 import ReactMarkdown from 'react-markdown'
 
 interface ItemDetailsTypes {
@@ -7,16 +7,18 @@ interface ItemDetailsTypes {
   details?: string
 }
 
+const detailsStyles = (): Array<TwStyle | string> => [tw`mt-2`]
+
 const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element => {
   if (details === '' || details === undefined)
     return (
-      <div data-testid='sectionItemDetails'>
+      <div css={detailsStyles()} data-testid='sectionItemDetails'>
         <ReactMarkdown>*this section intentionally left blank*</ReactMarkdown>
       </div>
     )
 
   return (
-    <div tw='mb-4' data-testid='sectionItemDetails'>
+    <div css={detailsStyles()} data-testid='sectionItemDetails'>
       <ReactMarkdown children={details} />
     </div>
   )

@@ -4,7 +4,7 @@ import Bucket from './Bucket'
 
 describe('<Bucket />', () => {
   test('displays nothing for no data', () => {
-    render(<Bucket />)
+    render(<Bucket skills={[]} />)
 
     const skills = screen.getByTestId('skillsBucket')
 

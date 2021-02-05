@@ -48,7 +48,13 @@ module.exports = {
         'monospace',
       ],
     },
-    extend: { colors: { deeporange: '#b53d27' } },
+    extend: {
+      colors: { deeporange: '#b53d27' },
+      screens: {
+        print: { raw: 'print' },
+        // => @media print { ... }
+      },
+    },
   },
   variants: {
     extend: {},

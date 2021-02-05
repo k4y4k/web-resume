@@ -8,7 +8,7 @@ interface SectionContainerTypes {
 }
 
 const sectionContainerStyles = (): Array<TwStyle | string> => [
-  tw`m-4 border border-black transition-all	`,
+  tw`m-4 border border-black transition-all `,
   tw`hover:bg-deeporange hover:bg-opacity-50 `,
   `&:hover {
 	box-shadow:
@@ -19,6 +19,7 @@ const sectionContainerStyles = (): Array<TwStyle | string> => [
 	  0 41.8px 33.4px rgba(181,61,39, 0.028),
 	  0 100px 80px rgba(181,61,39, 0.02);
 	}`,
+  tw`print:(m-0 mb-2 mx-1)`,
 ]
 
 const SectionContainer = ({

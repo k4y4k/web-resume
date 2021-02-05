@@ -7,6 +7,7 @@ interface SubtitleProps {
 
 const subtitleStyles = (): Array<TwStyle | string> => [
   tw`self-start p-2 bg-black`,
+  tw`print:self-center print:px-6`,
 ]
 
 const Subtitle = ({ subtitle = '' }: SubtitleProps): JSX.Element => {

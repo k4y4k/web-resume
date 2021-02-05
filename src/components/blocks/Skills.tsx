@@ -16,10 +16,9 @@ export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   return (
     <div data-testid='skills' css='grid-area:skills;'>
       <SectionContainer title='Skills'>
-        {skills.length > 0 &&
-          skills.map(el => (
-            <Composed key={el.name} heading={el.name} bucket={el.keywords} />
-          ))}
+        {skills?.map(el => (
+          <Composed key={el.name} heading={el.name} bucket={el.keywords} />
+        ))}
       </SectionContainer>
     </div>
   )

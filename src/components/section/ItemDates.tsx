@@ -1,5 +1,5 @@
-import 'twin.macro'
 import * as React from 'react'
+import tw, { TwStyle } from 'twin.macro'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import dayjs from 'dayjs'
 
@@ -8,10 +8,16 @@ interface ItemDatesTypes {
   from: string
 }
 
+const datesStyles = (): Array<TwStyle | string> => [
+  tw`inline-block`,
+  tw`print:text-sm`,
+]
+
 const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
   // no dates
   if (to === undefined || to === '')
-    if (from === undefined || from === '') return <p>Error: No Item Dates</p>
+    if (from === undefined || from === '')
+      return <p css={datesStyles()}>Error: No Item Dates</p>
 
   dayjs.extend(customParseFormat)
 
@@ -20,21 +26,22 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
 
   // dates not valid
   if (!fromDate.isValid() || (to !== undefined && !toDate.isValid()))
-    return <p>Error: Dates Not Valid</p>
+    return <p css={datesStyles()}>Error: Dates Not Valid</p>
 
   // to later than from
-  if (fromDate > toDate) return <p>Error: Dates Not Chronological</p>
+  if (fromDate > toDate)
+    return <p css={datesStyles()}>Error: Dates Not Chronological</p>
 
   // no to date / "to present"
   if (from !== undefined && to === undefined)
     return (
-      <p data-testid='sectionItemDates'>
+      <p css={datesStyles()} data-testid='sectionItemDates'>
         {fromDate.format('MMM YYYY')} - Present
       </p>
     )
 
   return (
-    <p tw='inline-block' data-testid='sectionItemDates'>
+    <p css={datesStyles()} data-testid='sectionItemDates'>
       {fromDate.format('MMM YYYY')} - {toDate.format('MMM YYYY')}
     </p>
   )

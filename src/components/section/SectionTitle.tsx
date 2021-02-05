@@ -7,6 +7,8 @@ interface SectionTitleTypes {
 
 const SectionTitleStyles = (): Array<TwStyle | string> => [
   tw`inline-block p-2 py-1 font-mono text-xl bg-black`,
+
+  tw`print:text-base`,
 ]
 
 const SectionTitle = ({ title }: SectionTitleTypes): JSX.Element => {

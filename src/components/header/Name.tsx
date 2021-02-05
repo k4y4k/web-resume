@@ -6,6 +6,7 @@ interface NameProps {
 }
 const NameStyles = css`
   ${tw`self-start p-2 mb-2 font-mono text-6xl font-black bg-black`}
+  ${tw`print:self-center print:px-6`}
 `
 
 const Name = ({ name }: NameProps): JSX.Element => {

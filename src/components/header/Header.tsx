@@ -1,6 +1,6 @@
-import 'twin.macro'
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import tw, { TwStyle } from 'twin.macro'
 import BackgroundImage from 'gatsby-background-image'
 import Name from './Name'
 import Subtitle from './Subtitle'
@@ -11,14 +11,19 @@ interface PureHeaderTypes {
   imageData: Record<string, unknown>
 }
 
+const headerStyles = (): Array<TwStyle | string> => [
+  tw`flex flex-col h-auto p-12 text-white uppercase`,
+  tw`print:p-2 print:content-center`,
+]
+
 export const PureHeader = ({
   name,
   subtitle,
   imageData,
 }: PureHeaderTypes): JSX.Element => (
   <BackgroundImage
+    css={headerStyles()}
     tag='header'
-    tw='text-white h-auto uppercase p-12 text-white flex flex-col'
     fluid={imageData}
     backgroundColor='#000000'
   >

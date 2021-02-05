@@ -1,4 +1,5 @@
 import * as React from 'react'
+import tw, { TwStyle } from 'twin.macro'
 import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
 
 interface AddressTypes {
@@ -9,6 +10,8 @@ interface AddressTypes {
   region: string
   restrictDisplay?: boolean
 }
+
+const addressStyles = (): TwStyle[] => [tw`cursor-default`]
 
 const Address = ({
   address = undefined,
@@ -27,7 +30,7 @@ const Address = ({
     city === undefined
   )
     return (
-      <div data-testid='address' id='address'>
+      <div css={addressStyles()} data-testid='address' id='address'>
         <p>Error: No Address</p>
       </div>
     )
@@ -35,7 +38,7 @@ const Address = ({
   // The Internet only needs the city / state
   if (restrictDisplay)
     return (
-      <div data-testid='address' id='address'>
+      <div css={addressStyles()} data-testid='address' id='address'>
         <p>
           <FiMapPin /> {city}, {region}, {countryCode}
         </p>
@@ -44,7 +47,7 @@ const Address = ({
 
   // pass restrictDisplay = false to render this
   return (
-    <div data-testid='address' id='address'>
+    <div css={addressStyles()} data-testid='address' id='address'>
       <p>{address}</p>
       <p>
         {city}, {region}

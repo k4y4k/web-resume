@@ -9,7 +9,11 @@ const LinkedIn = ({ username }: LinkedInTypes): JSX.Element => {
   if (username === '') return <p>Error: No LinkedIn</p>
 
   return (
-    <a href={`https://linkedin.com/in/${username}`} target='_blank'>
+    <a
+      rel='noreferrer'
+      href={`https://linkedin.com/in/${username}`}
+      target='_blank'
+    >
       <FiLinkedin /> {username}
     </a>
   )

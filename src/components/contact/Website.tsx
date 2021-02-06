@@ -11,7 +11,7 @@ const Website = ({ url }: WebsiteTypes): JSX.Element => {
   const stripped = url?.replace(/https?:\/\//i, '')
 
   return (
-    <a href={url} target='_blank'>
+    <a href={url} target='_blank' rel='noreferrer'>
       <FiGlobe /> {stripped}
     </a>
   )

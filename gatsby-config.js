@@ -7,6 +7,7 @@ module.exports = {
     title: "kayak's resume",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -43,12 +44,19 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: 'src/images/icon.png',
+        name: 'Resume | <kayak />',
+        short_name: 'Resume',
+        start_url: '/',
+        background_color: '#542344',
+        theme_color: '#542344',
+        display: 'standalone',
+        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        crossOrigin: `use-credentials`,
       },
     },
+    'gatsby-plugin-offline',
   ],
 }

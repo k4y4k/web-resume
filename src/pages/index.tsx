@@ -4,6 +4,7 @@
 import * as React from 'react'
 import tw, { GlobalStyles, TwStyle } from 'twin.macro'
 import { IconContext } from '@react-icons/all-files/lib'
+import { Helmet } from 'react-helmet'
 import Contact from '../components/contact/Contact'
 import Education from '../components/blocks/Education'
 import Experience from '../components/blocks/Experience'
@@ -21,7 +22,7 @@ const indexStyles = (): Array<TwStyle | string> => [
 const mainStyles = (): Array<TwStyle | string> => [
   'width: 75vw;',
   '@media (max-width: 1023px) { width: 90vw; }',
-  tw`py-4 grid mx-auto lg:block`,
+  tw`py-4 mx-auto grid lg:block`,
   `grid-template-areas: 
     "exed skills"
     "exed skills";
@@ -48,6 +49,14 @@ const IndexRoute = (): JSX.Element => {
         },
       }}
     >
+      <Helmet defer={false}>
+        <html lang='en' />
+        <meta charSet='utf-8' />
+        <title>{'Resume | <kayak />'}</title>
+        <meta name='description' content='Online resume for me, kayak.' />
+        <meta property='og:type' content='article' />{' '}
+        <link rel='canonical' href='https://kayak.rocks/web-resume' />
+      </Helmet>
       <GlobalStyles />
       <div css={indexStyles()}>
         <Header />

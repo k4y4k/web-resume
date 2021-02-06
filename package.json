@@ -15,7 +15,7 @@
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build-all": "gatsby build && build-storybook -o public/storybook",
+    "build-all": "gatsby build --prefix-paths && build-storybook -o public/storybook",
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "check-types": "tsc --noEmit --skipLibCheck",
     "lint": "yarn eslint --ignore-path .gitignore src/",

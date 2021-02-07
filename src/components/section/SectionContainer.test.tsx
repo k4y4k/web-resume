@@ -13,7 +13,7 @@ describe('<SectionContainer />', () => {
         subtitle=''
         fromDate=''
         toDate=''
-        details=''
+        summary=''
       />
     )
     render(<SectionContainer children={Item} title='Reason #8: Regret' />)

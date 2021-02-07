@@ -12,7 +12,7 @@ interface ItemContainerTypes {
   subtitle?: string
   fromDate: string
   toDate?: string
-  details?: string
+  summary?: string
 
   // education
   institution?: string
@@ -38,13 +38,10 @@ const itemContainerStyles = ({
 }: // eslint-disable-next-line
 ItemStyleTypes): Array<TwStyle | string | any> => [
   tw`flex flex-col p-6 m-6 my-0 bg-opacity-75`,
-
   // borders between elements
   tw`border-b border-black`,
-
   // don't have bottom border on last elemeent, even if it's odd
   currentIndex + 1 === collectionLength && tw`border-none`,
-
   tw`print:(p-0 m-0 mx-6  py-3 border-0)`,
 ]
 
@@ -58,7 +55,7 @@ const ItemContainer = ({
   subtitle,
   fromDate,
   toDate,
-  details,
+  summary,
   institution,
   area,
   studyType,
@@ -88,7 +85,7 @@ const ItemContainer = ({
         <Seperator>|</Seperator>
         <Dates from={fromDate} to={toDate} />
       </div>
-      <Details details={details ?? studyDetails} />
+      <Details details={summary ?? studyDetails} />
     </div>
   )
 }

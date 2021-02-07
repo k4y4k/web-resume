@@ -11,7 +11,7 @@ describe('<ItemContainer />', () => {
         title=''
         subtitle=''
         fromDate=''
-        details=''
+        summary=''
       />
     )
 

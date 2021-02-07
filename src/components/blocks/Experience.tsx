@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import dayjs from 'dayjs'
 import ItemContainer from '../section/ItemContainer'
 import SectionContainer from '../section/SectionContainer'
 
@@ -10,6 +11,7 @@ interface ExperienceItem {
   position: string
   startDate: string
   summary: string
+  organization?: string
 }
 
 interface two {
@@ -26,11 +28,11 @@ export const PureExperience = ({ history }: two): JSX.Element => {
               collectionLength={history.length}
               currentIndex={i}
               key={i}
-              details={el.summary}
+              summary={el.summary}
               fromDate={el.startDate}
               toDate={el.endDate}
               title={el.position}
-              subtitle={el.company}
+              subtitle={el.company ?? el.organization}
             />
           )
         })}
@@ -46,10 +48,17 @@ const Experience = (): JSX.Element => {
         id
         childDataJson {
           work {
-            company
-            endDate
-            position
             startDate
+            endDate
+            company
+            position
+            summary
+          }
+          volunteer {
+            startDate
+            endDate
+            organization
+            position
             summary
           }
         }
@@ -57,9 +66,13 @@ const Experience = (): JSX.Element => {
     }
   `)
 
-  const { work } = data?.file.childDataJson
+  const { work, volunteer } = data?.file.childDataJson
 
-  return <PureExperience history={work} />
+  const aggregated = [...work, ...volunteer].sort((a, b) =>
+    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1
+  )
+
+  return <PureExperience history={aggregated} />
 }
 
 export default Experience

@@ -40,7 +40,7 @@ const Address = ({
     return (
       <div css={addressStyles()} data-testid='address' id='address'>
         <p>
-          <FiMapPin /> {city}, {region}, {countryCode}
+          <FiMapPin /> {city}, {region + ','} {countryCode}
         </p>
       </div>
     )

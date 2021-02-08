@@ -52,11 +52,21 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
     fromDate.isSame(`${fromDateYear}-01-01`, 'day') ||
     toDate.isSame(`${toDateYear}-01-01`, 'day')
   )
-    return (
-      <p css={datesStyles()} data-testid='sectionItemDates'>
-        {fromDate.format('YYYY')} - {toDate.format('YYYY')}
-      </p>
-    )
+    if (fromDate.isSame(toDate, 'year'))
+      // have two 20XX "just years" dates. Now, are they the same year?
+      return (
+        // yes
+        <p css={datesStyles()} data-testid='sectionItemDates'>
+          {fromDate.format('YYYY')}
+        </p>
+      )
+    else
+      return (
+        // no
+        <p css={datesStyles()} data-testid='sectionItemDates'>
+          {fromDate.format('YYYY')} - {toDate.format('YYYY')}
+        </p>
+      )
 
   // same date (one day event?)
   if (fromDate.isSame(toDate, 'day'))

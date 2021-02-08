@@ -58,6 +58,14 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
       </p>
     )
 
+  // same date (one day event?)
+  if (fromDate.isSame(toDate, 'day'))
+    return (
+      <p css={datesStyles()} data-testid='sectionItemDates'>
+        {toDate.format('MMM YYYY')}
+      </p>
+    )
+
   return (
     <p css={datesStyles()} data-testid='sectionItemDates'>
       {fromDate.format('MMM YYYY')} - {toDate.format('MMM YYYY')}

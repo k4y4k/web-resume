@@ -49,7 +49,7 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
 
   // check for sameness
   if (
-    fromDate.isSame(`${fromDateYear}-01-01`, 'day') ||
+    fromDate.isSame(`${fromDateYear}-01-01`, 'day') &&
     toDate.isSame(`${toDateYear}-01-01`, 'day')
   )
     if (fromDate.isSame(toDate, 'year'))

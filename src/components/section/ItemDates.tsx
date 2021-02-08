@@ -21,8 +21,8 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
 
   dayjs.extend(customParseFormat)
 
-  const toDate = dayjs(to, ['YYYY-MM-DD', 'YYYY-MM'], true)
-  const fromDate = dayjs(from, ['YYYY-MM-DD', 'YYYY-MM'], true)
+  const toDate = dayjs(to, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)
+  const fromDate = dayjs(from, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)
 
   // dates not valid
   if (!fromDate.isValid() || (to !== undefined && !toDate.isValid()))
@@ -37,6 +37,24 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
     return (
       <p css={datesStyles()} data-testid='sectionItemDates'>
         {fromDate.format('MMM YYYY')} - Present
+      </p>
+    )
+
+  // just years
+  // we assume that anything set to Jan 01 20XX just wants 20XX
+
+  // get 20XX
+  const fromDateYear = fromDate.get('year')
+  const toDateYear = toDate.get('year')
+
+  // check for sameness
+  if (
+    fromDate.isSame(`${fromDateYear}-01-01`, 'day') ||
+    toDate.isSame(`${toDateYear}-01-01`, 'day')
+  )
+    return (
+      <p css={datesStyles()} data-testid='sectionItemDates'>
+        {fromDate.format('YYYY')} - {toDate.format('YYYY')}
       </p>
     )
 

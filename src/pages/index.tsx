@@ -37,7 +37,14 @@ const mainStyles = (): Array<TwStyle | string> => [
    }`,
 ]
 
+const showImageAttribution = (): void =>
+  console.log(
+    'Photo by Paweł Czerwiński on Unsplash (https://unsplash.com/photos/arwTpnIUHdM?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink)'
+  )
+
 const IndexRoute = (): JSX.Element => {
+  showImageAttribution()
+
   return (
     <IconContext.Provider
       value={{
@@ -53,9 +60,9 @@ const IndexRoute = (): JSX.Element => {
         <html lang='en' />
         <meta charSet='utf-8' />
         <title>{'Resume | <kayak />'}</title>
-        <meta name='description' content='Online resume for me, kayak.' />
-        <meta property='og:type' content='article' />{' '}
+        <meta name='description' content='Online resume.' />
         <link rel='canonical' href='https://kayak.rocks/web-resume' />
+        <meta property='og:type' content='website' />
       </Helmet>
       <GlobalStyles />
       <div css={indexStyles()}>

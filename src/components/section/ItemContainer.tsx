@@ -67,11 +67,17 @@ const ItemContainer = ({
   let studyDetails = ''
 
   if (studyType !== undefined && area !== undefined) {
-    studyTitle = `${studyType} of ${area}`
-  }
+    // area and type
+    if (studyType !== '' && area !== '') {
+      studyTitle = `${studyType} of ${area}`
+    }
 
-  if (courses !== undefined) {
-    studyDetails = transformArrayToBulletPoints(courses)
+    // area but no type (e.g. online cert)
+    if (studyType === '' && area !== '') studyTitle = area
+
+    if (courses !== undefined) {
+      studyDetails = transformArrayToBulletPoints(courses)
+    }
   }
 
   return (

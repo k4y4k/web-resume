@@ -9,7 +9,7 @@ interface ComposedTypes {
 }
 
 const skillsStyles = (): Array<TwStyle | string> => [
-  tw`p-4 mx-6 mb-4`,
+  tw`p-6 mx-6 mb-4`,
   tw` print:(p-0 m-0 mx-6 py-3)`,
 ]
 

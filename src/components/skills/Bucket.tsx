@@ -6,7 +6,7 @@ interface BucketTypes {
 }
 
 const bucketStyles = (): Array<TwStyle | string> => [
-  tw`p-1 m-1 whitespace-nowrap`,
+  tw`p-1 m-1`,
   tw`print:(p-0 m-0 mt-1)`,
 ]
 

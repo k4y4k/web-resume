@@ -25,6 +25,6 @@ describe('<ItemContainer />', () => {
     expect(dates).toBeInTheDocument()
 
     const details = screen.getByTestId('sectionItemDetails')
-    expect(details).toHaveTextContent('this section intentionally left blank')
+    expect(details).not.toHaveTextContent(/\w/g)
   })
 })

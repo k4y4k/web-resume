@@ -7,7 +7,7 @@ describe('<ItemDetails />', () => {
     render(<ItemDetails details='' />)
 
     const details = screen.getByTestId('sectionItemDetails')
-    expect(details).toHaveTextContent('this section intentionally left blank')
+    expect(details).not.toHaveTextContent(/\w/i)
   })
 
   test('renders markdown', () => {

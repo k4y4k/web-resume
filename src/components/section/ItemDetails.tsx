@@ -7,15 +7,14 @@ interface ItemDetailsTypes {
   details?: string
 }
 
-const detailsStyles = (): Array<TwStyle | string> => [tw`mt-2`]
+const detailsStyles = (): Array<TwStyle | string> => [
+  tw`mt-2`,
+  'li {list-style-type: circle; list-style-position: inside;}',
+]
 
 const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element => {
   if (details === '' || details === undefined)
-    return (
-      <div css={detailsStyles()} data-testid='sectionItemDetails'>
-        <ReactMarkdown>*this section intentionally left blank*</ReactMarkdown>
-      </div>
-    )
+    return <div css={detailsStyles()} data-testid='sectionItemDetails'></div>
 
   return (
     <div css={detailsStyles()} data-testid='sectionItemDetails'>

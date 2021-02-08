@@ -60,21 +60,6 @@ steps:
     commands:
       - yarn build-all
 
-  - name: publish-site
-    failure: ignore
-    image: plugins/gh-pages
-    settings:
-      pages_directory: public/
-      username:
-        from_secret: github_token
-      password: x-oauth-basic
-    when:
-      branch:
-        - main
-      event:
-        exclude:
-          - pull-request
-
   - name: rebuild-cache
     image: drillster/drone-volume-cache
     volumes:

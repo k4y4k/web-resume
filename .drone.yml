@@ -29,6 +29,16 @@ steps:
     commands:
       - yarn
 
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    volumes:
+      - name: cache
+        path: /cache
+    settings:
+      rebuild: true
+      mount:
+        - ./node_modules
+
   - name: download
     image: plugins/download
     settings:
@@ -60,15 +70,6 @@ steps:
     commands:
       - yarn build-all
 
-  - name: rebuild-cache
-    image: drillster/drone-volume-cache
-    volumes:
-      - name: cache
-        path: /cache
-    settings:
-      rebuild: true
-      mount:
-        - ./node_modules
 
 volumes:
   - name: cache

@@ -39,16 +39,6 @@ steps:
       mount:
         - ./node_modules
 
-  - name: download
-    image: plugins/download
-    settings:
-      username:
-        from_secret: github_token
-      password: x-oauth-basic
-      source:
-        from_secret: data-url
-      destination: src/data/data.json
-
   - name: test
     image: node
     commands:

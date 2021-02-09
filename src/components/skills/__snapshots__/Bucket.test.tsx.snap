@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Bucket /> alphabetises input 1`] = `
+.c0 {
+  padding: 0.25rem;
+  margin: 0.25rem;
+}
+
+.c1 {
+  padding: 0.5rem;
+}
+
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 0.25rem;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="skillsBucket"
+>
+  <span
+    class="c1"
+  >
+    A Minimal Caffeine Dependency 
+  </span>
+  <span
+    class="c1"
+  >
+    JavaScript 
+  </span>
+  <span
+    class="c1"
+  >
+    React 
+  </span>
+</div>
+`;
+
+exports[`<Bucket /> displays nothing for no data 1`] = `null`;

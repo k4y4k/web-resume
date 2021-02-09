@@ -4,11 +4,12 @@ import Bucket from './Bucket'
 
 describe('<Bucket />', () => {
   test('displays nothing for no data', () => {
-    render(<Bucket skills={[]} />)
+    render(<Bucket skills={['']} />)
 
-    const skills = screen.getByTestId('skillsBucket')
+    const skills = screen.queryByTestId('skillsBucket')
 
-    expect(skills).toHaveTextContent('')
+    expect(skills).not.toBeInTheDocument()
+    expect(skills).toMatchSnapshot()
   })
 
   test('alphabetises input', () => {
@@ -22,5 +23,6 @@ describe('<Bucket />', () => {
     expect(skills).toHaveTextContent(
       'A Minimal Caffeine Dependency JavaScript React'
     )
+    expect(skills).toMatchSnapshot()
   })
 })

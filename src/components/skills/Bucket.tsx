@@ -12,9 +12,8 @@ const bucketStyles = (): Array<TwStyle | string> => [
 
 const bucketItemStyles = (): Array<TwStyle | string> => [tw`p-2`]
 
-const Bucket = ({ skills }: BucketTypes): JSX.Element => {
-  if (skills === undefined)
-    return <div css={bucketStyles()} data-testid='skillsBucket'></div>
+const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
+  if (skills.length === 1 && skills[0] === '') return null
 
   const res = skills.sort((a, b) => a.localeCompare(b))
 

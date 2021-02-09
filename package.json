@@ -85,7 +85,8 @@
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
-    "*.{js,ts,jsx,tsx,md,json,css}": "prettier --write"
+    "*.{js,ts,jsx,tsx,md,json,css}": "prettier --write",
+    "*.{ts,tsx}": "tsc --noEmit --skipLibCheck"
   },
   "babelMacros": {
     "twin": {

@@ -5,15 +5,17 @@ import Subtitle from './Subtitle'
 describe('<Subtitle />', () => {
   test('Handles not having data', () => {
     render(<Subtitle subtitle='' />)
-    const subtitle = screen.getByText('Error: No Subtitle')
+    const subtitle = screen.queryByTestId('headerSubtitle')
 
-    expect(subtitle).not.toBeFalsy()
+    expect(subtitle).not.toBeInTheDocument()
+    expect(subtitle).toMatchSnapshot()
   })
 
   test('Displays subtitle', () => {
     render(<Subtitle subtitle='lead singer of kayak and the kayaks' />)
-    const subtitle = screen.getByText('lead singer of kayak and the kayaks')
+    const subtitle = screen.getByTestId('headerSubtitle')
 
-    expect(subtitle).not.toBeFalsy()
+    expect(subtitle).toHaveTextContent('lead singer of kayak and the kayaks')
+    expect(subtitle).toMatchSnapshot()
   })
 })

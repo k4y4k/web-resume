@@ -10,10 +10,14 @@ const subtitleStyles = (): Array<TwStyle | string> => [
   tw`print:self-center print:px-6`,
 ]
 
-const Subtitle = ({ subtitle = '' }: SubtitleProps): JSX.Element => {
-  if (subtitle === '') return <h2 css={subtitleStyles()}>Error: No Subtitle</h2>
+const Subtitle = ({ subtitle }: SubtitleProps): JSX.Element | null => {
+  if (subtitle === '') return null
 
-  return <h2 css={subtitleStyles()}>{subtitle}</h2>
+  return (
+    <h2 data-testid='headerSubtitle' css={subtitleStyles()}>
+      {subtitle}
+    </h2>
+  )
 }
 
 export default Subtitle

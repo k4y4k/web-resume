@@ -6,8 +6,7 @@ interface ItemSubtitleTypes {
 }
 
 const ItemSubtitle = ({ subtitle }: ItemSubtitleTypes): JSX.Element => {
-  if (subtitle === '' ?? subtitle === undefined)
-    return <span>Error: No Item Subtitle</span>
+  if (subtitle === '') return <span>Error: No Item Subtitle</span>
 
   return <span tw='inline-block'>{subtitle}</span>
 }

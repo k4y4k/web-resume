@@ -42,8 +42,6 @@ describe('<ItemContainer />', () => {
       />
     )
 
-    screen.debug()
-
     const title = screen.getByText('Bachelor of Software Development')
     expect(title).toBeInTheDocument()
 

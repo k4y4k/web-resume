@@ -1,10 +1,26 @@
 import * as React from 'react'
+import { PureSkills, Skills } from './Skills'
 import { render, screen } from '@testing-library/react'
-import { PureSkills as Skills } from './Skills'
+import { useStaticQuery } from 'gatsby'
 
 describe('<Skills />', () => {
+  beforeAll(() =>
+    (useStaticQuery as jest.Mock).mockReturnValue({
+      file: {
+        childDataJson: {
+          skills: [
+            {
+              name: 'Web Development',
+              keywords: ['HTML', 'CSS', 'Javascript'],
+            },
+          ],
+        },
+      },
+    })
+  )
+
   test('bails out on no data', () => {
-    render(<Skills skills={[]} />)
+    render(<PureSkills skills={[]} />)
 
     // still want the title
     expect(screen.getByTestId('skills')).toBeInTheDocument()
@@ -21,10 +37,16 @@ describe('<Skills />', () => {
       },
     ]
 
-    render(<Skills skills={data} />)
+    render(<PureSkills skills={data} />)
 
     const skillsList = screen.getAllByTestId('skills')
 
     expect(skillsList.length).toBe(1)
+  })
+
+  test('Skills renders OK', () => {
+    render(<Skills />)
+
+    expect(screen.queryByTestId('skills')).toMatchSnapshot()
   })
 })

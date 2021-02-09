@@ -24,7 +24,7 @@ export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   )
 }
 
-const Skills = (): JSX.Element => {
+export const Skills = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

@@ -15,6 +15,7 @@
     "./.eslintrc.js",
     "./gatsby-config.js",
     "./tailwind.config.js",
-    "./setup-test-env.js"
+    "./setup-test-env.js",
+    "./__mocks__/gatsby.js"
   ]
 }

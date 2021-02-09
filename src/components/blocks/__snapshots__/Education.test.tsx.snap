@@ -338,6 +338,28 @@ exports[`<Education /> no course details? 1`] = `
           2013
         </p>
       </div>
+      <div
+        css="
+  ,margin-top: 0.5rem;,
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+"
+        data-testid="sectionItemDetails"
+      >
+        <ul>
+          <li>
+            Awesome Class
+          </li>
+          <li>
+            Boring Unit
+          </li>
+          <li>
+            Interesting Extracurricular
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

@@ -63,7 +63,11 @@ describe('<Education />', () => {
         studyType: '',
         startDate: '2011-01-01',
         endDate: '2013-01-01',
-        gpa: '4.0',
+        courses: [
+          'Awesome Class',
+          'Boring Unit',
+          'Interesting Extracurricular',
+        ],
       },
     ]
 

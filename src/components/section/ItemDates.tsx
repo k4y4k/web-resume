@@ -13,24 +13,16 @@ const datesStyles = (): Array<TwStyle | string> => [
   tw`print:text-sm`,
 ]
 
-const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
-  // no dates
-  if (to === undefined || to === '')
-    if (from === undefined || from === '')
-      return <p css={datesStyles()}>Error: No Item Dates</p>
+const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
+  if (from === '') return null
 
   dayjs.extend(customParseFormat)
 
   const toDate = dayjs(to, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)
   const fromDate = dayjs(from, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)
 
-  // dates not valid
-  if (!fromDate.isValid() || (to !== undefined && !toDate.isValid()))
-    return <p css={datesStyles()}>Error: Dates Not Valid</p>
-
-  // to later than from
-  if (fromDate > toDate)
-    return <p css={datesStyles()}>Error: Dates Not Chronological</p>
+  const isFromDateValid = fromDate.isValid()
+  const isToDateValid = toDate.isValid()
 
   // no to date / "to present"
   if (from !== undefined && to === undefined)
@@ -40,10 +32,26 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element => {
       </p>
     )
 
+  // dates not valid / supplied to date invalid
+  if (!isFromDateValid || !isToDateValid)
+    return (
+      <p data-testid='sectionItemDates' css={datesStyles()}>
+        Error: Dates Not Valid
+      </p>
+    )
+
+  // to later than from
+  if (fromDate > toDate)
+    return (
+      <p data-testid='sectionItemDates' css={datesStyles()}>
+        Error: Dates Not Chronological
+      </p>
+    )
+
   // just years
   // we assume that anything set to Jan 01 20XX just wants 20XX
 
-  // get 20XX
+  // // get 20XX
   const fromDateYear = fromDate.get('year')
   const toDateYear = toDate.get('year')
 

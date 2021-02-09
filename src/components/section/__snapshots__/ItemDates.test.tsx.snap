@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemDates /> dates must make chronological sense 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  Error: Dates Not Chronological
+</p>
+`;
+
+exports[`<ItemDates /> handles badly formatted dates 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  Error: Dates Not Valid
+</p>
+`;
+
+exports[`<ItemDates /> handles no dates 1`] = `null`;
+
+exports[`<ItemDates /> month, year date expressed as Month, Year 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  Oct 2020
+   - 
+  Jul 2021
+</p>
+`;
+
+exports[`<ItemDates /> same dates: just one year 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  1999
+</p>
+`;
+
+exports[`<ItemDates /> same dates: years 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  2012
+   - 
+  2013
+</p>
+`;
+
+exports[`<ItemDates /> start date -> end date 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  Jan 1970
+   - 
+  Jan 2021
+</p>
+`;
+
+exports[`<ItemDates /> start date -> present (no end date) 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+@media print {
+  .c0 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+<p
+  class="c0"
+  data-testid="sectionItemDates"
+>
+  May 2012
+   - Present
+</p>
+`;

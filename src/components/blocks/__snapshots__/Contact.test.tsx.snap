@@ -152,7 +152,9 @@ exports[`<Contact /> renders OK 1`] = `
     john@gmail.com
   </a>
   <div
-    css="cursor: default;"
+    css="
+  ,cursor: default;,
+"
     data-testid="address"
     id="address"
   >

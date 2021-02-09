@@ -83,7 +83,7 @@ const ItemContainer = ({
       css={itemContainerStyles({ currentIndex, collectionLength })}
     >
       <Title title={title ?? studyTitle} />
-      <div css={itemBylineStyles()}>
+      <div data-testid='byline' css={itemBylineStyles()}>
         <Subtitle subtitle={subtitle ?? institution} />
         <Seperator>|</Seperator>
         <Dates from={fromDate} to={toDate} />

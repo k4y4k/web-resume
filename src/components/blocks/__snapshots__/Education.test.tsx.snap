@@ -155,12 +155,13 @@ exports[`<Education /> handles times where you don't have a 'type' (e.g. online 
       </h1>
       <div
         class="c2"
+        data-testid="byline"
       >
-        <h2
+        <span
           class="c3"
         >
           University
-        </h2>
+        </span>
         <div
           class="c4"
         >
@@ -316,12 +317,13 @@ exports[`<Education /> no course details? 1`] = `
       </h1>
       <div
         class="c2"
+        data-testid="byline"
       >
-        <h2
+        <span
           class="c3"
         >
           University
-        </h2>
+        </span>
         <div
           class="c4"
         >
@@ -461,12 +463,13 @@ exports[`<Education /> renders array of >=1 Education items 1`] = `
       </h1>
       <div
         class="c2"
+        data-testid="byline"
       >
-        <h2
+        <span
           class="c3"
         >
           University
-        </h2>
+        </span>
         <div
           class="c4"
         >

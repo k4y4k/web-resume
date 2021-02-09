@@ -40,7 +40,7 @@ export const PureEducation = ({ history }: two): JSX.Element => {
   )
 }
 
-const Education = (): JSX.Element => {
+export const Education = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

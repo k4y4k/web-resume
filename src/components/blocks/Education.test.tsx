@@ -9,7 +9,9 @@ describe('<Education />', () => {
     // still want the title
     expect(screen.getByTestId('education')).toBeInTheDocument()
 
+    // if there's no data, we shouldn't see <ItemContainer /> render
     expect(screen.queryByTestId('sectionItemContainer')).not.toBeInTheDocument()
+    expect(screen.getByTestId('education')).toMatchSnapshot()
   })
 
   test('renders array of >=1 Education items', () => {
@@ -25,10 +27,11 @@ describe('<Education />', () => {
       },
     ]
 
-    render(<Education history={data} />)
+    const { container } = render(<Education history={data} />)
 
-    const EducationList = screen.getAllByTestId('education')
+    const EducationList = screen.getByTestId('education')
 
-    expect(EducationList.length).toBe(1)
+    expect(EducationList).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

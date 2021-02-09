@@ -1,11 +1,37 @@
 import * as React from 'react'
+import { Contact, PureContact } from './Contact'
 import { render, screen, within } from '@testing-library/react'
-import { PureContact as Contact } from './Contact'
+
+import { useStaticQuery } from 'gatsby'
 
 describe('<Contact />', () => {
+  beforeAll(() =>
+    (useStaticQuery as jest.Mock).mockReturnValue({
+      file: {
+        childDataJson: {
+          basics: {
+            email: 'john@gmail.com',
+            website: 'http://johndoe.com',
+            location: {
+              city: 'San Francisco',
+              region: 'California',
+              countryCode: 'US',
+            },
+            profiles: [
+              {
+                network: 'Twitter',
+                username: 'john',
+              },
+            ],
+          },
+        },
+      },
+    })
+  )
+
   test('handles no data', () => {
     render(
-      <Contact
+      <PureContact
         address=''
         email=''
         website=''
@@ -30,7 +56,7 @@ describe('<Contact />', () => {
   describe('composes all other elements', () => {
     test('email', () => {
       render(
-        <Contact
+        <PureContact
           email='kayak@example.com'
           address=''
           twitter=''
@@ -51,7 +77,7 @@ describe('<Contact />', () => {
 
     test('twitter', () => {
       render(
-        <Contact
+        <PureContact
           address=''
           email=''
           github=''
@@ -72,7 +98,7 @@ describe('<Contact />', () => {
 
     test('github', () => {
       render(
-        <Contact
+        <PureContact
           address=''
           email=''
           twitter=''
@@ -94,7 +120,7 @@ describe('<Contact />', () => {
 
     test('website', () => {
       render(
-        <Contact
+        <PureContact
           address=''
           email=''
           twitter=''
@@ -115,7 +141,7 @@ describe('<Contact />', () => {
 
     test('address', () => {
       render(
-        <Contact
+        <PureContact
           email=''
           twitter=''
           website=''
@@ -138,7 +164,7 @@ describe('<Contact />', () => {
 
     test('linkedin', () => {
       render(
-        <Contact
+        <PureContact
           address=''
           email=''
           website=''
@@ -164,7 +190,7 @@ describe('<Contact />', () => {
 
   test('Hides things appropriately by default', () => {
     render(
-      <Contact
+      <PureContact
         email='kayak@example.com'
         twitter='kayakSinger1'
         github='octocat'
@@ -181,5 +207,11 @@ describe('<Contact />', () => {
     const address = screen.getByTestId('address')
     expect(address).toHaveTextContent('Example City, California')
     expect(address).not.toHaveTextContent('2712')
+  })
+
+  test('renders OK', () => {
+    render(<Contact />)
+
+    expect(screen.getByTestId('contact')).toMatchSnapshot()
   })
 })

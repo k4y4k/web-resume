@@ -62,7 +62,7 @@ export const PureContact = ({
   )
 }
 
-const Contact = (): JSX.Element => {
+export const Contact = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "json" }, name: { eq: "data" }) {

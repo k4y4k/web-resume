@@ -26,6 +26,46 @@ describe('<Education />', () => {
         courses: ['DB1101 - Basic SQL'],
       },
     ]
+    const { container } = render(<Education history={data} />)
+
+    const EducationList = screen.getByTestId('education')
+
+    expect(EducationList).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  test("handles times where you don't have a 'type' (e.g. online courses)", () => {
+    const data = [
+      {
+        institution: 'University',
+        area: 'Software Development',
+        studyType: '',
+        startDate: '2011-01-01',
+        endDate: '2013-01-01',
+        gpa: '4.0',
+        courses: ['DB1101 - Basic SQL'],
+      },
+    ]
+
+    const { container } = render(<Education history={data} />)
+
+    const EducationList = screen.getByTestId('education')
+
+    expect(EducationList).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  test('no course details?', () => {
+    const data = [
+      {
+        institution: 'University',
+        area: 'Software Development',
+        studyType: '',
+        startDate: '2011-01-01',
+        endDate: '2013-01-01',
+        gpa: '4.0',
+      },
+    ]
 
     const { container } = render(<Education history={data} />)
 

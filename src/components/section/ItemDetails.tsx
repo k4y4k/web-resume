@@ -1,5 +1,5 @@
 import * as React from 'react'
-import tw, { TwStyle } from 'twin.macro'
+import tw, { css } from 'twin.macro'
 import ReactMarkdown from 'react-markdown'
 
 interface ItemDetailsTypes {
@@ -7,17 +7,19 @@ interface ItemDetailsTypes {
   details?: string
 }
 
-const detailsStyles = (): Array<TwStyle | string> => [
-  tw`mt-2`,
-  'li {list-style-type: circle; list-style-position: inside;}',
-]
+const detailsStyles = css`
+  ${tw`mt-2`}
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+`
 
-const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element => {
-  if (details === '' || details === undefined)
-    return <div css={detailsStyles()} data-testid='sectionItemDetails'></div>
+const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element | null => {
+  if (details === '' || details === undefined) return null
 
   return (
-    <div css={detailsStyles()} data-testid='sectionItemDetails'>
+    <div css={detailsStyles} data-testid='sectionItemDetails'>
       <ReactMarkdown children={details} />
     </div>
   )

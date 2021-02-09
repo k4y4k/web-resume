@@ -3,19 +3,15 @@ import { render, screen } from '@testing-library/react'
 import ItemDetails from './ItemDetails'
 
 describe('<ItemDetails />', () => {
-  test('no data', () => {
+  test('no data = no details section', () => {
     render(<ItemDetails details='' />)
 
-    const details = screen.getByTestId('sectionItemDetails')
-    expect(details).not.toHaveTextContent(/\w/i)
+    const details = screen.queryByTestId('sectionItemDetails')
+    expect(details).not.toBeInTheDocument()
   })
 
   test('renders markdown', () => {
-    const string = `
-- a
-- b
-- c
-`
+    const string = '- a\n- b\n- c'
 
     render(<ItemDetails details={string} />)
 
@@ -23,5 +19,6 @@ describe('<ItemDetails />', () => {
     expect(details).toBeInTheDocument()
 
     expect(details).toHaveTextContent('abc')
+    expect(details).toMatchSnapshot()
   })
 })

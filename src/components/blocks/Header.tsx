@@ -2,8 +2,8 @@ import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import tw, { TwStyle } from 'twin.macro'
 import BackgroundImage from 'gatsby-background-image'
-import Name from './Name'
-import Subtitle from './Subtitle'
+import Name from '../header/Name'
+import Subtitle from '../header/Subtitle'
 
 interface PureHeaderTypes {
   name: string

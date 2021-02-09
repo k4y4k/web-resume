@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet'
 import Contact from '../components/contact/Contact'
 import Education from '../components/blocks/Education'
 import Experience from '../components/blocks/Experience'
-import Header from '../components/header/Header'
+import Header from '../components/blocks/Header'
 import Skills from '../components/blocks/Skills'
 
 const indexStyles = (): Array<TwStyle | string> => [

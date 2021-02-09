@@ -1,10 +1,45 @@
 import * as React from 'react'
+import { Experience, PureExperience } from './Experience'
 import { render, screen } from '@testing-library/react'
-import { PureExperience as Experience } from './Experience'
+import { useStaticQuery } from 'gatsby'
 
 describe('<Experience />', () => {
+  beforeAll(() =>
+    (useStaticQuery as jest.Mock).mockReturnValue({
+      file: {
+        childDataJson: {
+          work: [
+            {
+              startDate: '2013-01-01',
+              endDate: '2014-01-01',
+              company: 'Company',
+              position: 'President',
+              summary: 'Description...',
+            },
+          ],
+          volunteer: [
+            {
+              startDate: '2012-01-01',
+              endDate: '2013-01-01',
+              organization: 'Organization',
+              position: 'Volunteer',
+              summary: 'Description...',
+            },
+            {
+              startDate: '2016-03-07',
+              endDate: '2017-02-06',
+              organization: 'Organization',
+              position: 'Volunteer',
+              summary: 'Description...',
+            },
+          ],
+        },
+      },
+    })
+  )
+
   test('bails out on no data', () => {
-    render(<Experience history={[]} />)
+    render(<PureExperience history={[]} />)
 
     // still want the title
     expect(screen.getByTestId('experience')).toBeInTheDocument()
@@ -25,10 +60,16 @@ describe('<Experience />', () => {
       },
     ]
 
-    render(<Experience history={data} />)
+    render(<PureExperience history={data} />)
 
     const experienceList = screen.getAllByTestId('experience')
 
     expect(experienceList.length).toBe(1)
+  })
+
+  test('renders OK', () => {
+    render(<Experience />)
+
+    expect(screen.getByTestId('experience')).toMatchSnapshot()
   })
 })

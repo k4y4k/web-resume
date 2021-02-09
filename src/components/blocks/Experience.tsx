@@ -41,7 +41,7 @@ export const PureExperience = ({ history }: two): JSX.Element => {
   )
 }
 
-const Experience = (): JSX.Element => {
+export const Experience = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> displays header 1`] = `
+.c0 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 900;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
+.c1 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
+@media print {
+  .c0 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media print {
+  .c1 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+<div
+  class="gbi-2113735767-73WakrfVbNJBaAmhQtEeDv"
+  data-testid="header"
+  style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
+>
+  <style>
+    
+          .gbi-2113735767-73WakrfVbNJBaAmhQtEeDv:before,
+          .gbi-2113735767-73WakrfVbNJBaAmhQtEeDv:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            transition: opacity 0.5s ease 250ms;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+          }
+          .gbi-2113735767-73WakrfVbNJBaAmhQtEeDv:before {
+            z-index: -100;
+            
+            
+            opacity: 1; 
+          }
+          .gbi-2113735767-73WakrfVbNJBaAmhQtEeDv:after {
+            z-index: -101;
+            
+            
+            
+          }
+        
+  </style>
+  <h1
+    class="c0"
+  >
+    kayak
+  </h1>
+  <h2
+    class="c1"
+    data-testid="headerSubtitle"
+  >
+    CEO of supermarket cookie quality debates
+  </h2>
+</div>
+`;
+
+exports[`<Header /> renders OK 1`] = `
+.c0 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 900;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
+.c1 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
+@media print {
+  .c0 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media print {
+  .c1 {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+<div
+  class="gbi-1616669723-73WakrfVbNJBaAmhQtEeDv"
+  data-testid="header"
+  style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
+>
+  <style>
+    
+          .gbi-1616669723-73WakrfVbNJBaAmhQtEeDv:before,
+          .gbi-1616669723-73WakrfVbNJBaAmhQtEeDv:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #000000;
+            transition: opacity 0.5s ease 250ms;
+            background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+          }
+          .gbi-1616669723-73WakrfVbNJBaAmhQtEeDv:before {
+            z-index: -100;
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAB4mlEdvQStW7ANMgh/wD/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDESEQEkH/2gAIAQEAAQUCpMdSGqUZWg1xG0dff//EABgRAAIDAAAAAAAAAAAAAAAAAAEQAhEx/9oACAEDAQE/ASKUtX//xAAYEQACAwAAAAAAAAAAAAAAAAAAAhARMf/aAAgBAgEBPwEsXI//xAAaEAACAgMAAAAAAAAAAAAAAAAAEAEhERJB/9oACAEBAAY/AlRUGHt1f//EABwQAAMAAgMBAAAAAAAAAAAAAAABESFBMVFhgf/aAAgBAQABPyFwV+CRXiEzo6Qm9B9pN86NfDIFchysI//aAAwDAQACAAMAAAAQV8f8/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAREP/aAAgBAwEBPxBFlsTn/8QAFhEBAQEAAAAAAAAAAAAAAAAAASBR/9oACAECAQE/EDSF/8QAHBABAAICAwEAAAAAAAAAAAAAAQARIUExUWGB/9oACAEBAAE/EGN6uowjT1dQBKmadT1a6JQjlioFWBcsQVXrfsTQ2ZMqoC1aJ//Z);
+            
+            opacity: 1; 
+          }
+          .gbi-1616669723-73WakrfVbNJBaAmhQtEeDv:after {
+            z-index: -101;
+            
+            background-image: url(data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQDBf/EABYBAQEBAAAAAAAAAAAAAAAAAAMBAv/aAAwDAQACEAMQAAAB4mlEdvQStW7ANMgh/wD/xAAcEAABBQADAAAAAAAAAAAAAAABAAIDESEQEkH/2gAIAQEAAQUCpMdSGqUZWg1xG0dff//EABgRAAIDAAAAAAAAAAAAAAAAAAEQAhEx/9oACAEDAQE/ASKUtX//xAAYEQACAwAAAAAAAAAAAAAAAAAAAhARMf/aAAgBAgEBPwEsXI//xAAaEAACAgMAAAAAAAAAAAAAAAAAEAEhERJB/9oACAEBAAY/AlRUGHt1f//EABwQAAMAAgMBAAAAAAAAAAAAAAABESFBMVFhgf/aAAgBAQABPyFwV+CRXiEzo6Qm9B9pN86NfDIFchysI//aAAwDAQACAAMAAAAQV8f8/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAREP/aAAgBAwEBPxBFlsTn/8QAFhEBAQEAAAAAAAAAAAAAAAAAASBR/9oACAECAQE/EDSF/8QAHBABAAICAwEAAAAAAAAAAAAAAQARIUExUWGB/9oACAEBAAE/EGN6uowjT1dQBKmadT1a6JQjlioFWBcsQVXrfsTQ2ZMqoC1aJ//Z);
+            
+          }
+        
+  </style>
+  <h1
+    class="c0"
+  >
+    John Doe
+  </h1>
+  <h2
+    class="c1"
+    data-testid="headerSubtitle"
+  >
+    Programmer
+  </h2>
+</div>
+`;

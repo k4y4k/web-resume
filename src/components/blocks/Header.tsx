@@ -26,6 +26,7 @@ export const PureHeader = ({
     tag='header'
     fluid={imageData}
     backgroundColor='#000000'
+    data-testid='header'
   >
     <Name name={name} />
     <Subtitle subtitle={subtitle} />

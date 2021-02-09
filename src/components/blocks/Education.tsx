@@ -44,7 +44,6 @@ export const Education = (): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {
-        id
         childDataJson {
           education {
             institution

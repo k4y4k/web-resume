@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Education /> bails out on no data 1`] = `
+exports[`<PureEducation /> bails out on no data 1`] = `
 <div
   data-testid="education"
 >
@@ -35,7 +35,7 @@ exports[`<Education /> bails out on no data 1`] = `
 </div>
 `;
 
-exports[`<Education /> handles times where you don't have a 'type' (e.g. online courses) 1`] = `
+exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. online courses) 1`] = `
 .c5 {
   display: inline-block;
 }
@@ -197,7 +197,7 @@ exports[`<Education /> handles times where you don't have a 'type' (e.g. online 
 </div>
 `;
 
-exports[`<Education /> no course details? 1`] = `
+exports[`<PureEducation /> no course details? 1`] = `
 .c5 {
   display: inline-block;
 }
@@ -365,7 +365,169 @@ exports[`<Education /> no course details? 1`] = `
 </div>
 `;
 
-exports[`<Education /> renders array of >=1 Education items 1`] = `
+exports[`<PureEducation /> renders OK 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.c4 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+  --tw-bg-opacity: 0.75;
+  border-style: none;
+}
+
+.c2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+@media print {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-width: 0px;
+  }
+}
+
+@media print {
+  .c2 {
+    margin: 0px;
+  }
+}
+
+<div
+  data-testid="education"
+>
+  <div
+    css="
+  ,margin: 1rem;,border-width: 1px;,--tw-border-opacity: 1;,border-color: rgba(0, 0, 0, var(--tw-border-opacity));,transition-property: all;,transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);,transition-duration: 150ms;,
+  ,:hover {,--tw-bg-opacity: 0.5;,background-color: rgba(181, 61, 39, var(--tw-bg-opacity));,},
+  ,@media print {,margin: 0px;,margin-bottom: 0.5rem;,margin-left: 0.25rem;,margin-right: 0.25rem;,},
+
+  &:hover {
+    box-shadow: 0 2.8px 2.2px rgba(181, 61, 39, 0.07),
+      0 6.7px 5.3px rgba(181, 61, 39, 0.05),
+      0 12.5px 10px rgba(181, 61, 39, 0.042),
+      0 22.3px 17.9px rgba(181, 61, 39, 0.035),
+      0 41.8px 33.4px rgba(181, 61, 39, 0.028),
+      0 100px 80px rgba(181, 61, 39, 0.02);
+  }
+"
+  >
+    <h2
+      css="
+  ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
+  ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
+"
+    >
+      Education
+    </h2>
+     
+    <br />
+     
+    <div
+      class="c0"
+      data-testid="sectionItemContainer"
+    >
+      <h1
+        class="c1"
+      >
+        Bachelor of Software Development
+      </h1>
+      <div
+        class="c2"
+        data-testid="byline"
+      >
+        <span
+          class="c3"
+        >
+          University
+        </span>
+        <div
+          class="c4"
+        >
+          |
+        </div>
+        <p
+          class="c5"
+          data-testid="sectionItemDates"
+        >
+          2011
+           - 
+          2013
+        </p>
+      </div>
+      <div
+        css="
+  ,margin-top: 0.5rem;,
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+"
+        data-testid="sectionItemDetails"
+      >
+        <ul>
+          <li>
+            DB1101 - Basic SQL
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 .c5 {
   display: inline-block;
 }

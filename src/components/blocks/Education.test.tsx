@@ -1,10 +1,30 @@
 import * as React from 'react'
+import { Education, PureEducation } from './Education'
 import { render, screen } from '@testing-library/react'
-import { PureEducation as Education } from './Education'
+import { useStaticQuery } from 'gatsby'
 
-describe('<Education />', () => {
+describe('<PureEducation />', () => {
+  beforeAll(() =>
+    (useStaticQuery as jest.Mock).mockReturnValue({
+      file: {
+        childDataJson: {
+          education: [
+            {
+              institution: 'University',
+              area: 'Software Development',
+              studyType: 'Bachelor',
+              startDate: '2011-01-01',
+              endDate: '2013-01-01',
+              courses: ['DB1101 - Basic SQL'],
+            },
+          ],
+        },
+      },
+    })
+  )
+
   test('bails out on no data', () => {
-    render(<Education history={[]} />)
+    render(<PureEducation history={[]} />)
 
     // still want the title
     expect(screen.getByTestId('education')).toBeInTheDocument()
@@ -14,7 +34,7 @@ describe('<Education />', () => {
     expect(screen.getByTestId('education')).toMatchSnapshot()
   })
 
-  test('renders array of >=1 Education items', () => {
+  test('renders array of >=1 PureEducation items', () => {
     const data = [
       {
         institution: 'University',
@@ -26,11 +46,11 @@ describe('<Education />', () => {
         courses: ['DB1101 - Basic SQL'],
       },
     ]
-    const { container } = render(<Education history={data} />)
+    const { container } = render(<PureEducation history={data} />)
 
-    const EducationList = screen.getByTestId('education')
+    const education = screen.getByTestId('education')
 
-    expect(EducationList).toBeInTheDocument()
+    expect(education).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -47,11 +67,11 @@ describe('<Education />', () => {
       },
     ]
 
-    const { container } = render(<Education history={data} />)
+    const { container } = render(<PureEducation history={data} />)
 
-    const EducationList = screen.getByTestId('education')
+    const education = screen.getByTestId('education')
 
-    expect(EducationList).toBeInTheDocument()
+    expect(education).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()
   })
 
@@ -71,11 +91,17 @@ describe('<Education />', () => {
       },
     ]
 
-    const { container } = render(<Education history={data} />)
+    const { container } = render(<PureEducation history={data} />)
 
-    const EducationList = screen.getByTestId('education')
+    const education = screen.getByTestId('education')
 
-    expect(EducationList).toBeInTheDocument()
+    expect(education).toBeInTheDocument()
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  test('renders OK', () => {
+    render(<Education />)
+
+    expect(screen.getByTestId('education')).toMatchSnapshot()
   })
 })

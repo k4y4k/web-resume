@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemContainer /> education item education item 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.c4 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+  --tw-bg-opacity: 0.75;
+  border-style: none;
+}
+
+.c2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+@media print {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-width: 0px;
+  }
+}
+
+@media print {
+  .c2 {
+    margin: 0px;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="sectionItemContainer"
+>
+  <h1
+    class="c1"
+  >
+    Bachelor of Software Development
+  </h1>
+  <div
+    class="c2"
+    data-testid="byline"
+  >
+    <span
+      class="c3"
+    >
+      University
+    </span>
+    <div
+      class="c4"
+    >
+      |
+    </div>
+    <p
+      class="c5"
+      data-testid="sectionItemDates"
+    >
+      2011
+       - 
+      2013
+    </p>
+  </div>
+  <div
+    css="
+  ,margin-top: 0.5rem;,
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+"
+    data-testid="sectionItemDetails"
+  >
+    <ul>
+      <li>
+        DB1101 - Basic SQL
+      </li>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+}
+
+.c1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.c4 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+  --tw-bg-opacity: 0.75;
+  border-style: none;
+}
+
+.c2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+@media print {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}
+
+@media print {
+  .c1 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-width: 0px;
+  }
+}
+
+@media print {
+  .c2 {
+    margin: 0px;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="sectionItemContainer"
+>
+  <h1
+    class="c1"
+  >
+    Bachelor of Software Development
+  </h1>
+  <div
+    class="c2"
+    data-testid="byline"
+  >
+    <span
+      class="c3"
+    >
+      University
+    </span>
+    <div
+      class="c4"
+    >
+      |
+    </div>
+    <p
+      class="c5"
+      data-testid="sectionItemDates"
+    >
+      2011
+       - 
+      2013
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<ItemContainer /> experience item 1`] = `
+.c1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.c3 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+  --tw-bg-opacity: 0.75;
+  border-style: none;
+}
+
+.c2 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+@media print {
+  .c1 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-width: 0px;
+  }
+}
+
+@media print {
+  .c2 {
+    margin: 0px;
+  }
+}
+
+<div
+  class="c0"
+  data-testid="sectionItemContainer"
+>
+  <h1
+    class="c1"
+  >
+    Error: No Item Title
+  </h1>
+  <div
+    class="c2"
+    data-testid="byline"
+  >
+    <span>
+      Error: No Item Subtitle
+    </span>
+    <div
+      class="c3"
+    >
+      |
+    </div>
+  </div>
+</div>
+`;

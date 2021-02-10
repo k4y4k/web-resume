@@ -6,7 +6,7 @@ interface TitleTypes {
 }
 
 const TitleStyles = css`
-  ${tw`text-2xl font-black uppercase`}
+  ${tw`text-2xl font-thin uppercase`}
   ${tw`print:(text-lg)`}
 `
 

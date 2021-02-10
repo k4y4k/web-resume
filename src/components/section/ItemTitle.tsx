@@ -1,20 +1,20 @@
 import * as React from 'react'
-import tw, { TwStyle } from 'twin.macro'
+import tw, { css } from 'twin.macro'
 
 interface ItemTitleTypes {
-  title: string | undefined
+  title: string
 }
 
-const itemTitleStyles = (): Array<TwStyle | string> => [
-  tw`text-2xl uppercase`,
-  tw`print:text-lg font-black`,
-]
+const itemTitleStyles = css`
+  ${tw`text-2xl font-thin uppercase`}
+  ${tw`print:text-lg`}
+`
 
 const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element | null => {
   if (title === '') return null
 
   return (
-    <h1 data-testid='itemTitle' css={itemTitleStyles()}>
+    <h1 data-testid='itemTitle' css={itemTitleStyles}>
       {title}
     </h1>
   )

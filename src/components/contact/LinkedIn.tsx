@@ -2,11 +2,11 @@ import * as React from 'react'
 import { FiLinkedin } from '@react-icons/all-files/fi/FiLinkedin'
 
 interface LinkedInTypes {
-  username: string
+  username: string | null
 }
 
 const LinkedIn = ({ username }: LinkedInTypes): JSX.Element | null => {
-  if (username === '' || username === 'undefined') return null
+  if (username === '' || username === null) return null
 
   return (
     <a

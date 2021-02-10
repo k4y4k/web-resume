@@ -27,4 +27,6 @@ exports[`<Twitter /> displays twitter username with @ in front 1`] = `
 </a>
 `;
 
-exports[`<Twitter /> usernames no data 1`] = `null`;
+exports[`<Twitter /> handles no data 1`] = `null`;
+
+exports[`<Twitter /> handles null data 1`] = `null`;

@@ -11,6 +11,14 @@ describe('<LinkedIn />', () => {
     expect(linkedin).toMatchSnapshot()
   })
 
+  test('handles null data', () => {
+    render(<LinkedIn username={null} />)
+
+    const linkedin = screen.queryByTestId('contactLinkedin')
+    expect(linkedin).not.toBeInTheDocument()
+    expect(linkedin).toMatchSnapshot()
+  })
+
   test('links to profile in new tab', () => {
     render(<LinkedIn username='exampledin' />)
 

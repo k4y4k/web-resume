@@ -3,8 +3,16 @@ import { render, screen } from '@testing-library/react'
 import Twitter from './Twitter'
 
 describe('<Twitter />', () => {
-  test('usernames no data', () => {
+  test('handles no data', () => {
     render(<Twitter username='' />)
+
+    const twitter = screen.queryByTestId('contactTwitter')
+    expect(twitter).not.toBeInTheDocument()
+    expect(twitter).toMatchSnapshot()
+  })
+
+  test('handles null data', () => {
+    render(<Twitter username={null} />)
 
     const twitter = screen.queryByTestId('contactTwitter')
     expect(twitter).not.toBeInTheDocument()

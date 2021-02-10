@@ -12,10 +12,10 @@ import Website from '../contact/Website'
 interface PureContactTypes {
   restrictDisplay?: boolean
   email: string
-  twitter: string
-  github: string
+  twitter: string | null
+  linkedin: string | null
+  github: string | null
   website: string
-  linkedin: string
   address?: string
   postalCode?: string
   city: string

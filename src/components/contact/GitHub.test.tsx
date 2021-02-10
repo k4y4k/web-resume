@@ -11,6 +11,14 @@ describe('<GitHub />', () => {
     expect(github).toMatchSnapshot()
   })
 
+  test('handles null data', () => {
+    render(<GitHub username={null} />)
+
+    const github = screen.queryByTestId('contactGithub')
+    expect(github).not.toBeInTheDocument()
+    expect(github).toMatchSnapshot()
+  })
+
   test('displays username', () => {
     render(<GitHub username='octocat' />)
 

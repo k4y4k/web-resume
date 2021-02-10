@@ -2,6 +2,8 @@
 
 exports[`<LinkedIn /> handles no data 1`] = `null`;
 
+exports[`<LinkedIn /> handles null data 1`] = `null`;
+
 exports[`<LinkedIn /> links to profile in new tab 1`] = `
 <a
   data-testid="contactLinkedin"

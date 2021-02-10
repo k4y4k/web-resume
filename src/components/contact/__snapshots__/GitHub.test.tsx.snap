@@ -28,3 +28,5 @@ exports[`<GitHub /> displays username 1`] = `
 `;
 
 exports[`<GitHub /> handles no data 1`] = `null`;
+
+exports[`<GitHub /> handles null data 1`] = `null`;

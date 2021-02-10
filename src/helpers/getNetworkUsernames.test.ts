@@ -13,7 +13,7 @@ describe('getNetworkUsernames', () => {
     expect(getNetworkUsernames(data, 'twitter')).toBe(randomUsername)
   })
 
-  test('returns undefined if network not in list', () => {
+  test('returns null if network not in list', () => {
     const randomUsername = faker.internet.userName()
     const data = [
       {
@@ -23,6 +23,6 @@ describe('getNetworkUsernames', () => {
       },
     ]
 
-    expect(getNetworkUsernames(data, randomUsername)).toBeUndefined()
+    expect(getNetworkUsernames(data, randomUsername)).toBeNull()
   })
 })

@@ -2,11 +2,11 @@ import * as React from 'react'
 import { FiTwitter } from '@react-icons/all-files/fi/FiTwitter'
 
 interface TwitterTypes {
-  username: string
+  username: string | null
 }
 
 const Twitter = ({ username }: TwitterTypes): JSX.Element | null => {
-  if (username === '') return null
+  if (username === '' || username === null) return null
 
   return (
     <a

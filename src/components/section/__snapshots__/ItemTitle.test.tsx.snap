@@ -4,8 +4,8 @@ exports[`<ItemTitle /> displays title 1`] = `
 .c0 {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 100;
   text-transform: uppercase;
-  font-weight: 900;
 }
 
 @media print {

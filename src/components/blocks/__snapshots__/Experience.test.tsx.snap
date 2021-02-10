@@ -16,8 +16,8 @@ exports[`<Experience /> renders OK 1`] = `
 .c1 {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 100;
   text-transform: uppercase;
-  font-weight: 900;
 }
 
 .c4 {

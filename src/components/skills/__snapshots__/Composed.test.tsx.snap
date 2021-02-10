@@ -23,7 +23,7 @@ exports[`<Composed /> Composes heading and bucket 1`] = `
 .c0 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 900;
+  font-weight: 100;
   text-transform: uppercase;
 }
 

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Address from './Address'
+import faker from 'faker'
 
 export default {
   title: 'Contact/Address',
@@ -10,23 +11,28 @@ const Template = (args): JSX.Element => <Address {...args} />
 
 export const NonRestricted = Template.bind({})
 NonRestricted.args = {
-  address: '2712 Broadway St',
-  postalCode: 'CA 94115',
-  city: 'San Francisco',
-  countryCode: 'US',
-  region: 'California',
+  address: faker.address.streetAddress(),
+  postalCode: faker.address.zipCode(),
+  city: faker.address.city(),
+  countryCode: faker.address.countryCode(),
+  region: faker.address.state(),
   restrictDisplay: false,
 }
 
 export const Primary = Template.bind({})
 Primary.args = {
-  streetName: 'Example Rd',
-  streetNum: 75,
-  suburb: 'Example Suburb',
-  city: 'Example City',
-  state: 'Example State',
-  postcode: 8877,
+  address: faker.address.streetAddress(),
+  postalCode: faker.address.zipCode(),
+  city: faker.address.city(),
+  countryCode: faker.address.countryCode(),
+  region: faker.address.state(),
 }
 
 export const NoData = Template.bind({})
-NoData.args = {}
+NoData.args = {
+  address: '',
+  postalCode: '',
+  city: '',
+  countryCode: '',
+  region: '',
+}

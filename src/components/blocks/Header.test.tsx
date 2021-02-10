@@ -70,7 +70,7 @@ describe('<Header />', () => {
 
     render(
       <PureHeader
-        name={data?.file.childDataJson.basics.name}
+        title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
         imageData={data?.image.childImageSharp.fluid}
       />

@@ -2,11 +2,11 @@ import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import tw, { TwStyle } from 'twin.macro'
 import BackgroundImage from 'gatsby-background-image'
-import Name from '../header/Name'
 import Subtitle from '../header/Subtitle'
+import Title from '../header/Title'
 
 interface PureHeaderTypes {
-  name: string
+  title: string
   subtitle: string
   imageData: Record<string, unknown>
 }
@@ -17,7 +17,7 @@ const headerStyles = (): Array<TwStyle | string> => [
 ]
 
 export const PureHeader = ({
-  name,
+  title,
   subtitle,
   imageData,
 }: PureHeaderTypes): JSX.Element => (
@@ -28,7 +28,7 @@ export const PureHeader = ({
     backgroundColor='#000000'
     data-testid='header'
   >
-    <Name name={name} />
+    <Title title={title} />
     <Subtitle subtitle={subtitle} />
   </BackgroundImage>
 )
@@ -58,7 +58,7 @@ export const Header = (): JSX.Element => {
   const { name, label } = data?.text.childDataJson.basics
   const imageData = data?.image.childImageSharp.fluid
 
-  return <PureHeader name={name} subtitle={label} imageData={imageData} />
+  return <PureHeader title={name} subtitle={label} imageData={imageData} />
 }
 
 export default Header

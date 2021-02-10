@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> displays header 1`] = `
+.c1 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
 .c0 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -15,17 +24,8 @@ exports[`<Header /> displays header 1`] = `
   background-color: rgba(0,0,0,var(--tw-bg-opacity));
 }
 
-.c1 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  padding: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
 @media print {
-  .c0 {
+  .c1 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -35,7 +35,7 @@ exports[`<Header /> displays header 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -83,6 +83,7 @@ background-size: cover;
   </style>
   <h1
     class="c0"
+    data-testid="headerTitle"
   >
     kayak
   </h1>
@@ -96,6 +97,15 @@ background-size: cover;
 `;
 
 exports[`<Header /> renders OK 1`] = `
+.c1 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  padding: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
 .c0 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -110,17 +120,8 @@ exports[`<Header /> renders OK 1`] = `
   background-color: rgba(0,0,0,var(--tw-bg-opacity));
 }
 
-.c1 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  padding: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
 @media print {
-  .c0 {
+  .c1 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -130,7 +131,7 @@ exports[`<Header /> renders OK 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c0 {
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
@@ -178,6 +179,7 @@ background-size: cover;
   </style>
   <h1
     class="c0"
+    data-testid="headerTitle"
   >
     John Doe
   </h1>

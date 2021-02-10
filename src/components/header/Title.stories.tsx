@@ -1,12 +1,12 @@
 import * as React from 'react'
-import Name from './Name'
+import Title from './Title'
 
 export default {
-  title: 'Header/Name',
-  component: Name,
+  title: 'Header/Title',
+  component: Title,
 }
 
-const Template = (args): JSX.Element => <Name {...args} />
+const Template = (args): JSX.Element => <Title {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = { name: 'kayak kayak' }

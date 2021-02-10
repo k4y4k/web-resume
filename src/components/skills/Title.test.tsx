@@ -3,16 +3,20 @@ import { render, screen } from '@testing-library/react'
 import Title from './Title'
 
 describe('<Title />', () => {
-  test('no data?!?!??!', () => {
+  test('no data?', () => {
     render(<Title category='' />)
 
-    // it's that time of night where I recklessly inline things :)
-    expect(screen.getByText('Error: No Skills Category')).toBeInTheDocument()
+    const title = screen.queryByTestId('skillsTitle')
+    expect(title).not.toBeInTheDocument()
+    expect(title).toMatchSnapshot()
   })
 
   test('displays title 👌', () => {
     render(<Title category='Monster Hunting' />)
 
-    expect(screen.getByText('Monster Hunting')).toBeInTheDocument()
+    const title = screen.queryByTestId('skillsTitle')
+
+    expect(title).toBeInTheDocument()
+    expect(title).toMatchSnapshot()
   })
 })

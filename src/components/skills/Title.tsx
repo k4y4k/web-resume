@@ -10,10 +10,14 @@ const TitleStyles = css`
   ${tw`print:(text-lg)`}
 `
 
-const Title = ({ category }: TitleTypes): JSX.Element => {
-  if (category === '')
-    return <h2 css={[TitleStyles]}>Error: No Skills Category</h2>
+const Title = ({ category }: TitleTypes): JSX.Element | null => {
+  if (category === '') return null
 
-  return <h2 css={[TitleStyles]}>{category}</h2>
+  return (
+    <h2 data-testid='skillsTitle' css={TitleStyles}>
+      {category}
+    </h2>
+  )
 }
+
 export default Title

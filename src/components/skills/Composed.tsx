@@ -13,11 +13,23 @@ const skillsStyles = css`
   ${tw`print:(p-0 m-0 mx-6 py-3)`}
 `
 
-const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element => (
-  <div css={skillsStyles}>
-    <Title category={heading} />
-    <Bucket skills={bucket} />
-  </div>
-)
+const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element | null => {
+  // switching the logic was the only way to make this work
+
+  if (JSON.stringify(bucket) === '[]') return null
+
+  if (JSON.stringify(bucket) === '[""]') return null
+
+  if (heading === '') return null
+
+  return (
+    <div data-testid='skillsComposed' css={skillsStyles}>
+      <Title category={heading} />
+      <Bucket skills={bucket} />
+    </div>
+  )
+
+  // return null
+}
 
 export default Composed

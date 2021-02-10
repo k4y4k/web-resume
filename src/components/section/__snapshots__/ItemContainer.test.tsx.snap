@@ -85,6 +85,7 @@ exports[`<ItemContainer /> education item education item 1`] = `
 >
   <h1
     class="c1"
+    data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
@@ -94,6 +95,7 @@ exports[`<ItemContainer /> education item education item 1`] = `
   >
     <span
       class="c3"
+      data-testid="itemSubtitle"
     >
       University
     </span>
@@ -215,6 +217,7 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 >
   <h1
     class="c1"
+    data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
@@ -224,6 +227,7 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
   >
     <span
       class="c3"
+      data-testid="itemSubtitle"
     >
       University
     </span>
@@ -244,7 +248,15 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 </div>
 `;
 
-exports[`<ItemContainer /> experience item 1`] = `
+exports[`<ItemContainer /> experience item experience item 1`] = `
+.c5 {
+  display: inline-block;
+}
+
+.c3 {
+  display: inline-block;
+}
+
 .c1 {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -252,7 +264,7 @@ exports[`<ItemContainer /> experience item 1`] = `
   font-weight: 900;
 }
 
-.c3 {
+.c4 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-block;
@@ -281,6 +293,13 @@ exports[`<ItemContainer /> experience item 1`] = `
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   font-style: italic;
+}
+
+@media print {
+  .c5 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media print {
@@ -314,21 +333,47 @@ exports[`<ItemContainer /> experience item 1`] = `
 >
   <h1
     class="c1"
+    data-testid="itemTitle"
   >
-    Error: No Item Title
+    President
   </h1>
   <div
     class="c2"
     data-testid="byline"
   >
-    <span>
-      Error: No Item Subtitle
+    <span
+      class="c3"
+      data-testid="itemSubtitle"
+    >
+      Company
     </span>
     <div
-      class="c3"
+      class="c4"
     >
       |
     </div>
+    <p
+      class="c5"
+      data-testid="sectionItemDates"
+    >
+      2013
+       - 
+      2014
+    </p>
+  </div>
+  <div
+    css="
+  ,margin-top: 0.5rem;,
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+"
+    data-testid="sectionItemDetails"
+  >
+    <p>
+      Description...
+    </p>
   </div>
 </div>
 `;

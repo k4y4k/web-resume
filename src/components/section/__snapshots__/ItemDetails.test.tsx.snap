@@ -1,6 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<ItemDetails /> no data = no details section 1`] = `null`;
+
 exports[`<ItemDetails /> renders markdown 1`] = `
+<div
+  css="
+  ,margin-top: 0.5rem;,
+  li {
+    list-style-type: circle;
+    list-style-position: inside;
+  }
+"
+  data-testid="sectionItemDetails"
+>
+  <ul>
+    <li>
+      a
+    </li>
+    <li>
+      b
+    </li>
+    <li>
+      c
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`<ItemDetails /> renders markdown 2`] = `
 <div
   css="
   ,margin-top: 0.5rem;,

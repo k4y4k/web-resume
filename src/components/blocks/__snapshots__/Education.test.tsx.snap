@@ -19,12 +19,14 @@ exports[`<PureEducation /> bails out on no data 1`] = `
       0 100px 80px rgba(181, 61, 39, 0.02);
   }
 "
+    data-testid="sectionContainer"
   >
     <h2
       css="
   ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
   ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
 "
+      data-testid="sectionTitle"
     >
       Education
     </h2>
@@ -132,12 +134,14 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
       0 100px 80px rgba(181, 61, 39, 0.02);
   }
 "
+    data-testid="sectionContainer"
   >
     <h2
       css="
   ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
   ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
 "
+      data-testid="sectionTitle"
     >
       Education
     </h2>
@@ -150,6 +154,7 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
     >
       <h1
         class="c1"
+        data-testid="itemTitle"
       >
         Software Development
       </h1>
@@ -159,6 +164,7 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
       >
         <span
           class="c3"
+          data-testid="itemSubtitle"
         >
           University
         </span>
@@ -294,12 +300,14 @@ exports[`<PureEducation /> no course details? 1`] = `
       0 100px 80px rgba(181, 61, 39, 0.02);
   }
 "
+    data-testid="sectionContainer"
   >
     <h2
       css="
   ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
   ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
 "
+      data-testid="sectionTitle"
     >
       Education
     </h2>
@@ -312,6 +320,7 @@ exports[`<PureEducation /> no course details? 1`] = `
     >
       <h1
         class="c1"
+        data-testid="itemTitle"
       >
         Software Development
       </h1>
@@ -321,6 +330,7 @@ exports[`<PureEducation /> no course details? 1`] = `
       >
         <span
           class="c3"
+          data-testid="itemSubtitle"
         >
           University
         </span>
@@ -462,12 +472,14 @@ exports[`<PureEducation /> renders OK 1`] = `
       0 100px 80px rgba(181, 61, 39, 0.02);
   }
 "
+    data-testid="sectionContainer"
   >
     <h2
       css="
   ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
   ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
 "
+      data-testid="sectionTitle"
     >
       Education
     </h2>
@@ -480,6 +492,7 @@ exports[`<PureEducation /> renders OK 1`] = `
     >
       <h1
         class="c1"
+        data-testid="itemTitle"
       >
         Bachelor of Software Development
       </h1>
@@ -489,6 +502,7 @@ exports[`<PureEducation /> renders OK 1`] = `
       >
         <span
           class="c3"
+          data-testid="itemSubtitle"
         >
           University
         </span>
@@ -624,12 +638,14 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
       0 100px 80px rgba(181, 61, 39, 0.02);
   }
 "
+    data-testid="sectionContainer"
   >
     <h2
       css="
   ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
   ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
 "
+      data-testid="sectionTitle"
     >
       Education
     </h2>
@@ -642,6 +658,7 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
     >
       <h1
         class="c1"
+        data-testid="itemTitle"
       >
         Bachelor of Software Development
       </h1>
@@ -651,6 +668,7 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
       >
         <span
           class="c3"
+          data-testid="itemSubtitle"
         >
           University
         </span>

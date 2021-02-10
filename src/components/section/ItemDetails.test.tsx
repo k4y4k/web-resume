@@ -8,6 +8,7 @@ describe('<ItemDetails />', () => {
 
     const details = screen.queryByTestId('sectionItemDetails')
     expect(details).not.toBeInTheDocument()
+    expect(details).toMatchSnapshot()
   })
 
   test('renders markdown', () => {
@@ -19,6 +20,7 @@ describe('<ItemDetails />', () => {
     expect(details).toBeInTheDocument()
 
     expect(details).toHaveTextContent('abc')
+    expect(details).toMatchSnapshot()
     expect(details).toMatchSnapshot()
   })
 })

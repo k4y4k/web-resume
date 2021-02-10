@@ -6,14 +6,16 @@ describe('<ItemTitle />', () => {
   test('handles no data', () => {
     render(<ItemTitle title='' />)
 
-    const title = screen.getByText('Error: No Item Title')
-    expect(title).not.toBeFalsy()
+    const title = screen.queryByTestId('itemTitle')
+    expect(title).not.toBeInTheDocument()
+    expect(title).toMatchSnapshot()
   })
 
   test('displays title', () => {
     render(<ItemTitle title='My Frankly Astounding Thing' />)
 
-    const title = screen.getByText('My Frankly Astounding Thing')
-    expect(title).toBeInTheDocument()
+    const title = screen.getByTestId('itemTitle')
+    expect(title).toHaveTextContent(/my frankly astounding thing/i)
+    expect(title).toMatchSnapshot()
   })
 })

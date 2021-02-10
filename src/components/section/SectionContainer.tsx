@@ -26,7 +26,7 @@ const SectionContainer = ({
   title,
   children,
 }: SectionContainerTypes): JSX.Element => (
-  <div css={sectionContainerStyles}>
+  <div data-testid='sectionContainer' css={sectionContainerStyles}>
     <SectionTitle title={title} />
     {children}
   </div>

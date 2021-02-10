@@ -10,11 +10,14 @@ const itemTitleStyles = (): Array<TwStyle | string> => [
   tw`print:text-lg font-black`,
 ]
 
-const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element => {
-  if (title === '' || title === undefined)
-    return <h1 css={itemTitleStyles()}>Error: No Item Title</h1>
+const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element | null => {
+  if (title === '') return null
 
-  return <h1 css={itemTitleStyles()}>{title}</h1>
+  return (
+    <h1 data-testid='itemTitle' css={itemTitleStyles()}>
+      {title}
+    </h1>
+  )
 }
 
 export default ItemTitle

@@ -6,14 +6,16 @@ describe('<SectionTitle />', () => {
   test('no data? no wakkas', () => {
     render(<SectionTitle title='' />)
 
-    const title = screen.getByText('Error: No Section Title')
-    expect(title).toBeInTheDocument()
+    const title = screen.queryByTestId('sectionTitle')
+    expect(title).not.toBeInTheDocument()
+    expect(title).toMatchSnapshot()
   })
 
   test('displays title', () => {
     render(<SectionTitle title='Check this' />)
 
-    const title = screen.getByText('Check this')
-    expect(title).toBeInTheDocument()
+    const title = screen.getByTestId('sectionTitle')
+    expect(title).toHaveTextContent(/check this/i)
+    expect(title).toMatchSnapshot()
   })
 })

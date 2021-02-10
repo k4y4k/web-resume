@@ -6,7 +6,7 @@ interface LinkedInTypes {
 }
 
 const LinkedIn = ({ username }: LinkedInTypes): JSX.Element | null => {
-  if (username === '') return null
+  if (username === '' || username === 'undefined') return null
 
   return (
     <a

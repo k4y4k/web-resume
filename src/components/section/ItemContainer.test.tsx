@@ -3,31 +3,44 @@ import { render, screen } from '@testing-library/react'
 import ItemContainer from './ItemContainer'
 
 describe('<ItemContainer />', () => {
-  test('experience item', () => {
-    render(
-      <ItemContainer
-        currentIndex={0}
-        collectionLength={1}
-        title=''
-        subtitle=''
-        fromDate=''
-        summary=''
-      />
-    )
+  describe('experience item', () => {
+    test('experience item', () => {
+      const data = {
+        company: 'Company',
+        position: 'President',
+        website: 'http://company.com',
+        startDate: '2013-01-01',
+        endDate: '2014-01-01',
+        summary: 'Description...',
+        highlights: ['Started the company'],
+      }
 
-    const title = screen.getByText('Error: No Item Title')
-    expect(title).toBeInTheDocument()
+      render(
+        <ItemContainer
+          fromDate={data.startDate}
+          summary={data.summary}
+          toDate={data.endDate}
+          title={data.position}
+          subtitle={data.company}
+          currentIndex={0}
+          collectionLength={1}
+        />
+      )
 
-    const subtitle = screen.getByText('Error: No Item Subtitle')
-    expect(subtitle).toBeInTheDocument()
+      const title = screen.queryByText('Company')
+      expect(title).toBeInTheDocument()
 
-    const dates = screen.queryByTestId('sectionItemDates')
-    expect(dates).not.toBeInTheDocument()
+      const subtitle = screen.getByTestId('byline')
+      expect(subtitle).toBeInTheDocument()
 
-    const details = screen.queryByTestId('sectionItemDetails')
-    expect(details).not.toBeInTheDocument()
+      const dates = screen.queryByTestId('sectionItemDates')
+      expect(dates).toBeInTheDocument()
 
-    expect(screen.getByTestId('sectionItemContainer')).toMatchSnapshot()
+      const details = screen.queryByTestId('sectionItemDetails')
+      expect(details).toBeInTheDocument()
+
+      expect(screen.getByTestId('sectionItemContainer')).toMatchSnapshot()
+    })
   })
 
   describe('education item', () => {

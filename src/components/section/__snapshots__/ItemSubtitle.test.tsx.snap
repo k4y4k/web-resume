@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemSubtitle /> displays subtitle 1`] = `
+.c0 {
+  display: inline-block;
+}
+
+<span
+  class="c0"
+  data-testid="itemSubtitle"
+>
+  Yes, really! Really really!
+</span>
+`;
+
+exports[`<ItemSubtitle /> handles no data 1`] = `null`;

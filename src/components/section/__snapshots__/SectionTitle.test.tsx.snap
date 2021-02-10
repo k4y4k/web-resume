@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SectionTitle /> displays title 1`] = `
+<h2
+  css="
+  ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
+  ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
+"
+  data-testid="sectionTitle"
+>
+  Check this
+</h2>
+`;
+
+exports[`<SectionTitle /> no data? no wakkas 1`] = `null`;

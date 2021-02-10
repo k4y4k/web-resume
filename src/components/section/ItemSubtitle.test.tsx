@@ -6,14 +6,16 @@ describe('<ItemSubtitle />', () => {
   test('handles no data', () => {
     render(<ItemSubtitle subtitle='' />)
 
-    const subtitle = screen.getByText('Error: No Item Subtitle')
-    expect(subtitle).toBeInTheDocument()
+    const subtitle = screen.queryByTestId('itemSubtitle')
+    expect(subtitle).not.toBeInTheDocument()
+    expect(subtitle).toMatchSnapshot()
   })
 
   test('displays subtitle', () => {
     render(<ItemSubtitle subtitle='Yes, really! Really really!' />)
 
-    const subtitle = screen.getByText('Yes, really! Really really!')
-    expect(subtitle).toBeInTheDocument()
+    const subtitle = screen.getByTestId('itemSubtitle')
+    expect(subtitle).toHaveTextContent('Yes, really! Really really!')
+    expect(subtitle).toMatchSnapshot()
   })
 })

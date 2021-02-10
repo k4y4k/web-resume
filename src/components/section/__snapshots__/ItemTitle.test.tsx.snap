@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ItemTitle /> displays title 1`] = `
+.c0 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media print {
+  .c0 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+<h1
+  class="c0"
+  data-testid="itemTitle"
+>
+  My Frankly Astounding Thing
+</h1>
+`;
+
+exports[`<ItemTitle /> handles no data 1`] = `null`;

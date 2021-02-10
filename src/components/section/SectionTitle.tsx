@@ -10,13 +10,15 @@ const sectionTitleStyles = css`
   ${tw`print:text-base`}
 `
 
-const SectionTitle = ({ title }: SectionTitleTypes): JSX.Element => {
-  if (title === '')
-    return <h2 css={sectionTitleStyles}>Error: No Section Title</h2>
+const SectionTitle = ({ title }: SectionTitleTypes): JSX.Element | null => {
+  if (title === '') return null
 
   return (
     <>
-      <h2 css={sectionTitleStyles}>{title}</h2> <br />{' '}
+      <h2 data-testid='sectionTitle' css={sectionTitleStyles}>
+        {title}
+      </h2>{' '}
+      <br />{' '}
     </>
   )
 }

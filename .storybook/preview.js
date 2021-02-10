@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { GlobalStyles } from 'twin.macro'
+import { IconContext } from '@react-icons/all-files/lib'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -27,9 +28,18 @@ window.___navigate = pathname => {
 
 export const decorators = [
   Story => (
-    <>
+    <IconContext.Provider
+      value={{
+        style: {
+          verticalAlign: 'middle',
+          marginBottom: '0.125rem',
+          display: 'inline-block',
+          marginRight: '0.25rem',
+        },
+      }}
+    >
       <GlobalStyles />
       <Story />
-    </>
+    </IconContext.Provider>
   ),
 ]

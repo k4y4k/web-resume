@@ -6,26 +6,23 @@ describe('<LinkedIn />', () => {
   test('handles no data', () => {
     render(<LinkedIn username='' />)
 
-    const linkedin = screen.getByText('Error: No LinkedIn')
-    expect(linkedin).not.toBeFalsy()
+    const linkedin = screen.queryByTestId('contactLinkedin')
+    expect(linkedin).not.toBeInTheDocument()
+    expect(linkedin).toMatchSnapshot()
   })
 
-  test('links to profile', () => {
+  test('links to profile in new tab', () => {
     render(<LinkedIn username='exampledin' />)
 
-    const linkedin = screen.getByText('exampledin')
-    expect(linkedin).not.toBeFalsy()
+    const linkedin = screen.getByTestId('contactLinkedin')
+
+    expect(linkedin).toHaveTextContent('exampledin')
     expect(linkedin).toHaveAttribute(
       'href',
       'https://linkedin.com/in/exampledin'
     )
-  })
 
-  test('opens in new tab', () => {
-    render(<LinkedIn username='exampledin' />)
-
-    const linkedin = screen.getByText('exampledin')
-    expect(linkedin).not.toBeFalsy()
     expect(linkedin).toHaveAttribute('target', '_blank')
+    expect(linkedin).toMatchSnapshot()
   })
 })

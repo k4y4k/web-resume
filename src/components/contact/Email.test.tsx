@@ -5,26 +5,28 @@ import Email from './Email'
 describe('<Email/>', () => {
   test('Handles no data case properly', () => {
     render(<Email email='' />)
-    const email = screen.getByText('Error: No Email')
 
-    expect(email).not.toBeFalsy()
+    const email = screen.queryByTestId('contactEmail')
+
+    expect(email).not.toBeInTheDocument()
+    expect(email).toMatchSnapshot()
   })
 
   test('displays email, properly formatted', () => {
     render(<Email email='kayak@example.com' />)
 
-    const regex = /\S+@\S+\.\S+/
-    const email = screen.getByText(regex)
+    const email = screen.getByTestId('contactEmail')
 
-    expect(email).not.toBeFalsy()
+    expect(email).toHaveTextContent('kayak@example.com')
+    expect(email).toMatchSnapshot()
   })
 
   test('mailto: link', () => {
     render(<Email email='kayak@example.com' />)
 
-    const regex = /\S+@\S+\.\S+/
-    const email = screen.getByText(regex)
+    const email = screen.getByTestId('contactEmail')
 
     expect(email).toHaveAttribute('href', 'mailto:kayak@example.com')
+    expect(email).toMatchSnapshot()
   })
 })

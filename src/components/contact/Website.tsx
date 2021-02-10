@@ -5,13 +5,13 @@ interface WebsiteTypes {
   url: string
 }
 
-const Website = ({ url }: WebsiteTypes): JSX.Element => {
-  if (url === '') return <p>Error: No Website</p>
+const Website = ({ url }: WebsiteTypes): JSX.Element | null => {
+  if (url === '') return null
 
   const stripped = url?.replace(/https?:\/\//i, '')
 
   return (
-    <a href={url} target='_blank' rel='noreferrer'>
+    <a data-testid='contactWebsite' href={url} target='_blank' rel='noreferrer'>
       <FiGlobe /> {stripped}
     </a>
   )

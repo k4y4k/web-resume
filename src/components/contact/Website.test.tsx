@@ -6,28 +6,24 @@ describe('<Website />', () => {
   test('handles no data', () => {
     render(<Website url='' />)
 
-    const website = screen.getByText('Error: No Website')
-    expect(website).not.toBeFalsy()
+    const website = screen.queryByTestId('contactWebsite')
+    expect(website).not.toBeInTheDocument()
+    expect(website).toMatchSnapshot()
   })
 
   test('strips out protocol to display website', () => {
     render(<Website url='https://example.com' />)
 
-    const website = screen.getByText('example.com')
-    expect(website).not.toBeFalsy()
+    const website = screen.getByTestId('contactWebsite')
+    expect(website).toHaveTextContent('example.com')
   })
 
-  test('links to website', () => {
+  test('links to website in new tab', () => {
     render(<Website url='https://example.com' />)
 
-    const website = screen.getByText('example.com')
+    const website = screen.getByTestId('contactWebsite')
     expect(website).toHaveAttribute('href', 'https://example.com')
-  })
-
-  test('link opens in new tab', () => {
-    render(<Website url='https://example.com' />)
-
-    const website = screen.getByText('example.com')
     expect(website).toHaveAttribute('target', '_blank')
+    expect(website).toMatchSnapshot()
   })
 })

@@ -16,46 +16,37 @@ const addressStyles = css`
 `
 
 const Address = ({
-  address = undefined,
+  address,
   postalCode,
   city,
   countryCode,
   region,
   // restrict showing Address by default
   restrictDisplay = true,
-}: AddressTypes): JSX.Element => {
-  // if there isn't a 123 Example Rd-type datum (non-restricted) or a city (restricted), assume there's nothing else
-  if (
-    address === 'undefined' ||
-    address === '' ||
-    city === '' ||
-    city === undefined
-  )
-    return (
-      <div css={addressStyles} data-testid='address' id='address'>
-        <p>Error: No Address</p>
-      </div>
-    )
+}: AddressTypes): JSX.Element | null => {
+  // if there isn't a 123 Example Rd-type datum (non-restricted) or
+  // a city (restricted), assume there's nothing else
 
-  // The Internet only needs the city / state
-  if (restrictDisplay)
+  if (address === '' || city === '') return null
+
+  if (!restrictDisplay)
     return (
-      <div css={addressStyles} data-testid='address' id='address'>
+      <div data-testid='contactAddress' css={addressStyles} id='address'>
+        <p>{address}</p>
         <p>
-          <FiMapPin /> {city}, {region + ','} {countryCode}
+          {city}, {region}
+        </p>
+        <p>
+          {postalCode} {countryCode}
         </p>
       </div>
     )
 
-  // pass restrictDisplay = false to render this
+  // restricted mode enabled by default
   return (
-    <div css={addressStyles} data-testid='address' id='address'>
-      <p>{address}</p>
+    <div data-testid='contactAddress' css={addressStyles} id='address'>
       <p>
-        {city}, {region}
-      </p>
-      <p>
-        {postalCode} {countryCode}
+        <FiMapPin /> {city}, {region + ','} {countryCode}
       </p>
     </div>
   )

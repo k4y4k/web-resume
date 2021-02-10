@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
+<p>
+  Example City
+  , 
+  Example State
+</p>
+`;
+
+exports[`<Address /> Is formatted correctly street name + number on one line 1`] = `
+<div
+  css="
+  ,cursor: default;,
+"
+  data-testid="contactAddress"
+  id="address"
+>
+  <p>
+    75 Example Rd
+  </p>
+  <p>
+    Example City
+    , 
+    Example State
+  </p>
+  <p>
+    PE 8888
+     
+    EX
+  </p>
+</div>
+`;
+
+exports[`<Address /> Is not about to dox me only displays City / State when RESTRICT_ADDRESS env var is passed in 1`] = `
+<div
+  css="
+  ,cursor: default;,
+"
+  data-testid="contactAddress"
+  id="address"
+>
+  <p>
+    <svg
+      fill="none"
+      height="1em"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      viewBox="0 0 24 24"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+      />
+      <circle
+        cx="12"
+        cy="10"
+        r="3"
+      />
+    </svg>
+     
+    Example City
+    , 
+    Example State,
+     
+    ZZ
+  </p>
+</div>
+`;

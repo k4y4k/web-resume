@@ -5,11 +5,12 @@ interface TwitterTypes {
   username: string
 }
 
-const Twitter = ({ username }: TwitterTypes): JSX.Element => {
-  if (username === '') return <p>Error: No Twitter</p>
+const Twitter = ({ username }: TwitterTypes): JSX.Element | null => {
+  if (username === '') return null
 
   return (
     <a
+      data-testid='contactTwitter'
       href={`https://twitter.com/${username}`}
       rel='noreferrer'
       target='_blank'

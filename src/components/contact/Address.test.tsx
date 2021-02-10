@@ -8,13 +8,12 @@ describe('<Address />', () => {
       <Address address='' postalCode='' city='' countryCode='' region='' />
     )
 
-    const address = screen.getByTestId('address')
+    const address = screen.queryByTestId('contactAddress')
 
-    expect(address).not.toBeFalsy()
-    expect(address).toHaveTextContent('Error: No Address')
+    expect(address).not.toBeInTheDocument()
   })
 
-  describe('Is formatted correctly (AU style)', () => {
+  describe('Is formatted correctly', () => {
     test('street name + number on one line', () => {
       render(
         <Address
@@ -26,10 +25,11 @@ describe('<Address />', () => {
           restrictDisplay={false}
         />
       )
-      const addressContainer = document.getElementById('address') as HTMLElement
-      const address = within(addressContainer).getByText('75 Example Rd')
 
-      expect(address).not.toBeFalsy()
+      const address = screen.getByTestId('contactAddress')
+
+      expect(address).toHaveTextContent('75 Example Rd')
+      expect(address).toMatchSnapshot()
     })
 
     test('city, state on one line', () => {
@@ -50,6 +50,7 @@ describe('<Address />', () => {
       )
 
       expect(address).not.toBeFalsy()
+      expect(address).toMatchSnapshot()
     })
   })
 
@@ -67,11 +68,12 @@ describe('<Address />', () => {
         />
       )
 
-      const address = screen.getByTestId('address')
+      const address = screen.getByTestId('contactAddress')
 
       expect(address).not.toBeFalsy()
       expect(address).not.toHaveTextContent('Example Rd')
       expect(address).toHaveTextContent('Example City, Example State')
+      expect(address).toMatchSnapshot()
     })
   })
 })

@@ -5,11 +5,12 @@ interface LinkedInTypes {
   username: string
 }
 
-const LinkedIn = ({ username }: LinkedInTypes): JSX.Element => {
-  if (username === '') return <p>Error: No LinkedIn</p>
+const LinkedIn = ({ username }: LinkedInTypes): JSX.Element | null => {
+  if (username === '') return null
 
   return (
     <a
+      data-testid='contactLinkedin'
       rel='noreferrer'
       href={`https://linkedin.com/in/${username}`}
       target='_blank'

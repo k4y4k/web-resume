@@ -6,28 +6,25 @@ describe('<GitHub />', () => {
   test('handles no data', () => {
     render(<GitHub username='' />)
 
-    const github = screen.getByText('Error: No GitHub')
-    expect(github).not.toBeFalsy()
+    const github = screen.queryByTestId('contactGithub')
+    expect(github).not.toBeInTheDocument()
+    expect(github).toMatchSnapshot()
   })
 
   test('displays username', () => {
     render(<GitHub username='octocat' />)
 
-    const github = screen.getByText('octocat')
-    expect(github).not.toBeFalsy()
+    const github = screen.getByTestId('contactGithub')
+    expect(github).toHaveTextContent('octocat')
+    expect(github).toMatchSnapshot()
   })
 
-  test('links to profile', () => {
+  test('links to profile in new tab', () => {
     render(<GitHub username='octocat' />)
-    const github = screen.getByText('octocat')
+    const github = screen.getByTestId('contactGithub')
 
     expect(github).toHaveAttribute('href', 'https://github.com/octocat')
-  })
 
-  test('link opens in new tab', () => {
-    render(<GitHub username='octocat' />)
-
-    const github = screen.getByText('octocat')
     expect(github).toHaveAttribute('target', '_blank')
   })
 })

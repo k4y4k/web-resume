@@ -5,11 +5,11 @@ interface EmailTypes {
   email: string
 }
 
-const Email = ({ email }: EmailTypes): JSX.Element => {
-  if (email === '') return <p>Error: No Email</p>
+const Email = ({ email }: EmailTypes): JSX.Element | null => {
+  if (email === '') return null
 
   return (
-    <a href={`mailto:${email}`}>
+    <a data-testid='contactEmail' href={`mailto:${email}`}>
       <FiMail /> {email}
     </a>
   )

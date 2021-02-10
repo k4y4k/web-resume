@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Contact, PureContact } from './Contact'
-import { render, screen, within } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
 import { useStaticQuery } from 'gatsby'
 
@@ -45,147 +45,10 @@ describe('<Contact />', () => {
       />
     )
 
-    const contactSectionContents = screen.getAllByText('Error', {
-      exact: false,
-    })
+    const contact = screen.getByTestId('contact')
 
-    // github, email, twitter, website, address, linkedin
-    expect(contactSectionContents).toHaveLength(6)
-  })
-
-  describe('composes all other elements', () => {
-    test('email', () => {
-      render(
-        <PureContact
-          email='kayak@example.com'
-          address=''
-          twitter=''
-          website=''
-          github=''
-          linkedin=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const email = within(contactSection).getByText(/@example.com/gi)
-      expect(email).not.toBeFalsy()
-    })
-
-    test('twitter', () => {
-      render(
-        <PureContact
-          address=''
-          email=''
-          github=''
-          website=''
-          linkedin=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
-          twitter='kayakSinger1'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const twitter = within(contactSection).getByText(/@kayakSinger1/gi)
-      expect(twitter).not.toBeFalsy()
-    })
-
-    test('github', () => {
-      render(
-        <PureContact
-          address=''
-          email=''
-          twitter=''
-          linkedin=''
-          website=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
-          github='octocat'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const github = within(contactSection).getByText(/octocat/gi)
-
-      expect(github).not.toBeFalsy()
-    })
-
-    test('website', () => {
-      render(
-        <PureContact
-          address=''
-          email=''
-          twitter=''
-          github=''
-          linkedin=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
-          website='example.com'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const website = within(contactSection).getByText(/example.com/)
-      expect(website).not.toBeFalsy()
-    })
-
-    test('address', () => {
-      render(
-        <PureContact
-          email=''
-          twitter=''
-          website=''
-          github=''
-          linkedin=''
-          address='2712 Broadway St'
-          postalCode='CA 94115'
-          city='San Francisco'
-          countryCode='US'
-          region='California'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const address = within(contactSection).getByText(
-        /San Francisco, California/gi
-      )
-      expect(address).not.toBeFalsy()
-    })
-
-    test('linkedin', () => {
-      render(
-        <PureContact
-          address=''
-          email=''
-          website=''
-          twitter=''
-          github=''
-          postalCode=''
-          city=''
-          countryCode=''
-          region=''
-          linkedin='exampledin'
-        />
-      )
-
-      const contactSection = screen.getByTestId('contact')
-      const linkedin = within(contactSection).getByText(/exampledin/)
-      expect(linkedin).not.toBeFalsy()
-      expect(linkedin).toHaveAttribute(
-        'href',
-        'https://linkedin.com/in/exampledin'
-      )
-    })
+    // everything returns null in the absurd case that absolutely nothing is passed in
+    expect(contact.children).toHaveLength(0)
   })
 
   test('Hides things appropriately by default', () => {
@@ -204,9 +67,34 @@ describe('<Contact />', () => {
       />
     )
 
-    const address = screen.getByTestId('address')
+    const address = screen.getByTestId('contactAddress')
     expect(address).toHaveTextContent('Example City, California')
     expect(address).not.toHaveTextContent('2712')
+  })
+
+  test('Shows things when told', () => {
+    render(
+      <PureContact
+        email='kayak@example.com'
+        twitter='kayakSinger1'
+        github='octocat'
+        website='example.com'
+        linkedin='exampledin'
+        city='Example City'
+        address='2712 Broadway St'
+        postalCode='CA 94115'
+        countryCode='US'
+        region='California'
+        restrictDisplay={false}
+      />
+    )
+
+    const address = screen.getByTestId('contactAddress')
+    expect(address).toHaveTextContent(/example city/i)
+    expect(address).toHaveTextContent(/2712 broadway st/i)
+    expect(address).toHaveTextContent(/ca 94115/i)
+    expect(address).toHaveTextContent(/us/i)
+    expect(address).toHaveTextContent(/California/i)
   })
 
   test('renders OK', () => {

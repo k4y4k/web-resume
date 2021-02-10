@@ -44,6 +44,8 @@ export const PureContact = ({
   city,
   region,
   countryCode,
+  address,
+  postalCode,
 }: PureContactTypes): JSX.Element => {
   return (
     <section css={[ContactStyles]} id='contact' data-testid='contact'>
@@ -57,6 +59,8 @@ export const PureContact = ({
         city={city}
         region={region}
         countryCode={countryCode}
+        address={address}
+        postalCode={postalCode}
       />
     </section>
   )

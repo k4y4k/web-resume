@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Phone /> displays phone number 1`] = `
+<p
+  data-testid="contactPhone"
+>
+  012 345 6789
+</p>
+`;
+
+exports[`<Phone /> handles no phone data 1`] = `null`;
+
+exports[`<Phone /> hides phone number by default 1`] = `null`;

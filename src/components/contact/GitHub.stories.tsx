@@ -1,4 +1,5 @@
 import * as React from 'react'
+import faker from 'faker'
 import GitHub from './GitHub'
 
 export default {
@@ -9,7 +10,7 @@ export default {
 const Template = (args): JSX.Element => <GitHub {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = { username: 'octocat' }
+Primary.args = { username: faker.internet.userName() }
 
 export const NoData = Template.bind({})
-NoData.args = {}
+NoData.args = { username: '' }

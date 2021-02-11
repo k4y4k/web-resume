@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { fake } from 'faker'
 import Website from './Website'
 
 export default {
@@ -9,10 +10,10 @@ export default {
 const Template = (args): JSX.Element => <Website {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = { url: 'example.com' }
+Primary.args = { url: fake('{{internet.url}}') }
 
 export const HTTP = Template.bind({})
-HTTP.args = { url: 'example.com', proto: 'http://' }
+HTTP.args = { url: fake('{{internet.url}}') }
 
 export const NoData = Template.bind({})
-NoData.args = {}
+NoData.args = { url: '' }

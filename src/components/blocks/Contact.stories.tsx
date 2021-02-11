@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { PureContact as Contact } from './Contact'
+import { fake } from 'faker'
 
 export default {
   title: 'Contact/Container',
@@ -10,14 +11,16 @@ const Template = (args): JSX.Element => <Contact {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  email: 'kayak@example.com',
-  twitter: 'john',
-  github: 'k4y4k',
-  linkedin: 'linkyloo',
-  website: 'http://johndoe.com',
-  city: 'San Francisco',
-  region: 'California',
-  countryCode: 'US',
+  email: fake('{{internet.exampleEmail}}'),
+  twitter: fake('{{internet.userName}}'),
+  github: fake('{{internet.userName}}'),
+  website: fake('{{internet.url}}'),
+  linkedin: fake('{{internet.userName}}'),
+  city: fake('{{address.city}}'),
+  region: fake('{{address.state}}'),
+  countryCode: fake('{{address.countryCode}}'),
+  address: fake('{{address.streetAddress}}'),
+  postalCode: fake('{{address.zipCode}}'),
 }
 
 export const NoData = Template.bind({})
@@ -25,27 +28,26 @@ NoData.args = {
   email: '',
   twitter: '',
   github: '',
-  linkedin: '',
   website: '',
+  linkedin: '',
+  city: '',
+  region: '',
+  countryCode: '',
   address: '',
   postalCode: '',
-  city: '',
-  countryCode: '',
-  region: '',
 }
 
 export const NotHidden = Template.bind({})
 NotHidden.args = {
+  email: fake('{{internet.exampleEmail}}'),
+  twitter: fake('{{internet.userName}}'),
+  github: fake('{{internet.userName}}'),
+  website: fake('{{internet.url}}'),
+  linkedin: fake('{{internet.userName}}'),
+  city: fake('{{address.city}}'),
+  region: fake('{{address.state}}'),
+  countryCode: fake('{{address.countryCode}}'),
+  address: fake('{{address.streetAddress}}'),
+  postalCode: fake('{{address.zipCode}}'),
   restrictDisplay: false,
-  email: 'kayak@example.com',
-  twitter: 'john',
-  github: 'k4y4k',
-  linkedin: 'linkyloo',
-  website: 'http://johndoe.com',
-  phone: '(912) 555-4321',
-  address: '2712 Broadway St',
-  postalCode: 'CA 94115',
-  city: 'San Francisco',
-  countryCode: 'US',
-  region: 'California',
 }

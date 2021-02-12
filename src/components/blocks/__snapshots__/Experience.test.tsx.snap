@@ -102,8 +102,26 @@ exports[`<Experience /> renders OK 1`] = `
 
 }
 
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media print {
 
+}
+
+@media (max-width:639px) {
+  .c7 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 @media print {

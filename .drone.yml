@@ -58,8 +58,8 @@ steps:
   - name: build
     image: node:14
     commands:
-      - yarn build-all
-
+      - yarn fake
+      - yarn build
 
 volumes:
   - name: cache

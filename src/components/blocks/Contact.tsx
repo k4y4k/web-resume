@@ -31,6 +31,7 @@ export const ContactStyles = css`
   p {
     ${tw`p-4 hover:bg-deeporange transition-all`}
     ${tw`print:p-2`}
+    ${tw`sm:(px-2 py-2)`}
   }
 `
 

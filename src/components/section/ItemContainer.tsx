@@ -30,16 +30,18 @@ interface ItemStyleTypes {
   collectionLength: number
 }
 
-const Seperator = tw.div`mx-2 inline-block`
+const Seperator = tw.div`mx-2 inline-block sm:(block h-0 overflow-hidden)`
 
 const itemContainerStyles = ({
   currentIndex,
   collectionLength,
 }: // eslint-disable-next-line
 ItemStyleTypes): Array<TwStyle | string | any> => [
-  tw`flex flex-col p-6 m-6 my-0 border-b border-black bg-opacity-75 print:p-0 print:m-0 print:mx-6 print:py-3 print:border-0`,
+  tw`flex flex-col p-6 m-6 my-0 border-b border-black bg-opacity-75`,
+  tw`print:(print:p-0 print:m-0 print:mx-6 print:py-3 print:border-0)`,
   // don't have bottom border on last elemeent, even if it's odd
   currentIndex + 1 === collectionLength && tw`border-none`,
+  tw`sm:(py-6 px-2)`,
 ]
 
 const itemBylineStyles = (): Array<TwStyle | string> => [

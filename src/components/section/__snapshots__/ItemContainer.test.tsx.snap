@@ -61,16 +61,16 @@ exports[`<ItemContainer /> education item education item 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {
@@ -193,16 +193,16 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {
@@ -309,16 +309,16 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {

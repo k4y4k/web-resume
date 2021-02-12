@@ -33,8 +33,10 @@ const mainStyles = (): Array<TwStyle | string> => [
   `@media print { 
     display: grid !important;
     width: 95vw !important;
-
    }`,
+
+  tw`sm:(w-screen text-center)`,
+  '@media (max-width: 639px) { ul { text-align: left;}}',
 ]
 
 const showImageAttribution = (): void =>

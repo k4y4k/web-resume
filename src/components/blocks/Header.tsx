@@ -14,6 +14,7 @@ interface PureHeaderTypes {
 const headerStyles = (): Array<TwStyle | string> => [
   tw`flex flex-col h-auto p-12 text-white uppercase`,
   tw`print:p-2 print:content-center`,
+  tw`sm:text-center sm:block sm:px-2 sm:py-6`,
 ]
 
 export const PureHeader = ({

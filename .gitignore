@@ -3,4 +3,5 @@ node_modules/
 public/
 .eslintcache
 coverage/
-data.json
+src/data/
+createFakeData.js

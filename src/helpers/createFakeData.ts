@@ -146,7 +146,7 @@ const createEducation = (num: number): educationItem[] => {
         '{{name.firstName}} {{name.lastName}} University of {{address.cityPrefix}} {{address.city}}'
       ),
       area: fake('{{name.jobTitle}}'),
-      studyType: 'AAA',
+      studyType: 'Certificate',
       courses,
       startDate: dayjs(fake('{{date.past}}')).format('YYYY-MM-DD'),
       endDate: dayjs(fake('{{date.future}}')).format('YYYY-MM-DD'),

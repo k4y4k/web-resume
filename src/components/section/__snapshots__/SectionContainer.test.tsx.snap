@@ -44,6 +44,15 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
 
 }
 
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media print {
   .c1 {
     margin: 0px;

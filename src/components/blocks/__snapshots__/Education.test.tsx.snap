@@ -110,6 +110,15 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 
 }
 
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media print {
   .c2 {
     margin: 0px;
@@ -274,6 +283,15 @@ exports[`<PureEducation /> no course details? 1`] = `
 
 @media print {
 
+}
+
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 @media print {
@@ -448,6 +466,15 @@ exports[`<PureEducation /> renders OK 1`] = `
 
 }
 
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
 @media print {
   .c2 {
     margin: 0px;
@@ -612,6 +639,15 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 
 @media print {
 
+}
+
+@media (max-width:639px) {
+  .c0 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 }
 
 @media print {

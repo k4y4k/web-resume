@@ -10,6 +10,7 @@ exports[`<Contact /> renders OK 1`] = `
   p {
     ,padding: 1rem;,:hover {,--tw-bg-opacity: 1;,background-color: rgba(181, 61, 39, var(--tw-bg-opacity));,},transition-property: all;,transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);,transition-duration: 150ms;,
     ,@media print {,padding: 0.5rem;,},
+    ,@media (max-width: 639px) {,padding-left: 0.5rem;,padding-right: 0.5rem;,padding-top: 0.5rem;,padding-bottom: 0.5rem;,},
   }
 "
   data-testid="contact"

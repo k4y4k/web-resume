@@ -90,28 +90,20 @@ exports[`<Experience /> renders OK 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
 }
 
 @media print {
-  .c7 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
-  }
+
+}
+
+@media print {
+
 }
 
 @media print {

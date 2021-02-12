@@ -98,16 +98,16 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {
@@ -264,16 +264,16 @@ exports[`<PureEducation /> no course details? 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {
@@ -436,16 +436,16 @@ exports[`<PureEducation /> renders OK 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {
@@ -602,16 +602,16 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
   }
 }
 
-@media print {
-  .c0 {
-    padding: 0px;
-    margin: 0px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-width: 0px;
+@media (max-width:639px) {
+  .c4 {
+    display: block;
+    height: 0px;
+    overflow: hidden;
   }
+}
+
+@media print {
+
 }
 
 @media print {

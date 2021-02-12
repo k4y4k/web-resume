@@ -45,3 +45,11 @@ Run `yarn build && yarn serve`.
 Open the address it gives you in your browser (probably `http://localhost:9000`) and print the page to PDF.
 
 Done!
+
+# Screenshots
+
+⚠️ Any names, addresses, handles, locations, or other data has been generated with faker.js for purely illustrative purposes. No impersonation or endorsement has been intended. ⚠️
+
+![Desktop](./src/images/desktop-example.png)
+
+![Mobile](./src/images/mobile-example.png)

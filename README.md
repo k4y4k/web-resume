@@ -8,7 +8,7 @@
 
 [Check the wiki for an explanation of what this project DOES and DOES NOT do](https://github.com/k4y4k/web-resume/wiki/%22Wait,-sort-of%3F%22---What-data-this-project-supports).
 
-# Adding your own data
+# Seeing For Yourself
 
 Assuming you're want a resume that just lists:
 
@@ -29,6 +29,8 @@ Clone this repo (via git, GitHub Desktop, or download as ZIP).
 Delete the `.git/` folder.
 
 Run `yarn install` (or `npm install`)
+
+Run `yarn fake` to generate fake data. **!! This is important !!** Without this data, your site won't build.
 
 ## Step two: Set
 

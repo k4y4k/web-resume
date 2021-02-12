@@ -2,6 +2,8 @@ import * as React from 'react'
 import tw, { TwStyle } from 'twin.macro'
 import customParseFormat from 'dayjs/plugin/customParseFormat'
 import dayjs from 'dayjs'
+import timezone from 'dayjs/plugin/timezone'
+import utc from 'dayjs/plugin/utc'
 
 interface ItemDatesTypes {
   to?: string
@@ -17,6 +19,8 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
   if (from === '') return null
 
   dayjs.extend(customParseFormat)
+  dayjs.extend(utc)
+  dayjs.extend(timezone)
 
   const toDate = dayjs(to, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)
   const fromDate = dayjs(from, ['YYYY-MM-DD', 'YYYY-MM', 'YYYY'], true)

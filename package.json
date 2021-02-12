@@ -17,7 +17,8 @@
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "check-types": "tsc --noEmit --skipLibCheck",
     "lint": "yarn eslint --ignore-path .gitignore src/",
-    "test": "jest --collectCoverage --verbose"
+    "test": "jest --collectCoverage --verbose",
+    "fake": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts && node ./src/helpers/createFakeData.js"
   },
   "dependencies": {
     "@react-icons/all-files": "4.1.0",

@@ -25,7 +25,7 @@
     "@types/faker": "5.1.6",
     "babel-preset-react-app": "10.0.0",
     "dayjs": "1.10.4",
-    "faker": "5.3.1",
+    "faker": "5.4.0",
     "gatsby": "2.32.3",
     "gatsby-background-image": "1.4.1",
     "gatsby-plugin-manifest": "2.12.0",

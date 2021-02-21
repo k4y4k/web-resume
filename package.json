@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "4.1.0",
-    "@types/faker": "5.1.6",
+    "@types/faker": "5.1.7",
     "babel-preset-react-app": "10.0.0",
     "dayjs": "1.10.4",
     "faker": "5.4.0",

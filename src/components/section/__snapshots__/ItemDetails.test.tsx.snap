@@ -3,14 +3,17 @@
 exports[`<ItemDetails /> no data = no details section 1`] = `null`;
 
 exports[`<ItemDetails /> renders markdown 1`] = `
+.c0 {
+  margin-top: 0.5rem;
+}
+
+.c0 li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
 <div
-  css="
-  ,margin-top: 0.5rem;,
-  li {
-    list-style-type: circle;
-    list-style-position: inside;
-  }
-"
+  class="c0"
   data-testid="sectionItemDetails"
 >
   <ul>
@@ -29,13 +32,7 @@ exports[`<ItemDetails /> renders markdown 1`] = `
 
 exports[`<ItemDetails /> renders markdown 2`] = `
 <div
-  css="
-  ,margin-top: 0.5rem;,
-  li {
-    list-style-type: circle;
-    list-style-position: inside;
-  }
-"
+  class="ItemDetails___StyledDiv-sc-1iyit4s-0 lfcUXm"
   data-testid="sectionItemDetails"
 >
   <ul>

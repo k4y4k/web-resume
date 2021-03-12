@@ -9,10 +9,12 @@ exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
 `;
 
 exports[`<Address /> Is formatted correctly street name + number on one line 1`] = `
+.c0 {
+  cursor: default;
+}
+
 <div
-  css="
-  ,cursor: default;,
-"
+  class="c0"
   data-testid="contactAddress"
   id="address"
 >
@@ -33,10 +35,12 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
 `;
 
 exports[`<Address /> Is not about to dox me only displays City / State when RESTRICT_ADDRESS env var is passed in 1`] = `
+.c0 {
+  cursor: default;
+}
+
 <div
-  css="
-  ,cursor: default;,
-"
+  class="c0"
   data-testid="contactAddress"
   id="address"
 >

@@ -5,6 +5,15 @@ exports[`<ItemContainer /> education item education item 1`] = `
   display: inline-block;
 }
 
+.c6 {
+  margin-top: 0.5rem;
+}
+
+.c6 li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
 .c3 {
   display: inline-block;
 }
@@ -123,13 +132,7 @@ exports[`<ItemContainer /> education item education item 1`] = `
     </p>
   </div>
   <div
-    css="
-  ,margin-top: 0.5rem;,
-  li {
-    list-style-type: circle;
-    list-style-position: inside;
-  }
-"
+    class="c6"
     data-testid="sectionItemDetails"
   >
     <ul>
@@ -271,6 +274,15 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
   display: inline-block;
 }
 
+.c6 {
+  margin-top: 0.5rem;
+}
+
+.c6 li {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
 .c3 {
   display: inline-block;
 }
@@ -389,13 +401,7 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
     </p>
   </div>
   <div
-    css="
-  ,margin-top: 0.5rem;,
-  li {
-    list-style-type: circle;
-    list-style-position: inside;
-  }
-"
+    class="c6"
     data-testid="sectionItemDetails"
   >
     <p>

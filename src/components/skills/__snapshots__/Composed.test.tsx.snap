@@ -11,24 +11,34 @@ exports[`<Composed />  incomplete data title; bucket as empty array 1`] = `null`
 exports[`<Composed />  incomplete data title; bucket as empty string 1`] = `null`;
 
 exports[`<Composed /> Composes heading and bucket 1`] = `
-.c1 {
+.c2 {
   padding: 0.25rem;
   margin: 0.25rem;
 }
 
-.c2 {
+.c3 {
   padding: 0.5rem;
 }
 
-.c0 {
+.c1 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 100;
   text-transform: uppercase;
 }
 
+.c0 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 @media print {
-  .c1 {
+  .c2 {
     padding: 0px;
     margin: 0px;
     margin-top: 0.25rem;
@@ -36,31 +46,39 @@ exports[`<Composed /> Composes heading and bucket 1`] = `
 }
 
 @media print {
-  .c0 {
+  .c1 {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
+@media print {
+  .c0 {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}
+
 <div
-  css="
-  ,padding-left: 1.5rem;,padding-right: 1.5rem;,padding-top: 0.5rem;,padding-bottom: 0.5rem;,margin-left: 1.5rem;,margin-right: 1.5rem;,margin-bottom: 0.5rem;,
-  ,@media print {,padding: 0px;,margin: 0px;,margin-left: 1.5rem;,margin-right: 1.5rem;,padding-top: 0.75rem;,padding-bottom: 0.75rem;,},
-"
+  class="c0"
   data-testid="skillsComposed"
 >
   <h2
-    class="c0"
+    class="c1"
     data-testid="skillsTitle"
   >
     Wow!
   </h2>
   <div
-    class="c1"
+    class="c2"
     data-testid="skillsBucket"
   >
     <span
-      class="c2"
+      class="c3"
     >
       Things! 
     </span>

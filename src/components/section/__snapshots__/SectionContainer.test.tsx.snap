@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionContainer /> composes title and >1  items 1`] = `
-.c2 {
+.c4 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   display: inline-block;
 }
 
-.c0 {
+.c2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -26,14 +26,48 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
   border-style: none;
 }
 
-.c1 {
+.c3 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   font-style: italic;
 }
 
+.c1 {
+  display: inline-block;
+  padding: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-bg-opacity: 1;
+  background-color: rgba(0,0,0,var(--tw-bg-opacity));
+}
+
+.c0 {
+  margin: 1rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+
+.c0:hover {
+  --tw-bg-opacity: 0.5;
+  background-color: rgba(181,61,39,var(--tw-bg-opacity));
+}
+
+.c0:hover {
+  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
+}
+
 @media (max-width:639px) {
-  .c2 {
+  .c4 {
     display: block;
     height: 0px;
     overflow: hidden;
@@ -45,7 +79,7 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
 }
 
 @media (max-width:639px) {
-  .c0 {
+  .c2 {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     padding-left: 0.5rem;
@@ -54,33 +88,33 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
 }
 
 @media print {
-  .c1 {
+  .c3 {
     margin: 0px;
   }
 }
 
-<div
-  css="
-  ,margin: 1rem;,border-width: 1px;,--tw-border-opacity: 1;,border-color: rgba(0, 0, 0, var(--tw-border-opacity));,transition-property: all;,transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);,transition-duration: 150ms;,
-  ,:hover {,--tw-bg-opacity: 0.5;,background-color: rgba(181, 61, 39, var(--tw-bg-opacity));,},
-  ,@media print {,margin: 0px;,margin-bottom: 0.5rem;,margin-left: 0.25rem;,margin-right: 0.25rem;,},
-
-  &:hover {
-    box-shadow: 0 2.8px 2.2px rgba(181, 61, 39, 0.07),
-      0 6.7px 5.3px rgba(181, 61, 39, 0.05),
-      0 12.5px 10px rgba(181, 61, 39, 0.042),
-      0 22.3px 17.9px rgba(181, 61, 39, 0.035),
-      0 41.8px 33.4px rgba(181, 61, 39, 0.028),
-      0 100px 80px rgba(181, 61, 39, 0.02);
+@media print {
+  .c1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
-"
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+
+<div
+  class="c0"
   data-testid="sectionContainer"
 >
   <h2
-    css="
-  ,display: inline-block;,padding: 0.5rem;,padding-top: 0.25rem;,padding-bottom: 0.25rem;,font-family: Inconsolata, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;,font-size: 1.25rem;,line-height: 1.75rem;,--tw-bg-opacity: 1;,background-color: rgba(0, 0, 0, var(--tw-bg-opacity));,
-  ,@media print {,font-size: 1rem;,line-height: 1.5rem;,},
-"
+    class="c1"
     data-testid="sectionTitle"
   >
     Reason #8: Regret
@@ -89,15 +123,15 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
   <br />
    
   <div
-    class="c0"
+    class="c2"
     data-testid="sectionItemContainer"
   >
     <div
-      class="c1"
+      class="c3"
       data-testid="byline"
     >
       <div
-        class="c2"
+        class="c4"
       >
         |
       </div>

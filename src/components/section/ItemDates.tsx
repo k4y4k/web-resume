@@ -29,7 +29,7 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
   const isToDateValid = toDate.isValid()
 
   // no to date / "to present"
-  if (from !== undefined && to === undefined)
+  if (from !== '' && to === '')
     return (
       <p css={datesStyles()} data-testid='sectionItemDates'>
         {fromDate.format('MMM YYYY')} - Present

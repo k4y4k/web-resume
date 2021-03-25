@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { FiPhone } from '@react-icons/all-files/fi/FiPhone'
 
 interface PhoneTypes {
   num: string
@@ -17,7 +18,11 @@ const Phone = ({
     formattedNum.splice(3, 0, ' ')
     formattedNum.splice(7, 0, ' ')
 
-    return <p data-testid='contactPhone'>{formattedNum.join('')}</p>
+    return (
+      <p data-testid='contactPhone'>
+        <FiPhone /> {formattedNum.join('')}
+      </p>
+    )
   }
 
   return null

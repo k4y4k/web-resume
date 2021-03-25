@@ -79,7 +79,7 @@ exports[`<Header /> displays header 1`] = `
   }
 }
 
-<div
+<header
   class="c0 gbi-1816118710-73WakrfVbNJBaAmhQtEeDv"
   data-testid="header"
   style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
@@ -128,7 +128,7 @@ background-size: cover;
   >
     CEO of supermarket cookie quality debates
   </h2>
-</div>
+</header>
 `;
 
 exports[`<Header /> renders OK 1`] = `
@@ -210,7 +210,7 @@ exports[`<Header /> renders OK 1`] = `
   }
 }
 
-<div
+<header
   class="c0 gbi-1616669723-73WakrfVbNJBaAmhQtEeDv"
   data-testid="header"
   style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
@@ -259,5 +259,5 @@ background-size: cover;
   >
     Programmer
   </h2>
-</div>
+</header>
 `;

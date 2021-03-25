@@ -28,15 +28,24 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
   const isFromDateValid = fromDate.isValid()
   const isToDateValid = toDate.isValid()
 
+  // if from is invalid, just stop right there, no point really
+  if (!isFromDateValid)
+    return (
+      <p data-testid='sectionItemDates' css={datesStyles()}>
+        Error: Dates Not Valid
+      </p>
+    )
+
   // no to date / "to present"
-  if (from !== '' && to === '')
+  // the one case we don't need to check if `to` makes sense
+  if (from !== '' && (to === '' || to === undefined))
     return (
       <p css={datesStyles()} data-testid='sectionItemDates'>
         {fromDate.format('MMM YYYY')} - Present
       </p>
     )
 
-  // dates not valid / supplied to date invalid
+  // either date not valid (badly formed? missing? )
   if (!isFromDateValid || !isToDateValid)
     return (
       <p data-testid='sectionItemDates' css={datesStyles()}>
@@ -55,7 +64,7 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
   // just years
   // we assume that anything set to Jan 01 20XX just wants 20XX
 
-  // // get 20XX
+  // get 20XX
   const fromDateYear = fromDate.get('year')
   const toDateYear = toDate.get('year')
 

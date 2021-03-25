@@ -45,9 +45,9 @@ describe('<Address />', () => {
       )
 
       const addressContainer = document.getElementById('address') as HTMLElement
-      const address = within(addressContainer).getByText(
-        'Example City, Example State'
-      )
+      const address = within(
+        addressContainer
+      ).getByText('Example City, Example State', { exact: false })
 
       expect(address).not.toBeFalsy()
       expect(address).toMatchSnapshot()

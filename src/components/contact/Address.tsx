@@ -32,12 +32,8 @@ const Address = ({
   if (!restrictDisplay)
     return (
       <div data-testid='contactAddress' css={addressStyles} id='address'>
-        <p>{address}</p>
         <p>
-          {city}, {region}
-        </p>
-        <p>
-          {postalCode} {countryCode}
+          <FiMapPin /> {address}, {city}, {region}, {postalCode} {countryCode}
         </p>
       </div>
     )

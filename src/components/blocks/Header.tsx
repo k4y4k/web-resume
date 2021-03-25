@@ -8,7 +8,7 @@ import Title from '../header/Title'
 interface PureHeaderTypes {
   title: string
   subtitle: string
-  imageData: Record<string, unknown>
+  imageData: any
 }
 
 const headerStyles = (): Array<TwStyle | string> => [
@@ -24,7 +24,7 @@ export const PureHeader = ({
 }: PureHeaderTypes): JSX.Element => (
   <BackgroundImage
     css={headerStyles()}
-    tag='header'
+    Tag='header'
     fluid={imageData}
     backgroundColor='#000000'
     data-testid='header'

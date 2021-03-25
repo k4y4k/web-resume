@@ -5,3 +5,4 @@ public/
 coverage/
 src/data/
 createFakeData.js
+build/

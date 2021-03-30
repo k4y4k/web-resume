@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "@react-icons/all-files": "4.1.0",
-    "@types/faker": "5.1.7",
+    "@types/faker": "5.5.0",
     "babel-preset-react-app": "10.0.0",
     "dayjs": "1.10.4",
-    "faker": "5.4.0",
+    "faker": "5.5.2",
     "gatsby": "3.1.2",
     "gatsby-background-image": "1.5.0",
     "gatsby-plugin-manifest": "3.1.0",

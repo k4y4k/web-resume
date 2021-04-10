@@ -80,14 +80,14 @@ exports[`<Header /> displays header 1`] = `
 }
 
 <header
-  class="c0 gbi-1816118710-73WakrfVbNJBaAmhQtEeDv"
+  class="c0 gbi-1948820111-73WakrfVbNJBaAmhQtEeDv"
   data-testid="header"
   style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative; opacity: 0.99;"
 >
   <style>
     
-          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1816118710-73WakrfVbNJBaAmhQtEeDv:before,
-          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1816118710-73WakrfVbNJBaAmhQtEeDv:after {
+          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1948820111-73WakrfVbNJBaAmhQtEeDv:before,
+          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1948820111-73WakrfVbNJBaAmhQtEeDv:after {
             content: '';
             display: block;
             position: absolute;
@@ -102,13 +102,13 @@ background-repeat: no-repeat;
 background-size: cover;
 
           }
-          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1816118710-73WakrfVbNJBaAmhQtEeDv:before {
+          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1948820111-73WakrfVbNJBaAmhQtEeDv:before {
             z-index: -100;
             
             
             opacity: 1; 
           }
-          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1816118710-73WakrfVbNJBaAmhQtEeDv:after {
+          .Header___StyledBackgroundImage-sc-6geo7x-0.c0.gbi-1948820111-73WakrfVbNJBaAmhQtEeDv:after {
             z-index: -101;
             
             

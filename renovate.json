@@ -4,5 +4,6 @@
   "stabilityDays": 3,
   "prCreation": "not-pending",
   "labels": ["type: dependencies"],
-  "dependencyDashboard": true
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true
 }

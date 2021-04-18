@@ -17,34 +17,23 @@ exports[`<ItemDetails /> renders markdown 1`] = `
   data-testid="sectionItemDetails"
 >
   <ul>
-    <li>
-      a
-    </li>
-    <li>
-      b
-    </li>
-    <li>
-      c
-    </li>
-  </ul>
-</div>
-`;
+    
 
-exports[`<ItemDetails /> renders markdown 2`] = `
-<div
-  class="ItemDetails___StyledDiv-sc-1iyit4s-0 eVPfOY"
-  data-testid="sectionItemDetails"
->
-  <ul>
     <li>
       a
     </li>
+    
+
     <li>
       b
     </li>
+    
+
     <li>
       c
     </li>
+    
+
   </ul>
 </div>
 `;

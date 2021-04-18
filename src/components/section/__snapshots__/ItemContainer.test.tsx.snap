@@ -136,9 +136,13 @@ exports[`<ItemContainer /> education item education item 1`] = `
     data-testid="sectionItemDetails"
   >
     <ul>
+      
+
       <li>
         DB1101 - Basic SQL
       </li>
+      
+
     </ul>
   </div>
 </div>

@@ -273,9 +273,13 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
         data-testid="sectionItemDetails"
       >
         <ul>
+          
+
           <li>
             DB1101 - Basic SQL
           </li>
+          
+
         </ul>
       </div>
     </div>
@@ -485,15 +489,23 @@ exports[`<PureEducation /> no course details? 1`] = `
         data-testid="sectionItemDetails"
       >
         <ul>
+          
+
           <li>
             Awesome Class
           </li>
+          
+
           <li>
             Boring Unit
           </li>
+          
+
           <li>
             Interesting Extracurricular
           </li>
+          
+
         </ul>
       </div>
     </div>
@@ -703,9 +715,13 @@ exports[`<PureEducation /> renders OK 1`] = `
         data-testid="sectionItemDetails"
       >
         <ul>
+          
+
           <li>
             DB1101 - Basic SQL
           </li>
+          
+
         </ul>
       </div>
     </div>
@@ -915,9 +931,13 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
         data-testid="sectionItemDetails"
       >
         <ul>
+          
+
           <li>
             DB1101 - Basic SQL
           </li>
+          
+
         </ul>
       </div>
     </div>

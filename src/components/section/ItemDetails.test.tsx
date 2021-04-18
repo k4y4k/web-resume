@@ -19,8 +19,7 @@ describe('<ItemDetails />', () => {
     const details = screen.getByTestId('sectionItemDetails')
     expect(details).toBeInTheDocument()
 
-    expect(details).toHaveTextContent('abc')
-    expect(details).toMatchSnapshot()
+    expect(details).toHaveTextContent('a b c')
     expect(details).toMatchSnapshot()
   })
 })

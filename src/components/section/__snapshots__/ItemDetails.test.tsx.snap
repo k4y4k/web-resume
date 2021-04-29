@@ -3,17 +3,7 @@
 exports[`<ItemDetails /> no data = no details section 1`] = `null`;
 
 exports[`<ItemDetails /> renders markdown 1`] = `
-.c0 {
-  margin-top: 0.5rem;
-}
-
-.c0 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
 <div
-  class="c0"
   data-testid="sectionItemDetails"
 >
   <ul>

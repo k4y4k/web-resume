@@ -1,266 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<PureEducation /> bails out on no data 1`] = `
-.c1 {
-  display: inline-block;
-  padding: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-.c0 {
-  margin: 1rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0:hover {
-  --tw-bg-opacity: 0.5;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-.c0:hover {
-  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
-}
-
-@media print {
-  .c1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-}
-
 <div
   data-testid="education"
 >
   <div
-    class="c0"
     data-testid="sectionContainer"
   >
     <h2
-      class="c1"
       data-testid="sectionTitle"
     >
       Education
     </h2>
-     
-    <br />
-     
   </div>
 </div>
 `;
 
 exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. online courses) 1`] = `
-.c7 {
-  display: inline-block;
-}
-
-.c8 {
-  margin-top: 0.5rem;
-}
-
-.c8 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c6 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c4 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-.c1 {
-  display: inline-block;
-  padding: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-.c0 {
-  margin: 1rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0:hover {
-  --tw-bg-opacity: 0.5;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-.c0:hover {
-  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
-}
-
-@media print {
-  .c7 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c3 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c6 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c2 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-}
-
 <div
   data-testid="education"
 >
   <div
-    class="c0"
     data-testid="sectionContainer"
   >
     <h2
-      class="c1"
       data-testid="sectionTitle"
     >
       Education
     </h2>
-     
-    <br />
-     
     <div
-      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
-        class="c3"
         data-testid="itemTitle"
       >
         Software Development
       </h1>
       <div
-        class="c4"
         data-testid="byline"
       >
         <span
-          class="c5"
           data-testid="itemSubtitle"
         >
           University
         </span>
-        <div
-          class="c6"
-        >
-          |
-        </div>
+        |
         <p
-          class="c7"
           data-testid="sectionItemDates"
         >
           2011
@@ -269,7 +54,6 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
         </p>
       </div>
       <div
-        class="c8"
         data-testid="sectionItemDetails"
       >
         <ul>
@@ -288,195 +72,35 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 `;
 
 exports[`<PureEducation /> no course details? 1`] = `
-.c7 {
-  display: inline-block;
-}
-
-.c8 {
-  margin-top: 0.5rem;
-}
-
-.c8 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c6 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c4 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-.c1 {
-  display: inline-block;
-  padding: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-.c0 {
-  margin: 1rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0:hover {
-  --tw-bg-opacity: 0.5;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-.c0:hover {
-  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
-}
-
-@media print {
-  .c7 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c3 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c6 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c2 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-}
-
 <div
   data-testid="education"
 >
   <div
-    class="c0"
     data-testid="sectionContainer"
   >
     <h2
-      class="c1"
       data-testid="sectionTitle"
     >
       Education
     </h2>
-     
-    <br />
-     
     <div
-      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
-        class="c3"
         data-testid="itemTitle"
       >
         Software Development
       </h1>
       <div
-        class="c4"
         data-testid="byline"
       >
         <span
-          class="c5"
           data-testid="itemSubtitle"
         >
           University
         </span>
-        <div
-          class="c6"
-        >
-          |
-        </div>
+        |
         <p
-          class="c7"
           data-testid="sectionItemDates"
         >
           2011
@@ -485,7 +109,6 @@ exports[`<PureEducation /> no course details? 1`] = `
         </p>
       </div>
       <div
-        class="c8"
         data-testid="sectionItemDetails"
       >
         <ul>
@@ -514,195 +137,35 @@ exports[`<PureEducation /> no course details? 1`] = `
 `;
 
 exports[`<PureEducation /> renders OK 1`] = `
-.c7 {
-  display: inline-block;
-}
-
-.c8 {
-  margin-top: 0.5rem;
-}
-
-.c8 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c6 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c4 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-.c1 {
-  display: inline-block;
-  padding: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-.c0 {
-  margin: 1rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0:hover {
-  --tw-bg-opacity: 0.5;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-.c0:hover {
-  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
-}
-
-@media print {
-  .c7 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c3 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c6 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c2 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-}
-
 <div
   data-testid="education"
 >
   <div
-    class="c0"
     data-testid="sectionContainer"
   >
     <h2
-      class="c1"
       data-testid="sectionTitle"
     >
       Education
     </h2>
-     
-    <br />
-     
     <div
-      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
-        class="c3"
         data-testid="itemTitle"
       >
         Bachelor of Software Development
       </h1>
       <div
-        class="c4"
         data-testid="byline"
       >
         <span
-          class="c5"
           data-testid="itemSubtitle"
         >
           University
         </span>
-        <div
-          class="c6"
-        >
-          |
-        </div>
+        |
         <p
-          class="c7"
           data-testid="sectionItemDates"
         >
           2011
@@ -711,7 +174,6 @@ exports[`<PureEducation /> renders OK 1`] = `
         </p>
       </div>
       <div
-        class="c8"
         data-testid="sectionItemDetails"
       >
         <ul>
@@ -730,195 +192,35 @@ exports[`<PureEducation /> renders OK 1`] = `
 `;
 
 exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
-.c7 {
-  display: inline-block;
-}
-
-.c8 {
-  margin-top: 0.5rem;
-}
-
-.c8 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c5 {
-  display: inline-block;
-}
-
-.c3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c6 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c4 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-.c1 {
-  display: inline-block;
-  padding: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-.c0 {
-  margin: 1rem;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0:hover {
-  --tw-bg-opacity: 0.5;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-.c0:hover {
-  box-shadow: 0 2.8px 2.2px rgba(181,61,39,0.07),0 6.7px 5.3px rgba(181,61,39,0.05),0 12.5px 10px rgba(181,61,39,0.042),0 22.3px 17.9px rgba(181,61,39,0.035),0 41.8px 33.4px rgba(181,61,39,0.028),0 100px 80px rgba(181,61,39,0.02);
-}
-
-@media print {
-  .c7 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c3 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c6 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c2 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c4 {
-    margin: 0px;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-}
-
 <div
   data-testid="education"
 >
   <div
-    class="c0"
     data-testid="sectionContainer"
   >
     <h2
-      class="c1"
       data-testid="sectionTitle"
     >
       Education
     </h2>
-     
-    <br />
-     
     <div
-      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
-        class="c3"
         data-testid="itemTitle"
       >
         Bachelor of Software Development
       </h1>
       <div
-        class="c4"
         data-testid="byline"
       >
         <span
-          class="c5"
           data-testid="itemSubtitle"
         >
           University
         </span>
-        <div
-          class="c6"
-        >
-          |
-        </div>
+        |
         <p
-          class="c7"
           data-testid="sectionItemDates"
         >
           2011
@@ -927,7 +229,6 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
         </p>
       </div>
       <div
-        class="c8"
         data-testid="sectionItemDetails"
       >
         <ul>

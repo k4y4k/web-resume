@@ -25,8 +25,6 @@ export const PureExperience = ({ history }: two): JSX.Element => {
         {history.map((el, i: number) => {
           return (
             <ItemContainer
-              collectionLength={history.length}
-              currentIndex={i}
               key={i}
               summary={el.summary}
               fromDate={el.startDate}

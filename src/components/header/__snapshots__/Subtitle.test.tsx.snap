@@ -1,27 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Subtitle /> Displays subtitle 1`] = `
-.c0 {
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  padding: 0.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgba(0,0,0,var(--tw-bg-opacity));
-}
-
-@media print {
-  .c0 {
-    -webkit-align-self: center;
-    -ms-flex-item-align: center;
-    align-self: center;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
 <h2
-  class="c0"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks

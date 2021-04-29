@@ -1,5 +1,4 @@
 import * as React from 'react'
-import tw, { css } from 'twin.macro'
 import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
 
 interface AddressTypes {
@@ -10,10 +9,6 @@ interface AddressTypes {
   region: string
   restrictDisplay?: boolean
 }
-
-const addressStyles = css`
-  ${tw`cursor-default`}
-`
 
 const Address = ({
   address,
@@ -31,7 +26,7 @@ const Address = ({
 
   if (!restrictDisplay)
     return (
-      <div data-testid='contactAddress' css={addressStyles} id='address'>
+      <div data-testid='contactAddress' id='address'>
         <p>
           <FiMapPin /> {address}, {city}, {region}, {postalCode} {countryCode}
         </p>
@@ -40,7 +35,7 @@ const Address = ({
 
   // restricted mode enabled by default
   return (
-    <div data-testid='contactAddress' css={addressStyles} id='address'>
+    <div data-testid='contactAddress' id='address'>
       <p>
         <FiMapPin /> {city}, {region + ','} {countryCode}
       </p>

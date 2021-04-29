@@ -1,19 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemDates /> dates must make chronological sense 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   Error: Dates Not Chronological
@@ -21,19 +9,7 @@ exports[`<ItemDates /> dates must make chronological sense 1`] = `
 `;
 
 exports[`<ItemDates /> handles badly formatted dates 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   Error: Dates Not Valid
@@ -43,19 +19,7 @@ exports[`<ItemDates /> handles badly formatted dates 1`] = `
 exports[`<ItemDates /> handles no dates 1`] = `null`;
 
 exports[`<ItemDates /> month, year date expressed as Month, Year 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   Oct 2020
@@ -65,19 +29,7 @@ exports[`<ItemDates /> month, year date expressed as Month, Year 1`] = `
 `;
 
 exports[`<ItemDates /> same dates: just one year 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   1999
@@ -85,19 +37,7 @@ exports[`<ItemDates /> same dates: just one year 1`] = `
 `;
 
 exports[`<ItemDates /> same dates: years 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   2012
@@ -107,19 +47,7 @@ exports[`<ItemDates /> same dates: years 1`] = `
 `;
 
 exports[`<ItemDates /> start date -> end date 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   Jan 1970
@@ -129,19 +57,7 @@ exports[`<ItemDates /> start date -> end date 1`] = `
 `;
 
 exports[`<ItemDates /> start date -> present (no end date) 1`] = `
-.c0 {
-  display: inline-block;
-}
-
-@media print {
-  .c0 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
 <p
-  class="c0"
   data-testid="sectionItemDates"
 >
   May 2012

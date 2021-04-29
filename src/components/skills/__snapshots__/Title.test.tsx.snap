@@ -1,22 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Title /> displays title 👌 1`] = `
-.c0 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-@media print {
-  .c0 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
 <h2
-  class="c0"
   data-testid="skillsTitle"
 >
   Monster Hunting

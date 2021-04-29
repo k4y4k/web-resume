@@ -1,4 +1,3 @@
-import 'twin.macro'
 import * as React from 'react'
 
 interface ItemSubtitleTypes {
@@ -8,11 +7,7 @@ interface ItemSubtitleTypes {
 const ItemSubtitle = ({ subtitle }: ItemSubtitleTypes): JSX.Element | null => {
   if (subtitle === '') return null
 
-  return (
-    <span data-testid='itemSubtitle' tw='inline-block'>
-      {subtitle}
-    </span>
-  )
+  return <span data-testid='itemSubtitle'>{subtitle}</span>
 }
 
 export default ItemSubtitle

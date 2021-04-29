@@ -1,129 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemContainer /> education item education item 1`] = `
-.c5 {
-  display: inline-block;
-}
-
-.c6 {
-  margin-top: 0.5rem;
-}
-
-.c6 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c3 {
-  display: inline-block;
-}
-
-.c1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c4 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c2 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-@media print {
-  .c5 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c4 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c0 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c2 {
-    margin: 0px;
-  }
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
   <div
-    class="c2"
     data-testid="byline"
   >
     <span
-      class="c3"
       data-testid="itemSubtitle"
     >
       University
     </span>
-    <div
-      class="c4"
-    >
-      |
-    </div>
+    |
     <p
-      class="c5"
       data-testid="sectionItemDates"
     >
       2011
@@ -132,7 +27,6 @@ exports[`<ItemContainer /> education item education item 1`] = `
     </p>
   </div>
   <div
-    class="c6"
     data-testid="sectionItemDetails"
   >
     <ul>
@@ -149,120 +43,24 @@ exports[`<ItemContainer /> education item education item 1`] = `
 `;
 
 exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
-.c5 {
-  display: inline-block;
-}
-
-.c3 {
-  display: inline-block;
-}
-
-.c1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c4 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c2 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-@media print {
-  .c5 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c4 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c0 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c2 {
-    margin: 0px;
-  }
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
   <div
-    class="c2"
     data-testid="byline"
   >
     <span
-      class="c3"
       data-testid="itemSubtitle"
     >
       University
     </span>
-    <div
-      class="c4"
-    >
-      |
-    </div>
+    |
     <p
-      class="c5"
       data-testid="sectionItemDates"
     >
       2011
@@ -274,129 +72,24 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 `;
 
 exports[`<ItemContainer /> experience item experience item 1`] = `
-.c5 {
-  display: inline-block;
-}
-
-.c6 {
-  margin-top: 0.5rem;
-}
-
-.c6 li {
-  list-style-type: circle;
-  list-style-position: inside;
-}
-
-.c3 {
-  display: inline-block;
-}
-
-.c1 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-.c4 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  display: inline-block;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgba(0,0,0,var(--tw-border-opacity));
-  --tw-bg-opacity: 0.75;
-  border-style: none;
-}
-
-.c2 {
-  margin-top: 0.25rem;
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-@media print {
-  .c5 {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-@media print {
-  .c1 {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c4 {
-    display: block;
-    height: 0px;
-    overflow: hidden;
-  }
-}
-
-@media print {
-
-}
-
-@media (max-width:639px) {
-  .c0 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-@media print {
-  .c2 {
-    margin: 0px;
-  }
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
     data-testid="itemTitle"
   >
     President
   </h1>
   <div
-    class="c2"
     data-testid="byline"
   >
     <span
-      class="c3"
       data-testid="itemSubtitle"
     >
       Company
     </span>
-    <div
-      class="c4"
-    >
-      |
-    </div>
+    |
     <p
-      class="c5"
       data-testid="sectionItemDates"
     >
       2013
@@ -405,7 +98,6 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
     </p>
   </div>
   <div
-    class="c6"
     data-testid="sectionItemDetails"
   >
     <p>

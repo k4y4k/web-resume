@@ -16,7 +16,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -33,21 +32,12 @@ module.exports = {
         path: path.join(__dirname, '/src/data/'),
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'img',
-        path: path.join(__dirname, 'src/images/'),
-      },
-    },
     `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Resume | <kayak />',
+        name: 'Resume',
         short_name: 'Resume',
         start_url: '/',
         background_color: '#542344',

@@ -1,60 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contact /> renders OK 1`] = `
-.c1 {
-  cursor: default;
-}
-
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
-  place-content: space-evenly;
-  background-color: #2b0e26;
-}
-
-.c0 a,
-.c0 p {
-  padding: 1rem;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-transition-duration: 150ms;
-  transition-duration: 150ms;
-}
-
-.c0 a:hover,
-.c0 p:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgba(181,61,39,var(--tw-bg-opacity));
-}
-
-@media print {
-  .c0 a,
-  .c0 p {
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width:639px) {
-  .c0 a,
-  .c0 p {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-}
-
 <section
-  class="c0"
   data-testid="contact"
   id="contact"
 >
@@ -143,7 +90,6 @@ exports[`<Contact /> renders OK 1`] = `
     john@gmail.com
   </a>
   <div
-    class="c1"
     data-testid="contactAddress"
     id="address"
   >

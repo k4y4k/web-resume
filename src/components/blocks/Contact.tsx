@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import tw, { css } from 'twin.macro'
 import Address from '../contact/Address'
 import Email from '../contact/Email'
 import getNetworkUsernames from '../../helpers/getNetworkUsernames'
@@ -23,18 +22,6 @@ interface PureContactTypes {
   region: string
 }
 
-export const ContactStyles = css`
-  ${tw`flex flex-wrap text-white place-content-evenly`}
-  background-color: #2b0e26;
-
-  a,
-  p {
-    ${tw`p-4 hover:bg-deeporange transition-all`}
-    ${tw`print:p-2`}
-    ${tw`sm:(px-2 py-2)`}
-  }
-`
-
 export const PureContact = ({
   restrictDisplay = true,
   email,
@@ -49,7 +36,7 @@ export const PureContact = ({
   postalCode,
 }: PureContactTypes): JSX.Element => {
   return (
-    <section css={[ContactStyles]} id='contact' data-testid='contact'>
+    <section id='contact' data-testid='contact'>
       <Website url={website} />
       <Twitter username={twitter} />
       <GitHub username={github} />

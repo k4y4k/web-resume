@@ -22,8 +22,6 @@ describe('<ItemContainer />', () => {
           toDate={data.endDate}
           title={data.position}
           subtitle={data.company}
-          currentIndex={0}
-          collectionLength={1}
         />
       )
 
@@ -47,8 +45,6 @@ describe('<ItemContainer />', () => {
     test('education item', () => {
       render(
         <ItemContainer
-          currentIndex={0}
-          collectionLength={1}
           institution='University'
           area='Software Development'
           studyType='Bachelor'
@@ -73,8 +69,6 @@ describe('<ItemContainer />', () => {
     test('no courses? get nothing', () => {
       render(
         <ItemContainer
-          currentIndex={0}
-          collectionLength={1}
           institution='University'
           area='Software Development'
           studyType='Bachelor'

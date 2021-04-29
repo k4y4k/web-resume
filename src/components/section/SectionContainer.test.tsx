@@ -6,15 +6,7 @@ import SectionContainer from './SectionContainer'
 describe('<SectionContainer />', () => {
   test.only('composes title and >1  items', () => {
     const data = (
-      <ItemContainer
-        collectionLength={1}
-        currentIndex={0}
-        title=''
-        subtitle=''
-        fromDate=''
-        toDate=''
-        summary=''
-      />
+      <ItemContainer title='' subtitle='' fromDate='' toDate='' summary='' />
     )
 
     render(<SectionContainer children={data} title='Reason #8: Regret' />)

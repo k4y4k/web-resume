@@ -23,8 +23,6 @@ export const PureEducation = ({ history }: two): JSX.Element => {
         {history.map((el, i: number) => {
           return (
             <ItemContainer
-              collectionLength={history.length}
-              currentIndex={i}
               key={i}
               courses={el.courses}
               institution={el.institution}

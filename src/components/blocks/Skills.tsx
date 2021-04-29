@@ -14,7 +14,7 @@ interface SkillsList {
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   return (
-    <div data-testid='skills' css='grid-area:skills;'>
+    <div data-testid='skills'>
       <SectionContainer title='Skills'>
         {skills?.map(el => (
           <Composed key={el.name} heading={el.name} bucket={el.keywords} />

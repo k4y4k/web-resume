@@ -22,7 +22,7 @@ interface ItemContainerTypes {
 }
 
 const itemStyles = css`
-  ${tw`my-6`}
+  ${tw`my-4`}
 
   :nth-of-type(1) {
     ${tw`mt-2`}

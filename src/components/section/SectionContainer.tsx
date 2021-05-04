@@ -9,7 +9,7 @@ interface SectionContainerTypes {
 }
 
 const sectionStyles = css`
-  ${tw`my-4 mr-4 text-sm`}
+  ${tw`p-4 py-2`}
 `
 
 const SectionContainer = ({

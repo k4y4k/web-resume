@@ -5,6 +5,8 @@ exports[`<Subtitle /> Displays subtitle 1`] = `
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 <h2

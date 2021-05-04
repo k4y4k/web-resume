@@ -11,14 +11,25 @@ exports[`<Composed />  incomplete data title; bucket as empty array 1`] = `null`
 exports[`<Composed />  incomplete data title; bucket as empty string 1`] = `null`;
 
 exports[`<Composed /> Composes heading and bucket 1`] = `
+.c1 {
+  font-weight: 700;
+}
+
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 <div
+  class="c0"
   data-testid="skillsComposed"
 >
-  <h2
-    data-testid="skillsTitle"
+  <h1
+    class="c1"
+    data-testid="itemTitle"
   >
     Wow!
-  </h2>
+  </h1>
   <div
     data-testid="skillsBucket"
   >

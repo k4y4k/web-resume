@@ -1,6 +1,7 @@
+import 'twin.macro'
 import * as React from 'react'
 import Bucket from './Bucket'
-import Title from './Title'
+import ItemTitle from '../section/ItemTitle'
 
 interface ComposedTypes {
   heading: string
@@ -17,8 +18,8 @@ const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element | null => {
   if (heading === '') return null
 
   return (
-    <div data-testid='skillsComposed'>
-      <Title category={heading} />
+    <div data-testid='skillsComposed' tw='my-2'>
+      <ItemTitle title={heading} />
       <Bucket skills={bucket} />
     </div>
   )

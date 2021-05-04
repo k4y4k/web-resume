@@ -23,6 +23,10 @@ const pageStyles = css`
   ${tw`w-full p-12 mx-auto my-12 shadow-md`}
   width: ${a4Data.widthToMillimeters()}mm;
   height: ${a4Data.heightToMillimeters()}mm;
+
+  @media print {
+    ${tw`m-0`}
+  }
 `
 
 const mainStyles = css`

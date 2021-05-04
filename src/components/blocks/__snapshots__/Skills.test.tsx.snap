@@ -1,6 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Skills /> Skills renders OK 1`] = `
+.c3 {
+  font-weight: 700;
+}
+
+.c2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .c1 {
   font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
@@ -9,16 +18,13 @@ exports[`<Skills /> Skills renders OK 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="skills"
-  style="grid-area: sk; max-height: 200px;"
 >
   <div
     class="c0"
@@ -31,13 +37,15 @@ exports[`<Skills /> Skills renders OK 1`] = `
       Skills
     </h2>
     <div
+      class="c2"
       data-testid="skillsComposed"
     >
-      <h2
-        data-testid="skillsTitle"
+      <h1
+        class="c3"
+        data-testid="itemTitle"
       >
         Web Development
-      </h2>
+      </h1>
       <div
         data-testid="skillsBucket"
       >

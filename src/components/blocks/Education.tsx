@@ -19,7 +19,7 @@ interface two {
 
 export const PureEducation = ({ history }: two): JSX.Element => {
   return (
-    <div data-testid='education' style={{ gridArea: 'ed' }}>
+    <div data-testid='education'>
       <SectionContainer title='Education'>
         {history.map((el, i: number) => {
           return (

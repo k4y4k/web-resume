@@ -13,7 +13,10 @@ export const PureHeader = ({
   title,
   subtitle,
 }: PureHeaderTypes): JSX.Element => (
-  <div data-testid='header' tw='py-6 text-center'>
+  <div
+    data-testid='header'
+    tw='py-4 mb-4 pt-0 text-center border-b border-black '
+  >
     <Title title={title} />
     <Subtitle subtitle={subtitle} />
   </div>

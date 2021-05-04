@@ -6,9 +6,6 @@ describe('<Composed />', () => {
   test('Composes heading and bucket', () => {
     render(<Composed heading='Wow!' bucket={['Things!']} />)
 
-    const heading = screen.getByTestId('skillsTitle')
-    expect(heading).toBeInTheDocument()
-
     const bucket = screen.getByTestId('skillsBucket')
     expect(bucket).toBeInTheDocument()
 

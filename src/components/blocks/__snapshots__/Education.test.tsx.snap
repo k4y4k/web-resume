@@ -9,16 +9,13 @@ exports[`<PureEducation /> bails out on no data 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="education"
-  style="grid-area: ed;"
 >
   <div
     class="c0"
@@ -45,8 +42,8 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 }
 
 .c2 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c2:nth-of-type(1) {
@@ -61,16 +58,13 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="education"
-  style="grid-area: ed;"
 >
   <div
     class="c0"
@@ -139,8 +133,8 @@ exports[`<PureEducation /> no course details? 1`] = `
 }
 
 .c2 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c2:nth-of-type(1) {
@@ -155,16 +149,13 @@ exports[`<PureEducation /> no course details? 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="education"
-  style="grid-area: ed;"
 >
   <div
     class="c0"
@@ -243,8 +234,8 @@ exports[`<PureEducation /> renders OK 1`] = `
 }
 
 .c2 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c2:nth-of-type(1) {
@@ -259,16 +250,13 @@ exports[`<PureEducation /> renders OK 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="education"
-  style="grid-area: ed;"
 >
   <div
     class="c0"
@@ -337,8 +325,8 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 }
 
 .c2 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .c2:nth-of-type(1) {
@@ -353,16 +341,13 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 }
 
 .c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 <div
   data-testid="education"
-  style="grid-area: ed;"
 >
   <div
     class="c0"

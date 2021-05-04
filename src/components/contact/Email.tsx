@@ -9,9 +9,11 @@ const Email = ({ email }: EmailTypes): JSX.Element | null => {
   if (email === '') return null
 
   return (
-    <a data-testid='contactEmail' href={`mailto:${email}`}>
-      <FiMail /> {email}
-    </a>
+    <li>
+      <a data-testid='contactEmail' href={`mailto:${email}`}>
+        <FiMail /> {email}
+      </a>
+    </li>
   )
 }
 

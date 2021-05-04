@@ -1,13 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Skills /> Skills renders OK 1`] = `
+.c1 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.c0 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 <div
   data-testid="skills"
+  style="grid-area: sk; max-height: 200px;"
 >
   <div
+    class="c0"
     data-testid="sectionContainer"
   >
     <h2
+      class="c1"
       data-testid="sectionTitle"
     >
       Skills

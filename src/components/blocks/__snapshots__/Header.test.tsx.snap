@@ -1,15 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> displays header 1`] = `
+.c2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.c1 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.c0 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
 <div
+  class="c0"
   data-testid="header"
 >
   <h1
+    class="c1"
     data-testid="headerTitle"
   >
     kayak
   </h1>
   <h2
+    class="c2"
     data-testid="headerSubtitle"
   >
     CEO of supermarket cookie quality debates
@@ -18,15 +41,38 @@ exports[`<Header /> displays header 1`] = `
 `;
 
 exports[`<Header /> renders OK 1`] = `
+.c2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.c1 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.c0 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-align: center;
+}
+
 <div
+  class="c0"
   data-testid="header"
 >
   <h1
+    class="c1"
     data-testid="headerTitle"
   >
     John Doe
   </h1>
   <h2
+    class="c2"
     data-testid="headerSubtitle"
   >
     Programmer

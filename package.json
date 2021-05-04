@@ -18,6 +18,7 @@
     "fake": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts && node ./src/helpers/createFakeData.js"
   },
   "dependencies": {
+    "@5no/paper-sizes": "^1.0.2",
     "@react-icons/all-files": "4.1.0",
     "@types/faker": "5.5.3",
     "babel-preset-react-app": "10.0.0",

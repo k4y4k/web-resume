@@ -26,20 +26,16 @@ const Address = ({
 
   if (!restrictDisplay)
     return (
-      <div data-testid='contactAddress' id='address'>
-        <p>
-          <FiMapPin /> {address}, {city}, {region}, {postalCode} {countryCode}
-        </p>
-      </div>
+      <li data-testid='contactAddress' id='address'>
+        <FiMapPin /> {address}, {city}, {region}, {postalCode} {countryCode}
+      </li>
     )
 
   // restricted mode enabled by default
   return (
-    <div data-testid='contactAddress' id='address'>
-      <p>
-        <FiMapPin /> {city}, {region + ','} {countryCode}
-      </p>
-    </div>
+    <li data-testid='contactAddress' id='address'>
+      <FiMapPin /> {city}, {region + ','} {countryCode}
+    </li>
   )
 }
 

@@ -20,7 +20,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        'Rubik',
+        'Inter',
         'ui-sans-serif',
         'system-ui',
         '-apple-system',

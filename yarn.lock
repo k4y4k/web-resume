@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@5no/paper-sizes@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@5no/paper-sizes/-/paper-sizes-1.0.2.tgz#c1915d3794560db443eb572763ee516293fe9db9"
+  integrity sha512-irC2/0igRNQbYFU5JQi5OewX6MF8yAd5AR1B2Jdciuf5JOCvcfLDUEX9KcCWgf16CrOddLc7pmsoXLXLm+WRGg==
+
 "@ardatan/aggregate-error@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@ardatan/aggregate-error/-/aggregate-error-0.0.6.tgz#fe6924771ea40fc98dc7a7045c2e872dc8527609"

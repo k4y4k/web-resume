@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Rubik:400,900', 'Inconsolata:400,900'],
+          families: ['Inter:400,900', 'Inconsolata:400,900'],
         },
       },
     },

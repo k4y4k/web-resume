@@ -3,7 +3,13 @@
 exports[`<ItemDetails /> no data = no details section 1`] = `null`;
 
 exports[`<ItemDetails /> renders markdown 1`] = `
+.c0 ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 <div
+  class="c0"
   data-testid="sectionItemDetails"
 >
   <ul>

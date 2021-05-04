@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionTitle /> displays title 1`] = `
+.c0 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 <h2
+  class="c0"
   data-testid="sectionTitle"
 >
   Check this

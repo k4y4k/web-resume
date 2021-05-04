@@ -50,10 +50,10 @@ exports[`<Skills /> Skills renders OK 1`] = `
         data-testid="skillsBucket"
       >
         <span>
-          CSS 
+          HTML 
         </span>
         <span>
-          HTML 
+          CSS 
         </span>
         <span>
           Javascript 

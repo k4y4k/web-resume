@@ -20,7 +20,7 @@ const paperOptions = { dpi: 300, type: 'mm' }
 const a4Data = paperSizes('A4', paperOptions)
 
 const pageStyles = css`
-  ${tw`w-full p-12 mx-auto my-12 shadow-md`}
+  ${tw`w-full p-12 mx-auto my-12 shadow-lg`}
   width: ${a4Data.widthToMillimeters()}mm;
   height: ${a4Data.heightToMillimeters()}mm;
 

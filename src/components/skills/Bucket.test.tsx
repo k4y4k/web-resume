@@ -11,18 +11,4 @@ describe('<Bucket />', () => {
     expect(skills).not.toBeInTheDocument()
     expect(skills).toMatchSnapshot()
   })
-
-  test('alphabetises input', () => {
-    render(
-      <Bucket
-        skills={['JavaScript', 'React', 'A Minimal Caffeine Dependency']}
-      />
-    )
-
-    const skills = screen.getByTestId('skillsBucket')
-    expect(skills).toHaveTextContent(
-      'A Minimal Caffeine Dependency JavaScript React'
-    )
-    expect(skills).toMatchSnapshot()
-  })
 })

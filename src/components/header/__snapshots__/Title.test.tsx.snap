@@ -3,7 +3,16 @@
 exports[`<Title /> Handles not having any data properly 1`] = `null`;
 
 exports[`<Title /> displays title 1`] = `
+.c0 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
 <h1
+  class="c0"
   data-testid="headerTitle"
 >
   kayak kayak

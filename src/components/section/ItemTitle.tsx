@@ -1,3 +1,4 @@
+import 'twin.macro'
 import * as React from 'react'
 
 interface ItemTitleTypes {
@@ -7,7 +8,11 @@ interface ItemTitleTypes {
 const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element | null => {
   if (title === '') return null
 
-  return <h1 data-testid='itemTitle'>{title}</h1>
+  return (
+    <h1 data-testid='itemTitle' tw='font-bold'>
+      {title}
+    </h1>
+  )
 }
 
 export default ItemTitle

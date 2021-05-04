@@ -1,21 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Experience /> renders OK 1`] = `
+.c4 ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.c3 {
+  font-weight: 700;
+}
+
+.c2 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.c2:nth-of-type(1) {
+  margin-top: 0.5rem;
+}
+
+.c1 {
+  font-weight: 700;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.c0 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 <div
   data-testid="experience"
+  style="grid-area: ex;"
 >
   <div
+    class="c0"
     data-testid="sectionContainer"
   >
     <h2
+      class="c1"
       data-testid="sectionTitle"
     >
       Experience
     </h2>
     <div
+      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
+        class="c3"
         data-testid="itemTitle"
       >
         Volunteer
@@ -28,16 +66,17 @@ exports[`<Experience /> renders OK 1`] = `
         >
           Organization
         </span>
-        |
-        <p
+         | 
+        <span
           data-testid="sectionItemDates"
         >
           Mar 2016
            - 
           Feb 2017
-        </p>
+        </span>
       </div>
       <div
+        class="c4"
         data-testid="sectionItemDetails"
       >
         <p>
@@ -46,9 +85,11 @@ exports[`<Experience /> renders OK 1`] = `
       </div>
     </div>
     <div
+      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
+        class="c3"
         data-testid="itemTitle"
       >
         President
@@ -61,16 +102,17 @@ exports[`<Experience /> renders OK 1`] = `
         >
           Company
         </span>
-        |
-        <p
+         | 
+        <span
           data-testid="sectionItemDates"
         >
           2013
            - 
           2014
-        </p>
+        </span>
       </div>
       <div
+        class="c4"
         data-testid="sectionItemDetails"
       >
         <p>
@@ -79,9 +121,11 @@ exports[`<Experience /> renders OK 1`] = `
       </div>
     </div>
     <div
+      class="c2"
       data-testid="sectionItemContainer"
     >
       <h1
+        class="c3"
         data-testid="itemTitle"
       >
         Volunteer
@@ -94,16 +138,17 @@ exports[`<Experience /> renders OK 1`] = `
         >
           Organization
         </span>
-        |
-        <p
+         | 
+        <span
           data-testid="sectionItemDates"
         >
           2012
            - 
           2013
-        </p>
+        </span>
       </div>
       <div
+        class="c4"
         data-testid="sectionItemDetails"
       >
         <p>

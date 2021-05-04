@@ -1,4 +1,5 @@
 import * as React from 'react'
+import tw, { css } from 'twin.macro'
 import Dates from './ItemDates'
 import Details from './ItemDetails'
 import Subtitle from './ItemSubtitle'
@@ -19,6 +20,14 @@ interface ItemContainerTypes {
   studyType?: string
   courses?: string[]
 }
+
+const itemStyles = css`
+  ${tw`my-6`}
+
+  :nth-of-type(1) {
+    ${tw`mt-2`}
+  }
+`
 
 const ItemContainer = ({
   title,
@@ -49,11 +58,11 @@ const ItemContainer = ({
   }
 
   return (
-    <div data-testid='sectionItemContainer'>
+    <div data-testid='sectionItemContainer' css={itemStyles}>
       <Title title={title ?? studyTitle} />
       <div data-testid='byline'>
         <Subtitle subtitle={subtitle ?? institution} />
-        {'|'}
+        {' | '}
         <Dates from={fromDate} to={toDate} />
       </div>
       <Details details={summary ?? studyDetails} />

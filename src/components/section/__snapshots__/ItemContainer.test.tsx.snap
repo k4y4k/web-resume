@@ -1,10 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemContainer /> education item education item 1`] = `
+.c2 ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.c1 {
+  font-weight: 700;
+}
+
+.c0 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.c0:nth-of-type(1) {
+  margin-top: 0.5rem;
+}
+
 <div
+  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
+    class="c1"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
@@ -17,16 +37,17 @@ exports[`<ItemContainer /> education item education item 1`] = `
     >
       University
     </span>
-    |
-    <p
+     | 
+    <span
       data-testid="sectionItemDates"
     >
       2011
        - 
       2013
-    </p>
+    </span>
   </div>
   <div
+    class="c2"
     data-testid="sectionItemDetails"
   >
     <ul>
@@ -43,10 +64,25 @@ exports[`<ItemContainer /> education item education item 1`] = `
 `;
 
 exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
+.c1 {
+  font-weight: 700;
+}
+
+.c0 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.c0:nth-of-type(1) {
+  margin-top: 0.5rem;
+}
+
 <div
+  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
+    class="c1"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
@@ -59,23 +95,43 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
     >
       University
     </span>
-    |
-    <p
+     | 
+    <span
       data-testid="sectionItemDates"
     >
       2011
        - 
       2013
-    </p>
+    </span>
   </div>
 </div>
 `;
 
 exports[`<ItemContainer /> experience item experience item 1`] = `
+.c2 ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.c1 {
+  font-weight: 700;
+}
+
+.c0 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.c0:nth-of-type(1) {
+  margin-top: 0.5rem;
+}
+
 <div
+  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
+    class="c1"
     data-testid="itemTitle"
   >
     President
@@ -88,16 +144,17 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
     >
       Company
     </span>
-    |
-    <p
+     | 
+    <span
       data-testid="sectionItemDates"
     >
       2013
        - 
       2014
-    </p>
+    </span>
   </div>
   <div
+    class="c2"
     data-testid="sectionItemDetails"
   >
     <p>

@@ -9,14 +9,16 @@ const Twitter = ({ username }: TwitterTypes): JSX.Element | null => {
   if (username === '' || username === null) return null
 
   return (
-    <a
-      data-testid='contactTwitter'
-      href={`https://twitter.com/${username}`}
-      rel='noreferrer'
-      target='_blank'
-    >
-      <FiTwitter /> {`@${username}`}
-    </a>
+    <li>
+      <a
+        data-testid='contactTwitter'
+        href={`https://twitter.com/${username}`}
+        rel='noreferrer'
+        target='_blank'
+      >
+        <FiTwitter /> {`@${username}`}
+      </a>
+    </li>
   )
 }
 

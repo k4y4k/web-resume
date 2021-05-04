@@ -19,9 +19,9 @@ const Phone = ({
     formattedNum.splice(7, 0, ' ')
 
     return (
-      <p data-testid='contactPhone'>
+      <li data-testid='contactPhone'>
         <FiPhone /> {formattedNum.join('')}
-      </p>
+      </li>
     )
   }
 

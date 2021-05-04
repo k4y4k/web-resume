@@ -1,3 +1,4 @@
+import 'twin.macro'
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Composed from '../skills/Composed'
@@ -14,7 +15,7 @@ interface SkillsList {
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   return (
-    <div data-testid='skills'>
+    <div data-testid='skills' style={{ gridArea: 'sk', maxHeight: '200px' }}>
       <SectionContainer title='Skills'>
         {skills?.map(el => (
           <Composed key={el.name} heading={el.name} bucket={el.keywords} />

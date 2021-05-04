@@ -1,3 +1,4 @@
+import 'twin.macro'
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Subtitle from '../header/Subtitle'
@@ -12,7 +13,7 @@ export const PureHeader = ({
   title,
   subtitle,
 }: PureHeaderTypes): JSX.Element => (
-  <div data-testid='header'>
+  <div data-testid='header' tw='py-6 text-center'>
     <Title title={title} />
     <Subtitle subtitle={subtitle} />
   </div>

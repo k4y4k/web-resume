@@ -1,3 +1,4 @@
+import 'twin.macro'
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import ItemContainer from '../section/ItemContainer'
@@ -18,7 +19,7 @@ interface two {
 
 export const PureEducation = ({ history }: two): JSX.Element => {
   return (
-    <div data-testid='education'>
+    <div data-testid='education' style={{ gridArea: 'ed' }}>
       <SectionContainer title='Education'>
         {history.map((el, i: number) => {
           return (

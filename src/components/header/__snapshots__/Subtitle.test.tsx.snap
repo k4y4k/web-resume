@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Subtitle /> Displays subtitle 1`] = `
+.c0 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
 <h2
+  class="c0"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks

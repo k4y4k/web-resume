@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Phone /> displays phone number 1`] = `
-<p
+<li
   data-testid="contactPhone"
 >
   <svg
@@ -21,7 +21,7 @@ exports[`<Phone /> displays phone number 1`] = `
   </svg>
    
   012 345 6789
-</p>
+</li>
 `;
 
 exports[`<Phone /> handles no phone data 1`] = `null`;

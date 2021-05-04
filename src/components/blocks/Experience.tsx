@@ -20,7 +20,7 @@ interface two {
 
 export const PureExperience = ({ history }: two): JSX.Element => {
   return (
-    <div data-testid='experience'>
+    <div data-testid='experience' style={{ gridArea: 'ex' }}>
       <SectionContainer title='Experience'>
         {history.map((el, i: number) => {
           return (

@@ -24,24 +24,26 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
 
   // if from is invalid, just stop right there, no point really
   if (!isFromDateValid)
-    return <p data-testid='sectionItemDates'>Error: Dates Not Valid</p>
+    return <span data-testid='sectionItemDates'>Error: Dates Not Valid</span>
 
   // no to date / "to present"
   // the one case we don't need to check if `to` makes sense
   if (from !== '' && (to === '' || to === undefined))
     return (
-      <p data-testid='sectionItemDates'>
+      <span data-testid='sectionItemDates'>
         {fromDate.format('MMM YYYY')} - Present
-      </p>
+      </span>
     )
 
   // either date not valid (badly formed? missing? )
   if (!isFromDateValid || !isToDateValid)
-    return <p data-testid='sectionItemDates'>Error: Dates Not Valid</p>
+    return <span data-testid='sectionItemDates'>Error: Dates Not Valid</span>
 
   // to later than from
   if (fromDate > toDate)
-    return <p data-testid='sectionItemDates'>Error: Dates Not Chronological</p>
+    return (
+      <span data-testid='sectionItemDates'>Error: Dates Not Chronological</span>
+    )
 
   // just years
   // we assume that anything set to Jan 01 20XX just wants 20XX
@@ -59,24 +61,26 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
       // have two 20XX "just years" dates. Now, are they the same year?
       return (
         // yes
-        <p data-testid='sectionItemDates'>{fromDate.format('YYYY')}</p>
+        <span data-testid='sectionItemDates'>{fromDate.format('YYYY')}</span>
       )
     else
       return (
         // no
-        <p data-testid='sectionItemDates'>
+        <span data-testid='sectionItemDates'>
           {fromDate.format('YYYY')} - {toDate.format('YYYY')}
-        </p>
+        </span>
       )
 
   // same date (one day event?)
   if (fromDate.isSame(toDate, 'day'))
-    return <p data-testid='sectionItemDates'>{toDate.format('MMM YYYY')}</p>
+    return (
+      <span data-testid='sectionItemDates'>{toDate.format('MMM YYYY')}</span>
+    )
 
   return (
-    <p data-testid='sectionItemDates'>
+    <span data-testid='sectionItemDates'>
       {fromDate.format('MMM YYYY')} - {toDate.format('MMM YYYY')}
-    </p>
+    </span>
   )
 }
 

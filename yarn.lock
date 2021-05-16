@@ -13595,7 +13595,15 @@ shellwords@^0.1.1:
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
   integrity sha512-vFwSUfQvqybiICwZY5+DAWIPLKsWO31Q91JSKl3UYv+K5c2QRPzn0qzec6QPu1Qc9eHYItiP3NdJqNVqetYAww==
 
-short-uuid@4.1.0, short-uuid@^4.1.0:
+short-uuid@4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/short-uuid/-/short-uuid-4.2.0.tgz#3706d9e7287ac589dc5ffe324d3e34817a07540b"
+  integrity sha512-r3cxuPPZSuF0QkKsK9bBR7u+7cwuCRzWzgjPh07F5N2iIUNgblnMHepBY16xgj5t1lG9iOP9k/TEafY1qhRzaw==
+  dependencies:
+    any-base "^1.1.0"
+    uuid "^8.3.2"
+
+short-uuid@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/short-uuid/-/short-uuid-4.1.0.tgz#c959f46101b4278e2589d5c85b4c35a385b51764"
   integrity sha512-Zjerp00N5uUC7ET1mEjz77vY9h5zm6IQivtHxcbnoSIWyK6PD/dQnU5w916F8lzQIJjxBTEbCKsAikE64WxUxQ==
@@ -15284,7 +15292,7 @@ uuid@3.4.0, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-uuid@^8.3.0:
+uuid@^8.3.0, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==

@@ -4,6 +4,8 @@ exports[`<Contact /> renders OK 1`] = `
 .c0 .icon {
   display: inline-block;
   vertical-align: middle;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
   margin-bottom: 0.125rem;
 }
 

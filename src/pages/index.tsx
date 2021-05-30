@@ -14,23 +14,29 @@ import { getImage } from 'gatsby-plugin-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import BackgroundImage from 'gatsby-background-image'
 import Contact from '../components/blocks/Contact'
+import Modal from '../components/modal/Modal'
+import '../index.css'
 
 const paperSizes = require('@5no/paper-sizes')
 const paperOptions = { dpi: 300, type: 'mm' }
 const a4Data = paperSizes('A4', paperOptions)
 
 const pageStyles = css`
-  ${tw`w-full p-12 mx-auto my-12 shadow-lg`}
+  ${tw`w-full p-12 mx-auto shadow-lg`}
   width: ${a4Data.widthToMillimeters()}mm;
   height: ${a4Data.heightToMillimeters()}mm;
 
   @media print {
     ${tw`m-0`}
   }
+
+  @media screen and (min-width: 1200px) {
+    ${tw`my-12`}
+  }
 `
 
 const mainStyles = css`
-  ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
+  ${tw`text-sm grid grid-flow-row-dense grid-cols-2 `}
   max-height: calc( ${a4Data.heightToMillimeters()}mm * 0.8 );
   grid-template-rows: content content content;
   grid-template-areas:
@@ -70,12 +76,9 @@ const IndexRoute = (): JSX.Element => {
       </Helmet>
       <GlobalStyles />
 
-      <BackgroundImage
-        css={pageStyles}
-        Tag='section'
-        {...bgImage}
-        preserveStackingContext
-      >
+      <Modal />
+
+      <BackgroundImage css={pageStyles} Tag='section' {...bgImage}>
         <div
           tw='bg-white p-8'
           css={{ height: `${a4Data.heightToMillimeters() - 25}mm` }}
@@ -84,9 +87,9 @@ const IndexRoute = (): JSX.Element => {
           <main css={mainStyles}>
             <Experience />
             <div style={{ gridArea: 'sk' }}>
+              <Contact />
               <Skills />
               <Education />
-              <Contact />
             </div>
           </main>
         </div>

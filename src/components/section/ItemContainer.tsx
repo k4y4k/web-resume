@@ -60,7 +60,7 @@ const ItemContainer = ({
   return (
     <div data-testid='sectionItemContainer' css={itemStyles}>
       <Title title={title ?? studyTitle} />
-      <div data-testid='byline'>
+      <div data-testid='byline' tw='italic'>
         <Subtitle subtitle={subtitle ?? institution} />
         {' | '}
         <Dates from={fromDate} to={toDate} />

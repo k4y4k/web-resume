@@ -9,7 +9,10 @@ const SectionTitle = ({ title }: SectionTitleTypes): JSX.Element | null => {
   if (title === '') return null
 
   return (
-    <h2 data-testid='sectionTitle' tw='font-bold font-mono text-xl'>
+    <h2
+      data-testid='sectionTitle'
+      tw='text-orchid-700 font-bold font-mono text-xl uppercase'
+    >
       {title}
     </h2>
   )

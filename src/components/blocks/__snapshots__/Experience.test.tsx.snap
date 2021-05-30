@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Experience /> renders OK 1`] = `
-.c4 ul {
+.c5 ul {
   list-style-type: disc;
   list-style-position: inside;
+  text-indent: -21px;
+  padding-left: 21px;
 }
 
 .c3 {
@@ -19,11 +21,18 @@ exports[`<Experience /> renders OK 1`] = `
   margin-top: 0.5rem;
 }
 
+.c4 {
+  font-style: italic;
+}
+
 .c1 {
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
   font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  text-transform: uppercase;
 }
 
 .c0 {
@@ -56,6 +65,7 @@ exports[`<Experience /> renders OK 1`] = `
         Volunteer
       </h1>
       <div
+        class="c4"
         data-testid="byline"
       >
         <span
@@ -73,7 +83,7 @@ exports[`<Experience /> renders OK 1`] = `
         </span>
       </div>
       <div
-        class="c4"
+        class="c5"
         data-testid="sectionItemDetails"
       >
         <p>
@@ -92,6 +102,7 @@ exports[`<Experience /> renders OK 1`] = `
         President
       </h1>
       <div
+        class="c4"
         data-testid="byline"
       >
         <span
@@ -109,7 +120,7 @@ exports[`<Experience /> renders OK 1`] = `
         </span>
       </div>
       <div
-        class="c4"
+        class="c5"
         data-testid="sectionItemDetails"
       >
         <p>
@@ -128,6 +139,7 @@ exports[`<Experience /> renders OK 1`] = `
         Volunteer
       </h1>
       <div
+        class="c4"
         data-testid="byline"
       >
         <span
@@ -145,7 +157,7 @@ exports[`<Experience /> renders OK 1`] = `
         </span>
       </div>
       <div
-        class="c4"
+        class="c5"
         data-testid="sectionItemDetails"
       >
         <p>

@@ -2,10 +2,13 @@
 
 exports[`<SectionTitle /> displays title 1`] = `
 .c0 {
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
   font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  text-transform: uppercase;
 }
 
 <h2

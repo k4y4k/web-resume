@@ -26,7 +26,7 @@ interface PureContactTypes {
 
 const iconStyles = css`
   .icon {
-    ${tw`inline-block align-middle`}
+    ${tw`inline-block align-middle text-orchid-700`}
     margin-bottom: 0.125rem;
   }
 

@@ -1,0 +1,6 @@
+html,
+body {
+  background: #7b4397;
+  background: linear-gradient(to bottom right, #dc2430, #7b4397);
+  transition: ease all 800ms;
+}

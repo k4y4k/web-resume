@@ -6,6 +6,8 @@ exports[`<ItemDetails /> renders markdown 1`] = `
 .c0 ul {
   list-style-type: disc;
   list-style-position: inside;
+  text-indent: -21px;
+  padding-left: 21px;
 }
 
 <div

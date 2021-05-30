@@ -9,6 +9,8 @@ exports[`<Title /> displays title 1`] = `
   font-size: 3.75rem;
   line-height: 1;
   margin-bottom: 0px;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 <h1

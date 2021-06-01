@@ -1,3 +1,4 @@
+import 'twin.macro'
 import * as React from 'react'
 import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
 
@@ -33,7 +34,7 @@ const Address = ({
 
   // restricted mode enabled by default
   return (
-    <li data-testid='contactAddress' id='address'>
+    <li data-testid='contactAddress' id='address' tw=''>
       <FiMapPin /> {city}, {region + ','} {countryCode}
     </li>
   )

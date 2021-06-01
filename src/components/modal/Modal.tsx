@@ -13,7 +13,7 @@ const modalStyles = css`
   }
 
   a {
-    ${tw`p-1 mx-1 text-purple-600 rounded-md cursor-pointer`}
+    ${tw`p-1 mx-1 underline cursor-pointer rounded-md`}
 
     &::after {
       content: ' ➜';

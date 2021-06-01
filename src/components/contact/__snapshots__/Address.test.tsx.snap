@@ -78,6 +78,7 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
 
 exports[`<Address /> Is not about to dox me only displays City / State when RESTRICT_ADDRESS env var is passed in 1`] = `
 <li
+  class="Address___StyledLi-sc-1xuz7b7-0"
   data-testid="contactAddress"
   id="address"
 >

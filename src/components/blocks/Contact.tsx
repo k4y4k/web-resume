@@ -31,7 +31,19 @@ const iconStyles = css`
   }
 
   li {
-    ${tw`py-1`}
+    ${tw`py-1 mx-1 cursor-pointer`}
+
+    a:hover {
+      ${tw`p-1 text-white bg-purple-800 rounded-md`}
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+
+  a::after {
+    content: ' ➜';
   }
 `
 

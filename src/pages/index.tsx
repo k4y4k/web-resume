@@ -69,7 +69,7 @@ const IndexRoute = (): JSX.Element => {
       <Helmet defer={false}>
         <html lang='en' />
         <meta charSet='utf-8' />
-        <title>{'Resume | <kayak />'}</title>
+        <title>{'Example Resumé | k4y4k/web-resume'}</title>
         <meta name='description' content='Online resume.' />
         <link rel='canonical' href='https://kayak.rocks/web-resume' />
         <meta property='og:type' content='website' />

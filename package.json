@@ -24,7 +24,7 @@
     "babel-preset-react-app": "10.0.0",
     "dayjs": "1.10.5",
     "faker": "5.5.3",
-    "gatsby": "3.6.1",
+    "gatsby": "3.6.2",
     "gatsby-background-image": "1.5.3",
     "gatsby-plugin-image": "1.6.0",
     "gatsby-plugin-manifest": "3.6.0",

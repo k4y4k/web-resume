@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { render, screen } from '@testing-library/react'
-import Index from './index'
+import Resume from './Resume'
 import { useStaticQuery } from 'gatsby'
 
 describe('Resume', () => {
@@ -47,7 +47,7 @@ describe('Resume', () => {
   )
 
   test('Renders OK', () => {
-    render(<Index />)
+    render(<Resume />)
 
     expect(screen).toMatchSnapshot()
   })

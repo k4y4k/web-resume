@@ -6,6 +6,17 @@ import { PureModal } from './Modal'
 jest.mock('short-uuid')
 
 describe('<PureModal />', () => {
+  const OLD_ENV = process.env
+
+  beforeEach(() => {
+    jest.resetModules()
+    process.env = { ...OLD_ENV }
+  })
+
+  afterAll(() => {
+    process.env = OLD_ENV
+  })
+
   const data = {
     fluid: {
       src: '/static/55019b471591030c02c094b138609888/1a09b/unsplash.jpg',
@@ -24,7 +35,28 @@ describe('<PureModal />', () => {
     },
   }
 
-  test('renders OK', () => {
+  test('does not render if GATSBY_SHOW_MODAL is false', () => {
+    const uuid = require('short-uuid')
+    uuid.generate.mockImplementation(() => '73WakrfVbNJBaAmhQtEeDv')
+
+    const { container } = render(<PureModal modalBg={data} />)
+
+    expect(container).toMatchSnapshot()
+  })
+
+  test("does not render if GATSBY_SHOW_MODAL is ''", () => {
+    process.env.GATSBY_SHOW_MODAL = ''
+    const uuid = require('short-uuid')
+    uuid.generate.mockImplementation(() => '73WakrfVbNJBaAmhQtEeDv')
+
+    const { container } = render(<PureModal modalBg={data} />)
+
+    expect(container).toMatchSnapshot()
+  })
+
+  test('renders OK otherwise', () => {
+    process.env.GATSBY_SHOW_MODAL = 'true'
+
     const uuid = require('short-uuid')
     uuid.generate.mockImplementation(() => '73WakrfVbNJBaAmhQtEeDv')
 
@@ -34,6 +66,8 @@ describe('<PureModal />', () => {
   })
 
   test('button makes it go away ', () => {
+    process.env.GATSBY_SHOW_MODAL = 'true'
+
     const uuid = require('short-uuid')
     uuid.generate.mockImplementation(() => '73WakrfVbNJBaAmhQtEeDv')
 

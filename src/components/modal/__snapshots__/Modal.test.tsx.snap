@@ -2,7 +2,11 @@
 
 exports[`<PureModal /> button makes it go away  1`] = `<div />`;
 
-exports[`<PureModal /> renders OK 1`] = `
+exports[`<PureModal /> does not render if GATSBY_SHOW_MODAL is '' 1`] = `<div />`;
+
+exports[`<PureModal /> does not render if GATSBY_SHOW_MODAL is false 1`] = `<div />`;
+
+exports[`<PureModal /> renders OK otherwise 1`] = `
 .c0 {
   position: fixed !important;
   top: 0px;
@@ -104,13 +108,13 @@ exports[`<PureModal /> renders OK 1`] = `
 
 <div>
   <div
-    class="c0 gbi-1850775931-73WakrfVbNJBaAmhQtEeDv"
+    class="c0 gbi-1850775931-undefined"
     style="background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;"
   >
     <style>
       
-          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-73WakrfVbNJBaAmhQtEeDv:before,
-          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-73WakrfVbNJBaAmhQtEeDv:after {
+          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-undefined:before,
+          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-undefined:after {
             content: '';
             display: block;
             position: absolute;
@@ -126,13 +130,13 @@ background-size: cover;
 background-color: rgba(76,29,149,var(--tw-bg-opacity));
 
           }
-          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-73WakrfVbNJBaAmhQtEeDv:before {
+          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-undefined:before {
             z-index: -100;
             background-image: url(data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYEBQcD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQF/9oADAMBAAIQAxAAAAFLjZ31VWhFiSaKei6YlX5EcrAj/8QAHRAAAQQDAQEAAAAAAAAAAAAAAwABAgQFEhQRJP/aAAgBAQABBQIVvrFSMOxP60YugaF0lcj6xWRx7HZ20n0tNWRuImSD4Rf/xAAaEQEAAQUAAAAAAAAAAAAAAAABAAIDEBEh/9oACAEDAQE/AS8nIBqVY//EABkRAQEBAAMAAAAAAAAAAAAAAAEAAhESQf/aAAgBAgEBPwFyM82j27N//8QAIBAAAQMDBQEAAAAAAAAAAAAAAgABAxEhMRASIkFhUf/aAAgBAQAGPwKUnjCMLs91PHTcEd2cHyuZsfx6KSP6d3QsB7G79XLPiKeHPY170qWU167k5+00/8QAHhAAAgMAAgMBAAAAAAAAAAAAAREAITFBYVFxgbH/2gAIAQEAAT8hpqJWPsIcCMYYR/RkLG84Rsd1DARZi/x1PWqjaYzPJ1cEJ8gjlENJHI4dx5h9yUca8iCB9/dOKf/aAAwDAQACAAMAAAAQV+MA/8QAGxEBAAICAwAAAAAAAAAAAAAAAQARIUGBsfD/2gAIAQMBAT8QLvk31Ehp9zBsls//xAAbEQEBAAEFAAAAAAAAAAAAAAABABEhMVGB8P/aAAgBAgEBPxBvhkFNPdRbLHf/xAAfEAEAAgICAgMAAAAAAAAAAAABESEAMUFxUWGBkfD/2gAIAQEAAT8QqC4BqCCWmxn3g+AsHWPGg4Md43QJbyqp4GVq4omsTqhDbgenfjJwDFDKakdh+tySPIC0QkyksMzhD5ChYZCRak9/OMlr1fCMx94ORmeVcYib2EkdC4e5nEFCg8pga9ViRz//2Q==);
             
             opacity: 1; 
           }
-          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-73WakrfVbNJBaAmhQtEeDv:after {
+          .Modal___StyledBackgroundImage-wzs0mx-0.c0.gbi-1850775931-undefined:after {
             z-index: -101;
             
             background-image: url(data:image/jpeg;base64,/9j/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAAeABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAYEBQcD/8QAFgEBAQEAAAAAAAAAAAAAAAAAAgQF/9oADAMBAAIQAxAAAAFLjZ31VWhFiSaKei6YlX5EcrAj/8QAHRAAAQQDAQEAAAAAAAAAAAAAAwABAgQFEhQRJP/aAAgBAQABBQIVvrFSMOxP60YugaF0lcj6xWRx7HZ20n0tNWRuImSD4Rf/xAAaEQEAAQUAAAAAAAAAAAAAAAABAAIDEBEh/9oACAEDAQE/AS8nIBqVY//EABkRAQEBAAMAAAAAAAAAAAAAAAEAAhESQf/aAAgBAgEBPwFyM82j27N//8QAIBAAAQMDBQEAAAAAAAAAAAAAAgABAxEhMRASIkFhUf/aAAgBAQAGPwKUnjCMLs91PHTcEd2cHyuZsfx6KSP6d3QsB7G79XLPiKeHPY170qWU167k5+00/8QAHhAAAgMAAgMBAAAAAAAAAAAAAREAITFBYVFxgbH/2gAIAQEAAT8hpqJWPsIcCMYYR/RkLG84Rsd1DARZi/x1PWqjaYzPJ1cEJ8gjlENJHI4dx5h9yUca8iCB9/dOKf/aAAwDAQACAAMAAAAQV+MA/8QAGxEBAAICAwAAAAAAAAAAAAAAAQARIUGBsfD/2gAIAQMBAT8QLvk31Ehp9zBsls//xAAbEQEBAAEFAAAAAAAAAAAAAAABABEhMVGB8P/aAAgBAgEBPxBvhkFNPdRbLHf/xAAfEAEAAgICAgMAAAAAAAAAAAABESEAMUFxUWGBkfD/2gAIAQEAAT8QqC4BqCCWmxn3g+AsHWPGg4Md43QJbyqp4GVq4omsTqhDbgenfjJwDFDKakdh+tySPIC0QkyksMzhD5ChYZCRak9/OMlr1fCMx94ORmeVcYib2EkdC4e5nEFCg8pga9ViRz//2Q==);

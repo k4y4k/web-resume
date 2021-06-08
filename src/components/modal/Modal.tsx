@@ -47,6 +47,10 @@ interface modalTypes {
 export const PureModal = ({ modalBg }: modalTypes): JSX.Element | null => {
   const [open, isOpen] = React.useState(true)
 
+  const showModal = process.env.GATSBY_SHOW_MODAL ?? ''
+
+  if (showModal === '') return null
+
   if (!open) return null
 
   return (

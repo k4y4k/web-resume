@@ -7,7 +7,16 @@ module.exports = {
   transform: {
     // "^.+\\.(tsx?|jsx?)$": "ts-jest",
     '\\.svg': '<rootDir>//__mocks__/svgTransform.js',
-    '^.+\\.(tsx?|jsx?)$': `<rootDir>/jest-preprocess.js`,
+    '\\.[jt]sx?$': [
+      'babel-jest',
+      {
+        presets: [
+          '@babel/preset-react',
+          'babel-preset-gatsby',
+          '@babel/preset-typescript',
+        ],
+      },
+    ],
   },
   moduleNameMapper: {
     // "\\.svg": `.//__mocks__/file-mocks.js`,
@@ -23,4 +32,5 @@ module.exports = {
   },
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$',
   moduleFileExtensions: ['ts', 'tsx', 'js'],
+  testEnvironment: 'jsdom',
 }

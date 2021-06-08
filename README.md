@@ -6,7 +6,7 @@
 
 # "Wait, sort of?"
 
-[Check the wiki for an explanation of what this project DOES and DOES NOT do](https://github.com/k4y4k/web-resume/wiki/%22Wait,-sort-of%3F%22---What-data-this-project-supports).
+[Check the wiki for an explanation of what this project DOES and DOES NOT do](https://github.com/k4y4k/web-resume/wiki/%22Wait,-sort-of%3F%22---What-data-this-project-supports). The wiki also has more, expanded instructions.
 
 # Seeing For Yourself
 

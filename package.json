@@ -56,7 +56,7 @@
     "babel-jest": "27.0.2",
     "babel-plugin-jsx-remove-data-test-id": "3.0.0",
     "babel-preset-gatsby": "1.6.0",
-    "eslint": "7.27.0",
+    "eslint": "7.28.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard-with-typescript": "20.0.0",
     "eslint-plugin-import": "2.23.4",

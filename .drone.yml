@@ -13,31 +13,11 @@ clone:
   depth: 2
 
 steps:
-  - name: restore-cache
-    image: drillster/drone-volume-cache
-    volumes:
-      - name: cache
-        path: /cache
-    settings:
-      restore: true
-      mount:
-        - ./node_modules
-
   - name: install
     image: node
     pull: if-not-exists
     commands:
       - yarn
-
-  - name: rebuild-cache
-    image: drillster/drone-volume-cache
-    volumes:
-      - name: cache
-        path: /cache
-    settings:
-      rebuild: true
-      mount:
-        - ./node_modules
 
   - name: test
     image: node
@@ -60,8 +40,3 @@ steps:
     commands:
       - yarn fake
       - yarn build
-
-volumes:
-  - name: cache
-    host:
-      path: /cache

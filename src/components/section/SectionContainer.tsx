@@ -6,6 +6,7 @@ import SectionTitle from './SectionTitle'
 interface SectionContainerTypes {
   title: string
   children: React.ReactNode
+  onCoverLetter?: boolean
 }
 
 const sectionStyles = css`
@@ -15,9 +16,10 @@ const sectionStyles = css`
 const SectionContainer = ({
   title,
   children,
+  onCoverLetter = false,
 }: SectionContainerTypes): JSX.Element => (
   <div data-testid='sectionContainer' css={sectionStyles}>
-    <SectionTitle title={title} />
+    <SectionTitle onCoverLetter={onCoverLetter} title={title} />
     {children}
   </div>
 )

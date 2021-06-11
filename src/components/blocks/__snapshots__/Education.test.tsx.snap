@@ -2,13 +2,13 @@
 
 exports[`<PureEducation /> bails out on no data 1`] = `
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {
@@ -60,13 +60,13 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 }
 
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {
@@ -161,13 +161,13 @@ exports[`<PureEducation /> no course details? 1`] = `
 }
 
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {
@@ -272,13 +272,13 @@ exports[`<PureEducation /> renders OK 1`] = `
 }
 
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {
@@ -373,13 +373,13 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 }
 
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {

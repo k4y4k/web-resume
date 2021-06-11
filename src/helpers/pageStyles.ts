@@ -6,9 +6,11 @@ const paperOptions = { dpi: 300, type: 'mm' }
 export const a4Data = paperSizes('A4', paperOptions)
 
 const pageStyles = css`
-  ${tw`w-full p-12 mx-auto shadow-lg`}
+  ${tw`p-12 my-12 shadow-lg `}
   width: ${a4Data.widthToMillimeters()}mm;
+  max-width: ${a4Data.widthToMillimeters()}mm;
   height: ${a4Data.heightToMillimeters()}mm;
+  max-height: ${a4Data.heightToMillimeters()}mm;
 
   @media print {
     ${tw`m-0`}

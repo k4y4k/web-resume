@@ -54,6 +54,8 @@ describe('<Header />', () => {
 
     render(
       <PureHeader
+        lightmode={false}
+        compact={false}
         title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
       />
@@ -72,6 +74,141 @@ describe('<Header />', () => {
 
   test('renders OK', () => {
     render(<Header />)
+
+    expect(screen.getByTestId('header')).toMatchSnapshot()
+  })
+
+  test('lightmode', () => {
+    const data = {
+      file: {
+        childDataJson: {
+          basics: {
+            name: 'kayak',
+            label: 'CEO of supermarket cookie quality debates',
+          },
+        },
+      },
+      image: {
+        childImageSharp: {
+          fluid: {
+            base64: '',
+            aspectRatio: 1,
+            src: '',
+            srcSet: '',
+            srcWebp: '',
+            srcSetWebp: '',
+            sizes: '',
+          },
+        },
+      },
+    }
+
+    render(
+      <PureHeader
+        lightmode={true}
+        compact={false}
+        title={data?.file.childDataJson.basics.name}
+        subtitle={data?.file.childDataJson.basics.label}
+      />
+    )
+
+    const name = screen.getByText('kayak')
+    expect(name).not.toBeFalsy()
+
+    const subtitle = screen.getByText(
+      'CEO of supermarket cookie quality debates'
+    )
+    expect(subtitle).not.toBeFalsy()
+
+    expect(screen.getByTestId('header')).toMatchSnapshot()
+  })
+
+  test('compact', () => {
+    const data = {
+      file: {
+        childDataJson: {
+          basics: {
+            name: 'kayak',
+            label: 'CEO of supermarket cookie quality debates',
+          },
+        },
+      },
+      image: {
+        childImageSharp: {
+          fluid: {
+            base64: '',
+            aspectRatio: 1,
+            src: '',
+            srcSet: '',
+            srcWebp: '',
+            srcSetWebp: '',
+            sizes: '',
+          },
+        },
+      },
+    }
+
+    render(
+      <PureHeader
+        lightmode={false}
+        compact={true}
+        title={data?.file.childDataJson.basics.name}
+        subtitle={data?.file.childDataJson.basics.label}
+      />
+    )
+
+    const name = screen.getByText('kayak')
+    expect(name).not.toBeFalsy()
+
+    const subtitle = screen.getByText(
+      'CEO of supermarket cookie quality debates'
+    )
+    expect(subtitle).not.toBeFalsy()
+
+    expect(screen.getByTestId('header')).toMatchSnapshot()
+  })
+
+  test('lightmode and compact', () => {
+    const data = {
+      file: {
+        childDataJson: {
+          basics: {
+            name: 'kayak',
+            label: 'CEO of supermarket cookie quality debates',
+          },
+        },
+      },
+      image: {
+        childImageSharp: {
+          fluid: {
+            base64: '',
+            aspectRatio: 1,
+            src: '',
+            srcSet: '',
+            srcWebp: '',
+            srcSetWebp: '',
+            sizes: '',
+          },
+        },
+      },
+    }
+
+    render(
+      <PureHeader
+        lightmode={true}
+        compact={true}
+        title={data?.file.childDataJson.basics.name}
+        subtitle={data?.file.childDataJson.basics.label}
+      />
+    )
+
+    const name = screen.getByText('kayak')
+    expect(name).not.toBeFalsy()
+
+    const subtitle = screen.getByText(
+      'CEO of supermarket cookie quality debates'
+    )
+    expect(subtitle).not.toBeFalsy()
 
     expect(screen.getByTestId('header')).toMatchSnapshot()
   })

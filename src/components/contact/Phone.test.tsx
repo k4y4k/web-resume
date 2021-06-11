@@ -4,7 +4,7 @@ import Phone from './Phone'
 
 describe('<Phone />', () => {
   test('handles no phone data', () => {
-    render(<Phone num='' />)
+    render(<Phone />)
 
     const phone = screen.queryByTestId('contactPhone')
     expect(phone).not.toBeInTheDocument()
@@ -12,7 +12,7 @@ describe('<Phone />', () => {
   })
 
   test('hides phone number by default', () => {
-    render(<Phone num='0123456789' />)
+    render(<Phone />)
 
     const phone = screen.queryByTestId('contactPhone')
     expect(phone).not.toBeInTheDocument()
@@ -20,7 +20,7 @@ describe('<Phone />', () => {
   })
 
   test('displays phone number', () => {
-    render(<Phone num='0123456789' restrictDisplay={false} />)
+    render(<Phone restrictDisplay={false} />)
 
     const phone = screen.getByTestId('contactPhone')
     expect(phone).toHaveTextContent('012 345 6789')

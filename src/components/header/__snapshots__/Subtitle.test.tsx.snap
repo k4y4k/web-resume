@@ -2,11 +2,12 @@
 
 exports[`<Subtitle /> Displays subtitle 1`] = `
 .c0 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(103,73,177,var(--tw-text-opacity));
 }
 
 <h2
@@ -18,3 +19,61 @@ exports[`<Subtitle /> Displays subtitle 1`] = `
 `;
 
 exports[`<Subtitle /> Handles not having data 1`] = `null`;
+
+exports[`<Subtitle /> compact 1`] = `
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(103,73,177,var(--tw-text-opacity));
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+<h2
+  class="c0"
+  data-testid="headerSubtitle"
+>
+  lead singer of kayak and the kayaks
+</h2>
+`;
+
+exports[`<Subtitle /> lightmode 1`] = `
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity));
+}
+
+<h2
+  class="c0"
+  data-testid="headerSubtitle"
+>
+  lead singer of kayak and the kayaks
+</h2>
+`;
+
+exports[`<Subtitle /> lightmode and compact 1`] = `
+.c0 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity));
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+<h2
+  class="c0"
+  data-testid="headerSubtitle"
+>
+  lead singer of kayak and the kayaks
+</h2>
+`;

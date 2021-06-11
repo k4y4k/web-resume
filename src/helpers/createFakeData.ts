@@ -56,11 +56,13 @@ const createBasics = (): basics => {
 
   const profiles = createProfiles()
 
+  const phone = Math.floor(Math.random() * 9999999999).toString()
+
   return {
     name: fake('{{name.firstName}} {{name.lastName}}'),
     label: fake('{{name.jobTitle}}'),
     email: fake('{{internet.email}}'),
-    phone: fake('{{phone.phoneNumber}}'),
+    phone: phone.length === 10 ? phone : '1234567890',
     website: fake('{{internet.url}}'),
     location,
     profiles,

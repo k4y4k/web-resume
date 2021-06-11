@@ -1,24 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Contact /> renders OK 1`] = `
+.c1 {
+  white-space: normal !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+}
+
+.c1 .icon {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
 .c0 .icon {
   display: inline-block;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   vertical-align: middle;
   --tw-text-opacity: 1;
   color: rgba(77,54,140,var(--tw-text-opacity));
   margin-bottom: 0.125rem;
+  max-width: 15px;
 }
 
 .c0 li {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  margin-left: 0.25rem;
+  margin-left: -0.25rem;
   margin-right: 0.25rem;
-  cursor: pointer;
+  white-space: nowrap;
+}
+
+.c0 li a {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .c0 li a:hover {
-  padding: 0.25rem;
   --tw-text-opacity: 1;
   color: rgba(255,255,255,var(--tw-text-opacity));
   --tw-bg-opacity: 1;
@@ -32,6 +64,7 @@ exports[`<Contact /> renders OK 1`] = `
 
 .c0 a::after {
   content: ' ➜';
+  margin-right: 0.25rem;
 }
 
 <ul
@@ -129,7 +162,7 @@ exports[`<Contact /> renders OK 1`] = `
     </a>
   </li>
   <li
-    class="Address___StyledLi-sc-1xuz7b7-0"
+    class="c1"
     data-testid="contactAddress"
     id="address"
   >
@@ -153,12 +186,13 @@ exports[`<Contact /> renders OK 1`] = `
         r="3"
       />
     </svg>
-     
-    San Francisco
-    , 
-    California,
-     
-    US
+    <span>
+      San Francisco
+      , 
+      California,
+       
+      US
+    </span>
   </li>
 </ul>
 `;

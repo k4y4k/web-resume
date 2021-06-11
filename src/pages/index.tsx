@@ -8,6 +8,7 @@ import { IconContext } from '@react-icons/all-files'
 import Modal from '../components/modal/Modal'
 import '../index.css'
 import Resume from '../components/pages/Resume'
+import CoverLetter from '../components/pages/CoverLetter'
 
 const IndexRoute = (): JSX.Element => {
   return (
@@ -24,7 +25,10 @@ const IndexRoute = (): JSX.Element => {
 
       <Modal />
 
-      <Resume />
+      <main tw='flex flex-row flex-wrap place-content-evenly'>
+        <Resume />
+        <CoverLetter />
+      </main>
     </IconContext.Provider>
   )
 }

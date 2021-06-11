@@ -30,7 +30,9 @@ const Resume = (): JSX.Element => {
             gatsbyImageData(
               width: 2000
               placeholder: BLURRED
+              quality: 90
               formats: [AUTO, WEBP, AVIF]
+              transformOptions: { rotate: 180 }
             )
           }
         }
@@ -46,14 +48,14 @@ const Resume = (): JSX.Element => {
         css={{ height: `${a4Data.heightToMillimeters() - 25}mm` }}
       >
         <Header />
-        <main css={resumeContentStyles}>
+        <div css={resumeContentStyles}>
           <Experience />
           <div style={{ gridArea: 'sk' }}>
             <Contact />
             <Skills />
             <Education />
           </div>
-        </main>
+        </div>
       </div>
     </BackgroundImage>
   )

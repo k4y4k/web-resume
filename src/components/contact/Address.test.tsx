@@ -4,9 +4,7 @@ import Address from './Address'
 
 describe('<Address />', () => {
   test('Handles no data', () => {
-    render(
-      <Address address='' postalCode='' city='' countryCode='' region='' />
-    )
+    render(<Address address='' city='' countryCode='' region='' />)
 
     const address = screen.queryByTestId('contactAddress')
 
@@ -19,7 +17,6 @@ describe('<Address />', () => {
         <Address
           city='Example City'
           address='75 Example Rd'
-          postalCode='PE 8888'
           countryCode='EX'
           region='Example State'
           restrictDisplay={false}
@@ -36,7 +33,6 @@ describe('<Address />', () => {
       render(
         <Address
           city='Example City'
-          postalCode='8877'
           address='83 Example Rd'
           countryCode='ZZ'
           restrictDisplay={false}
@@ -62,7 +58,6 @@ describe('<Address />', () => {
       render(
         <Address
           city='Example City'
-          postalCode='8877'
           address='83 Example Rd'
           countryCode='ZZ'
           region='Example State'

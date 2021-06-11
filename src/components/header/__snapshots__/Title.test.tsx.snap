@@ -2,15 +2,76 @@
 
 exports[`<Title /> Handles not having any data properly 1`] = `null`;
 
-exports[`<Title /> displays title 1`] = `
+exports[`<Title /> compact 1`] = `
 .c0 {
-  font-weight: 700;
+  margin-bottom: 0px;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 3.75rem;
   line-height: 1;
-  margin-bottom: 0px;
+  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
+  color: rgba(103,73,177,var(--tw-text-opacity));
+  font-size: 3rem;
+  line-height: 1;
+}
+
+<h1
+  class="c0"
+  data-testid="headerTitle"
+>
+  kayak kayak
+</h1>
+`;
+
+exports[`<Title /> displays title 1`] = `
+.c0 {
+  margin-bottom: 0px;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(103,73,177,var(--tw-text-opacity));
+}
+
+<h1
+  class="c0"
+  data-testid="headerTitle"
+>
+  kayak kayak
+</h1>
+`;
+
+exports[`<Title /> lightmode 1`] = `
+.c0 {
+  margin-bottom: 0px;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity));
+}
+
+<h1
+  class="c0"
+  data-testid="headerTitle"
+>
+  kayak kayak
+</h1>
+`;
+
+exports[`<Title /> lightmode and compact 1`] = `
+.c0 {
+  margin-bottom: 0px;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity));
+  font-size: 3rem;
+  line-height: 1;
 }
 
 <h1

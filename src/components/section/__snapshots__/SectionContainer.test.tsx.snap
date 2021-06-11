@@ -15,13 +15,13 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
 }
 
 .c1 {
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-  font-weight: 700;
   font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
+  font-weight: 700;
   text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
 }
 
 .c0 {

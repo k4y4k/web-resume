@@ -1,41 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
-<li
-  data-testid="contactAddress"
-  id="address"
->
-  <svg
-    fill="none"
-    height="1em"
-    stroke="currentColor"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    stroke-width="2"
-    viewBox="0 0 24 24"
-    width="1em"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
-    />
-    <circle
-      cx="12"
-      cy="10"
-      r="3"
-    />
-  </svg>
-   
-  83 Example Rd
-  , 
+<span>
   Example City
   , 
-  Example State
-  , 
-  8877
+  Example State,
    
   ZZ
-</li>
+</span>
 `;
 
 exports[`<Address /> Is formatted correctly street name + number on one line 1`] = `
@@ -77,8 +49,31 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
 `;
 
 exports[`<Address /> Is not about to dox me only displays City / State when RESTRICT_ADDRESS env var is passed in 1`] = `
+.c0 {
+  white-space: normal !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+}
+
+.c0 .icon {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
 <li
-  class="Address___StyledLi-sc-1xuz7b7-0"
+  class="c0"
   data-testid="contactAddress"
   id="address"
 >
@@ -102,11 +97,12 @@ exports[`<Address /> Is not about to dox me only displays City / State when REST
       r="3"
     />
   </svg>
-   
-  Example City
-  , 
-  Example State,
-   
-  ZZ
+  <span>
+    Example City
+    , 
+    Example State,
+     
+    ZZ
+  </span>
 </li>
 `;

@@ -7,6 +7,7 @@ module.exports = {
     title: "kayak's resume",
   },
   plugins: [
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,

@@ -6,6 +6,7 @@ import Email from '../contact/Email'
 import getNetworkUsernames from '../../helpers/getNetworkUsernames'
 import GitHub from '../contact/GitHub'
 import LinkedIn from '../contact/LinkedIn'
+import Phone from '../contact/Phone'
 import SectionContainer from '../section/SectionContainer'
 import Twitter from '../contact/Twitter'
 import Website from '../contact/Website'
@@ -22,19 +23,30 @@ interface PureContactTypes {
   city: string
   countryCode: string
   region: string
+  compact?: boolean
+}
+
+interface ContactTypes {
+  restrictDisplay?: boolean
+  compact?: boolean
 }
 
 const iconStyles = css`
   .icon {
-    ${tw`inline-block align-middle text-orchid-700`}
+    ${tw`inline-block mx-1 text-base align-middle text-orchid-700`}
     margin-bottom: 0.125rem;
+    max-width: 15px;
   }
 
   li {
-    ${tw`py-1 mx-1 cursor-pointer`}
+    ${tw`py-1 mx-1 -ml-1 whitespace-nowrap`}
+
+    a {
+      ${tw`py-1`}
+    }
 
     a:hover {
-      ${tw`p-1 text-white bg-purple-800 rounded-md`}
+      ${tw`text-white bg-purple-800 rounded-md`}
 
       .icon {
         color: white;
@@ -44,11 +56,31 @@ const iconStyles = css`
 
   a::after {
     content: ' ➜';
+    ${tw`mr-1`}
+  }
+`
+
+const compactStyles = css`
+  .icon {
+    ${tw`text-white`}
+  }
+
+  li {
+    ${tw`p-0 m-0 my-4 text-white`}
+
+    a::after {
+      content: none;
+    }
+  }
+
+  li:nth-of-type(1) {
+    ${tw`mt-0`}
   }
 `
 
 export const PureContact = ({
   restrictDisplay = true,
+  compact = false,
   email,
   twitter,
   github,
@@ -58,15 +90,15 @@ export const PureContact = ({
   region,
   countryCode,
   address,
-  postalCode,
 }: PureContactTypes): JSX.Element => {
   return (
-    <SectionContainer title='Contact'>
-      <ul css={iconStyles} data-testid='contact'>
-        <Website url={website} />
+    <SectionContainer onCoverLetter={compact} title='Contact'>
+      <ul css={[iconStyles, compact && compactStyles]} data-testid='contact'>
+        {compact && <Phone restrictDisplay={restrictDisplay} />}
+        {!compact && <Website url={website} />}
         <Email email={email} />
-        <Twitter username={twitter} />
-        <GitHub username={github} />
+        {!compact && <Twitter username={twitter} />}
+        {!compact && <GitHub username={github} />}
         <LinkedIn username={linkedin} />
         <Address
           restrictDisplay={restrictDisplay}
@@ -74,14 +106,16 @@ export const PureContact = ({
           region={region}
           countryCode={countryCode}
           address={address}
-          postalCode={postalCode}
         />
       </ul>
     </SectionContainer>
   )
 }
 
-export const Contact = (): JSX.Element => {
+export const Contact = ({
+  compact,
+  restrictDisplay,
+}: ContactTypes): JSX.Element => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "json" }, name: { eq: "data" }) {
@@ -124,7 +158,13 @@ export const Contact = (): JSX.Element => {
     region,
     countryCode,
   }
-  return <PureContact {...props} />
+  return (
+    <PureContact
+      {...props}
+      compact={compact}
+      restrictDisplay={restrictDisplay}
+    />
+  )
 }
 
 export default Contact

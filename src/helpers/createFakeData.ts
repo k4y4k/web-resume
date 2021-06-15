@@ -176,15 +176,7 @@ const createSkills = (num: number): skillsItem[] => {
   return skillsList
 }
 
-interface fakeData {
-  basics: basics
-  work: workItem[]
-  volunteer: volunteerItem[]
-  education: educationItem[]
-  skills: skillsItem[]
-}
-
-export const createFakeData = (): fakeData => {
+export const createFakeData = (): string => {
   console.log('creating fake data')
   const basics = createBasics()
   const work = createWork(Math.floor(Math.random() * 2))
@@ -192,16 +184,40 @@ export const createFakeData = (): fakeData => {
   const education = createEducation(Math.floor(Math.random() * 2))
   const skills = createSkills(Math.floor(Math.random() * 5))
 
-  return { basics, work, volunteer, education, skills }
+  return JSON.stringify({ basics, work, volunteer, education, skills })
 }
 
-export const writeToDisk = (data: fakeData): any => {
-  fs.writeFileSync(
-    path.join(__dirname, '../data/data.json'),
-    JSON.stringify(data)
+export const writeToDisk = (data: string, dest: string): void => {
+  fs.writeFileSync(path.join(__dirname, dest), data)
+}
+
+writeToDisk(createFakeData(), '../data/data.json')
+
+const createFakeCoverLetter = (): string => {
+  console.log('creating fake cover letter')
+
+  const contents = fake(
+    '{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}'
   )
+  const recruiterName = fake('{{name.findName}}')
+  const address = fake('{{address.streetAddress}}')
+  const postalCode = fake('{{address.zipCode}}')
+  const city = fake('{{address.city}}')
+  const countryCode = fake('{{address.countryCode}}')
+  const region = fake('{{address.state}}')
+
+  return `---
+address: ${address}
+postalCode: ${postalCode}
+recruiterName: ${recruiterName}
+city: ${city}
+countryCode: ${countryCode}
+region: ${region}
+---
+
+${contents}`
 }
 
-writeToDisk(createFakeData())
+writeToDisk(createFakeCoverLetter(), '../data/letter.md')
 
 export default createFakeData

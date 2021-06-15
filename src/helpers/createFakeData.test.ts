@@ -2,7 +2,7 @@ import createFakeData from './createFakeData'
 
 describe('create fake data', () => {
   test('generates correct shape', () => {
-    const fakedata = createFakeData()
+    const fakedata = JSON.parse(createFakeData())
 
     expect(fakedata).toHaveProperty('basics')
     expect(fakedata).toHaveProperty('work')

@@ -12,6 +12,7 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
     'sort-imports': [
       'error',
       {

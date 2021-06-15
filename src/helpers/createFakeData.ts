@@ -196,15 +196,15 @@ writeToDisk(createFakeData(), '../data/data.json')
 const createFakeCoverLetter = (): string => {
   console.log('creating fake cover letter')
 
-  const contents = fake(
+  const contents: string = fake(
     '{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}'
   )
-  const recruiterName = fake('{{name.findName}}')
-  const address = fake('{{address.streetAddress}}')
-  const postalCode = fake('{{address.zipCode}}')
-  const city = fake('{{address.city}}')
-  const countryCode = fake('{{address.countryCode}}')
-  const region = fake('{{address.state}}')
+  const recruiterName: string = fake('{{name.findName}}')
+  const address: string = fake('{{address.streetAddress}}')
+  const postalCode: string = fake('{{address.zipCode}}')
+  const city: string = fake('{{address.city}}')
+  const countryCode: string = fake('{{address.countryCode}}')
+  const region: string = fake('{{address.state}}')
 
   return `---
 address: ${address}

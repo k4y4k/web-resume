@@ -11,7 +11,31 @@ exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
 `;
 
 exports[`<Address /> Is formatted correctly street name + number on one line 1`] = `
+.c0 {
+  white-space: normal !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  vertical-align: middle;
+}
+
+.c0 .icon {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
 <li
+  class="c0"
   data-testid="contactAddress"
   id="address"
 >
@@ -35,16 +59,13 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
       r="3"
     />
   </svg>
-   
-  75 Example Rd
-  , 
-  Example City
-  , 
-  Example State
-  , 
-  PE 8888
-   
-  EX
+  <span>
+    Example City
+    , 
+    Example State,
+     
+    EX
+  </span>
 </li>
 `;
 

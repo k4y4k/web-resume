@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Index Renders OK 1`] = `
+exports[`<Thanks/> uwu renders OK 1`] = `
 Object {
   "debug": [Function],
   "findAllByAltText": [Function],

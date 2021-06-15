@@ -11,7 +11,7 @@ const Phone = ({ restrictDisplay = true }: PhoneTypes): JSX.Element | null => {
 
   const { phone } = useStaticQuery(graphql`
     {
-      file(extension: { eq: "json" }, name: { eq: "data" }) {
+      num: file(extension: { eq: "json" }, name: { eq: "data" }) {
         childDataJson {
           basics {
             phone
@@ -19,7 +19,7 @@ const Phone = ({ restrictDisplay = true }: PhoneTypes): JSX.Element | null => {
         }
       }
     }
-  `).file.childDataJson.basics
+  `).num.childDataJson.basics
 
   // xxx xxx xxxx
   const formattedNum = Array.from(phone)

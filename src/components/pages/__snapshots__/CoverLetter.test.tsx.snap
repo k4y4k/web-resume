@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cover Letter Renders OK 1`] = `
+.c5 {
+  padding-bottom: 0px !important;
+}
+
+.c6 {
+  padding-bottom: 0px !important;
+}
+
+.c4 {
+  font-weight: 700;
+}
+
+.c7 {
+  padding-bottom: 0px !important;
+  margin-top: 1rem;
+}
+
+.c8 {
+  font-style: italic;
+}
+
+.c3 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 65ch;
+}
+
+.c3 p {
+  padding-bottom: 1rem;
+}
+
+.c0 {
+  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  --tw-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  width: 210mm;
+  max-width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+  --tw-bg-opacity: 1;
+  background-color: rgba(255,255,255,var(--tw-bg-opacity));
+  padding: 0px;
+}
+
+.c1 {
+  display: grid;
+  grid-auto-flow: row dense;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  height: 297mm;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: 'header txt';
+}
+
+.c2 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .c0 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+        style="grid-area: txt;"
+      >
+        <div
+          class="c3"
+        >
+          <p
+            class="c4"
+          >
+            June 15, 2021
+          </p>
+          <p
+            class="c5"
+          >
+            Polycarp Medvedev
+          </p>
+          <p
+            class="c6"
+          >
+            60342 Athena Plaza
+            , 
+            Port Idellabury
+          </p>
+          <p>
+            South Dakota
+            , 
+            60033-4381
+            , 
+            ES
+          </p>
+          <p>
+            Dear 
+            Polycarp Medvedev
+            ,
+          </p>
+          <div>
+            <p>
+              esse dolore molestias suscipit dignissimos illum cupiditate consequatur non voluptates ut dolores aliquam cum qui sed libero architecto iusto porro unde suscipit non non tempore officiis vero aut rem id repellendus et iste
+            </p>
+            
+
+            <p>
+              voluptatem beatae illo rerum mollitia expedita et ducimus aliquam deserunt aut suscipit error facere recusandae sunt in aut aperiam ut quia minima ullam quasi laudantium alias velit accusamus
+            </p>
+            
+
+            <p>
+              voluptatem maiores repellendus voluptate aperiam quia magni quisquam incidunt quis voluptas repudiandae aut dolorum eum
+            </p>
+            
+
+            <p>
+              voluptas consequatur ab reiciendis omnis ipsam qui quia aperiam dolores ut ducimus rerum magnam voluptatem dolorum natus aut minus odio reprehenderit impedit quis recusandae repellat et autem nihil voluptas beatae minima laboriosam cum in sed iusto officia
+            </p>
+            
+
+            <p>
+              sunt laborum hic rerum quaerat vel quidem perspiciatis et et porro iste laborum reiciendis enim nostrum ut
+            </p>
+            
+
+            <p>
+              tenetur omnis ad at ratione quia quia et alias sequi sunt aliquid eos aut aut odio eligendi consequatur nulla optio tenetur tempore quaerat et pariatur harum quasi ipsam optio molestiae sed consectetur quos tenetur nihil velit
+            </p>
+            
+
+            <p>
+              quis similique libero nemo optio et voluptatum similique ut
+            </p>
+            
+
+            <p>
+              voluptas nulla aut similique possimus nihil sed laboriosam dolorum molestiae quia voluptatem consequuntur corporis impedit dolorum quos incidunt ut numquam sit aut error vero consequatur
+            </p>
+          </div>
+          <p
+            class="c7"
+          >
+            Thank you,
+          </p>
+          <p
+            class="c8"
+          >
+            Blaze Powlowski
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

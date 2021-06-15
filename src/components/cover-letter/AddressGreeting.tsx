@@ -7,7 +7,6 @@ const AddressGreeting = (): JSX.Element => {
     {
       letterContents: file(extension: { eq: "md" }, name: { eq: "letter" }) {
         childMarkdownRemark {
-          html
           frontmatter {
             recruiterName
             address

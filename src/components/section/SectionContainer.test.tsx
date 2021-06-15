@@ -4,7 +4,7 @@ import ItemContainer from './ItemContainer'
 import SectionContainer from './SectionContainer'
 
 describe('<SectionContainer />', () => {
-  test.only('composes title and >1  items', () => {
+  test('composes title and >1  items', () => {
     const data = (
       <ItemContainer title='' subtitle='' fromDate='' toDate='' summary='' />
     )

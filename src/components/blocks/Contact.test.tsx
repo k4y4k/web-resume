@@ -1,12 +1,19 @@
 import * as React from 'react'
 import { Contact, PureContact } from './Contact'
 import { render, screen } from '@testing-library/react'
-
 import { useStaticQuery } from 'gatsby'
 
 describe('<Contact />', () => {
   beforeAll(() =>
     (useStaticQuery as jest.Mock).mockReturnValue({
+      num: {
+        childDataJson: {
+          basics: {
+            phone: '5918298681',
+          },
+        },
+      },
+
       file: {
         childDataJson: {
           basics: {
@@ -32,13 +39,11 @@ describe('<Contact />', () => {
   test('handles no data', () => {
     render(
       <PureContact
-        address=''
         email=''
         website=''
         twitter=''
         github=''
         linkedin=''
-        postalCode=''
         city=''
         countryCode=''
         region=''
@@ -60,8 +65,6 @@ describe('<Contact />', () => {
         website='example.com'
         linkedin='exampledin'
         city='Example City'
-        address='2712 Broadway St'
-        postalCode='CA 94115'
         countryCode='US'
         region='California'
       />
@@ -81,8 +84,6 @@ describe('<Contact />', () => {
         website='example.com'
         linkedin='exampledin'
         city='Example City'
-        address='2712 Broadway St'
-        postalCode='CA 94115'
         countryCode='US'
         region='California'
         restrictDisplay={false}
@@ -91,14 +92,31 @@ describe('<Contact />', () => {
 
     const address = screen.getByTestId('contactAddress')
     expect(address).toHaveTextContent(/example city/i)
-    expect(address).toHaveTextContent(/2712 broadway st/i)
-    expect(address).toHaveTextContent(/ca 94115/i)
     expect(address).toHaveTextContent(/us/i)
     expect(address).toHaveTextContent(/California/i)
   })
 
   test('renders OK', () => {
     render(<Contact />)
+
+    expect(screen.getByTestId('contact')).toMatchSnapshot()
+  })
+
+  test('renders OK (compact mode)', () => {
+    render(
+      <PureContact
+        email='kayak@example.com'
+        twitter='kayakSinger1'
+        github='octocat'
+        website='example.com'
+        linkedin='exampledin'
+        city='Example City'
+        countryCode='US'
+        region='California'
+        restrictDisplay={false}
+        compact={true}
+      />
+    )
 
     expect(screen.getByTestId('contact')).toMatchSnapshot()
   })

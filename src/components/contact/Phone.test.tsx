@@ -1,8 +1,21 @@
 import * as React from 'react'
 import { render, screen } from '@testing-library/react'
 import Phone from './Phone'
+import { useStaticQuery } from 'gatsby'
 
 describe('<Phone />', () => {
+  beforeAll(() =>
+    (useStaticQuery as jest.Mock).mockReturnValue({
+      num: {
+        childDataJson: {
+          basics: {
+            phone: '0123456789',
+          },
+        },
+      },
+    })
+  )
+
   test('handles no phone data', () => {
     render(<Phone />)
 

@@ -13,17 +13,15 @@ import Website from '../contact/Website'
 
 interface PureContactTypes {
   restrictDisplay?: boolean
+  compact?: boolean
   email: string
   twitter: string | null
-  linkedin: string | null
   github: string | null
   website: string
-  address?: string
-  postalCode?: string
+  linkedin: string | null
   city: string
-  countryCode: string
   region: string
-  compact?: boolean
+  countryCode: string
 }
 
 interface ContactTypes {
@@ -88,8 +86,8 @@ export const PureContact = ({
   linkedin,
   city,
   region,
+
   countryCode,
-  address,
 }: PureContactTypes): JSX.Element => {
   return (
     <SectionContainer onCoverLetter={compact} title='Contact'>
@@ -105,7 +103,6 @@ export const PureContact = ({
           city={city}
           region={region}
           countryCode={countryCode}
-          address={address}
         />
       </ul>
     </SectionContainer>

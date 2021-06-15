@@ -2,7 +2,6 @@ import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import tw, { css } from 'twin.macro'
 import AddressGreeting from './AddressGreeting'
-
 import DateLine from './DateLine'
 import ThanksForComingToMyTEDTalk from './Thanks'
 

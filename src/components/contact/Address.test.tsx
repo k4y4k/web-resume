@@ -4,7 +4,7 @@ import Address from './Address'
 
 describe('<Address />', () => {
   test('Handles no data', () => {
-    render(<Address address='' city='' countryCode='' region='' />)
+    render(<Address city='' countryCode='' region='' />)
 
     const address = screen.queryByTestId('contactAddress')
 
@@ -16,7 +16,6 @@ describe('<Address />', () => {
       render(
         <Address
           city='Example City'
-          address='75 Example Rd'
           countryCode='EX'
           region='Example State'
           restrictDisplay={false}
@@ -25,7 +24,7 @@ describe('<Address />', () => {
 
       const address = screen.getByTestId('contactAddress')
 
-      expect(address).toHaveTextContent('75 Example Rd')
+      expect(address).toHaveTextContent('Example State')
       expect(address).toMatchSnapshot()
     })
 
@@ -33,7 +32,6 @@ describe('<Address />', () => {
       render(
         <Address
           city='Example City'
-          address='83 Example Rd'
           countryCode='ZZ'
           restrictDisplay={false}
           region='Example State'
@@ -56,12 +54,7 @@ describe('<Address />', () => {
       process.env.RESTRICT_ADDRESS = 'true'
 
       render(
-        <Address
-          city='Example City'
-          address='83 Example Rd'
-          countryCode='ZZ'
-          region='Example State'
-        />
+        <Address city='Example City' countryCode='ZZ' region='Example State' />
       )
 
       const address = screen.getByTestId('contactAddress')

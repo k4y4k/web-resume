@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateLine renders OK 1`] = `
+.c0 {
+  font-weight: 700;
+}
+
+<div>
+  <p
+    class="c0"
+  >
+    June 15, 2021
+  </p>
+</div>
+`;

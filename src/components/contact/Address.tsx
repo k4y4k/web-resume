@@ -3,7 +3,6 @@ import tw, { css } from 'twin.macro'
 import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
 
 interface AddressTypes {
-  address?: string
   city: string
   countryCode: string
   region: string
@@ -18,14 +17,13 @@ const AddressStyles = css`
 `
 
 const Address = ({
-  address,
   city,
   countryCode,
   region,
 }: AddressTypes): JSX.Element | null => {
   // if there isn't a 123 Example Rd-type datum (non-restricted) or
   // a city (restricted), assume there's nothing else
-  if (address === '' || city === '') return null
+  if (city === '') return null
 
   // restricted mode enabled by default
   return (

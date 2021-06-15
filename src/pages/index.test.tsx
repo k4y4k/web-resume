@@ -3,43 +3,36 @@ import { render, screen } from '@testing-library/react'
 import Index from './index'
 import { useStaticQuery } from 'gatsby'
 
-describe('Resume', () => {
+describe('Index', () => {
   beforeAll(() =>
     (useStaticQuery as jest.Mock).mockReturnValue({
-      data: {
-        placeholderImage: {
-          childImageSharp: {
-            gatsbyImageData: {
-              layout: 'constrained',
-              placeholder: {
-                fallback:
-                  'data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAeABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAABAgP/2gAMAwEAAhADEAAAAeHVki3ilLR3rnpKWFx//8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECERIh/9oACAEBAAEFAiPVrKnBPCaTVz0lGvGZyScyf//EABkRAAIDAQAAAAAAAAAAAAAAAAARAQIQIf/aAAgBAwEBPwHJq+iP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8Bgz//xAAbEAACAQUAAAAAAAAAAAAAAAAAMSEQERIgUf/aAAgBAQAGPwLWRiinbmIj/8QAGxABAAIDAQEAAAAAAAAAAAAAAQAxESFRkcH/2gAIAQEAAT8hi1FwwX7HIpczMzqhqcBiNrUYFK3BWfhACitw7vZ//9oADAMBAAIAAwAAABBL/Yz/xAAYEQADAQEAAAAAAAAAAAAAAAAAAREhMf/aAAgBAwEBPxDj0woaFo//xAAYEQEBAQEBAAAAAAAAAAAAAAABABEhMf/aAAgBAgEBPxAcbl4DaX//xAAcEAEAAwEBAAMAAAAAAAAAAAABABEhMWFRcYH/2gAIAQEAAT8QFETEnDKdGEphOg0lfBfzEEOnsKpOy49ZgXlwvcDr9Q0qiwlTivVnFWwOE9P2ILUWP//Z',
-              },
-              images: {
-                fallback: {
-                  src: '/static/55019b471591030c02c094b138609888/0cb03/unsplash.jpg',
-                  srcSet:
-                    '/static/55019b471591030c02c094b138609888/2579c/unsplash.jpg 250w,\n/static/55019b471591030c02c094b138609888/2ff65/unsplash.jpg 500w,\n/static/55019b471591030c02c094b138609888/0cb03/unsplash.jpg 1000w',
-                  sizes: '(min-width: 1000px) 1000px, 100vw',
-                },
-                sources: [
-                  {
-                    srcSet:
-                      '/static/55019b471591030c02c094b138609888/ba6f7/unsplash.avif 250w,\n/static/55019b471591030c02c094b138609888/1f164/unsplash.avif 500w,\n/static/55019b471591030c02c094b138609888/75f1f/unsplash.avif 1000w',
-                    type: 'image/avif',
-                    sizes: '(min-width: 1000px) 1000px, 100vw',
-                  },
-                  {
-                    srcSet:
-                      '/static/55019b471591030c02c094b138609888/1c893/unsplash.webp 250w,\n/static/55019b471591030c02c094b138609888/316df/unsplash.webp 500w,\n/static/55019b471591030c02c094b138609888/b3e07/unsplash.webp 1000w',
-                    type: 'image/webp',
-                    sizes: '(min-width: 1000px) 1000px, 100vw',
-                  },
-                ],
-              },
-              width: 2000,
-              height: 3000,
-            },
+      jsonName: {
+        childDataJson: {
+          basics: {
+            name: 'Blaze Powlowski',
+          },
+        },
+      },
+      letterContents: {
+        childMarkdownRemark: {
+          frontmatter: {
+            recruiterName: 'Polycarp Medvedev',
+            address: '60342 Athena Plaza',
+            city: 'Port Idellabury',
+            countryCode: 'ES',
+            postalCode: '60033-4381',
+            region: 'South Dakota',
+          },
+          html: '<p>esse dolore molestias suscipit dignissimos illum cupiditate consequatur non voluptates ut dolores aliquam cum qui sed libero architecto iusto porro unde suscipit non non tempore officiis vero aut rem id repellendus et iste</p>\n<p>voluptatem beatae illo rerum mollitia expedita et ducimus aliquam deserunt aut suscipit error facere recusandae sunt in aut aperiam ut quia minima ullam quasi laudantium alias velit accusamus</p>\n<p>voluptatem maiores repellendus voluptate aperiam quia magni quisquam incidunt quis voluptas repudiandae aut dolorum eum</p>\n<p>voluptas consequatur ab reiciendis omnis ipsam qui quia aperiam dolores ut ducimus rerum magnam voluptatem dolorum natus aut minus odio reprehenderit impedit quis recusandae repellat et autem nihil voluptas beatae minima laboriosam cum in sed iusto officia</p>\n<p>sunt laborum hic rerum quaerat vel quidem perspiciatis et et porro iste laborum reiciendis enim nostrum ut</p>\n<p>tenetur omnis ad at ratione quia quia et alias sequi sunt aliquid eos aut aut odio eligendi consequatur nulla optio tenetur tempore quaerat et pariatur harum quasi ipsam optio molestiae sed consectetur quos tenetur nihil velit</p>\n<p>quis similique libero nemo optio et voluptatum similique ut</p>\n<p>voluptas nulla aut similique possimus nihil sed laboriosam dolorum molestiae quia voluptatem consequuntur corporis impedit dolorum quos incidunt ut numquam sit aut error vero consequatur</p>',
+        },
+      },
+      headerImage: {
+        childImageSharp: {
+          fluid: {
+            aspectRatio: 1,
+            sizes: `100 200 300`,
+            src: `pretend-i-am-a-base64-encoded-image`,
+            srcSet: `asdfasdf`,
           },
         },
       },

@@ -26,12 +26,11 @@ const AddressGreeting = (): JSX.Element => {
   return (
     <>
       <p tw='pb-0!'>{recruiterName}</p>
-      <p tw='pb-0!'>
-        {address}, {city}
-      </p>
+      <p tw='pb-0!'>{address}</p>
       <p>
-        {region}, {postalCode}, {countryCode}
+        {city}, {region}, {postalCode}, {countryCode}
       </p>
+
       <p>Dear {recruiterName},</p>
     </>
   )

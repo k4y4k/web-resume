@@ -19,10 +19,10 @@ exports[`<AddressGreeting/> renders OK 1`] = `
     class="c1"
   >
     60342 Athena Plaza
-    , 
-    Port Idellabury
   </p>
   <p>
+    Port Idellabury
+    , 
     South Dakota
     , 
     60033-4381

@@ -39,7 +39,7 @@ exports[`<CoverLetterContents/> renders OK 1`] = `
     <p
       class="c1"
     >
-      June 15, 2021
+      June 17, 2021
     </p>
     <p
       class="c2"
@@ -50,10 +50,10 @@ exports[`<CoverLetterContents/> renders OK 1`] = `
       class="c3"
     >
       60342 Athena Plaza
-      , 
-      Port Idellabury
     </p>
     <p>
+      Port Idellabury
+      , 
       South Dakota
       , 
       60033-4381

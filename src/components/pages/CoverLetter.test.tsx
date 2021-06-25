@@ -2,11 +2,20 @@
 
 import * as React from 'react'
 import CoverLetter from './CoverLetter'
+import MockDate from 'mockdate'
 import { render } from '@testing-library/react'
 import { useStaticQuery } from 'gatsby'
 
 // Necessary to fixate generated className.
 jest.mock('short-uuid')
+
+beforeEach(() => {
+  MockDate.set(new Date('2021-06-17'))
+})
+
+afterEach(() => {
+  MockDate.reset()
+})
 
 describe('Cover Letter', () => {
   beforeAll(() =>

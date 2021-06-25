@@ -1,7 +1,16 @@
 import * as React from 'react'
 import CoverLetterContents from './CoverLetterContents'
+import MockDate from 'mockdate'
 import { render } from '@testing-library/react'
 import { useStaticQuery } from 'gatsby'
+
+beforeEach(() => {
+  MockDate.set(new Date('2021-06-17'))
+})
+
+afterEach(() => {
+  MockDate.reset()
+})
 
 describe('<CoverLetterContents/>', () => {
   beforeAll(() =>

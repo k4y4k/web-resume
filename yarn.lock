@@ -1031,7 +1031,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:^7.14.5":
+"@babel/plugin-proposal-decorators@npm:7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-proposal-decorators@npm:7.14.5"
   dependencies:
@@ -14946,7 +14946,7 @@ fsevents@~2.3.1:
   resolution: "kayak-s-resume@workspace:."
   dependencies:
     "@5no/paper-sizes": 1.0.2
-    "@babel/plugin-proposal-decorators": ^7.14.5
+    "@babel/plugin-proposal-decorators": 7.14.5
     "@react-icons/all-files": 4.1.0
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.0.0

@@ -15116,7 +15116,7 @@ fsevents@~2.3.1:
     react: 17.0.2
     react-dom: 17.0.2
     react-helmet: 6.1.0
-    react-markdown: 6.0.2
+    react-markdown: 6.0.3
     styled-components: 5.3.0
     tailwindcss: 2.2.7
     twin.macro: 2.6.2
@@ -19351,15 +19351,15 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-markdown@npm:6.0.2":
-  version: 6.0.2
-  resolution: "react-markdown@npm:6.0.2"
+"react-markdown@npm:6.0.3":
+  version: 6.0.3
+  resolution: "react-markdown@npm:6.0.3"
   dependencies:
     "@types/hast": ^2.0.0
     "@types/unist": ^2.0.3
     comma-separated-tokens: ^1.0.0
     prop-types: ^15.7.2
-    property-information: ^5.0.0
+    property-information: ^5.3.0
     react-is: ^17.0.0
     remark-parse: ^9.0.0
     remark-rehype: ^8.0.0
@@ -19371,7 +19371,7 @@ fsevents@~2.3.1:
   peerDependencies:
     "@types/react": ">=16"
     react: ">=16"
-  checksum: 8aea1f47a5adde357ef59b67cab4997c8e34e728c9c96b387eeadf13eb89911d1250b5232ab9d07f955c2d20704aa4f71d9ea1b8784e07cf74aa18827d15b240
+  checksum: 3ad2e4b6ca36e4398250df52f5cc2cdceac92e1a26c1cc1b7139b4adb7a0e797d8c70034870bdc2c8e0e95aeeb3b847164168b106f86815d6376eb8531560aa9
   languageName: node
   linkType: hard
 

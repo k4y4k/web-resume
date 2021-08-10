@@ -30,6 +30,8 @@ interface ContactTypes {
 }
 
 const iconStyles = css`
+  ${tw`p-0 m-0`}
+
   .icon {
     ${tw`inline-block mx-1 text-base align-middle text-orchid-700`}
     margin-bottom: 0.125rem;
@@ -37,10 +39,10 @@ const iconStyles = css`
   }
 
   li {
-    ${tw`py-1 mx-1 -ml-1 whitespace-nowrap`}
+    ${tw`py-1 mx-1 -ml-1 list-none whitespace-nowrap`}
 
     a {
-      ${tw`py-1`}
+      ${tw`py-1 text-black no-underline`}
     }
 
     a:hover {
@@ -63,8 +65,17 @@ const compactStyles = css`
     ${tw`text-white`}
   }
 
+  a {
+    ${tw`pr-1`}
+  }
+
+  li,
+  a {
+    ${tw`text-white!`}
+  }
+
   li {
-    ${tw`p-0 m-0 my-4 text-white`}
+    ${tw`p-0 m-0 my-4 `}
 
     a::after {
       content: none;
@@ -86,7 +97,6 @@ export const PureContact = ({
   linkedin,
   city,
   region,
-
   countryCode,
 }: PureContactTypes): JSX.Element => {
   return (

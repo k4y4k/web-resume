@@ -11,6 +11,10 @@ const coverLetterContentsStyles = css`
   p {
     ${tw`pb-4`}
   }
+
+  h1 {
+    ${tw`pb-1`}
+  }
 `
 
 const CoverLetterContents = (): JSX.Element => {

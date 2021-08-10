@@ -11,8 +11,10 @@ interface AddressTypes {
 
 const AddressStyles = css`
   ${tw`whitespace-normal! flex flex-row flex-nowrap align-middle`}
+
   .icon {
-    ${tw`flex-grow mr-2`}
+    ${tw`flex-grow`}
+    margin-right: 8px;
   }
 `
 

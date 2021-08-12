@@ -199,7 +199,8 @@ const createFakeCoverLetter = (): string => {
   const contents: string = fake(
     '{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}'
   )
-  const recruiterName: string = fake('{{name.findName}}')
+  const recruiterFirstName: string = fake('{{name.firstName}}')
+  const recruiterLastName: string = fake('{{name.lastName}}')
   const address: string = fake('{{address.streetAddress}}')
   const postalCode: string = fake('{{address.zipCode}}')
   const city: string = fake('{{address.city}}')
@@ -209,7 +210,8 @@ const createFakeCoverLetter = (): string => {
   return `---
 address: ${address}
 postalCode: ${postalCode}
-recruiterName: ${recruiterName}
+recruiterFirstName: ${recruiterFirstName}
+recruiterLastName: ${recruiterLastName}
 city: ${city}
 countryCode: ${countryCode}
 region: ${region}

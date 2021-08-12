@@ -8,7 +8,8 @@ const AddressGreeting = (): JSX.Element => {
       letterContents: file(extension: { eq: "md" }, name: { eq: "letter" }) {
         childMarkdownRemark {
           frontmatter {
-            recruiterName
+            recruiterFirstName
+            recruiterLastName
             address
             city
             countryCode
@@ -20,18 +21,30 @@ const AddressGreeting = (): JSX.Element => {
     }
   `)
 
-  const { recruiterName, address, city, region, postalCode, countryCode } =
-    letterContents.childMarkdownRemark.frontmatter
+  const {
+    recruiterFirstName,
+    recruiterLastName,
+    address,
+    city,
+    region,
+    postalCode,
+    countryCode,
+  } = letterContents.childMarkdownRemark.frontmatter
 
   return (
     <>
-      <p tw='pb-0!'>{recruiterName}</p>
+      <p tw='pb-0!'>
+        {recruiterFirstName} {recruiterLastName}
+      </p>
       <p tw='pb-0!'>{address}</p>
       <p>
-        {city}, {region}, {postalCode}, {countryCode}
+        {city !== ' ' ? `${city}, ` : null}
+        {region !== ' ' ? `${region}, ` : null}
+        {postalCode !== ' ' ? `${postalCode}, ` : null}
+        {countryCode !== ' ' ? `${countryCode}` : null}
       </p>
 
-      <p>Dear {recruiterName},</p>
+      <h1 tw='mt-4 mb-1'>Dear {recruiterFirstName},</h1>
     </>
   )
 }

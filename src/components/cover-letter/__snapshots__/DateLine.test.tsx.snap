@@ -2,12 +2,19 @@
 
 exports[`DateLine renders OK 1`] = `
 .c0 {
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
   font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 <div>
   <p
     class="c0"
+    style="font-size: 21px;"
   >
     June 15, 2021
   </p>

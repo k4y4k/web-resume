@@ -75,7 +75,7 @@ const compactStyles = css`
   }
 
   li {
-    ${tw`p-0 m-0 my-4 `}
+    ${tw`p-0 m-0 my-4`}
 
     a::after {
       content: none;

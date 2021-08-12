@@ -6,9 +6,12 @@ dayjs.extend(localizedFormat)
 
 const DateLine = (): JSX.Element => {
   return (
-    <h1 tw='font-bold' style={{ fontSize: '21px' }}>
+    <p
+      tw='text-orchid-700 font-bold uppercase text-xl font-mono '
+      style={{ fontSize: '21px' }}
+    >
       {dayjs().format('LL')}
-    </h1>
+    </p>
   )
 }
 

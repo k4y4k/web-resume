@@ -9,16 +9,27 @@ exports[`Cover Letter Renders OK 1`] = `
   padding-bottom: 0px !important;
 }
 
-.c4 {
-  font-weight: 700;
+.c7 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
 }
 
-.c7 {
+.c4 {
+  --tw-text-opacity: 1;
+  color: rgba(77,54,140,var(--tw-text-opacity));
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+}
+
+.c8 {
   padding-bottom: 0px !important;
   margin-top: 1rem;
 }
 
-.c8 {
+.c9 {
   font-style: italic;
 }
 
@@ -30,6 +41,10 @@ exports[`Cover Letter Renders OK 1`] = `
 
 .c3 p {
   padding-bottom: 1rem;
+}
+
+.c3 h1 {
+  padding-bottom: 0.25rem;
 }
 
 .c0 {
@@ -92,13 +107,14 @@ exports[`Cover Letter Renders OK 1`] = `
         >
           <p
             class="c4"
+            style="font-size: 21px;"
           >
             June 17, 2021
           </p>
           <p
             class="c5"
           >
-            Polycarp Medvedev
+             
           </p>
           <p
             class="c6"
@@ -106,19 +122,17 @@ exports[`Cover Letter Renders OK 1`] = `
             60342 Athena Plaza
           </p>
           <p>
-            Port Idellabury
-            , 
-            South Dakota
-            , 
-            60033-4381
-            , 
+            Port Idellabury, 
+            South Dakota, 
+            60033-4381, 
             ES
           </p>
-          <p>
+          <h1
+            class="c7"
+          >
             Dear 
-            Polycarp Medvedev
             ,
-          </p>
+          </h1>
           <div>
             <p>
               esse dolore molestias suscipit dignissimos illum cupiditate consequatur non voluptates ut dolores aliquam cum qui sed libero architecto iusto porro unde suscipit non non tempore officiis vero aut rem id repellendus et iste
@@ -160,12 +174,12 @@ exports[`Cover Letter Renders OK 1`] = `
             </p>
           </div>
           <p
-            class="c7"
+            class="c8"
           >
             Thank you,
           </p>
           <p
-            class="c8"
+            class="c9"
           >
             Blaze Powlowski
           </p>

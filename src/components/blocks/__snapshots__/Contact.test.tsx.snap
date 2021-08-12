@@ -21,7 +21,12 @@ exports[`<Contact /> renders OK (compact mode) 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-right: 0.5rem;
+  margin-right: 8px;
+}
+
+.c0 {
+  padding: 0px;
+  margin: 0px;
 }
 
 .c0 .icon {
@@ -42,12 +47,17 @@ exports[`<Contact /> renders OK (compact mode) 1`] = `
   padding-bottom: 0.25rem;
   margin-left: -0.25rem;
   margin-right: 0.25rem;
+  list-style-type: none;
   white-space: nowrap;
 }
 
 .c0 li a {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(0,0,0,var(--tw-text-opacity));
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 li a:hover {
@@ -72,13 +82,21 @@ exports[`<Contact /> renders OK (compact mode) 1`] = `
   color: rgba(255,255,255,var(--tw-text-opacity));
 }
 
+.c0 a {
+  padding-right: 0.25rem;
+}
+
+.c0 li,
+.c0 a {
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity)) !important;
+}
+
 .c0 li {
   padding: 0px;
   margin: 0px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
 }
 
 .c0 li a::after {
@@ -235,7 +253,12 @@ exports[`<Contact /> renders OK 1`] = `
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-right: 0.5rem;
+  margin-right: 8px;
+}
+
+.c0 {
+  padding: 0px;
+  margin: 0px;
 }
 
 .c0 .icon {
@@ -256,12 +279,17 @@ exports[`<Contact /> renders OK 1`] = `
   padding-bottom: 0.25rem;
   margin-left: -0.25rem;
   margin-right: 0.25rem;
+  list-style-type: none;
   white-space: nowrap;
 }
 
 .c0 li a {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(0,0,0,var(--tw-text-opacity));
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 li a:hover {

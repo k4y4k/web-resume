@@ -9,11 +9,16 @@ exports[`<AddressGreeting/> renders OK 1`] = `
   padding-bottom: 0px !important;
 }
 
+.c2 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
 <div>
   <p
     class="c0"
   >
-    Polycarp Medvedev
+     
   </p>
   <p
     class="c1"
@@ -21,18 +26,16 @@ exports[`<AddressGreeting/> renders OK 1`] = `
     60342 Athena Plaza
   </p>
   <p>
-    Port Idellabury
-    , 
-    South Dakota
-    , 
-    60033-4381
-    , 
+    Port Idellabury, 
+    South Dakota, 
+    60033-4381, 
     ES
   </p>
-  <p>
+  <h1
+    class="c2"
+  >
     Dear 
-    Polycarp Medvedev
     ,
-  </p>
+  </h1>
 </div>
 `;

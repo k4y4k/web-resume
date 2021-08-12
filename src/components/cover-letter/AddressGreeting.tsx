@@ -2,8 +2,24 @@ import 'twin.macro'
 import * as React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 
+interface AddressGreetingProps {
+  letterContents: {
+    childMarkdownRemark: {
+      frontmatter: {
+        recruiterFirstName: string
+        recruiterLastName: string
+        address: string
+        city: string
+        countryCode: string
+        postalCode: string
+        region: string
+      }
+    }
+  }
+}
+
 const AddressGreeting = (): JSX.Element => {
-  const { letterContents } = useStaticQuery(graphql`
+  const { letterContents }: AddressGreetingProps = useStaticQuery(graphql`
     {
       letterContents: file(extension: { eq: "md" }, name: { eq: "letter" }) {
         childMarkdownRemark {

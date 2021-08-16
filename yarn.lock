@@ -4592,10 +4592,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/faker@npm:5.5.7":
-  version: 5.5.7
-  resolution: "@types/faker@npm:5.5.7"
-  checksum: 27cce2c2f4843cae730a9a1dbb2ec695d1c24c893ea4ef4a5208b897931afce211802b3e01f86bdf6660124ca102c9abab9b5b101295082342bf27e80a9e4f18
+"@types/faker@npm:5.5.8":
+  version: 5.5.8
+  resolution: "@types/faker@npm:5.5.8"
+  checksum: 9c36b91aae36951b7ae0f0ae428272963b5d0c4c5bd88436211a616a8e217683df4d5633441367856a7b9cad45c8ee6aa97dd8b7168534032daf56dfc9415216
   languageName: node
   linkType: hard
 
@@ -15083,7 +15083,7 @@ fsevents@~2.3.1:
     "@react-icons/all-files": 4.1.0
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.0.0
-    "@types/faker": 5.5.7
+    "@types/faker": 5.5.8
     "@types/react": 17.0.18
     "@types/styled-components": 5.1.12
     "@typescript-eslint/eslint-plugin": 4.29.1

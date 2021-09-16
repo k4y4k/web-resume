@@ -15193,7 +15193,7 @@ fsevents@~2.3.1:
     jest-styled-components: 7.0.5
     lint-staged: 11.1.2
     mockdate: 3.0.5
-    prettier: 2.3.2
+    prettier: 2.4.1
     react: 17.0.2
     react-dom: 17.0.2
     react-helmet: 6.1.0
@@ -18883,7 +18883,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.3.2, prettier@npm:^2.3.2":
+"prettier@npm:2.4.1":
+  version: 2.4.1
+  resolution: "prettier@npm:2.4.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: d72ebe33441651cdb334d05d8d180bedbb6f8ca9db47163719b9763f3f471d27b9dc86b9f2c9383773681ff836eb5951acd1809871077c9313609f7b7e05554e
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.3.2":
   version: 2.3.2
   resolution: "prettier@npm:2.3.2"
   bin:

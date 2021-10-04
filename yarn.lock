@@ -4527,16 +4527,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:12.1.1":
-  version: 12.1.1
-  resolution: "@testing-library/react@npm:12.1.1"
+"@testing-library/react@npm:12.1.2":
+  version: 12.1.2
+  resolution: "@testing-library/react@npm:12.1.2"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^8.0.0
   peerDependencies:
     react: "*"
     react-dom: "*"
-  checksum: 99a205666c5e374d9f593c97a4da341a72bb00d68ac3ea88f573b9c7e5cf43abb10d1546fb6ed93160b80c8414e93def434879d0673ccde864a044fca42efc52
+  checksum: d48b14b34d1c24987b44c00ce040e24d5cd0ea37866f24f8fbc000e09b3965de6d754c9f92d56f93dc281d4af199a7dd6a4897d7cd940742ad5c619684eaaff6
   languageName: node
   linkType: hard
 
@@ -14058,7 +14058,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": 7.15.4
     "@react-icons/all-files": 4.1.0
     "@testing-library/jest-dom": 5.14.1
-    "@testing-library/react": 12.1.1
+    "@testing-library/react": 12.1.2
     "@types/faker": 5.5.8
     "@types/react": 17.0.27
     "@types/styled-components": 5.1.14

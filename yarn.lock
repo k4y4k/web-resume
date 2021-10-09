@@ -508,16 +508,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-decorators@npm:7.15.4":
-  version: 7.15.4
-  resolution: "@babel/plugin-proposal-decorators@npm:7.15.4"
+"@babel/plugin-proposal-decorators@npm:7.15.8":
+  version: 7.15.8
+  resolution: "@babel/plugin-proposal-decorators@npm:7.15.8"
   dependencies:
     "@babel/helper-create-class-features-plugin": ^7.15.4
     "@babel/helper-plugin-utils": ^7.14.5
     "@babel/plugin-syntax-decorators": ^7.14.5
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 02d966e11bf9b4a6984940cc77319f901e21574bca542a294d384ef8b05a6571b2b60c6ac5aa4e97beeec95e3ec6b440c8fc04d1e37996bb1fd366cfe672c0db
+  checksum: 291d1e1ff17c54ff40c38903b9be8bbe78fb7eed8abc496a6ebccf12083b97809e829a43a720df526dab21e1004483edaf38ef1635ae6fcda6a8f258df17fb67
   languageName: node
   linkType: hard
 
@@ -11860,7 +11860,7 @@ __metadata:
   resolution: "kayak-s-resume@workspace:."
   dependencies:
     "@5no/paper-sizes": 1.0.2
-    "@babel/plugin-proposal-decorators": 7.15.4
+    "@babel/plugin-proposal-decorators": 7.15.8
     "@react-icons/all-files": 4.1.0
     "@testing-library/jest-dom": 5.14.1
     "@testing-library/react": 12.1.2

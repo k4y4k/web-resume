@@ -2220,7 +2220,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/core@npm:^27.2.4, @jest/core@npm:^27.2.5":
+"@jest/core@npm:^27.2.5":
   version: 27.2.5
   resolution: "@jest/core@npm:27.2.5"
   dependencies:
@@ -2371,7 +2371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/transform@npm:^27.2.4, @jest/transform@npm:^27.2.5":
+"@jest/transform@npm:^27.2.5":
   version: 27.2.5
   resolution: "@jest/transform@npm:27.2.5"
   dependencies:
@@ -2406,7 +2406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/types@npm:^27.2.4, @jest/types@npm:^27.2.5":
+"@jest/types@npm:^27.2.5":
   version: 27.2.5
   resolution: "@jest/types@npm:27.2.5"
   dependencies:
@@ -4478,25 +4478,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-jest@npm:27.2.4":
-  version: 27.2.4
-  resolution: "babel-jest@npm:27.2.4"
-  dependencies:
-    "@jest/transform": ^27.2.4
-    "@jest/types": ^27.2.4
-    "@types/babel__core": ^7.1.14
-    babel-plugin-istanbul: ^6.0.0
-    babel-preset-jest: ^27.2.0
-    chalk: ^4.0.0
-    graceful-fs: ^4.2.4
-    slash: ^3.0.0
-  peerDependencies:
-    "@babel/core": ^7.8.0
-  checksum: 1aeee799c16253c566ad7b3447a32e98188a0457c59b69764996b2ca56c4087302f83233df3838d249314f24b2dc18a86184f34dc03496ecab006f1824c3a145
-  languageName: node
-  linkType: hard
-
-"babel-jest@npm:^27.2.5":
+"babel-jest@npm:27.2.5, babel-jest@npm:^27.2.5":
   version: 27.2.5
   resolution: "babel-jest@npm:27.2.5"
   dependencies:
@@ -11056,7 +11038,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-cli@npm:^27.2.4":
+"jest-cli@npm:^27.2.5":
   version: 27.2.5
   resolution: "jest-cli@npm:27.2.5"
   dependencies:
@@ -11536,13 +11518,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest@npm:27.2.4":
-  version: 27.2.4
-  resolution: "jest@npm:27.2.4"
+"jest@npm:27.2.5":
+  version: 27.2.5
+  resolution: "jest@npm:27.2.5"
   dependencies:
-    "@jest/core": ^27.2.4
+    "@jest/core": ^27.2.5
     import-local: ^3.0.2
-    jest-cli: ^27.2.4
+    jest-cli: ^27.2.5
   peerDependencies:
     node-notifier: ^8.0.1 || ^9.0.0 || ^10.0.0
   peerDependenciesMeta:
@@ -11550,7 +11532,7 @@ __metadata:
       optional: true
   bin:
     jest: bin/jest.js
-  checksum: 49538c7b16ee98ec0d2143e1970c9c4792511bc9e0cafc8f3de7e64f690f13ade3841340700186081484e48324a98931ce858bb3d7ae2efec7beeb8914339fbe
+  checksum: fe262171655d8caf1e80ce2a412bf5eaf9eb8679fb6b3c0edc903f2795f1c73b33704cf0afd7cf1752bd674eccda5136d5e2ffbccffbee02a5c83743c7ae0141
   languageName: node
   linkType: hard
 
@@ -11791,7 +11773,7 @@ __metadata:
     "@types/styled-components": 5.1.15
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
-    babel-jest: 27.2.4
+    babel-jest: 27.2.5
     babel-plugin-jsx-remove-data-test-id: 3.0.0
     babel-plugin-styled-components: 1.13.2
     babel-preset-gatsby: 1.14.0
@@ -11821,7 +11803,7 @@ __metadata:
     gbimage-bridge: 0.1.4
     husky: 7.0.2
     identity-obj-proxy: 3.0.0
-    jest: 27.2.4
+    jest: 27.2.5
     jest-styled-components: 7.0.5
     lint-staged: 11.2.0
     mockdate: 3.0.5

@@ -16,7 +16,7 @@ steps:
   - name: install
     image: node:16
     commands:
-      - yarn
+      - yarn --immutable
 
   - name: test
     image: node:16

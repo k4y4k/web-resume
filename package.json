@@ -66,17 +66,11 @@
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-promise": "5.1.0",
     "eslint-plugin-standard": "4.1.0",
-    "husky": "7.0.2",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.2.5",
     "jest-styled-components": "7.0.5",
-    "lint-staged": "11.2.3",
     "mockdate": "3.0.5",
     "prettier": "2.4.1"
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": "eslint --cache --fix",
-    "*.{js,ts,jsx,tsx,md,json,css}": "prettier --write"
   },
   "babelMacros": {
     "twin": {

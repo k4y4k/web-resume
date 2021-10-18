@@ -136,11 +136,11 @@ const createEducation = (num: number): educationItem[] => {
   for (let i = 0; i < num + 1; i++) {
     const courses = [
       fake(' {{random.alphaNumeric}}{{random.alphaNumeric}}').toUpperCase() +
-        fake('{{random.number}}: {{name.jobType}} {{name.jobArea}}'),
+        fake('{{datatype.number}}: {{name.jobType}} {{name.jobArea}}'),
       fake(' {{random.alphaNumeric}}{{random.alphaNumeric}}').toUpperCase() +
-        fake('{{random.number}}: {{name.jobType}} {{name.jobArea}}'),
+        fake('{{datatype.number}}: {{name.jobType}} {{name.jobArea}}'),
       fake(' {{random.alphaNumeric}}{{random.alphaNumeric}}').toUpperCase() +
-        fake('{{random.number}}: {{name.jobType}} {{name.jobArea}}'),
+        fake('{{datatype.number}}: {{name.jobType}} {{name.jobArea}}'),
     ]
 
     eduList.push({

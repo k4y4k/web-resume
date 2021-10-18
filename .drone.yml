@@ -14,13 +14,12 @@ clone:
 
 steps:
   - name: install
-    image: node
-    pull: if-not-exists
+    image: node:16
     commands:
       - yarn
 
   - name: test
-    image: node
+    image: node:16
     commands:
       - yarn check-types
       - yarn lint

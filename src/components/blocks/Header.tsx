@@ -52,7 +52,7 @@ export const Header = ({
     }
   `)
 
-  const { name, label } = data?.text.childDataJson.basics
+  const { name, label } = data.text.childDataJson.basics
 
   return (
     <PureHeader

@@ -39,7 +39,7 @@ export const Skills = (): JSX.Element => {
     }
   `)
 
-  const { skills } = data?.file.childDataJson
+  const { skills } = data.file.childDataJson
 
   return <PureSkills skills={skills} />
 }

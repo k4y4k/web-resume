@@ -57,7 +57,7 @@ export const Education = (): JSX.Element => {
     }
   `)
 
-  const { education } = data?.file.childDataJson
+  const { education } = data.file.childDataJson
 
   return <PureEducation history={education} />
 }

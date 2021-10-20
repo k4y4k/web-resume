@@ -64,7 +64,7 @@ export const Experience = (): JSX.Element => {
     }
   `)
 
-  const { work, volunteer } = data?.file.childDataJson
+  const { work, volunteer } = data.file.childDataJson
 
   const aggregated = [...work, ...volunteer].sort((a, b) =>
     dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1

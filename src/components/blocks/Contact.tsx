@@ -145,15 +145,15 @@ export const Contact = ({
     }
   `)
 
-  const { email, website } = data?.file.childDataJson.basics
+  const { email, website } = data.file.childDataJson.basics
 
   // extract list of networks
-  const { profiles } = data?.file.childDataJson.basics
+  const { profiles } = data.file.childDataJson.basics
   const twitter = getNetworkUsernames(profiles, 'twitter')
   const github = getNetworkUsernames(profiles, 'github')
   const linkedin = getNetworkUsernames(profiles, 'linkedin')
 
-  const { city, countryCode, region } = data?.file.childDataJson.basics.location
+  const { city, countryCode, region } = data.file.childDataJson.basics.location
 
   const props = {
     email,

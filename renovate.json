@@ -1,5 +1,7 @@
 {
   "extends": ["config:base", ":maintainLockFilesWeekly"],
+  "schedule": ["on sunday and monday"],
+  "timezone": "Australia/Brisbane",
   "semanticCommits": "enabled",
   "stabilityDays": 3,
   "prCreation": "not-pending",

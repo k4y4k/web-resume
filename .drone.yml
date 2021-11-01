@@ -14,12 +14,12 @@ clone:
 
 steps:
   - name: install
-    image: node:16
+    image: node:17
     commands:
       - yarn --immutable
 
   - name: test
-    image: node:16
+    image: node:17
     commands:
       - yarn check-types
       - yarn lint
@@ -39,7 +39,7 @@ steps:
         - failure
 
   - name: build
-    image: node:16
+    image: node:17
     commands:
       - yarn fake
       - yarn build

@@ -12,6 +12,9 @@ exports[`<AddressGreeting/> renders OK 1`] = `
 .c2 {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 <div>

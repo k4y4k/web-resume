@@ -3,6 +3,8 @@
 exports[`<Skills /> Skills renders OK 1`] = `
 .c3 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c2 {

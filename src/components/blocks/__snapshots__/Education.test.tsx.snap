@@ -44,6 +44,8 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 
 .c3 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -145,6 +147,8 @@ exports[`<PureEducation /> no course details? 1`] = `
 
 .c3 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -256,6 +260,8 @@ exports[`<PureEducation /> renders OK 1`] = `
 
 .c3 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c2 {
@@ -357,6 +363,8 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 
 .c3 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c2 {

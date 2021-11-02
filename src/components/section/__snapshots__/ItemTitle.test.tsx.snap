@@ -3,6 +3,8 @@
 exports[`<ItemTitle /> displays title 1`] = `
 .c0 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 <h1

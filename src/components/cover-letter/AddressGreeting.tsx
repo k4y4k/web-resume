@@ -60,7 +60,7 @@ const AddressGreeting = (): JSX.Element => {
         {countryCode !== ' ' ? `${countryCode}` : null}
       </p>
 
-      <h1 tw='mt-4 mb-1'>Dear {recruiterFirstName},</h1>
+      <h1 tw='mt-4 mb-1 font-bold text-xl'>Dear {recruiterFirstName},</h1>
     </>
   )
 }

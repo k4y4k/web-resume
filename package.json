@@ -76,5 +76,6 @@
     "twin": {
       "preset": "styled-components"
     }
-  }
+  },
+  "packageManager": "yarn@3.1.0"
 }

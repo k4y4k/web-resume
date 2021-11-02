@@ -40,6 +40,8 @@ steps:
 
   - name: build
     image: node:17
+    environment:
+      NODE_OPTIONS: --openssl-legacy-provider
     commands:
       - yarn fake
       - yarn build

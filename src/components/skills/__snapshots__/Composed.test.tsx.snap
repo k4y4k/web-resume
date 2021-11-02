@@ -13,6 +13,8 @@ exports[`<Composed />  incomplete data title; bucket as empty string 1`] = `null
 exports[`<Composed /> Composes heading and bucket 1`] = `
 .c1 {
   font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
 }
 
 .c0 {

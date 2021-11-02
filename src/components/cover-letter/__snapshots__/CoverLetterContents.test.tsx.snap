@@ -12,6 +12,9 @@ exports[`<CoverLetterContents/> renders OK 1`] = `
 .c4 {
   margin-top: 1rem;
   margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .c1 {

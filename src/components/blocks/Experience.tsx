@@ -12,6 +12,7 @@ interface ExperienceItem {
   startDate: string
   summary: string
   organization?: string
+  link: string
 }
 
 interface two {
@@ -31,6 +32,7 @@ export const PureExperience = ({ history }: two): JSX.Element => {
               toDate={el.endDate}
               title={el.position}
               subtitle={el.company ?? el.organization}
+              link={el.link}
             />
           )
         })}
@@ -51,6 +53,7 @@ export const Experience = (): JSX.Element => {
             company
             position
             summary
+            link
           }
           volunteer {
             startDate

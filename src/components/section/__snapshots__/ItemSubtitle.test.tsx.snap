@@ -8,4 +8,12 @@ exports[`<ItemSubtitle /> displays subtitle 1`] = `
 </span>
 `;
 
+exports[`<ItemSubtitle /> displays subtitle with link 1`] = `
+<span
+  data-testid="itemSubtitle"
+>
+  Quack quack
+</span>
+`;
+
 exports[`<ItemSubtitle /> handles no data 1`] = `null`;

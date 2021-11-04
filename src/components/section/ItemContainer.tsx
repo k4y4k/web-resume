@@ -19,6 +19,9 @@ interface ItemContainerTypes {
   area?: string
   studyType?: string
   courses?: string[]
+
+  // link
+  link?: string
 }
 
 const itemStyles = css`
@@ -39,6 +42,7 @@ const ItemContainer = ({
   area,
   studyType,
   courses,
+  link,
 }: ItemContainerTypes): JSX.Element => {
   let studyTitle = ''
   let studyDetails = ''
@@ -61,8 +65,16 @@ const ItemContainer = ({
     <div data-testid='sectionItemContainer' css={itemStyles}>
       <Title title={title ?? studyTitle} />
       <div data-testid='byline' tw='italic'>
-        <Subtitle subtitle={subtitle ?? institution} />
-        {' | '}
+        {subtitle !== undefined || institution !== undefined ? (
+          <>
+            <Subtitle
+              link={link ?? undefined}
+              subtitle={subtitle ?? institution}
+            />
+            {' | '}
+          </>
+        ) : null}
+
         <Dates from={fromDate} to={toDate} />
       </div>
       <Details details={summary ?? studyDetails} />

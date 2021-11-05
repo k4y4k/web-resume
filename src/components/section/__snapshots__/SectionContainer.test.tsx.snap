@@ -47,9 +47,7 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
     <div
       class="c3"
       data-testid="byline"
-    >
-       | 
-    </div>
+    />
   </div>
 </div>
 `;

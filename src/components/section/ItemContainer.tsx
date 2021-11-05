@@ -61,16 +61,16 @@ const ItemContainer = ({
     }
   }
 
+  let displaySubtitle = true
+  if (subtitle === '' || institution === '') displaySubtitle = false
+
   return (
     <div data-testid='sectionItemContainer' css={itemStyles}>
       <Title title={title ?? studyTitle} />
       <div data-testid='byline' tw='italic'>
-        {subtitle !== undefined || institution !== undefined ? (
+        {displaySubtitle ? (
           <>
-            <Subtitle
-              link={link ?? undefined}
-              subtitle={subtitle ?? institution}
-            />
+            <Subtitle link={link} subtitle={subtitle ?? institution} />
             {' | '}
           </>
         ) : null}

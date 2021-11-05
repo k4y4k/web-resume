@@ -1,20 +1,19 @@
 import * as React from 'react'
 import { render, screen } from '@testing-library/react'
 import ItemContainer from './ItemContainer'
+const data = {
+  company: 'Company',
+  position: 'President',
+  startDate: '2013-01-01',
+  endDate: '2014-01-01',
+  summary: 'Description...',
+  highlights: ['Started the company'],
+  link: 'https://duckduckgo.com',
+}
 
 describe('<ItemContainer />', () => {
   describe('experience item', () => {
     test('experience item', () => {
-      const data = {
-        company: 'Company',
-        position: 'President',
-        website: 'http://company.com',
-        startDate: '2013-01-01',
-        endDate: '2014-01-01',
-        summary: 'Description...',
-        highlights: ['Started the company'],
-      }
-
       render(
         <ItemContainer
           fromDate={data.startDate}
@@ -22,6 +21,7 @@ describe('<ItemContainer />', () => {
           toDate={data.endDate}
           title={data.position}
           subtitle={data.company}
+          link={data.link}
         />
       )
 
@@ -80,4 +80,24 @@ describe('<ItemContainer />', () => {
       expect(screen.getByTestId('sectionItemContainer')).toMatchSnapshot()
     })
   })
+
+  describe('conditionally add the seperator between name and date', () => {
+    test('date only', () => {
+      render(
+        <ItemContainer
+          fromDate={data.startDate}
+          summary={data.summary}
+          toDate={data.endDate}
+          title={data.position}
+          subtitle={''}
+          link={data.link}
+        />
+      )
+
+      expect(screen.getByTestId('sectionItemContainer')).toMatchSnapshot()
+    })
+
+    test.todo('name and date')
+  })
 })
+

@@ -6,9 +6,15 @@ import ItemTitle from '../section/ItemTitle'
 interface ComposedTypes {
   heading: string
   bucket: string[]
+
+  compact: boolean
 }
 
-const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element | null => {
+const Composed = ({
+  heading,
+  bucket,
+  compact,
+}: ComposedTypes): JSX.Element | null => {
   // switching the logic was the only way to make this work
 
   if (JSON.stringify(bucket) === '[]') return null
@@ -19,7 +25,7 @@ const Composed = ({ heading, bucket }: ComposedTypes): JSX.Element | null => {
 
   return (
     <div data-testid='skillsComposed' tw='my-2'>
-      <ItemTitle title={heading} />
+      {compact ? null : <ItemTitle title={heading} />}
       <Bucket skills={bucket} />
     </div>
   )

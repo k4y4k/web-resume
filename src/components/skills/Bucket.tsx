@@ -10,7 +10,15 @@ const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
   return (
     <div data-testid='skillsBucket'>
       {skills.map(el => (
-        <span key={el}>{`${el} `}</span>
+        <p
+          style={{
+            marginRight: '0.5rem',
+            display: 'inline-block',
+          }}
+          key={el}
+        >
+          {`${el}`}
+        </p>
       ))}
     </div>
   )

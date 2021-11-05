@@ -50,7 +50,8 @@ const AddressGreeting = (): JSX.Element => {
   return (
     <>
       <p tw='pb-0!'>
-        {recruiterFirstName} {recruiterLastName}
+        {recruiterFirstName}{' '}
+        {recruiterLastName === '_' ? null : recruiterLastName}
       </p>
       <p tw='pb-0!'>{address}</p>
       <p>

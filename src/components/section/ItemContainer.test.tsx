@@ -96,8 +96,5 @@ describe('<ItemContainer />', () => {
 
       expect(screen.getByTestId('sectionItemContainer')).toMatchSnapshot()
     })
-
-    test.todo('name and date')
   })
 })
-

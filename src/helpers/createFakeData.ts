@@ -75,6 +75,7 @@ interface workItem {
   summary: string
   startDate: string
   endDate: string
+  link: string
 }
 
 const createWork = (num: number): workItem[] => {
@@ -87,6 +88,7 @@ const createWork = (num: number): workItem[] => {
       summary: fake('- {{company.bs}}\n- {{company.bs}}\n- {{company.bs}}'),
       startDate: dayjs(fake('{{date.past}}')).format('YYYY-MM-DD'),
       endDate: dayjs(fake('{{date.future}}')).format('YYYY-MM-DD'),
+      link: fake('{{internet.url}}'),
     }
 
     workList.push(newWork)

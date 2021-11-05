@@ -14,11 +14,19 @@ interface SkillsList {
 }
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
+  let compact = false
+  if (skills.length <= 1) compact = true
+
   return (
     <div data-testid='skills'>
       <SectionContainer title='Skills'>
         {skills?.map(el => (
-          <Composed key={el.name} heading={el.name} bucket={el.keywords} />
+          <Composed
+            compact={compact}
+            key={el.name}
+            heading={el.name}
+            bucket={el.keywords}
+          />
         ))}
       </SectionContainer>
     </div>

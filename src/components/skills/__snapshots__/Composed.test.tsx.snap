@@ -35,9 +35,11 @@ exports[`<Composed /> Composes heading and bucket 1`] = `
   <div
     data-testid="skillsBucket"
   >
-    <span>
-      Things! 
-    </span>
+    <p
+      style="margin-right: 0.5rem; display: inline-block;"
+    >
+      Things!
+    </p>
   </div>
 </div>
 `;

@@ -11735,14 +11735,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-styled-components@npm:7.0.5":
-  version: 7.0.5
-  resolution: "jest-styled-components@npm:7.0.5"
+"jest-styled-components@npm:7.0.6":
+  version: 7.0.6
+  resolution: "jest-styled-components@npm:7.0.6"
   dependencies:
     css: ^3.0.0
   peerDependencies:
     styled-components: ">= 5"
-  checksum: fef9f261dd59d6d095c1bc43da5ba5faaf87ca73dff20ff10e38f70201c35c60f6347836581c087bab6a8b26de29adc4cd657fdf2a28cf98609b2452a7368549
+  checksum: 7af3f0df2ccd284014a6ef3177b09a97f706a1a873423f01fdaf281e3c1914f1162ed53865d3ccdd42385ac274935b903207c03abb8794fd1f45997f5c932a4a
   languageName: node
   linkType: hard
 
@@ -12107,7 +12107,7 @@ __metadata:
     gbimage-bridge: 0.1.4
     identity-obj-proxy: 3.0.0
     jest: 27.3.1
-    jest-styled-components: 7.0.5
+    jest-styled-components: 7.0.6
     mockdate: 3.0.5
     prettier: 2.4.1
     react: 17.0.2

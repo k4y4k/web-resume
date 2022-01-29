@@ -16,7 +16,7 @@ steps:
   - name: install
     image: node:17
     commands:
-      - yarn --immutable
+      - yarn install --immutable --immutable-cache
 
   - name: test
     image: node:17

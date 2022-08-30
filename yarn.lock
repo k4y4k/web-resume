@@ -3115,16 +3115,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:12.1.2":
-  version: 12.1.2
-  resolution: "@testing-library/react@npm:12.1.2"
+"@testing-library/react@npm:12.1.5":
+  version: 12.1.5
+  resolution: "@testing-library/react@npm:12.1.5"
   dependencies:
     "@babel/runtime": ^7.12.5
     "@testing-library/dom": ^8.0.0
+    "@types/react-dom": <18.0.0
   peerDependencies:
-    react: "*"
-    react-dom: "*"
-  checksum: 70b0f7f27c83fe1a33e7df01b1e64850fbab4050c403848d611d852cadaa25ccde58518773002ae569a1350b2282c2ccbcbe5eb6af8b29ab377ab2a8ab573b3b
+    react: <18.0.0
+    react-dom: <18.0.0
+  checksum: 4abd0490405e709a7df584a0db604e508a4612398bb1326e8fa32dd9393b15badc826dcf6d2f7525437886d507871f719f127b9860ed69ddd204d1fa834f576a
   languageName: node
   linkType: hard
 
@@ -3583,6 +3584,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:<18.0.0":
+  version: 17.0.17
+  resolution: "@types/react-dom@npm:17.0.17"
+  dependencies:
+    "@types/react": ^17
+  checksum: 23caf98aa03e968811560f92a2c8f451694253ebe16b670929b24eaf0e7fa62ba549abe9db0ac028a9d8a9086acd6ab9c6c773f163fa21224845edbc00ba6232
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*":
   version: 17.0.34
   resolution: "@types/react@npm:17.0.34"
@@ -3602,6 +3612,17 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: e68b0d59aa69577fc6a6d654b25d5d8408625498f4c483f160b557fac21e840f6e8807cbde93e9f039949b6d624a019b1990d18499c1d65aecf3605c25e30242
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:^17":
+  version: 17.0.48
+  resolution: "@types/react@npm:17.0.48"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: b683fa33f751ced0b8c8715df9f40de15513c1d7ce66064a75cdfb8805cc913b0b214a2e7022ef0b724bd62a1e8651d040cd265dd0452bde03cca9b8e495742d
   languageName: node
   linkType: hard
 
@@ -12061,7 +12082,7 @@ __metadata:
     "@babel/plugin-proposal-decorators": 7.16.4
     "@react-icons/all-files": 4.1.0
     "@testing-library/jest-dom": 5.15.0
-    "@testing-library/react": 12.1.2
+    "@testing-library/react": 12.1.5
     "@types/faker": 5.5.9
     "@types/react": 17.0.37
     "@types/styled-components": 5.1.15

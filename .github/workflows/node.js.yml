@@ -11,9 +11,8 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    
     strategy:
       matrix:
         node-version: [lts/*, latest/*]

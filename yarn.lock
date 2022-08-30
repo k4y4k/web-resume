@@ -3604,18 +3604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.37":
-  version: 17.0.37
-  resolution: "@types/react@npm:17.0.37"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: e68b0d59aa69577fc6a6d654b25d5d8408625498f4c483f160b557fac21e840f6e8807cbde93e9f039949b6d624a019b1990d18499c1d65aecf3605c25e30242
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:^17":
+"@types/react@npm:17.0.48, @types/react@npm:^17":
   version: 17.0.48
   resolution: "@types/react@npm:17.0.48"
   dependencies:
@@ -12084,7 +12073,7 @@ __metadata:
     "@testing-library/jest-dom": 5.15.0
     "@testing-library/react": 12.1.5
     "@types/faker": 5.5.9
-    "@types/react": 17.0.37
+    "@types/react": 17.0.48
     "@types/styled-components": 5.1.15
     "@typescript-eslint/eslint-plugin": 5.3.1
     "@typescript-eslint/parser": 5.3.1

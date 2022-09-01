@@ -12,6 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adobe/css-tools@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@adobe/css-tools@npm:4.0.1"
+  checksum: 80226e2229024c21da9ffa6b5cd4a34b931f071e06f45aba4777ade071d7a6c94605cf73b13718b0c4b34e8b124c65c607b82eaa53a326d3eb73d9682a04a593
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.1.0":
   version: 2.2.0
   resolution: "@ampproject/remapping@npm:2.2.0"
@@ -4127,20 +4134,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:5.15.0":
-  version: 5.15.0
-  resolution: "@testing-library/jest-dom@npm:5.15.0"
+"@testing-library/jest-dom@npm:5.16.5":
+  version: 5.16.5
+  resolution: "@testing-library/jest-dom@npm:5.16.5"
   dependencies:
+    "@adobe/css-tools": ^4.0.1
     "@babel/runtime": ^7.9.2
     "@types/testing-library__jest-dom": ^5.9.1
-    aria-query: ^4.2.2
+    aria-query: ^5.0.0
     chalk: ^3.0.0
-    css: ^3.0.0
     css.escape: ^1.5.1
     dom-accessibility-api: ^0.5.6
     lodash: ^4.17.15
     redent: ^3.0.0
-  checksum: fb11af2462b28bdcbbddf199f58e7f9153358358e2ec47dba311f21d88014351cc31087560e9cbacbccc78063e455361efffb31be6242edd1dbd2e21bb3f4359
+  checksum: 94911f901a8031f3e489d04ac057cb5373621230f5d92bed80e514e24b069fb58a3166d1dd86963e55f078a1bd999da595e2ab96ed95f452d477e272937d792a
   languageName: node
   linkType: hard
 
@@ -13291,7 +13298,7 @@ __metadata:
     "@5no/paper-sizes": 1.0.2
     "@babel/plugin-proposal-decorators": 7.18.10
     "@react-icons/all-files": 4.1.0
-    "@testing-library/jest-dom": 5.15.0
+    "@testing-library/jest-dom": 5.16.5
     "@testing-library/react": 12.1.5
     "@types/faker": 5.5.9
     "@types/react": 18.0.18

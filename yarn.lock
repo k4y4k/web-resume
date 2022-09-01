@@ -2649,7 +2649,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.10.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.15.4, @babel/runtime@npm:^7.3.4, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.16.0
   resolution: "@babel/runtime@npm:7.16.0"
   dependencies:
@@ -2658,7 +2658,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.16.3":
+"@babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.5":
   version: 7.18.9
   resolution: "@babel/runtime@npm:7.18.9"
   dependencies:
@@ -9604,7 +9604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filter-invalid-dom-props@npm:^2.0.0":
+"filter-invalid-dom-props@npm:^2.1.0":
   version: 2.1.0
   resolution: "filter-invalid-dom-props@npm:2.1.0"
   dependencies:
@@ -9888,20 +9888,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-background-image@npm:1.5.3":
-  version: 1.5.3
-  resolution: "gatsby-background-image@npm:1.5.3"
+"gatsby-background-image@npm:1.6.0":
+  version: 1.6.0
+  resolution: "gatsby-background-image@npm:1.6.0"
   dependencies:
-    "@babel/runtime": ^7.13.17
-    filter-invalid-dom-props: ^2.0.0
+    "@babel/runtime": ^7.16.5
+    filter-invalid-dom-props: ^2.1.0
     global: ^4.4.0
-    short-uuid: ^4.1.0
+    short-uuid: ^4.2.0
     sort-media-queries: ^0.2.2
   peerDependencies:
-    gatsby: ^2.0.0 || ^3.0.0
+    gatsby: ^2.0.0 || ^3.0.0 || ^4.0.0
     react: ">=16.x"
     react-dom: ">=16.x"
-  checksum: 940d056a220ce426693deb1aeb69ed46eab51da5c403bd2aeac83ae879cd95abf207552f31880e32274d69e26bd2b97a1efb9ba0bdcf6f8f5ac2617367120a83
+  checksum: 7ccfa4e810b06b8a5ea6139aff526eed8178ac95746225fd915dd51d9a10b53a99478e2c25429a3edfeb19287e32f06cbf8f42b4101bf086a977c26f33d36ed5
   languageName: node
   linkType: hard
 
@@ -13355,7 +13355,7 @@ __metadata:
     eslint-plugin-standard: 4.1.0
     faker: 5.5.3
     gatsby: 4.2.0
-    gatsby-background-image: 1.5.3
+    gatsby-background-image: 1.6.0
     gatsby-plugin-image: 2.2.0
     gatsby-plugin-manifest: 4.2.0
     gatsby-plugin-offline: 5.2.0
@@ -18382,7 +18382,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"short-uuid@npm:^4.1.0":
+"short-uuid@npm:^4.2.0":
   version: 4.2.0
   resolution: "short-uuid@npm:4.2.0"
   dependencies:

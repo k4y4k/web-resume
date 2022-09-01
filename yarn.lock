@@ -10575,16 +10575,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gbimage-bridge@npm:0.1.4":
-  version: 0.1.4
-  resolution: "gbimage-bridge@npm:0.1.4"
+"gbimage-bridge@npm:0.2.2":
+  version: 0.2.2
+  resolution: "gbimage-bridge@npm:0.2.2"
   peerDependencies:
-    gatsby: ^3.0.0
-    gatsby-background-image: ^1.4.1
-    gatsby-plugin-image: ^1.0.1
-    react: ^16.14.0 || ^17.0.0
-    react-dom: ^16.14.0 || ^17.0.0
-  checksum: 4bd75c46f7702b366f47f483cb1131cfae2f3424e602a0c55d212e85858c51423ddaeaf582031cabd4c7a49c27597c1df8fa2a54d3df1528821bb3e8ae97cc35
+    gatsby: ^3.0.0 || ^4.0.0
+    gatsby-background-image: ^1.0.0
+    gatsby-plugin-image: ^1.0.0 || ^2.0.0
+    react: ^16.14.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.14.0 || ^17.0.0 || ^18.0.0
+  checksum: ff3592c456fc4d8e0090432b294986050a91fced86762c5d69a3ad704df7ff91adab8075149623c7960e55a83bb361feee0056ef20dafbfad0528e2ca7c143ea
   languageName: node
   linkType: hard
 
@@ -13367,7 +13367,7 @@ __metadata:
     gatsby-transformer-json: 4.2.0
     gatsby-transformer-remark: 5.2.0
     gatsby-transformer-sharp: 4.2.0
-    gbimage-bridge: 0.1.4
+    gbimage-bridge: 0.2.2
     identity-obj-proxy: 3.0.0
     jest: 27.3.1
     jest-styled-components: 7.0.6

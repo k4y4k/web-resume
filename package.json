@@ -37,7 +37,7 @@
     "gatsby-transformer-json": "4.2.0",
     "gatsby-transformer-remark": "5.2.0",
     "gatsby-transformer-sharp": "4.2.0",
-    "gbimage-bridge": "0.1.4",
+    "gbimage-bridge": "0.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",

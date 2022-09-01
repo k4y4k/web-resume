@@ -7746,10 +7746,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dayjs@npm:1.10.7":
-  version: 1.10.7
-  resolution: "dayjs@npm:1.10.7"
-  checksum: a0a4ca95abaa03d0702161dc2c35d16121188e342f5052b9c61cdf784dab68af766f477c04f87f71c6af666fd4d13db9b9853b87265850d6093b7b04e1bb1cd7
+"dayjs@npm:1.11.5":
+  version: 1.11.5
+  resolution: "dayjs@npm:1.11.5"
+  checksum: e3bbaa7b4883b31be4bf75a181f1447fbb19800c29b332852125aab96baeff3ac232dcba8b88c4ea17d3b636c99dac5fb9d1af4bb6ae26615698bbc4a852dffb
   languageName: node
   linkType: hard
 
@@ -13310,7 +13310,7 @@ __metadata:
     babel-plugin-styled-components: 1.13.3
     babel-preset-gatsby: 2.2.0
     babel-preset-react-app: 10.0.1
-    dayjs: 1.10.7
+    dayjs: 1.11.5
     eslint: 8.23.0
     eslint-config-prettier: 8.3.0
     eslint-config-standard-with-typescript: 20.0.0

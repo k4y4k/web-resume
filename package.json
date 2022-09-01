@@ -22,7 +22,7 @@
     "@react-icons/all-files": "4.1.0",
     "@types/faker": "5.5.9",
     "babel-preset-react-app": "10.0.1",
-    "dayjs": "1.10.7",
+    "dayjs": "1.11.5",
     "faker": "5.5.3",
     "gatsby": "4.2.0",
     "gatsby-background-image": "1.5.3",

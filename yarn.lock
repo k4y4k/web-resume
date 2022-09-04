@@ -13342,7 +13342,7 @@ __metadata:
     react-markdown: 6.0.3
     styled-components: 5.3.5
     tailwindcss: 3.1.8
-    twin.macro: 2.8.1
+    twin.macro: 2.8.2
     typescript: 4.8.2
   languageName: unknown
   linkType: soft
@@ -19032,9 +19032,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"twin.macro@npm:2.8.1":
-  version: 2.8.1
-  resolution: "twin.macro@npm:2.8.1"
+"twin.macro@npm:2.8.2":
+  version: 2.8.2
+  resolution: "twin.macro@npm:2.8.2"
   dependencies:
     "@babel/parser": ^7.12.5
     "@babel/template": ^7.14.5
@@ -19051,7 +19051,7 @@ __metadata:
     string-similarity: ^4.0.3
     tailwindcss: ^2.2.7
     timsort: ^0.3.0
-  checksum: ed93ff973f95012fa47beaadea1c71eaabdf9c5982f4064625dcc7d9516cc183493797a9a520ca0d95e1a1e5e00b55ac2320b731dfc7ded1b402ceaedb0a1096
+  checksum: d5af8fbac429e06968b61ce1f7cb2ced53f0d23d88fc680a42e743ddf47263b95db651c804424e7535f765d3ace3e347c2dc564f851f1f495383a83d176e8d05
   languageName: node
   linkType: hard
 

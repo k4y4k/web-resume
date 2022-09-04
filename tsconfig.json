@@ -16,7 +16,8 @@
     "./gatsby-config.js",
     "./tailwind.config.js",
     "./setup-test-env.js",
-    "./__mocks__/*",
-    "./jest.config.js"
+    "./__mocks__/gatsby.js",
+    "./jest.config.js",
+    "./jest-preprocess.js"
   ]
 }

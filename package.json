@@ -60,7 +60,7 @@
     "@typescript-eslint/parser": "5.36.1",
     "babel-jest": "27.5.1",
     "babel-plugin-jsx-remove-data-test-id": "3.0.0",
-    "babel-plugin-styled-components": "1.13.3",
+    "babel-plugin-styled-components": "2.0.7",
     "babel-preset-gatsby": "2.22.0",
     "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",

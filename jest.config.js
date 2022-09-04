@@ -1,36 +1,31 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 const path = require('path')
 
 module.exports = {
-  setupFilesAfterEnv: [path.resolve(__dirname, './/setup-test-env.js')],
   transform: {
-    // "^.+\\.(tsx?|jsx?)$": "ts-jest",
-    '\\.svg': '<rootDir>//__mocks__/svgTransform.js',
-    '\\.[jt]sx?$': [
-      'babel-jest',
-      {
-        presets: [
-          '@babel/preset-react',
-          'babel-preset-gatsby',
-          '@babel/preset-typescript',
-        ],
-      },
-    ],
+    '^.+\\.[jt]sx?$': '<rootDir>/jest-preprocess.js',
   },
+  setupFilesAfterEnv: [path.resolve(__dirname, './/setup-test-env.js')],
+
   moduleNameMapper: {
-    // "\\.svg": `.//__mocks__/file-mocks.js`,
-    '\\.svg': `<rootDir>//__mocks__/svgTransform.js`,
-    'typeface-*': 'identity-obj-proxy',
     '.+\\.(css|styl|less|sass|scss)$': `identity-obj-proxy`,
-    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>//__mocks__/file-mocks.js`,
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': `<rootDir>/__mocks__/file-mock.js`,
+    '^gatsby-page-utils/(.*)$': `gatsby-page-utils/dist/$1`, // Workaround for https://github.com/facebook/jest/issues/9771
+    '^gatsby-core-utils/(.*)$': `gatsby-core-utils/dist/$1`, // Workaround for https://github.com/facebook/jest/issues/9771
+    '^gatsby-plugin-utils/(.*)$': [
+      `gatsby-plugin-utils/dist/$1`,
+      `gatsby-plugin-utils/$1`,
+    ], // Workaround for https://github.com/facebook/jest/issues/9771
   },
-  testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
-  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`, `\\.svg`],
+  testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
+  transformIgnorePatterns: [
+    `node_modules/(?!(gatsby|gatsby-script|gatsby-link)/)`,
+  ],
   globals: {
     __PATH_PREFIX__: ``,
   },
-  testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|tsx)$',
-  moduleFileExtensions: ['ts', 'tsx', 'js'],
+  testEnvironmentOptions: {
+    url: `http://localhost`,
+  },
+  setupFiles: [`<rootDir>/loadershim.js`],
   testEnvironment: 'jsdom',
 }

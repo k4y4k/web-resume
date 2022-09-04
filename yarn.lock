@@ -8990,7 +8990,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-n@npm:^15.2.5":
+"eslint-plugin-n@npm:15.2.5":
   version: 15.2.5
   resolution: "eslint-plugin-n@npm:15.2.5"
   dependencies:
@@ -13312,7 +13312,7 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-config-standard-with-typescript: 22.0.0
     eslint-plugin-import: 2.26.0
-    eslint-plugin-n: ^15.2.5
+    eslint-plugin-n: 15.2.5
     eslint-plugin-node: 11.1.0
     eslint-plugin-promise: 6.0.1
     eslint-plugin-standard: 4.1.0

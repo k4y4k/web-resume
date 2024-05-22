@@ -50,6 +50,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "7.21.0",
     "@babel/preset-typescript": "7.21.0",
+    "@biomejs/biome": "1.7.3",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "12.1.5",
     "@types/jest": "29.5.0",
@@ -81,7 +82,6 @@
       "preset": "styled-components"
     }
   },
-  "packageManager": "yarn@3.5.0",
   "volta": {
     "node": "20.13.1"
   }

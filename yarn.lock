@@ -10891,9 +10891,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby@npm:4.25.5":
-  version: 4.25.5
-  resolution: "gatsby@npm:4.25.5"
+"gatsby@npm:4.25.7":
+  version: 4.25.7
+  resolution: "gatsby@npm:4.25.7"
   dependencies:
     "@babel/code-frame": ^7.14.0
     "@babel/core": ^7.15.5
@@ -11069,7 +11069,7 @@ __metadata:
       optional: true
   bin:
     gatsby: ./cli.js
-  checksum: 9ea3d0d9e40b945590ce5d7d5e0d28b8d1f1c8c744f0079542ad3f7036720b243554535e7ad819e4055e6f5965e4d1bf6e2b54e3373267a5180b4976f1f3f8a8
+  checksum: e435ba3cc31395e7b7433d783698dd712d26ef1f66038865d8e69580c3ac4d580d76df474cea09a1044552a8b78332dae0f146a16f43acdf804d629e90018f24
   languageName: node
   linkType: hard
 
@@ -13770,7 +13770,7 @@ __metadata:
     eslint-plugin-promise: 6.1.1
     eslint-plugin-standard: 4.1.0
     faker: 5.5.3
-    gatsby: 4.25.5
+    gatsby: 4.25.7
     gatsby-background-image: 1.6.0
     gatsby-plugin-image: 2.25.0
     gatsby-plugin-manifest: 4.25.0

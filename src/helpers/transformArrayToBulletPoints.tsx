@@ -1,14 +1,14 @@
 const transformArrayToBulletPoints = (courses: string[]): string => {
-  let res = ''
+  let res = "";
 
-  courses.forEach(el => {
+  courses.forEach((el) => {
     // don't return empty points
-    if (el === '') return
+    if (el === "") return;
 
-    return (res += `- ${el} \n`)
-  })
+    return (res += `- ${el} \n`);
+  });
 
-  return res
-}
+  return res;
+};
 
-export default transformArrayToBulletPoints
+export default transformArrayToBulletPoints;

@@ -1,62 +1,62 @@
-import * as React from 'react'
-import { render, screen } from '@testing-library/react'
-import Composed from './Composed'
+import * as React from "react";
+import { render, screen } from "@testing-library/react";
+import Composed from "./Composed";
 
-describe('<Composed />', () => {
-  test('Composes heading and bucket', () => {
-    render(<Composed compact={false} heading='Wow!' bucket={['Things!']} />)
+describe("<Composed />", () => {
+  test("Composes heading and bucket", () => {
+    render(<Composed compact={false} heading="Wow!" bucket={["Things!"]} />);
 
-    const bucket = screen.getByTestId('skillsBucket')
-    expect(bucket).toBeInTheDocument()
+    const bucket = screen.getByTestId("skillsBucket");
+    expect(bucket).toBeInTheDocument();
 
-    expect(screen.getByTestId('skillsComposed')).toMatchSnapshot()
-  })
+    expect(screen.getByTestId("skillsComposed")).toMatchSnapshot();
+  });
 
-  describe(' incomplete data', () => {
-    test('empty everything', () => {
-      render(<Composed compact={false} heading='' bucket={[]} />)
+  describe(" incomplete data", () => {
+    test("empty everything", () => {
+      render(<Composed compact={false} heading="" bucket={[]} />);
 
-      const skills = screen.queryByTestId('skillsComposed')
-      expect(skills).not.toBeInTheDocument()
-      expect(skills).toMatchSnapshot()
-    })
+      const skills = screen.queryByTestId("skillsComposed");
+      expect(skills).not.toBeInTheDocument();
+      expect(skills).toMatchSnapshot();
+    });
 
-    test('title; bucket as empty array', () => {
-      render(<Composed compact={false} heading='Wow!' bucket={[]} />)
+    test("title; bucket as empty array", () => {
+      render(<Composed compact={false} heading="Wow!" bucket={[]} />);
 
-      const skills = screen.queryByTestId('skillsComposed')
-      expect(skills).not.toBeInTheDocument()
-      expect(skills).toMatchSnapshot()
-    })
+      const skills = screen.queryByTestId("skillsComposed");
+      expect(skills).not.toBeInTheDocument();
+      expect(skills).toMatchSnapshot();
+    });
 
-    test('title; bucket as empty string', () => {
-      render(<Composed compact={false} heading='' bucket={['']} />)
+    test("title; bucket as empty string", () => {
+      render(<Composed compact={false} heading="" bucket={[""]} />);
 
-      const skills = screen.queryByTestId('skillsComposed')
-      expect(skills).not.toBeInTheDocument()
-      expect(skills).toMatchSnapshot()
-    })
+      const skills = screen.queryByTestId("skillsComposed");
+      expect(skills).not.toBeInTheDocument();
+      expect(skills).toMatchSnapshot();
+    });
 
-    test('no title; bucket as empty string', () => {
-      render(<Composed compact={false} heading='' bucket={['']} />)
+    test("no title; bucket as empty string", () => {
+      render(<Composed compact={false} heading="" bucket={[""]} />);
 
-      const skills = screen.queryByTestId('skillsComposed')
-      expect(skills).not.toBeInTheDocument()
-      expect(skills).toMatchSnapshot()
-    })
+      const skills = screen.queryByTestId("skillsComposed");
+      expect(skills).not.toBeInTheDocument();
+      expect(skills).toMatchSnapshot();
+    });
 
-    test('no title; bucket', () => {
-      render(<Composed compact={false} heading='' bucket={['Things!']} />)
+    test("no title; bucket", () => {
+      render(<Composed compact={false} heading="" bucket={["Things!"]} />);
 
-      const skills = screen.queryByTestId('skillsComposed')
-      expect(skills).not.toBeInTheDocument()
-      expect(skills).toMatchSnapshot()
-    })
-  })
+      const skills = screen.queryByTestId("skillsComposed");
+      expect(skills).not.toBeInTheDocument();
+      expect(skills).toMatchSnapshot();
+    });
+  });
 
   test("omit bucket heading if there's only 1 category", () => {
     render(
-      <Composed compact={true} heading='My Heading' bucket={['One', 'Two']} />
-    )
-  })
-})
+      <Composed compact={true} heading="My Heading" bucket={["One", "Two"]} />,
+    );
+  });
+});

@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { FiPhone } from '@react-icons/all-files/fi/FiPhone'
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { FiPhone } from "@react-icons/all-files/fi/FiPhone";
 
 interface PhoneTypes {
-  restrictDisplay?: boolean
+  restrictDisplay?: boolean;
 }
 
 const Phone = ({ restrictDisplay = true }: PhoneTypes): JSX.Element | null => {
-  if (restrictDisplay) return null
+  if (restrictDisplay) return null;
 
   const { phone } = useStaticQuery(graphql`
     {
@@ -19,18 +19,18 @@ const Phone = ({ restrictDisplay = true }: PhoneTypes): JSX.Element | null => {
         }
       }
     }
-  `).num.childDataJson.basics
+  `).num.childDataJson.basics;
 
   // xxx xxx xxxx
-  const formattedNum = Array.from(phone)
-  formattedNum.splice(3, 0, ' ')
-  formattedNum.splice(7, 0, ' ')
+  const formattedNum = Array.from(phone);
+  formattedNum.splice(3, 0, " ");
+  formattedNum.splice(7, 0, " ");
 
   return (
-    <li data-testid='contactPhone'>
-      <FiPhone /> {formattedNum.join('')}
+    <li data-testid="contactPhone">
+      <FiPhone /> {formattedNum.join("")}
     </li>
-  )
-}
+  );
+};
 
-export default Phone
+export default Phone;

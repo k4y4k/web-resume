@@ -1,12 +1,12 @@
-import * as React from 'react'
-import tw, { css } from 'twin.macro'
-import { FiMapPin } from '@react-icons/all-files/fi/FiMapPin'
+import * as React from "react";
+import tw, { css } from "twin.macro";
+import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
 
 interface AddressTypes {
-  city: string
-  countryCode: string
-  region: string
-  restrictDisplay?: boolean
+  city: string;
+  countryCode: string;
+  region: string;
+  restrictDisplay?: boolean;
 }
 
 const AddressStyles = css`
@@ -16,7 +16,7 @@ const AddressStyles = css`
     ${tw`flex-grow`}
     margin-right: 8px;
   }
-`
+`;
 
 const Address = ({
   city,
@@ -25,17 +25,17 @@ const Address = ({
 }: AddressTypes): JSX.Element | null => {
   // if there isn't a 123 Example Rd-type datum (non-restricted) or
   // a city (restricted), assume there's nothing else
-  if (city === '') return null
+  if (city === "") return null;
 
   // restricted mode enabled by default
   return (
-    <li css={AddressStyles} data-testid='contactAddress' id='address'>
+    <li css={AddressStyles} data-testid="contactAddress" id="address">
       <FiMapPin />
       <span>
-        {city}, {region + ','} {countryCode}
+        {city}, {region + ","} {countryCode}
       </span>
     </li>
-  )
-}
+  );
+};
 
-export default Address
+export default Address;

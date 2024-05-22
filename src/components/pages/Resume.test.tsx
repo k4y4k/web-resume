@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { render, screen } from '@testing-library/react'
-import Resume from './Resume'
-import { useStaticQuery } from 'gatsby'
+import * as React from "react";
+import { render, screen } from "@testing-library/react";
+import Resume from "./Resume";
+import { useStaticQuery } from "gatsby";
 
-describe('Resume', () => {
+describe("Resume", () => {
   beforeAll(() =>
     (useStaticQuery as jest.Mock).mockReturnValue({
       data: {
@@ -18,12 +18,12 @@ describe('Resume', () => {
           },
         },
       },
-    })
-  )
+    }),
+  );
 
-  test('Renders OK', () => {
-    render(<Resume />)
+  test("Renders OK", () => {
+    render(<Resume />);
 
-    expect(screen).toMatchSnapshot()
-  })
-})
+    expect(screen).toMatchSnapshot();
+  });
+});

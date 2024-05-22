@@ -1,26 +1,26 @@
-import 'twin.macro'
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import ItemContainer from '../section/ItemContainer'
-import SectionContainer from '../section/SectionContainer'
+import "twin.macro";
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import ItemContainer from "../section/ItemContainer";
+import SectionContainer from "../section/SectionContainer";
 
 interface EducationItem {
-  courses: string[]
-  institution: string
-  area: string
-  studyType: string
-  startDate: string
-  endDate: string
+  courses: string[];
+  institution: string;
+  area: string;
+  studyType: string;
+  startDate: string;
+  endDate: string;
 }
 
 interface two {
-  history: EducationItem[]
+  history: EducationItem[];
 }
 
 export const PureEducation = ({ history }: two): JSX.Element => {
   return (
-    <div data-testid='education'>
-      <SectionContainer title='Education'>
+    <div data-testid="education">
+      <SectionContainer title="Education">
         {history.map((el, i: number) => {
           return (
             <ItemContainer
@@ -32,12 +32,12 @@ export const PureEducation = ({ history }: two): JSX.Element => {
               fromDate={el.startDate}
               toDate={el.endDate}
             />
-          )
+          );
         })}
       </SectionContainer>
     </div>
-  )
-}
+  );
+};
 
 export const Education = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -55,11 +55,11 @@ export const Education = (): JSX.Element => {
         }
       }
     }
-  `)
+  `);
 
-  const { education } = data.file.childDataJson
+  const { education } = data.file.childDataJson;
 
-  return <PureEducation history={education} />
-}
+  return <PureEducation history={education} />;
+};
 
-export default Education
+export default Education;

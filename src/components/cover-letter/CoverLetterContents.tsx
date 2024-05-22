@@ -1,9 +1,9 @@
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import tw, { css } from 'twin.macro'
-import AddressGreeting from './AddressGreeting'
-import DateLine from './DateLine'
-import ThanksForComingToMyTEDTalk from './Thanks'
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import tw, { css } from "twin.macro";
+import AddressGreeting from "./AddressGreeting";
+import DateLine from "./DateLine";
+import ThanksForComingToMyTEDTalk from "./Thanks";
 
 const coverLetterContentsStyles = css`
   ${tw`py-8 max-w-prose`}
@@ -15,7 +15,7 @@ const coverLetterContentsStyles = css`
   h1 {
     ${tw`pb-1`}
   }
-`
+`;
 
 const CoverLetterContents = (): JSX.Element => {
   const { letterContents, jsonName } = useStaticQuery(
@@ -35,8 +35,8 @@ const CoverLetterContents = (): JSX.Element => {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
   return (
     <div css={coverLetterContentsStyles}>
@@ -49,7 +49,7 @@ const CoverLetterContents = (): JSX.Element => {
       />
       <ThanksForComingToMyTEDTalk name={jsonName.childDataJson.basics.name} />
     </div>
-  )
-}
+  );
+};
 
-export default CoverLetterContents
+export default CoverLetterContents;

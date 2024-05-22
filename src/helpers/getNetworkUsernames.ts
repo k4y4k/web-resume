@@ -7,19 +7,19 @@
  */
 
 interface profileItem {
-  network: string
-  username: string
+  network: string;
+  username: string;
 }
 
 const getNetworkUsernames = (
   profiles: profileItem[],
-  networkName: string
+  networkName: string,
 ): string | null => {
-  const regex = new RegExp(networkName, 'i')
+  const regex = new RegExp(networkName, "i");
 
-  const res = profiles.filter((el: profileItem) => regex.test(el.network))
+  const res = profiles.filter((el: profileItem) => regex.test(el.network));
 
-  return res[0]?.username ?? null
-}
+  return res[0]?.username ?? null;
+};
 
-export default getNetworkUsernames
+export default getNetworkUsernames;

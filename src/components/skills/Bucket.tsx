@@ -1,19 +1,19 @@
-import * as React from 'react'
+import * as React from "react";
 
 interface BucketTypes {
-  skills: string[]
+  skills: string[];
 }
 
 const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
-  if (skills.length === 1 && skills[0] === '') return null
+  if (skills.length === 1 && skills[0] === "") return null;
 
   return (
-    <div data-testid='skillsBucket'>
-      {skills.map(el => (
+    <div data-testid="skillsBucket">
+      {skills.map((el) => (
         <p
           style={{
-            marginRight: '0.5rem',
-            display: 'inline-block',
+            marginRight: "0.5rem",
+            display: "inline-block",
           }}
           key={el}
         >
@@ -21,7 +21,7 @@ const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
         </p>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Bucket
+export default Bucket;

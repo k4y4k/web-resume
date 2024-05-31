@@ -1,32 +1,32 @@
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import tw, { css } from 'twin.macro'
-import Address from '../contact/Address'
-import Email from '../contact/Email'
-import getNetworkUsernames from '../../helpers/getNetworkUsernames'
-import GitHub from '../contact/GitHub'
-import LinkedIn from '../contact/LinkedIn'
-import Phone from '../contact/Phone'
-import SectionContainer from '../section/SectionContainer'
-import Twitter from '../contact/Twitter'
-import Website from '../contact/Website'
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import tw, { css } from "twin.macro";
+import Address from "../contact/Address";
+import Email from "../contact/Email";
+import getNetworkUsernames from "../../helpers/getNetworkUsernames";
+import GitHub from "../contact/GitHub";
+import LinkedIn from "../contact/LinkedIn";
+import Phone from "../contact/Phone";
+import SectionContainer from "../section/SectionContainer";
+import Twitter from "../contact/Twitter";
+import Website from "../contact/Website";
 
 interface PureContactTypes {
-  restrictDisplay?: boolean
-  compact?: boolean
-  email: string
-  twitter: string | null
-  github: string | null
-  website: string
-  linkedin: string | null
-  city: string
-  region: string
-  countryCode: string
+  restrictDisplay?: boolean;
+  compact?: boolean;
+  email: string;
+  twitter: string | null;
+  github: string | null;
+  website: string;
+  linkedin: string | null;
+  city: string;
+  region: string;
+  countryCode: string;
 }
 
 interface ContactTypes {
-  restrictDisplay?: boolean
-  compact?: boolean
+  restrictDisplay?: boolean;
+  compact?: boolean;
 }
 
 const iconStyles = css`
@@ -58,7 +58,7 @@ const iconStyles = css`
     content: ' ➜';
     ${tw`mr-1`}
   }
-`
+`;
 
 const compactStyles = css`
   .icon {
@@ -85,7 +85,7 @@ const compactStyles = css`
   li:nth-of-type(1) {
     ${tw`mt-0`}
   }
-`
+`;
 
 export const PureContact = ({
   restrictDisplay = true,
@@ -100,8 +100,8 @@ export const PureContact = ({
   countryCode,
 }: PureContactTypes): JSX.Element => {
   return (
-    <SectionContainer onCoverLetter={compact} title='Contact'>
-      <ul css={[iconStyles, compact && compactStyles]} data-testid='contact'>
+    <SectionContainer onCoverLetter={compact} title="Contact">
+      <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
         {compact && <Phone restrictDisplay={restrictDisplay} />}
         {!compact && <Website url={website} />}
         <Email email={email} />
@@ -116,8 +116,8 @@ export const PureContact = ({
         />
       </ul>
     </SectionContainer>
-  )
-}
+  );
+};
 
 export const Contact = ({
   compact,
@@ -143,17 +143,17 @@ export const Contact = ({
         }
       }
     }
-  `)
+  `);
 
-  const { email, website } = data.file.childDataJson.basics
+  const { email, website } = data.file.childDataJson.basics;
 
   // extract list of networks
-  const { profiles } = data.file.childDataJson.basics
-  const twitter = getNetworkUsernames(profiles, 'twitter')
-  const github = getNetworkUsernames(profiles, 'github')
-  const linkedin = getNetworkUsernames(profiles, 'linkedin')
+  const { profiles } = data.file.childDataJson.basics;
+  const twitter = getNetworkUsernames(profiles, "twitter");
+  const github = getNetworkUsernames(profiles, "github");
+  const linkedin = getNetworkUsernames(profiles, "linkedin");
 
-  const { city, countryCode, region } = data.file.childDataJson.basics.location
+  const { city, countryCode, region } = data.file.childDataJson.basics.location;
 
   const props = {
     email,
@@ -164,14 +164,14 @@ export const Contact = ({
     city,
     region,
     countryCode,
-  }
+  };
   return (
     <PureContact
       {...props}
       compact={compact}
       restrictDisplay={restrictDisplay}
     />
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

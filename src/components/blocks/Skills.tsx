@@ -1,26 +1,26 @@
-import 'twin.macro'
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Composed from '../skills/Composed'
-import SectionContainer from '../section/SectionContainer'
+import "twin.macro";
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import Composed from "../skills/Composed";
+import SectionContainer from "../section/SectionContainer";
 
 interface SkillsItem {
-  keywords: string[]
-  name: string
+  keywords: string[];
+  name: string;
 }
 
 interface SkillsList {
-  skills: SkillsItem[]
+  skills: SkillsItem[];
 }
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
-  let compact = false
-  if (skills.length <= 1) compact = true
+  let compact = false;
+  if (skills.length <= 1) compact = true;
 
   return (
-    <div data-testid='skills'>
-      <SectionContainer title='Skills'>
-        {skills?.map(el => (
+    <div data-testid="skills">
+      <SectionContainer title="Skills">
+        {skills?.map((el) => (
           <Composed
             compact={compact}
             key={el.name}
@@ -30,8 +30,8 @@ export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
         ))}
       </SectionContainer>
     </div>
-  )
-}
+  );
+};
 
 export const Skills = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -45,11 +45,11 @@ export const Skills = (): JSX.Element => {
         }
       }
     }
-  `)
+  `);
 
-  const { skills } = data.file.childDataJson
+  const { skills } = data.file.childDataJson;
 
-  return <PureSkills skills={skills} />
-}
+  return <PureSkills skills={skills} />;
+};
 
-export default Skills
+export default Skills;

@@ -1,13 +1,13 @@
-import 'twin.macro'
-import * as React from 'react'
-import Bucket from './Bucket'
-import ItemTitle from '../section/ItemTitle'
+import "twin.macro";
+import * as React from "react";
+import Bucket from "./Bucket";
+import ItemTitle from "../section/ItemTitle";
 
 interface ComposedTypes {
-  heading: string
-  bucket: string[]
+  heading: string;
+  bucket: string[];
 
-  compact: boolean
+  compact: boolean;
 }
 
 const Composed = ({
@@ -17,20 +17,20 @@ const Composed = ({
 }: ComposedTypes): JSX.Element | null => {
   // switching the logic was the only way to make this work
 
-  if (JSON.stringify(bucket) === '[]') return null
+  if (JSON.stringify(bucket) === "[]") return null;
 
-  if (JSON.stringify(bucket) === '[""]') return null
+  if (JSON.stringify(bucket) === '[""]') return null;
 
-  if (heading === '') return null
+  if (heading === "") return null;
 
   return (
-    <div data-testid='skillsComposed' tw='my-2'>
+    <div data-testid="skillsComposed" tw="my-2">
       {compact ? null : <ItemTitle title={heading} />}
       <Bucket skills={bucket} />
     </div>
-  )
+  );
 
   // return null
-}
+};
 
-export default Composed
+export default Composed;

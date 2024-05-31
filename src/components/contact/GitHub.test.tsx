@@ -1,38 +1,38 @@
-import * as React from 'react'
-import { render, screen } from '@testing-library/react'
-import GitHub from './GitHub'
+import * as React from "react";
+import { render, screen } from "@testing-library/react";
+import GitHub from "./GitHub";
 
-describe('<GitHub />', () => {
-  test('handles no data', () => {
-    render(<GitHub username='' />)
+describe("<GitHub />", () => {
+  test("handles no data", () => {
+    render(<GitHub username="" />);
 
-    const github = screen.queryByTestId('contactGithub')
-    expect(github).not.toBeInTheDocument()
-    expect(github).toMatchSnapshot()
-  })
+    const github = screen.queryByTestId("contactGithub");
+    expect(github).not.toBeInTheDocument();
+    expect(github).toMatchSnapshot();
+  });
 
-  test('handles null data', () => {
-    render(<GitHub username={null} />)
+  test("handles null data", () => {
+    render(<GitHub username={null} />);
 
-    const github = screen.queryByTestId('contactGithub')
-    expect(github).not.toBeInTheDocument()
-    expect(github).toMatchSnapshot()
-  })
+    const github = screen.queryByTestId("contactGithub");
+    expect(github).not.toBeInTheDocument();
+    expect(github).toMatchSnapshot();
+  });
 
-  test('displays username', () => {
-    render(<GitHub username='octocat' />)
+  test("displays username", () => {
+    render(<GitHub username="octocat" />);
 
-    const github = screen.getByTestId('contactGithub')
-    expect(github).toHaveTextContent('octocat')
-    expect(github).toMatchSnapshot()
-  })
+    const github = screen.getByTestId("contactGithub");
+    expect(github).toHaveTextContent("octocat");
+    expect(github).toMatchSnapshot();
+  });
 
-  test('links to profile in new tab', () => {
-    render(<GitHub username='octocat' />)
-    const github = screen.getByTestId('contactGithub')
+  test("links to profile in new tab", () => {
+    render(<GitHub username="octocat" />);
+    const github = screen.getByTestId("contactGithub");
 
-    expect(github).toHaveAttribute('href', 'https://github.com/octocat')
+    expect(github).toHaveAttribute("href", "https://github.com/octocat");
 
-    expect(github).toHaveAttribute('target', '_blank')
-  })
-})
+    expect(github).toHaveAttribute("target", "_blank");
+  });
+});

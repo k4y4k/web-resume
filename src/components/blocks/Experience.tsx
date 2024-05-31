@@ -1,28 +1,28 @@
-import * as React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import dayjs from 'dayjs'
-import ItemContainer from '../section/ItemContainer'
-import SectionContainer from '../section/SectionContainer'
+import * as React from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import dayjs from "dayjs";
+import ItemContainer from "../section/ItemContainer";
+import SectionContainer from "../section/SectionContainer";
 
 interface ExperienceItem {
-  company: string
-  endDate: string
-  highlights?: string[]
-  position: string
-  startDate: string
-  summary: string
-  organization?: string
-  link: string
+  company: string;
+  endDate: string;
+  highlights?: string[];
+  position: string;
+  startDate: string;
+  summary: string;
+  organization?: string;
+  link: string;
 }
 
 interface two {
-  history: ExperienceItem[]
+  history: ExperienceItem[];
 }
 
 export const PureExperience = ({ history }: two): JSX.Element => {
   return (
-    <div data-testid='experience'>
-      <SectionContainer title='Experience'>
+    <div data-testid="experience">
+      <SectionContainer title="Experience">
         {history.map((el, i: number) => {
           return (
             <ItemContainer
@@ -34,12 +34,12 @@ export const PureExperience = ({ history }: two): JSX.Element => {
               subtitle={el.company ?? el.organization}
               link={el.link}
             />
-          )
+          );
         })}
       </SectionContainer>
     </div>
-  )
-}
+  );
+};
 
 export const Experience = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -65,15 +65,15 @@ export const Experience = (): JSX.Element => {
         }
       }
     }
-  `)
+  `);
 
-  const { work, volunteer } = data.file.childDataJson
+  const { work, volunteer } = data.file.childDataJson;
 
   const aggregated = [...work, ...volunteer].sort((a, b) =>
-    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1
-  )
+    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1,
+  );
 
-  return <PureExperience history={aggregated} />
-}
+  return <PureExperience history={aggregated} />;
+};
 
-export default Experience
+export default Experience;

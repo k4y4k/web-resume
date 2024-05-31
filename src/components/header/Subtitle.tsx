@@ -1,10 +1,10 @@
-import * as React from 'react'
-import tw from 'twin.macro'
+import * as React from "react";
+import tw from "twin.macro";
 
 interface SubtitleProps {
-  subtitle: string
-  lightmode: boolean
-  compact: boolean
+  subtitle: string;
+  lightmode: boolean;
+  compact: boolean;
 }
 
 const Subtitle = ({
@@ -12,7 +12,7 @@ const Subtitle = ({
   lightmode,
   compact,
 }: SubtitleProps): JSX.Element | null => {
-  if (subtitle === '') return null
+  if (subtitle === "") return null;
 
   return (
     <h2
@@ -21,11 +21,11 @@ const Subtitle = ({
         lightmode ? tw`text-white` : tw`text-orchid-600`,
         compact && tw`text-2xl`,
       ]}
-      data-testid='headerSubtitle'
+      data-testid="headerSubtitle"
     >
       {subtitle}
     </h2>
-  )
-}
+  );
+};
 
-export default Subtitle
+export default Subtitle;

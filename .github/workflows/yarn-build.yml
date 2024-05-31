@@ -26,6 +26,6 @@ jobs:
         with:
           version: latest
 
-      - run: pnpm i
+      - run: pnpm i --shamefully-hoist
 
       - run: pnpm run fake && pnpm run build

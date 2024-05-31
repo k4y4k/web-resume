@@ -1,7 +1,6 @@
 import dayjs from "dayjs";
 import { fake } from "faker";
-import fs from "fs";
-import path from "path";
+import fs from "node:fs";
 
 interface profileItem {
   network: string;
@@ -189,11 +188,7 @@ export const createFakeData = (): string => {
   return JSON.stringify({ basics, work, volunteer, education, skills });
 };
 
-export const writeToDisk = (data: string, dest: string): void => {
-  fs.writeFileSync(path.join(__dirname, dest), data);
-};
-
-writeToDisk(createFakeData(), "../data/data.json");
+fs.writeFileSync("src/data/data.json", createFakeData());
 
 const createFakeCoverLetter = (): string => {
   console.log("creating fake cover letter");
@@ -222,6 +217,6 @@ region: ${region}
 ${contents}`;
 };
 
-writeToDisk(createFakeCoverLetter(), "../data/letter.md");
+fs.writeFileSync("src/data/letter.md", createFakeCoverLetter());
 
 export default createFakeData;

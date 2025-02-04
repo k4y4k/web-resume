@@ -13,6 +13,7 @@ interface ExperienceItem {
   summary: string;
   organization?: string;
   link: string;
+  rawDates?: string;
 }
 
 interface two {
@@ -33,6 +34,7 @@ export const PureWorkExperience = ({ history }: two): JSX.Element => {
               title={el.position}
               subtitle={el.company ?? el.organization}
               link={el.link}
+              rawDates={el.rawDates}
             />
           );
         })}
@@ -53,6 +55,7 @@ export const WorkExperience = (): JSX.Element => {
             startDate
             position
             organization
+            rawDates
           }
         }
       }

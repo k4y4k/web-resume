@@ -17,7 +17,7 @@ describe("<Subtitle />", () => {
         lightmode={false}
         compact={false}
         subtitle="lead singer of kayak and the kayaks"
-      />,
+      />
     );
     const subtitle = screen.getByTestId("headerSubtitle");
 
@@ -31,7 +31,7 @@ describe("<Subtitle />", () => {
         lightmode={true}
         compact={false}
         subtitle="lead singer of kayak and the kayaks"
-      />,
+      />
     );
     const subtitle = screen.getByTestId("headerSubtitle");
 
@@ -45,7 +45,7 @@ describe("<Subtitle />", () => {
         lightmode={false}
         compact={true}
         subtitle="lead singer of kayak and the kayaks"
-      />,
+      />
     );
     const subtitle = screen.getByTestId("headerSubtitle");
 
@@ -59,7 +59,7 @@ describe("<Subtitle />", () => {
         lightmode={true}
         compact={true}
         subtitle="lead singer of kayak and the kayaks"
-      />,
+      />
     );
     const subtitle = screen.getByTestId("headerSubtitle");
 

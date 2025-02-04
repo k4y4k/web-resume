@@ -19,7 +19,7 @@ describe("<Address />", () => {
           countryCode="EX"
           region="Example State"
           restrictDisplay={false}
-        />,
+        />
       );
 
       const address = screen.getByTestId("contactAddress");
@@ -35,15 +35,15 @@ describe("<Address />", () => {
           countryCode="ZZ"
           restrictDisplay={false}
           region="Example State"
-        />,
+        />
       );
 
       const addressContainer = document.getElementById(
-        "address",
+        "address"
       ) as HTMLElement;
       const address = within(addressContainer).getByText(
         "Example City, Example State",
-        { exact: false },
+        { exact: false }
       );
 
       expect(address).not.toBeFalsy();
@@ -56,7 +56,7 @@ describe("<Address />", () => {
       process.env.RESTRICT_ADDRESS = "true";
 
       render(
-        <Address city="Example City" countryCode="ZZ" region="Example State" />,
+        <Address city="Example City" countryCode="ZZ" region="Example State" />
       );
 
       const address = screen.getByTestId("contactAddress");

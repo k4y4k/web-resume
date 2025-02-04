@@ -21,7 +21,7 @@ describe("<SectionTitle />", () => {
 
   test("does not display title on the cover page", () => {
     const { container } = render(
-      <SectionTitle onCoverLetter={true} title="Check this" />,
+      <SectionTitle onCoverLetter={true} title="Check this" />
     );
 
     expect(container).not.toHaveTextContent(/check this/i);

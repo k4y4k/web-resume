@@ -146,7 +146,7 @@ const createEducation = (num: number): educationItem[] => {
 
     eduList.push({
       institution: fake(
-        "{{name.firstName}} {{name.lastName}} University of {{address.cityPrefix}} {{address.city}}",
+        "{{name.firstName}} {{name.lastName}} University of {{address.cityPrefix}} {{address.city}}"
       ),
       area: fake("{{name.jobTitle}}"),
       studyType: "Certificate",
@@ -194,7 +194,7 @@ const createFakeCoverLetter = (): string => {
   console.log("creating fake cover letter");
 
   const contents: string = fake(
-    "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
+    "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}"
   );
   const recruiterFirstName: string = fake("{{name.firstName}}");
   const recruiterLastName: string = fake("{{name.lastName}}");

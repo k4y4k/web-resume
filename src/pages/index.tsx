@@ -5,9 +5,9 @@ import * as React from "react";
 import { GlobalStyles } from "twin.macro";
 import { Helmet } from "react-helmet";
 import { IconContext } from "@react-icons/all-files";
- import "../index.css";
+import "../index.css";
 import Resume from "../components/pages/Resume";
- import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 const IndexRoute = (): JSX.Element => {
   const { name }: { name: string } = useStaticQuery(graphql`

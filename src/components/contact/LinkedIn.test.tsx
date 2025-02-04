@@ -12,7 +12,7 @@ describe("<LinkedIn />", () => {
   });
 
   test("handles null data", () => {
-     render(<LinkedIn username={null} url={null} />);
+    render(<LinkedIn username={null} url={null} />);
 
     const linkedin = screen.queryByTestId("contactLinkedin");
     expect(linkedin).not.toBeInTheDocument();

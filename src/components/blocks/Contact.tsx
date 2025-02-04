@@ -6,8 +6,8 @@ import Email from "../contact/Email";
 import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
- import SectionContainer from "../section/SectionContainer";
- import Website from "../contact/Website";
+import SectionContainer from "../section/SectionContainer";
+import Website from "../contact/Website";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;
@@ -54,7 +54,7 @@ const iconStyles = css`
   }
 
   a::after {
-    content: ' ➜';
+    content: " ➜";
     ${tw`mr-1`}
   }
 `;
@@ -134,7 +134,8 @@ export const Contact = ({
             }
             profiles {
               network
-              username url
+              username
+              url
             }
           }
         }
@@ -149,8 +150,6 @@ export const Contact = ({
   const twitter = getNetworkUsernames(profiles, "twitter");
   const github = getNetworkUsernames(profiles, "github");
   const linkedin = getNetworkUsernames(profiles, "linkedin", true);
-
-
 
   const { city, countryCode, region } = data.file.childDataJson.basics.location;
 

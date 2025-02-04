@@ -31,12 +31,18 @@ export const pageContainerStyles = css`
   max-height: ${a4Data.heightToMillimeters()}mm;
 
   @media print {
-    ${tw`m-0`}
+    ${tw`m-0 shadow-none m-0`}
   }
 
   @media screen and (min-width: 1200px) {
     ${tw`my-12`}
   }
+`;
+
+const imageStripStyles = css`
+  height: ${a4Data.heightToMillimeters()}mm;
+  width: 30mm;
+  marginright: 1rem;
 `;
 
 const Resume = (): JSX.Element => {
@@ -55,22 +61,14 @@ const Resume = (): JSX.Element => {
           }
         }
       }
-    `,
+    `
   );
 
   const bgImage = convertToBgImage(getImage(placeholderImage));
   return (
     <section tw="bg-white" css={pageContainerStyles}>
-      <BackgroundImage
-        Tag="aside"
-        {...bgImage}
-        style={{
-          height: `${a4Data.heightToMillimeters()}mm`,
-          width: "30mm",
-          marginRight: "1rem",
-        }}
-      />
-      <div tw="flex flex-col py-8">
+      <BackgroundImage Tag="aside" {...bgImage} css={imageStripStyles} />
+      <div tw="flex flex-col p-4">
         <Header />
         <div css={resumeContentStyles}>
           <WorkExperience />

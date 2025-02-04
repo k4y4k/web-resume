@@ -24,7 +24,7 @@ describe("<Header />", () => {
           },
         },
       },
-    }),
+    })
   );
 
   test("displays header", () => {
@@ -58,14 +58,14 @@ describe("<Header />", () => {
         compact={false}
         title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
-      />,
+      />
     );
 
     const name = screen.getByText("kayak");
     expect(name).not.toBeFalsy();
 
     const subtitle = screen.getByText(
-      "CEO of supermarket cookie quality debates",
+      "CEO of supermarket cookie quality debates"
     );
     expect(subtitle).not.toBeFalsy();
 
@@ -109,14 +109,14 @@ describe("<Header />", () => {
         compact={false}
         title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
-      />,
+      />
     );
 
     const name = screen.getByText("kayak");
     expect(name).not.toBeFalsy();
 
     const subtitle = screen.getByText(
-      "CEO of supermarket cookie quality debates",
+      "CEO of supermarket cookie quality debates"
     );
     expect(subtitle).not.toBeFalsy();
 
@@ -154,14 +154,14 @@ describe("<Header />", () => {
         compact={true}
         title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
-      />,
+      />
     );
 
     const name = screen.getByText("kayak");
     expect(name).not.toBeFalsy();
 
     const subtitle = screen.getByText(
-      "CEO of supermarket cookie quality debates",
+      "CEO of supermarket cookie quality debates"
     );
     expect(subtitle).not.toBeFalsy();
 
@@ -199,14 +199,14 @@ describe("<Header />", () => {
         compact={true}
         title={data?.file.childDataJson.basics.name}
         subtitle={data?.file.childDataJson.basics.label}
-      />,
+      />
     );
 
     const name = screen.getByText("kayak");
     expect(name).not.toBeFalsy();
 
     const subtitle = screen.getByText(
-      "CEO of supermarket cookie quality debates",
+      "CEO of supermarket cookie quality debates"
     );
     expect(subtitle).not.toBeFalsy();
 

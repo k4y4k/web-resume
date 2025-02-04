@@ -20,7 +20,7 @@ describe("<PureEducation />", () => {
           ],
         },
       },
-    }),
+    })
   );
 
   test("bails out on no data", () => {
@@ -31,7 +31,7 @@ describe("<PureEducation />", () => {
 
     // if there's no data, we shouldn't see <ItemContainer /> render
     expect(
-      screen.queryByTestId("sectionItemContainer"),
+      screen.queryByTestId("sectionItemContainer")
     ).not.toBeInTheDocument();
     expect(screen.getByTestId("education")).toMatchSnapshot();
   });

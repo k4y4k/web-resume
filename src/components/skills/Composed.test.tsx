@@ -56,7 +56,7 @@ describe("<Composed />", () => {
 
   test("omit bucket heading if there's only 1 category", () => {
     render(
-      <Composed compact={true} heading="My Heading" bucket={["One", "Two"]} />,
+      <Composed compact={true} heading="My Heading" bucket={["One", "Two"]} />
     );
   });
 });

@@ -21,7 +21,7 @@ describe("<ItemSubtitle />", () => {
 
   test("displays subtitle with link", () => {
     render(
-      <ItemSubtitle link="https://duckduckgo.com" subtitle="Quack quack" />,
+      <ItemSubtitle link="https://duckduckgo.com" subtitle="Quack quack" />
     );
 
     const subtitle = screen.getByTestId("itemSubtitle");

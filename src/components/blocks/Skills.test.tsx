@@ -16,7 +16,7 @@ describe("<Skills />", () => {
           ],
         },
       },
-    }),
+    })
   );
 
   test("bails out on no data", () => {
@@ -26,7 +26,7 @@ describe("<Skills />", () => {
     expect(screen.getByTestId("skills")).toBeInTheDocument();
 
     expect(
-      screen.queryByTestId("sectionItemContainer"),
+      screen.queryByTestId("sectionItemContainer")
     ).not.toBeInTheDocument();
   });
 

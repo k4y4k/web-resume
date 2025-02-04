@@ -17,7 +17,7 @@ const SectionTitle = ({
   return (
     <h2
       data-testid="sectionTitle"
-      tw="font-mono text-xl font-bold uppercase text-orchid-700"
+      tw="font-mono text-lg font-bold uppercase text-orchid-700"
     >
       {title}
     </h2>

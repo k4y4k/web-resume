@@ -35,7 +35,7 @@ describe("<Experience />", () => {
           ],
         },
       },
-    }),
+    })
   );
 
   test("bails out on no data", () => {
@@ -45,7 +45,7 @@ describe("<Experience />", () => {
     expect(screen.getByTestId("experience")).toBeInTheDocument();
 
     expect(
-      screen.queryByTestId("sectionItemContainer"),
+      screen.queryByTestId("sectionItemContainer")
     ).not.toBeInTheDocument();
   });
 

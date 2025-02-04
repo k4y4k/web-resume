@@ -65,7 +65,7 @@ export const WorkExperience = (): JSX.Element => {
   const { volunteer } = data.file.childDataJson;
 
   const aggregated = [...volunteer].sort((a, b) =>
-    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1,
+    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1
   );
 
   return <PureWorkExperience history={aggregated} />;

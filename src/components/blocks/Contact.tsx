@@ -16,7 +16,8 @@ interface PureContactTypes {
   twitter: string | null;
   github: string | null;
   website: string;
-  linkedin: string | null;
+  linkedinUser: string | null;
+  linkedinUrl: string | null;
   city: string;
   region: string;
   countryCode: string;
@@ -89,10 +90,10 @@ export const PureContact = ({
   restrictDisplay = true,
   compact = false,
   email,
-  twitter,
   github,
   website,
-  linkedin,
+  linkedinUser,
+  linkedinUrl,
   city,
   region,
   countryCode,
@@ -103,7 +104,7 @@ export const PureContact = ({
         {!compact && <Website url={website} />}
         <Email email={email} />
         {!compact && <GitHub username={github} />}
-        <LinkedIn username={linkedin} />
+        <LinkedIn url={linkedinUrl} username={linkedinUser} />
         <Address
           restrictDisplay={restrictDisplay}
           city={city}
@@ -133,7 +134,7 @@ export const Contact = ({
             }
             profiles {
               network
-              username
+              username url
             }
           }
         }
@@ -147,7 +148,9 @@ export const Contact = ({
   const { profiles } = data.file.childDataJson.basics;
   const twitter = getNetworkUsernames(profiles, "twitter");
   const github = getNetworkUsernames(profiles, "github");
-  const linkedin = getNetworkUsernames(profiles, "linkedin");
+  const linkedin = getNetworkUsernames(profiles, "linkedin", true);
+
+
 
   const { city, countryCode, region } = data.file.childDataJson.basics.location;
 
@@ -156,11 +159,13 @@ export const Contact = ({
     website,
     twitter,
     github,
-    linkedin,
+    linkedinUser: linkedin ? linkedin.username : null,
+    linkedinUrl: linkedin ? linkedin.url : null,
     city,
     region,
     countryCode,
   };
+
   return (
     <PureContact
       {...props}

@@ -1,13 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Skills /> Skills renders OK 1`] = `
+.c3 {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+}
+
 .c2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
@@ -39,21 +46,27 @@ exports[`<Skills /> Skills renders OK 1`] = `
       class="c2"
       data-testid="skillsComposed"
     >
+      <h1
+        class="c3"
+        data-testid="itemTitle"
+      >
+        Web Development
+      </h1>
       <div
         data-testid="skillsBucket"
       >
         <p
-          style="margin-right: 0.5rem; display: inline-block;"
-        >
-          HTML
-        </p>
-        <p
-          style="margin-right: 0.5rem; display: inline-block;"
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
         >
           CSS
         </p>
         <p
-          style="margin-right: 0.5rem; display: inline-block;"
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
+        >
+          HTML
+        </p>
+        <p
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
         >
           Javascript
         </p>

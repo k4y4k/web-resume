@@ -1,24 +1,42 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import pageStyles, { a4Data } from "../../helpers/pageStyles";
 import tw, { css } from "twin.macro";
-import BackgroundImage from "gatsby-background-image";
 import Contact from "../blocks/Contact";
 import { convertToBgImage } from "gbimage-bridge";
-import Education from "../blocks/Education";
-import Experience from "../blocks/Experience";
+import WorkExperience from "../blocks/WorkExperience";
 import { getImage } from "gatsby-plugin-image";
 import Header from "../blocks/Header";
 import Skills from "../blocks/Skills";
+import Volunteer from "../blocks/Volunteer";
+import BackgroundImage from "gatsby-background-image";
+const paperSizes = require("@5no/paper-sizes");
+const paperOptions = { dpi: 300, type: "mm" };
+export const a4Data = paperSizes("A4", paperOptions);
 
 const resumeContentStyles = css`
   ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
   max-height: calc( ${a4Data.heightToMillimeters()}mm * 0.8 );
   grid-template-rows: content content content;
   grid-template-areas:
-    'ex sk'
-    'ex sk'
-    'ex sk';
+    "ex sk"
+    "ex sk"
+    "ex sk";
+`;
+
+export const pageContainerStyles = css`
+  ${tw`my-12 shadow-lg flex`}
+  width: ${a4Data.widthToMillimeters()}mm;
+  max-width: ${a4Data.widthToMillimeters()}mm;
+  height: ${a4Data.heightToMillimeters()}mm;
+  max-height: ${a4Data.heightToMillimeters()}mm;
+
+  @media print {
+    ${tw`m-0`}
+  }
+
+  @media screen and (min-width: 1200px) {
+    ${tw`my-12`}
+  }
 `;
 
 const Resume = (): JSX.Element => {
@@ -42,22 +60,28 @@ const Resume = (): JSX.Element => {
 
   const bgImage = convertToBgImage(getImage(placeholderImage));
   return (
-    <BackgroundImage css={pageStyles} Tag="section" {...bgImage}>
-      <div
-        tw="bg-white p-8"
-        css={{ height: `${a4Data.heightToMillimeters() - 25}mm` }}
-      >
+    <section tw="bg-white" css={pageContainerStyles}>
+      <BackgroundImage
+        Tag="aside"
+        {...bgImage}
+        style={{
+          height: `${a4Data.heightToMillimeters()}mm`,
+          width: "30mm",
+          marginRight: "1rem",
+        }}
+      />
+      <div tw="flex flex-col py-8">
         <Header />
         <div css={resumeContentStyles}>
-          <Experience />
+          <WorkExperience />
           <div style={{ gridArea: "sk" }}>
             <Contact />
             <Skills />
-            <Education />
+            <Volunteer />
           </div>
         </div>
       </div>
-    </BackgroundImage>
+    </section>
   );
 };
 

@@ -15,7 +15,7 @@ interface SkillsList {
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   let compact = false;
-  if (skills.length <= 1) compact = true;
+  if (skills.length <= 1) compact = !true;
 
   return (
     <div data-testid="skills">

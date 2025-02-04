@@ -9,11 +9,15 @@ const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
 
   return (
     <div data-testid="skillsBucket">
-      {skills.map((el) => (
+      {skills.sort().map((el) => (
         <p
           style={{
-            marginRight: "0.5rem",
+            marginRight: "0.66rem",
+            marginBottom: "0.2rem",
             display: "inline-block",
+            lineHeight: "1.15",
+            // border: "1px solid black",
+            // padding: 4,
           }}
           key={el}
         >

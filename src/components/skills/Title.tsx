@@ -7,7 +7,13 @@ interface TitleTypes {
 const Title = ({ category }: TitleTypes): JSX.Element | null => {
   if (category === "") return null;
 
-  return <h2 data-testid="skillsTitle">{category}</h2>;
+  return (
+    <h2
+      data-testid="skillsTitle"
+    >
+      {category}
+    </h2>
+  );
 };
 
 export default Title;

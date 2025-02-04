@@ -32,7 +32,7 @@ const Address = ({
     <li css={AddressStyles} data-testid="contactAddress" id="address">
       <FiMapPin />
       <span>
-        {city}, {region + ","} {countryCode}
+        {city}, {`${region},`} {countryCode}
       </span>
     </li>
   );

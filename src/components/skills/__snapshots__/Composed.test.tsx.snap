@@ -12,6 +12,7 @@ exports[`<Composed />  incomplete data title; bucket as empty string 1`] = `null
 
 exports[`<Composed /> Composes heading and bucket 1`] = `
 .c1 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -36,7 +37,7 @@ exports[`<Composed /> Composes heading and bucket 1`] = `
     data-testid="skillsBucket"
   >
     <p
-      style="margin-right: 0.5rem; display: inline-block;"
+      style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
     >
       Things!
     </p>

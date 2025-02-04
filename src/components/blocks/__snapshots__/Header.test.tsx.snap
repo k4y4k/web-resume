@@ -14,7 +14,7 @@ exports[`<Header /> compact 1`] = `
 
 .c1 {
   margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
@@ -72,7 +72,7 @@ exports[`<Header /> displays header 1`] = `
 
 .c1 {
   margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
@@ -126,7 +126,7 @@ exports[`<Header /> lightmode 1`] = `
 
 .c1 {
   margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
@@ -182,7 +182,7 @@ exports[`<Header /> lightmode and compact 1`] = `
 
 .c1 {
   margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;
@@ -240,7 +240,7 @@ exports[`<Header /> renders OK 1`] = `
 
 .c1 {
   margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-family: Inconsolata,monospace;
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 700;

@@ -1,8 +1,8 @@
 {
-  "name": "kayak-s-resume",
+  "name": "web-resume",
   "version": "1.0.0",
   "private": true,
-  "description": "kayak's resume",
+  "description": "resume",
   "author": "kayak",
   "scripts": {
     "develop": "gatsby develop",
@@ -14,7 +14,8 @@
     "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "check-types": "tsc --noEmit --skipLibCheck",
     "test": "jest --collectCoverage --verbose",
-    "fake": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts && node ./src/helpers/createFakeData.js"
+    "fake": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts && node ./src/helpers/createFakeData.js",
+    "c": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts"
   },
   "dependencies": {
     "@5no/paper-sizes": "1.0.2",
@@ -72,7 +73,17 @@
       "preset": "styled-components"
     }
   },
-  "volta": {
-    "node": "20.13.1"
-  }
+  "trustedDependencies": [
+    "@biomejs/biome",
+    "@parcel/watcher",
+    "core-js",
+    "core-js-pure",
+    "es5-ext",
+    "gatsby",
+    "gatsby-cli",
+    "gatsby-telemetry",
+    "lmdb",
+    "msgpackr-extract",
+    "sharp"
+  ]
 }

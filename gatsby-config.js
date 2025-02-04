@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   pathPrefix: "/web-resume",
   siteMetadata: {
-    title: "kayak's resume",
+    title: "online resume",
   },
   plugins: [
     `gatsby-transformer-remark`,

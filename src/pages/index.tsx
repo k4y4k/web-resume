@@ -5,11 +5,9 @@ import * as React from "react";
 import { GlobalStyles } from "twin.macro";
 import { Helmet } from "react-helmet";
 import { IconContext } from "@react-icons/all-files";
-import Modal from "../components/modal/Modal";
-import "../index.css";
+ import "../index.css";
 import Resume from "../components/pages/Resume";
-import CoverLetter from "../components/pages/CoverLetter";
-import { graphql, useStaticQuery } from "gatsby";
+ import { graphql, useStaticQuery } from "gatsby";
 
 const IndexRoute = (): JSX.Element => {
   const { name }: { name: string } = useStaticQuery(graphql`
@@ -29,18 +27,14 @@ const IndexRoute = (): JSX.Element => {
       <Helmet defer={false}>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <title>{`${name} | k4y4k/web-resume`}</title>
-        <meta name="description" content="Online resume." />
-        <link rel="canonical" href="https://kayak.rocks/web-resume" />
+        <title>{`${name}`}</title>
+        <meta name="description" content={`${name}'s online resume`} />
         <meta property="og:type" content="website" />
       </Helmet>
       <GlobalStyles />
 
-      <Modal />
-
       <main tw="flex flex-row flex-wrap place-content-evenly">
         <Resume />
-        <CoverLetter />
       </main>
     </IconContext.Provider>
   );

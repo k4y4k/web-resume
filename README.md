@@ -1,24 +1,7 @@
-<div align="center">
-	<img src="header.svg" width="800" height="150" alt="">
-</div>
+# web-resume
 
-![Build Status](http://k4y4k.theworkpc.com/api/badges/k4y4k/web-resume/status.svg?ref=refs/heads/main) ![Codecov](https://img.shields.io/codecov/c/gh/k4y4k/web-resume?logo=codecov&logoColor=white) ![Codacy Badge](https://app.codacy.com/project/badge/Grade/bbcbc83b00d84ab1b313f2f186ea2619)
+this project is how I generate PDFs of my resume.
 
-# "Wait, sort of?"
-
-[Check the wiki for an explanation of what this project DOES and DOES NOT do](https://github.com/k4y4k/web-resume/wiki/%22Wait,-sort-of%3F%22---What-data-this-project-supports). The wiki also has more, expanded instructions.
-
-# Seeing For Yourself
-
-Assuming you're want a resume that just lists:
-
-- your experience (incl. volunteer work),
-- your education,
-- your skills,
-- how to contact you
-- (of course) your name
-
-(and you like the colour purple), then you're golden. Feel free to use.
 
 ## Step one: Get
 

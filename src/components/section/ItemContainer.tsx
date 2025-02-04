@@ -67,7 +67,7 @@ const ItemContainer = ({
   return (
     <div data-testid="sectionItemContainer" css={itemStyles}>
       <Title title={title ?? studyTitle} />
-      <div data-testid="byline" tw="italic">
+      <div data-testid="byline" tw="italic mb-1">
         {displaySubtitle ? (
           <>
             <Subtitle link={link} subtitle={subtitle ?? institution} />

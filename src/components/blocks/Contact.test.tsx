@@ -60,7 +60,7 @@ describe("<Contact />", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
         linkedin="exampledin"
@@ -79,7 +79,7 @@ describe("<Contact />", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
         linkedin="exampledin"
@@ -106,7 +106,7 @@ describe("<Contact />", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
         linkedin="exampledin"

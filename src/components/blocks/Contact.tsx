@@ -6,10 +6,8 @@ import Email from "../contact/Email";
 import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
-import Phone from "../contact/Phone";
-import SectionContainer from "../section/SectionContainer";
-import Twitter from "../contact/Twitter";
-import Website from "../contact/Website";
+ import SectionContainer from "../section/SectionContainer";
+ import Website from "../contact/Website";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;
@@ -102,10 +100,8 @@ export const PureContact = ({
   return (
     <SectionContainer onCoverLetter={compact} title="Contact">
       <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
-        {compact && <Phone restrictDisplay={restrictDisplay} />}
         {!compact && <Website url={website} />}
         <Email email={email} />
-        {!compact && <Twitter username={twitter} />}
         {!compact && <GitHub username={github} />}
         <LinkedIn username={linkedin} />
         <Address

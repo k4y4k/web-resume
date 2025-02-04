@@ -13,20 +13,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+
       - name: Use Node.js 20
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: ".tool_versions"
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4.0.0
-        with:
-          version: latest
+      - uses: oven-sh/setup-bun@v2
 
-      - run: pnpm i --shamefully-hoist
+      - run: bun install
 
-      - run: pnpm run fake && pnpm run build
+      - run: bun run fake && bun run build

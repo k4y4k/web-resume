@@ -20,5 +20,6 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "ignore": [".cache/"]
-  }
+  },
+  "javascript": { "jsxRuntime": "reactClassic" }
 }

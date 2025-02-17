@@ -1,7 +1,7 @@
-import * as React from "react";
-import { WorkExperience, PureWorkExperience } from "./WorkExperience";
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
+import * as React from "react";
+import { PureWorkExperience, WorkExperience } from "./WorkExperience";
 
 describe("<Experience />", () => {
   beforeAll(() =>
@@ -35,7 +35,7 @@ describe("<Experience />", () => {
           ],
         },
       },
-    })
+    }),
   );
 
   test("bails out on no data", () => {
@@ -45,7 +45,7 @@ describe("<Experience />", () => {
     expect(screen.getByTestId("experience")).toBeInTheDocument();
 
     expect(
-      screen.queryByTestId("sectionItemContainer")
+      screen.queryByTestId("sectionItemContainer"),
     ).not.toBeInTheDocument();
   });
 

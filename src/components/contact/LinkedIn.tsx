@@ -1,5 +1,5 @@
-import * as React from "react";
 import { FiLinkedin } from "@react-icons/all-files/fi/FiLinkedin";
+import * as React from "react";
 
 interface LinkedInTypes {
   username: string | null;

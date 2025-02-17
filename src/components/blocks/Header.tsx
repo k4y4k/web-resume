@@ -1,8 +1,8 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
+import tw from "twin.macro";
 import Subtitle from "../header/Subtitle";
 import Title from "../header/Title";
-import tw from "twin.macro";
 
 interface PureHeaderTypes {
   title: string;

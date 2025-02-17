@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Contact, PureContact } from "./Contact";
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
+import * as React from "react";
+import { Contact, PureContact } from "./Contact";
 
 describe("<Contact />", () => {
   beforeAll(() =>
@@ -33,7 +33,7 @@ describe("<Contact />", () => {
           },
         },
       },
-    })
+    }),
   );
 
   test("handles no data", () => {
@@ -48,7 +48,7 @@ describe("<Contact />", () => {
         city=""
         countryCode=""
         region=""
-      />
+      />,
     );
 
     const contact = screen.getByTestId("contact");
@@ -69,7 +69,7 @@ describe("<Contact />", () => {
         city="Example City"
         countryCode="US"
         region="California"
-      />
+      />,
     );
 
     const address = screen.getByTestId("contactAddress");
@@ -90,7 +90,7 @@ describe("<Contact />", () => {
         countryCode="US"
         region="California"
         restrictDisplay={false}
-      />
+      />,
     );
 
     const address = screen.getByTestId("contactAddress");
@@ -119,7 +119,7 @@ describe("<Contact />", () => {
         region="California"
         restrictDisplay={false}
         compact={true}
-      />
+      />,
     );
 
     expect(screen.getByTestId("contact")).toMatchSnapshot();

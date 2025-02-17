@@ -1,5 +1,5 @@
-import * as React from "react";
 import { render, screen } from "@testing-library/react";
+import * as React from "react";
 import ItemContainer from "./ItemContainer";
 const data = {
   company: "Company",
@@ -22,7 +22,7 @@ describe("<ItemContainer />", () => {
           title={data.position}
           subtitle={data.company}
           link={data.link}
-        />
+        />,
       );
 
       const title = screen.queryByText("Company");
@@ -51,7 +51,7 @@ describe("<ItemContainer />", () => {
           fromDate="2011-01-01"
           toDate="2013-01-01"
           courses={["DB1101 - Basic SQL"]}
-        />
+        />,
       );
 
       const title = screen.getByText("Bachelor of Software Development");
@@ -74,7 +74,7 @@ describe("<ItemContainer />", () => {
           studyType="Bachelor"
           fromDate="2011-01-01"
           toDate="2013-01-01"
-        />
+        />,
       );
 
       expect(screen.getByTestId("sectionItemContainer")).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe("<ItemContainer />", () => {
           title={data.position}
           subtitle={""}
           link={data.link}
-        />
+        />,
       );
 
       expect(screen.getByTestId("sectionItemContainer")).toMatchSnapshot();

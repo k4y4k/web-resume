@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path");
+const path = require("node:path");
 
 module.exports = {
   pathPrefix: "/web-resume",
@@ -7,15 +7,15 @@ module.exports = {
     title: "online resume",
   },
   plugins: [
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-transformer-remark",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        name: "images",
+        path: path.join(__dirname, "src", "images"),
       },
     },
     {
@@ -36,13 +36,13 @@ module.exports = {
     },
     "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `data`,
+        name: "data",
         path: path.join(__dirname, "/src/data/"),
       },
     },
-    `gatsby-plugin-styled-components`,
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-manifest",
@@ -54,7 +54,7 @@ module.exports = {
         theme_color: "#542344",
         display: "standalone",
         icon: "src/images/icon.png",
-        crossOrigin: `use-credentials`,
+        crossOrigin: "use-credentials",
       },
     },
     "gatsby-plugin-offline",

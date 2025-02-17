@@ -19,18 +19,18 @@ interface UsernameAndUrl {
 
 function getNetworkUsernames(
   profiles: ProfileItem[],
-  networkName: string
+  networkName: string,
 ): string | null;
 function getNetworkUsernames(
   profiles: ProfileItem[],
   networkName: string,
-  shouldProvideUrl: boolean
+  shouldProvideUrl: boolean,
 ): UsernameAndUrl | null;
 
 function getNetworkUsernames(
   profiles: ProfileItem[],
   networkName: string,
-  shouldProvideUrl?: boolean
+  shouldProvideUrl?: boolean,
 ): string | null | UsernameAndUrl {
   const regex = new RegExp(networkName, "i");
 

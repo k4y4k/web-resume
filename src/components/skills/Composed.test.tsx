@@ -1,5 +1,5 @@
-import * as React from "react";
 import { render, screen } from "@testing-library/react";
+import * as React from "react";
 import Composed from "./Composed";
 
 describe("<Composed />", () => {
@@ -56,7 +56,7 @@ describe("<Composed />", () => {
 
   test("omit bucket heading if there's only 1 category", () => {
     render(
-      <Composed compact={true} heading="My Heading" bucket={["One", "Two"]} />
+      <Composed compact={true} heading="My Heading" bucket={["One", "Two"]} />,
     );
   });
 });

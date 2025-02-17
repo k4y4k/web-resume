@@ -1,6 +1,6 @@
+import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
 import * as React from "react";
 import tw, { css } from "twin.macro";
-import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
 
 interface AddressTypes {
   city: string;

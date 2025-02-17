@@ -1,5 +1,5 @@
-import * as React from "react";
 import { FiMail } from "@react-icons/all-files/fi/FiMail";
+import * as React from "react";
 
 interface EmailTypes {
   email: string;

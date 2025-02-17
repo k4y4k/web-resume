@@ -1,6 +1,6 @@
 import "twin.macro";
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 import ItemContainer from "../section/ItemContainer";
 import SectionContainer from "../section/SectionContainer";
 
@@ -21,10 +21,10 @@ export const PureEducation = ({ history }: two): JSX.Element => {
   return (
     <div data-testid="education">
       <SectionContainer title="Education">
-        {history.map((el, i: number) => {
+        {history.map((el) => {
           return (
             <ItemContainer
-              key={i}
+              key={`${el.institution}${el.startDate}${el.endDate}${JSON.stringify(el.courses)}`}
               courses={el.courses}
               institution={el.institution}
               area={el.area}

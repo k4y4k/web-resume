@@ -1,8 +1,8 @@
-import * as React from "react";
-import customParseFormat from "dayjs/plugin/customParseFormat";
 import dayjs from "dayjs";
+import customParseFormat from "dayjs/plugin/customParseFormat";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
+import * as React from "react";
 
 interface ItemDatesTypes {
   to?: string;
@@ -56,20 +56,22 @@ const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
   if (
     fromDate.isSame(`${fromDateYear}-01-01`, "day") &&
     toDate.isSame(`${toDateYear}-01-01`, "day")
-  )
-    if (fromDate.isSame(toDate, "year"))
+  ) {
+    if (fromDate.isSame(toDate, "year")) {
       // have two 20XX "just years" dates. Now, are they the same year?
       return (
         // yes
         <span data-testid="sectionItemDates">{fromDate.format("YYYY")}</span>
       );
-    else
-      return (
-        // no
-        <span data-testid="sectionItemDates">
-          {fromDate.format("YYYY")} - {toDate.format("YYYY")}
-        </span>
-      );
+    }
+
+    return (
+      // no
+      <span data-testid="sectionItemDates">
+        {fromDate.format("YYYY")} - {toDate.format("YYYY")}
+      </span>
+    );
+  }
 
   // same date (one day event?)
   if (fromDate.isSame(toDate, "day"))

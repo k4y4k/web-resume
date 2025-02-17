@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable sort-imports */
 
-import * as React from "react";
-import { GlobalStyles } from "twin.macro";
-import { Helmet } from "react-helmet";
 import { IconContext } from "@react-icons/all-files";
+import * as React from "react";
+import { Helmet } from "react-helmet";
+import { GlobalStyles } from "twin.macro";
 import "../index.css";
-import Resume from "../components/pages/Resume";
-import { graphql, useStaticQuery } from "gatsby";
 import dayjs from "dayjs";
+import { graphql, useStaticQuery } from "gatsby";
+import Resume from "../components/pages/Resume";
 
 const IndexRoute = (): JSX.Element => {
   const { name }: { name: string } = useStaticQuery(graphql`

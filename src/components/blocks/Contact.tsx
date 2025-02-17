@@ -1,13 +1,13 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 import tw, { css } from "twin.macro";
+import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import Address from "../contact/Address";
 import Email from "../contact/Email";
-import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
-import SectionContainer from "../section/SectionContainer";
 import Website from "../contact/Website";
+import SectionContainer from "../section/SectionContainer";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;

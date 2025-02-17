@@ -1,14 +1,14 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
+import { getImage } from "gatsby-plugin-image";
+import { convertToBgImage } from "gbimage-bridge";
+import * as React from "react";
 import tw, { css } from "twin.macro";
 import Contact from "../blocks/Contact";
-import { convertToBgImage } from "gbimage-bridge";
-import WorkExperience from "../blocks/WorkExperience";
-import { getImage } from "gatsby-plugin-image";
 import Header from "../blocks/Header";
 import Skills from "../blocks/Skills";
 import Volunteer from "../blocks/Volunteer";
-import BackgroundImage from "gatsby-background-image";
+import WorkExperience from "../blocks/WorkExperience";
 const paperSizes = require("@5no/paper-sizes");
 const paperOptions = { dpi: 300, type: "mm" };
 export const a4Data = paperSizes("A4", paperOptions);
@@ -61,7 +61,7 @@ const Resume = (): JSX.Element => {
           }
         }
       }
-    `
+    `,
   );
 
   const bgImage = convertToBgImage(getImage(placeholderImage));

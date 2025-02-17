@@ -1,6 +1,6 @@
-import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import dayjs from "dayjs";
+import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 import ItemContainer from "../section/ItemContainer";
 import SectionContainer from "../section/SectionContainer";
 
@@ -65,7 +65,7 @@ export const WorkExperience = (): JSX.Element => {
   const { volunteer } = data.file.childDataJson;
 
   const aggregated = [...volunteer].sort((a, b) =>
-    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1
+    dayjs(a.startDate).isAfter(b.startDate) ? -1 : 1,
   );
 
   return <PureWorkExperience history={aggregated} />;

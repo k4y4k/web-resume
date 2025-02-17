@@ -1,6 +1,6 @@
 import * as React from "react";
-import tw, { css } from "twin.macro";
 import ReactMarkdown from "react-markdown";
+import tw, { css } from "twin.macro";
 
 interface ItemDetailsTypes {
   // accepts markdown
@@ -23,7 +23,7 @@ const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element | null => {
 
   return (
     <div css={detailsStyles} data-testid="sectionItemDetails">
-      <ReactMarkdown children={details} />
+      <ReactMarkdown>{details}</ReactMarkdown>
     </div>
   );
 };

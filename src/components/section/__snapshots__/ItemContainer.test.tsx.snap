@@ -11,7 +11,7 @@ exports[`<ItemContainer /> conditionally add the seperator between name and date
 .c1 {
   margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -73,7 +73,7 @@ exports[`<ItemContainer /> education item education item 1`] = `
 .c1 {
   margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -140,7 +140,7 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 .c1 {
   margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -200,7 +200,7 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
 .c1 {
   margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 

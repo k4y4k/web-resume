@@ -14,7 +14,7 @@ exports[`<Composed /> Composes heading and bucket 1`] = `
 .c1 {
   margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 

@@ -3,5 +3,9 @@ assert_lefthook_installed: true
 pre-commit:
   commands:
     lint:
-      run: bunx biome check --apply
+      run: bunx biome check --write
       stage_fixed: true
+
+    test:
+      run: bun run test
+      fail_text: "🚆🐌 Test failed."

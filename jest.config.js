@@ -29,4 +29,5 @@ module.exports = {
   },
   setupFiles: ["<rootDir>/loadershim.js"],
   testEnvironment: "jsdom",
+  bail: 1,
 };

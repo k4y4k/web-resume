@@ -40,7 +40,7 @@ export const pageContainerStyles = css`
 const imageStripStyles = css`
   height: ${a4Data.heightToMillimeters()}mm;
   width: 30mm;
-  marginright: 1rem;
+  marginRight: 1rem;
 `;
 
 const Resume = (): React.ReactNode => {
@@ -54,7 +54,7 @@ const Resume = (): React.ReactNode => {
         quality: 90
         formats: [AUTO, WEBP, AVIF]
         height: 1333
-        width: 35
+        width: 200
         transformOptions: {rotate: 180, fit: COVER, cropFocus: CENTER}
       )
     }

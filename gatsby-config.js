@@ -6,6 +6,7 @@ module.exports = {
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
   },
+  graphqlTypegen: true,
   pathPrefix: "/web-resume",
   siteMetadata: {
     title: "online resume",

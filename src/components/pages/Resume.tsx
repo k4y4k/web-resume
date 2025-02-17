@@ -1,7 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
-import { getImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import * as React from "react";
 import tw, { css } from "twin.macro";
 import Contact from "../blocks/Contact";
@@ -45,29 +43,30 @@ const imageStripStyles = css`
   marginright: 1rem;
 `;
 
-const Resume = (): JSX.Element => {
-  const { placeholderImage } = useStaticQuery(
+const Resume = (): React.ReactNode => {
+  const data = useStaticQuery(
     graphql`
-      {
-        placeholderImage: file(relativePath: { eq: "unsplash.jpg" }) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 2000
-              placeholder: BLURRED
-              quality: 90
-              formats: [AUTO, WEBP, AVIF]
-              transformOptions: { rotate: 180 }
-            )
-          }
-        }
-      }
+{
+  placeholderImage: file(relativePath: {eq: "unsplash.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(
+        placeholder: BLURRED
+        quality: 90
+        formats: [AUTO, WEBP, AVIF]
+        height: 1333
+        width: 35
+        transformOptions: {rotate: 180, fit: COVER, cropFocus: CENTER}
+      )
+    }
+  }
+}
     `,
   );
 
-  const bgImage = convertToBgImage(getImage(placeholderImage));
+  const bgImage = getImage(data.placeholderImage);
   return (
-    <section tw="bg-white" css={pageContainerStyles}>
-      <BackgroundImage Tag="aside" {...bgImage} css={imageStripStyles} />
+    <section data-testid="resume-root" tw="bg-white" css={pageContainerStyles}>
+      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStripStyles} />}{" "}
       <div tw="flex flex-col p-4">
         <Header />
         <div css={resumeContentStyles}>

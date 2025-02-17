@@ -1,7 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("node:path");
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+  },
   pathPrefix: "/web-resume",
   siteMetadata: {
     title: "online resume",
@@ -10,7 +14,6 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -43,20 +46,5 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
-    "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Resume",
-        short_name: "Resume",
-        start_url: "/",
-        background_color: "#542344",
-        theme_color: "#542344",
-        display: "standalone",
-        icon: "src/images/icon.png",
-        crossOrigin: "use-credentials",
-      },
-    },
-    "gatsby-plugin-offline",
   ],
 };

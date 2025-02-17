@@ -22,7 +22,7 @@ interface ItemContainerTypes {
 
   // link
   link?: string;
-  rawDates?: string;
+  // rawDates?: string;
 }
 
 const itemStyles = css`
@@ -44,7 +44,7 @@ const ItemContainer = ({
   studyType,
   courses,
   link,
-  rawDates,
+  // rawDates,
 }: ItemContainerTypes): JSX.Element => {
   let studyTitle = "";
   let studyDetails = "";
@@ -77,11 +77,16 @@ const ItemContainer = ({
           </>
         ) : null}
 
+        {/*
         {rawDates ? (
           <span data-testid="sectionItemDates">{rawDates}</span>
         ) : (
-          <Dates from={fromDate} to={toDate} />
+        
+        */}
+        <Dates from={fromDate} to={toDate} />
+        {/*
         )}
+        */}
       </div>
       <Details details={summary ?? studyDetails} />
     </div>

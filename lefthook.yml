@@ -1,0 +1,7 @@
+assert_lefthook_installed: true
+
+pre-commit:
+  commands:
+    lint:
+      run: bunx biome check --apply {staged_files}
+      stage_fixed: true

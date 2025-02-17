@@ -11,7 +11,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "build-all": "gatsby build --prefix-paths",
-    "format": "yarn prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
+    "format": "biome check --apply .",
     "check-types": "tsc --noEmit --skipLibCheck",
     "test": "jest --collectCoverage --verbose",
     "fake": "tsc --skipLibCheck --esModuleInterop ./src/helpers/createFakeData.ts && node ./src/helpers/createFakeData.js",
@@ -38,6 +38,7 @@
     "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "4.25.0",
     "gbimage-bridge": "0.2.2",
+    "lefthook": "1.10.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-helmet": "6.1.0",
@@ -52,7 +53,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "7.21.0",
     "@babel/preset-typescript": "7.21.0",
-    "@biomejs/biome": "1.7.3",
+    "@biomejs/biome": "latest",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "12.1.5",
     "@types/jest": "29.5.0",
@@ -84,6 +85,7 @@
     "gatsby",
     "gatsby-cli",
     "gatsby-telemetry",
+    "lefthook",
     "lmdb",
     "msgpackr-extract",
     "sharp"

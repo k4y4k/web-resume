@@ -101,7 +101,7 @@ export const PureContact = ({
   return (
     <SectionContainer onCoverLetter={compact} title="Contact">
       <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
-        {!compact && <Website url={website} />}
+        {/* {!compact && <Website url={website} />} */}
         <Email email={email} />
         {!compact && <GitHub username={github} />}
         <LinkedIn url={linkedinUrl} username={linkedinUser} />

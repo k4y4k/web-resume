@@ -8,6 +8,7 @@ import { IconContext } from "@react-icons/all-files";
 import "../index.css";
 import Resume from "../components/pages/Resume";
 import { graphql, useStaticQuery } from "gatsby";
+import dayjs from "dayjs";
 
 const IndexRoute = (): JSX.Element => {
   const { name }: { name: string } = useStaticQuery(graphql`
@@ -27,7 +28,7 @@ const IndexRoute = (): JSX.Element => {
       <Helmet defer={false}>
         <html lang="en" />
         <meta charSet="utf-8" />
-        <title>{`${name}`}</title>
+        <title>{`${name} - Resume - ${dayjs().format("DD-MM-YYYY")}`}</title>
         <meta name="description" content={`${name}'s online resume`} />
         <meta property="og:type" content="website" />
       </Helmet>

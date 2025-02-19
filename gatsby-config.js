@@ -11,6 +11,7 @@ module.exports = {
   siteMetadata: {
     title: "online resume",
   },
+  trailingSlash: "always",
   plugins: [
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",

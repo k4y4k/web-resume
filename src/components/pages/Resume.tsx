@@ -43,30 +43,31 @@ const imageStripStyles = css`
   marginRight: 1rem;
 `;
 
-const Resume = (): React.ReactNode => {
+const Resume = () => {
   const data = useStaticQuery(
     graphql`
-{
-  placeholderImage: file(relativePath: {eq: "unsplash.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(
-        placeholder: BLURRED
-        quality: 90
-        formats: [AUTO, WEBP, AVIF]
-        height: 1333
-        width: 200
-        transformOptions: {rotate: 180, fit: COVER, cropFocus: CENTER}
-      )
-    }
-  }
-}
+      {
+        placeholderImage: file(relativePath: {eq: "unsplash.jpg"}) {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: BLURRED
+              quality: 90
+              formats: [AUTO, WEBP, AVIF]
+              height: 1333
+              width: 200
+              transformOptions: {rotate: 180, fit: COVER, cropFocus: CENTER}
+            )
+          }
+        }
+      }
     `,
   );
 
   const bgImage = getImage(data.placeholderImage);
+
   return (
     <section data-testid="resume-root" tw="bg-white" css={pageContainerStyles}>
-      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStripStyles} />}{" "}
+      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStripStyles} />}
       <div tw="flex flex-col p-4">
         <Header />
         <div css={resumeContentStyles}>

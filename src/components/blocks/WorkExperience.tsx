@@ -19,7 +19,7 @@ interface two {
   history: ExperienceItem[];
 }
 
-export const PureWorkExperience = ({ history }: two): JSX.Element => {
+export const PureWorkExperience = ({ history }: two) => {
   return (
     <div data-testid="experience">
       <SectionContainer title="Experience">
@@ -41,7 +41,7 @@ export const PureWorkExperience = ({ history }: two): JSX.Element => {
   );
 };
 
-export const WorkExperience = (): JSX.Element => {
+export const WorkExperience = () => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

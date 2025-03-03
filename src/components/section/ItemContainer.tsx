@@ -44,8 +44,7 @@ const ItemContainer = ({
   studyType,
   courses,
   link,
-  // rawDates,
-}: ItemContainerTypes): JSX.Element => {
+}: ItemContainerTypes) => {
   let studyTitle = "";
   let studyDetails = "";
 
@@ -77,16 +76,7 @@ const ItemContainer = ({
           </>
         ) : null}
 
-        {/*
-        {rawDates ? (
-          <span data-testid="sectionItemDates">{rawDates}</span>
-        ) : (
-        
-        */}
         <Dates from={fromDate} to={toDate} />
-        {/*
-        )}
-        */}
       </div>
       <Details details={summary ?? studyDetails} />
     </div>

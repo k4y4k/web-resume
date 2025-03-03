@@ -7,6 +7,7 @@ import Header from "../blocks/Header";
 import Skills from "../blocks/Skills";
 import Volunteer from "../blocks/Volunteer";
 import WorkExperience from "../blocks/WorkExperience";
+
 const paperSizes = require("@5no/paper-sizes");
 const paperOptions = { dpi: 300, type: "mm" };
 export const a4Data = paperSizes("A4", paperOptions);
@@ -22,7 +23,7 @@ const resumeContentStyles = css`
 `;
 
 export const pageContainerStyles = css`
-  ${tw`my-12 shadow-lg flex`}
+  ${tw`my-12 shadow-lg flex mx-auto `}
   width: ${a4Data.widthToMillimeters()}mm;
   max-width: ${a4Data.widthToMillimeters()}mm;
   height: ${a4Data.heightToMillimeters()}mm;
@@ -47,7 +48,7 @@ const Resume = () => {
   const data = useStaticQuery(
     graphql`
       {
-        placeholderImage: file(relativePath: {eq: "unsplash.jpg"}) {
+        placeholderImage: file(relativePath: { eq: "unsplash.jpg" }) {
           childImageSharp {
             gatsbyImageData(
               placeholder: BLURRED
@@ -55,7 +56,7 @@ const Resume = () => {
               formats: [AUTO, WEBP, AVIF]
               height: 1333
               width: 200
-              transformOptions: {rotate: 180, fit: COVER, cropFocus: CENTER}
+              transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }
             )
           }
         }
@@ -69,7 +70,7 @@ const Resume = () => {
     <section data-testid="resume-root" tw="bg-white" css={pageContainerStyles}>
       {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStripStyles} />}
       <div tw="flex flex-col p-4">
-        <Header />
+        <Header isCoverLetter={false} />
         <div css={resumeContentStyles}>
           <WorkExperience />
           <div style={{ gridArea: "sk" }}>

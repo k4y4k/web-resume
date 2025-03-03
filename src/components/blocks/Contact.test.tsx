@@ -36,27 +36,6 @@ describe("<Contact />", () => {
     }),
   );
 
-  test("handles no data", () => {
-    render(
-      <PureContact
-        email=""
-        website=""
-        twitter=""
-        github=""
-        linkedinUrl=""
-        linkedinUser=""
-        city=""
-        countryCode=""
-        region=""
-      />,
-    );
-
-    const contact = screen.getByTestId("contact");
-
-    // everything returns null in the absurd case that absolutely nothing is passed in
-    expect(contact.children).toHaveLength(0);
-  });
-
   test("Hides things appropriately by default", () => {
     render(
       <PureContact

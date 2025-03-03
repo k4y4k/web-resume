@@ -4,15 +4,24 @@ import { GlobalStyles } from "twin.macro";
 import "../index.css";
 import dayjs from "dayjs";
 import { graphql } from "gatsby";
+import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
 
-const IndexRoute = (): JSX.Element => {
+const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
       <GlobalStyles />
 
-      <main tw="flex flex-row flex-wrap place-content-evenly">
+      <main
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "place-content-evenly",
+        }}
+      >
         <Resume />
+        <CoverLetter />
       </main>
     </IconContext.Provider>
   );

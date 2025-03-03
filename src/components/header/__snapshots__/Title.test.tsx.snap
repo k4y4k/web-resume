@@ -6,8 +6,6 @@ exports[`<Title /> compact 1`] = `
 .c0 {
   --tw-text-opacity: 1;
   color: rgba(103,73,177,var(--tw-text-opacity));
-  font-size: 1.875rem;
-  line-height: 2.25rem;
   margin-bottom: 0px;
   margin-top: 0.5rem;
   font-family: Inconsolata,monospace;
@@ -63,7 +61,7 @@ exports[`<Title /> displays title 1`] = `
 exports[`<Title /> lightmode 1`] = `
 .c0 {
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(103,73,177,var(--tw-text-opacity));
   margin-bottom: 0px;
   margin-top: 0.5rem;
   font-family: Inconsolata,monospace;
@@ -91,9 +89,7 @@ exports[`<Title /> lightmode 1`] = `
 exports[`<Title /> lightmode and compact 1`] = `
 .c0 {
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+  color: rgba(103,73,177,var(--tw-text-opacity));
   margin-bottom: 0px;
   margin-top: 0.5rem;
   font-family: Inconsolata,monospace;

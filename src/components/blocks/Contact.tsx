@@ -6,7 +6,7 @@ import Address from "../contact/Address";
 import Email from "../contact/Email";
 import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
-import Website from "../contact/Website";
+import Phone from "../contact/Phone";
 import SectionContainer from "../section/SectionContainer";
 
 interface PureContactTypes {
@@ -21,6 +21,8 @@ interface PureContactTypes {
   city: string;
   region: string;
   countryCode: string;
+  phone: string;
+  technical: boolean;
 }
 
 interface ContactTypes {
@@ -91,20 +93,28 @@ export const PureContact = ({
   compact = false,
   email,
   github,
-  website,
+  technical,
+  phone,
   linkedinUser,
   linkedinUrl,
   city,
   region,
   countryCode,
-}: PureContactTypes): JSX.Element => {
+}: PureContactTypes) => {
   return (
     <SectionContainer onCoverLetter={compact} title="Contact">
       <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
-        {/* {!compact && <Website url={website} />} */}
+        {technical ? (
+          <>
+            {!compact && <GitHub username={github} />}
+            <LinkedIn url={linkedinUrl} username={linkedinUser} />
+          </>
+        ) : (
+          <>
+            <Phone phone={phone} />
+          </>
+        )}
         <Email email={email} />
-        {!compact && <GitHub username={github} />}
-        <LinkedIn url={linkedinUrl} username={linkedinUser} />
         <Address
           restrictDisplay={restrictDisplay}
           city={city}
@@ -116,10 +126,7 @@ export const PureContact = ({
   );
 };
 
-export const Contact = ({
-  compact,
-  restrictDisplay,
-}: ContactTypes): JSX.Element => {
+export const Contact = ({ compact, restrictDisplay }: ContactTypes) => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "json" }, name: { eq: "data" }) {
@@ -127,6 +134,8 @@ export const Contact = ({
           basics {
             email
             website
+            phone
+            technical
             location {
               city
               region
@@ -143,7 +152,7 @@ export const Contact = ({
     }
   `);
 
-  const { email, website } = data.file.childDataJson.basics;
+  const { email, website, phone, technical } = data.file.childDataJson.basics;
 
   // extract list of networks
   const { profiles } = data.file.childDataJson.basics;
@@ -156,6 +165,8 @@ export const Contact = ({
   const props = {
     email,
     website,
+    phone,
+    technical,
     twitter,
     github,
     linkedinUser: linkedin ? linkedin.username : null,

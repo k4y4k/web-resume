@@ -9,7 +9,7 @@ describe("<Contact />", () => {
       num: {
         childDataJson: {
           basics: {
-            phone: "5918298681",
+            phone: "1234567890",
           },
         },
       },
@@ -27,7 +27,7 @@ describe("<Contact />", () => {
             profiles: [
               {
                 network: "Twitter",
-                username: "john",
+                username: "example",
               },
             ],
           },
@@ -48,6 +48,8 @@ describe("<Contact />", () => {
         city="Example City"
         countryCode="US"
         region="California"
+        phone="1234567890"
+        technical={false}
       />,
     );
 
@@ -69,6 +71,8 @@ describe("<Contact />", () => {
         countryCode="US"
         region="California"
         restrictDisplay={false}
+        phone="1234567890"
+        technical={false}
       />,
     );
 
@@ -98,6 +102,8 @@ describe("<Contact />", () => {
         region="California"
         restrictDisplay={false}
         compact={true}
+        phone="1234567890"
+        technical={false}
       />,
     );
 

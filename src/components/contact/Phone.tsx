@@ -6,15 +6,11 @@ interface PhoneTypes {
 }
 
 const Phone = ({ phone }: PhoneTypes) => {
-  if (phone === "") return null;
+  if (typeof phone !== "string" || phone.trim() === "") return null;
 
   return (
     <li>
-      <a
-        data-testid="contactEmail"
-        href={`tel:${phone}`}
-        style={{ fontWeight: 900 }}
-      >
+      <a data-testid="contactEmail" href={`tel:${phone.replace(/ /gi, "")}`}>
         <FiPhone /> {phone}
       </a>
     </li>

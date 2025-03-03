@@ -23,7 +23,7 @@ const ItemDetails = ({ details }: ItemDetailsTypes): JSX.Element | null => {
 
   return (
     <div css={detailsStyles} data-testid="sectionItemDetails">
-      <ReactMarkdown>{details}</ReactMarkdown>
+      <ReactMarkdown skipHtml={!false}>{details}</ReactMarkdown>
     </div>
   );
 };

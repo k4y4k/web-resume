@@ -24,7 +24,7 @@ const CoverLetter = (): JSX.Element => {
             placeholder: BLURRED
             quality: 90
             height: 1333
-            width: 200
+            width: 500
             transformOptions: { rotate: 0, fit: COVER, cropFocus: CENTER }
           )
         }

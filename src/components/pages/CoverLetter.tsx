@@ -10,7 +10,7 @@ import { a4Data, pageContainerStyles } from "./Resume";
 const coverLetterContentStyles = css`
   ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
   height: ${a4Data.heightToMillimeters()}mm;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-areas: "header txt";
 `;
 

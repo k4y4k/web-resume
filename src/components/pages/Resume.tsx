@@ -41,7 +41,6 @@ export const pageContainerStyles = css`
 const imageStripStyles = css`
   height: ${a4Data.heightToMillimeters()}mm;
   width: 30mm;
-  marginRight: 1rem;
 `;
 
 const Resume = () => {

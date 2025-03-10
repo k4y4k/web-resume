@@ -6,6 +6,7 @@ import dayjs from "dayjs";
 import { graphql } from "gatsby";
 import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
+import Modal from "../components/modal/Modal";
 
 const IndexRoute = () => {
   return (
@@ -20,6 +21,8 @@ const IndexRoute = () => {
           justifyContent: "place-content-evenly",
         }}
       >
+        <Modal />
+
         <Resume />
         <CoverLetter />
       </main>

@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import modalReducer from "./modalSlice";
 import { useDispatch, useSelector } from "react-redux";
+import modalReducer from "./modalSlice";
 
 export const store = configureStore({
   reducer: {

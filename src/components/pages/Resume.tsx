@@ -52,7 +52,7 @@ const Resume = () => {
             gatsbyImageData(
               placeholder: BLURRED
               quality: 90
-              formats: [AUTO, WEBP, AVIF]
+              formats: [AUTO]
               height: 1333
               width: 200
               transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }

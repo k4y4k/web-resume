@@ -20,7 +20,7 @@ const CoverLetter = (): JSX.Element => {
       headerImage: file(relativePath: { eq: "unsplash.jpg" }) {
         childImageSharp {
           gatsbyImageData(
-            formats: [AUTO, WEBP, AVIF]
+            formats: [AUTO]
             placeholder: BLURRED
             quality: 90
             height: 1333

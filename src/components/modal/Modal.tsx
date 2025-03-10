@@ -1,7 +1,10 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import tw, { css } from "twin.macro";
+import { toggleVisible } from "../../store/modalSlice";
+import { useAppDispatch, useAppSelector } from "../../store";
 
 const modalStyle = css`
   p {
@@ -44,11 +47,8 @@ const imageStyle = css`
 `;
 
 export const Modal = () => {
-  const [open, isOpen] = useState(true);
-
-  // const showModal = process.env.GATSBY_SHOW_MODAL ?? "";
-  //
-  // if (!showModal || !open) return null;
+  const modalState = useAppSelector((state) => state.modal.show);
+  const dispatch = useAppDispatch();
 
   const data = useStaticQuery(
     graphql`
@@ -59,10 +59,10 @@ export const Modal = () => {
               placeholder: DOMINANT_COLOR
               quality: 95
               formats: [AUTO]
-              height: 1000
-              width: 1000
+              height: 2000
+              width: 2000
               layout: FULL_WIDTH
-              # transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }
+              transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }
             )
           }
         }
@@ -72,7 +72,7 @@ export const Modal = () => {
 
   const bgImage = getImage(data.placeholderImage);
 
-  if (!open) return null;
+  if (!modalState) return null;
 
   return (
     <div css={modalContainerStyle}>
@@ -101,10 +101,10 @@ export const Modal = () => {
 
         <button
           type="submit"
-          onClick={() => isOpen(!open)}
+          onClick={() => dispatch(toggleVisible())}
           tw="hover:bg-orchid-900 bg-orchid-700 text-white rounded-md py-2 px-4 mx-auto block my-4"
         >
-          I understand ( {JSON.stringify(open)} )
+          I understand
         </button>
       </div>
     </div>

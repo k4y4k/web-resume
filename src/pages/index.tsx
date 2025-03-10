@@ -4,28 +4,32 @@ import { GlobalStyles } from "twin.macro";
 import "../index.css";
 import dayjs from "dayjs";
 import { graphql } from "gatsby";
+import { Provider as ReduxProvider } from "react-redux";
+import Modal from "../components/modal/Modal";
 import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
-import Modal from "../components/modal/Modal";
+import { store } from "../store";
 
 const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
-      <GlobalStyles />
+      <ReduxProvider store={store}>
+        <GlobalStyles />
 
-      <main
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          justifyContent: "place-content-evenly",
-        }}
-      >
-        <Modal />
+        <main
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "place-content-evenly",
+          }}
+        >
+          <Modal />
 
-        <Resume />
-        <CoverLetter />
-      </main>
+          <Resume />
+          <CoverLetter />
+        </main>
+      </ReduxProvider>
     </IconContext.Provider>
   );
 };

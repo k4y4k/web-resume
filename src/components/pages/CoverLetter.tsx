@@ -14,13 +14,14 @@ const coverLetterContentStyles = css`
   grid-template-areas: "header txt";
 `;
 
+// FIXME: Netlify can't handle AVIF files at all
 const CoverLetter = (): JSX.Element => {
   const { headerImage } = useStaticQuery(graphql`
     {
       headerImage: file(relativePath: { eq: "unsplash.jpg" }) {
         childImageSharp {
           gatsbyImageData(
-            formats: [AUTO]
+            formats: [WEBP]
             placeholder: BLURRED
             quality: 90
             height: 1333

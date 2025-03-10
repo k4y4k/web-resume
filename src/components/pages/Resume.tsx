@@ -43,6 +43,7 @@ const imageStripStyles = css`
   width: 30mm;
 `;
 
+// FIXME: Netlify can't handle AVIF files at all
 const Resume = () => {
   const data = useStaticQuery(
     graphql`
@@ -52,7 +53,7 @@ const Resume = () => {
             gatsbyImageData(
               placeholder: BLURRED
               quality: 90
-              formats: [AUTO]
+              formats: [WEBP]
               height: 1333
               width: 200
               transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }

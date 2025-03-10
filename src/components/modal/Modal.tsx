@@ -3,8 +3,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import tw, { css } from "twin.macro";
-import { toggleVisible } from "../../store/modalSlice";
 import { useAppDispatch, useAppSelector } from "../../store";
+import { toggleVisible } from "../../store/modalSlice";
 
 const modalStyle = css`
   p {

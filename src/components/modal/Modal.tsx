@@ -1,7 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
 import tw, { css } from "twin.macro";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { toggleVisible } from "../../store/modalSlice";
@@ -88,12 +87,12 @@ export const Modal = () => {
         </p>
         <p>
           All of this data has been generated with a library called{" "}
-          <a href="https://github.com/marak/Faker.js/">faker.js</a>. None of it
-          is real or intended to reflect or mimic a real person. Any
+          <a href="https://github.com/faker-js/faker">faker</a>. None of it is
+          real data, or intended to reflect or mimic a real person. Any
           similarities to people living or dead is purely coincidental.
         </p>
         <p>
-          The accounts in the contact section may not exist. If they do, their
+          The details in the contact section may not exist. If they do, their
           inclusion in this project <strong>was not intentional</strong> and any
           views that their owners express are their own. Please{" "}
           <strong>do not try to contact them</strong>.

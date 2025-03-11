@@ -1,6 +1,6 @@
 import fs from "node:fs";
+import { faker } from "@faker-js/faker";
 import dayjs from "dayjs";
-import { fake } from "faker";
 
 interface profileItem {
   network: string;
@@ -12,18 +12,18 @@ const createProfiles = (): profileItem[] => {
   return [
     {
       network: "github",
-      username: fake("{{internet.userName}}"),
-      url: fake("{{internet.url}}"),
+      username: faker.helpers.fake("{{internet.username}}"),
+      url: faker.helpers.fake("{{internet.url}}"),
     },
     {
       network: "twitter",
-      username: fake("{{internet.userName}}"),
-      url: fake("{{internet.url}}"),
+      username: faker.helpers.fake("{{internet.username}}"),
+      url: faker.helpers.fake("{{internet.url}}"),
     },
     {
       network: "linkedin",
-      username: fake("{{internet.userName}}"),
-      url: fake("{{internet.url}}"),
+      username: faker.helpers.fake("{{internet.username}}"),
+      url: faker.helpers.fake("{{internet.url}}"),
     },
   ];
 };
@@ -35,7 +35,7 @@ interface basics {
   phone: string;
   website: string;
   location: {
-    address: string;
+    location: string;
     postalCode: string;
     city: string;
     countryCode: string;
@@ -46,11 +46,11 @@ interface basics {
 
 const createBasics = (): basics => {
   const location = {
-    address: fake("{{address.streetAddress}}"),
-    postalCode: fake("{{address.zipCode}}"),
-    city: fake("{{address.city}}"),
-    countryCode: fake("{{address.countryCode}}"),
-    region: fake("{{address.state}}"),
+    location: faker.helpers.fake("{{location.streetAddress}}"),
+    postalCode: faker.helpers.fake("{{location.zipCode}}"),
+    city: faker.helpers.fake("{{location.city}}"),
+    countryCode: faker.helpers.fake("{{location.countryCode}}"),
+    region: faker.helpers.fake("{{location.state}}"),
   };
 
   const profiles = createProfiles();
@@ -58,11 +58,11 @@ const createBasics = (): basics => {
   const phone = Math.floor(Math.random() * 9999999999).toString();
 
   return {
-    name: fake("{{name.firstName}} {{name.lastName}}"),
-    label: fake("{{name.jobTitle}}"),
-    email: fake("{{internet.email}}"),
+    name: faker.helpers.fake("{{person.firstName}} {{person.lastName}}"),
+    label: faker.helpers.fake("{{person.jobTitle}}"),
+    email: faker.helpers.fake("{{internet.email}}"),
     phone: phone.length === 10 ? phone : "1234567890",
-    website: fake("{{internet.url}}"),
+    website: faker.helpers.fake("{{internet.url}}"),
     location,
     profiles,
   };
@@ -82,12 +82,18 @@ const createWork = (num: number): workItem[] => {
 
   for (let i = 0; i < num + 1; i++) {
     const newWork = {
-      company: fake("{{company.companyName}}"),
-      position: fake("{{name.jobTitle}}"),
-      summary: fake("- {{company.bs}}\n- {{company.bs}}\n- {{company.bs}}"),
-      startDate: dayjs(fake("{{date.past}}")).format("YYYY-MM-DD"),
-      endDate: dayjs(fake("{{date.future}}")).format("YYYY-MM-DD"),
-      link: fake("{{internet.url}}"),
+      company: faker.helpers.fake("{{company.name}}"),
+      position: faker.helpers.fake("{{person.jobTitle}}"),
+      summary: faker.helpers.fake(
+        "- {{company.buzzPhrase}}\n- {{company.buzzPhrase}}\n- {{company.buzzPhrase}}",
+      ),
+      startDate: dayjs(faker.helpers.fake("{{date.past}}")).format(
+        "YYYY-MM-DD",
+      ),
+      endDate: dayjs(faker.helpers.fake("{{date.future}}")).format(
+        "YYYY-MM-DD",
+      ),
+      link: faker.helpers.fake("{{internet.url}}"),
     };
 
     workList.push(newWork);
@@ -109,11 +115,17 @@ const createVolunteer = (num: number): volunteerItem[] => {
 
   for (let i = 0; i < num + 1; i++) {
     const newVol = {
-      organization: fake("{{company.companyName}}"),
-      position: fake("Volunteer {{name.jobTitle}}"),
-      summary: fake("- {{company.bs}}\n- {{company.bs}}\n- {{company.bs}}"),
-      startDate: dayjs(fake("{{date.past}}")).format("YYYY-MM-DD"),
-      endDate: dayjs(fake("{{date.future}}")).format("YYYY-MM-DD"),
+      organization: faker.helpers.fake("{{company.name}}"),
+      position: faker.helpers.fake("Volunteer {{person.jobTitle}}"),
+      summary: faker.helpers.fake(
+        "- {{company.buzzPhrase}}\n- {{company.buzzPhrase}}\n- {{company.buzzPhrase}}",
+      ),
+      startDate: dayjs(faker.helpers.fake("{{date.past}}")).format(
+        "YYYY-MM-DD",
+      ),
+      endDate: dayjs(faker.helpers.fake("{{date.future}}")).format(
+        "YYYY-MM-DD",
+      ),
     };
 
     volList.push(newVol);
@@ -136,23 +148,39 @@ const createEducation = (num: number): educationItem[] => {
 
   for (let i = 0; i < num + 1; i++) {
     const courses = [
-      fake(" {{random.alphaNumeric}}{{random.alphaNumeric}}").toUpperCase() +
-        fake("{{datatype.number}}: {{name.jobType}} {{name.jobArea}}"),
-      fake(" {{random.alphaNumeric}}{{random.alphaNumeric}}").toUpperCase() +
-        fake("{{datatype.number}}: {{name.jobType}} {{name.jobArea}}"),
-      fake(" {{random.alphaNumeric}}{{random.alphaNumeric}}").toUpperCase() +
-        fake("{{datatype.number}}: {{name.jobType}} {{name.jobArea}}"),
+      faker.helpers
+        .fake(" {{string.alphanumeric}}{{string.alphanumeric}}")
+        .toUpperCase() +
+        faker.helpers.fake(
+          "{{number.int}}: {{person.jobType}} {{person.jobArea}}",
+        ),
+      faker.helpers
+        .fake(" {{string.alphanumeric}}{{string.alphanumeric}}")
+        .toUpperCase() +
+        faker.helpers.fake(
+          "{{number.int}}: {{person.jobType}} {{person.jobArea}}",
+        ),
+      faker.helpers
+        .fake(" {{string.alphanumeric}}{{string.alphanumeric}}")
+        .toUpperCase() +
+        faker.helpers.fake(
+          "{{number.int}}: {{person.jobType}} {{person.jobArea}}",
+        ),
     ];
 
     eduList.push({
-      institution: fake(
-        "{{name.firstName}} {{name.lastName}} University of {{address.cityPrefix}} {{address.city}}",
+      institution: faker.helpers.fake(
+        "{{person.firstName}} {{person.lastName}} University of {{location.city}}",
       ),
-      area: fake("{{name.jobTitle}}"),
+      area: faker.helpers.fake("{{person.jobTitle}}"),
       studyType: "Certificate",
       courses,
-      startDate: dayjs(fake("{{date.past}}")).format("YYYY-MM-DD"),
-      endDate: dayjs(fake("{{date.future}}")).format("YYYY-MM-DD"),
+      startDate: dayjs(faker.helpers.fake("{{date.past}}")).format(
+        "YYYY-MM-DD",
+      ),
+      endDate: dayjs(faker.helpers.fake("{{date.future}}")).format(
+        "YYYY-MM-DD",
+      ),
     });
   }
 
@@ -169,8 +197,11 @@ const createSkills = (num: number): skillsItem[] => {
 
   for (let i = 0; i < num + 1; i++) {
     skillsList.push({
-      name: fake("{{name.jobArea}}"),
-      keywords: [fake("{{random.word}}"), fake("{{hacker.noun}}")],
+      name: faker.helpers.fake("{{person.jobArea}}"),
+      keywords: [
+        faker.helpers.fake("{{word.words}}"),
+        faker.helpers.fake("{{hacker.noun}}"),
+      ],
     });
   }
 
@@ -178,9 +209,9 @@ const createSkills = (num: number): skillsItem[] => {
 };
 
 export const createFakeData = (): string => {
-  console.log("creating fake data");
+  console.log("creating faker data");
   const basics = createBasics();
-  const work = createWork(Math.floor(Math.random() * 2));
+  const work = createWork(Math.floor(Math.random() * 4));
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
   const education = createEducation(Math.floor(Math.random() * 2));
   const skills = createSkills(Math.floor(Math.random() * 5));
@@ -191,27 +222,19 @@ export const createFakeData = (): string => {
 fs.writeFileSync("src/data/data.json", createFakeData());
 
 const createFakeCoverLetter = (): string => {
-  console.log("creating fake cover letter");
+  console.log("creating faker cover letter");
 
-  const contents: string = fake(
+  const contents: string = faker.helpers.fake(
     "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
   );
-  const recruiterFirstName: string = fake("{{name.firstName}}");
-  const recruiterLastName: string = fake("{{name.lastName}}");
-  const address: string = fake("{{address.streetAddress}}");
-  const postalCode: string = fake("{{address.zipCode}}");
-  const city: string = fake("{{address.city}}");
-  const countryCode: string = fake("{{address.countryCode}}");
-  const region: string = fake("{{address.state}}");
+  const recruiterFirstName: string = faker.helpers.fake("{{person.firstName}}");
+  const recruiterLastName: string = faker.helpers.fake("{{person.lastName}}");
+  const location: string = faker.helpers.fake("{{location.streetAddress}}");
 
   return `---
-address: ${address}
-postalCode: ${postalCode}
+location: ${location}
 recruiterFirstName: ${recruiterFirstName}
 recruiterLastName: ${recruiterLastName}
-city: ${city}
-countryCode: ${countryCode}
-region: ${region}
 ---
 
 ${contents}`;

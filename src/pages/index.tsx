@@ -1,9 +1,7 @@
 import { IconContext } from "@react-icons/all-files";
-import * as React from "react";
-import { GlobalStyles } from "twin.macro";
-import "../index.css";
 import dayjs from "dayjs";
 import { graphql } from "gatsby";
+import * as React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import Modal from "../components/modal/Modal";
 import CoverLetter from "../components/pages/CoverLetter";
@@ -14,8 +12,6 @@ const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
       <ReduxProvider store={store}>
-        <GlobalStyles />
-
         <main
           style={{
             display: "flex",
@@ -26,8 +22,8 @@ const IndexRoute = () => {
         >
           <Modal />
 
-          <Resume />
-          <CoverLetter />
+          {/* <Resume /> */}
+          {/* <CoverLetter /> */}
         </main>
       </ReduxProvider>
     </IconContext.Provider>

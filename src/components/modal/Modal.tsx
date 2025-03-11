@@ -1,49 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
-import tw, { css } from "twin.macro";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { toggleVisible } from "../../store/modalSlice";
-
-const modalStyle = css`
-  p {
-    ${tw`mb-2`}
-  }
-
-  a {
-    ${tw`p-1 mx-1 underline cursor-pointer rounded-md`}
-
-    &::after {
-      content: " ➜";
-    }
-
-    &:hover {
-      ${tw`text-white bg-orchid-800`}
-    }
-  }
-
-  span {
-    ${tw`mb-2 whitespace-nowrap`}
-  }
-
-  .icon {
-    ${tw`inline-block align-middle`}
-    margin-bottom: 0.125rem;
-  }
-`;
-
-const modalContainerStyle = css`
-  ${tw`fixed! top-0 z-10 flex justify-center text-center`}
-  height: 100vh;
-  width: 100%;
-  background-color: #080818;
-`;
-
-const imageStyle = css`
-  ${tw`fixed!`}
-  height: 100vh;
-  width: 100vw;
-`;
+import "./modal-contents.module.css";
 
 export const Modal = () => {
   const modalState = useAppSelector((state) => state.modal.show);
@@ -74,13 +34,18 @@ export const Modal = () => {
   if (!modalState) return null;
 
   return (
-    <div css={modalContainerStyle}>
-      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStyle} />}
-      <div
-        css={modalStyle}
-        tw="bg-white max-w-prose self-center p-6 rounded-md shadow-md z-20"
-      >
-        <h1 tw="text-2xl font-bold font-mono text-center mb-4">Hi there 👋</h1>
+    <div className="!fixed top-0 z-10 flex justify-center text-center h-screen w-screen bg-[#080818]">
+      {bgImage && (
+        <GatsbyImage
+          image={bgImage}
+          alt=""
+          className="!fixed h-screen w-screen"
+        />
+      )}
+      <div className="bg-white max-w-prose self-center p-8 rounded-md shadow-lg z-20">
+        <h1 className="text-2xl font-bold font-mono text-center mb-4">
+          Hi there 👋
+        </h1>
         <p>
           Please note that the following resume <strong>is not real</strong>. In
           fact, <strong>this person does not exist</strong>.
@@ -101,7 +66,7 @@ export const Modal = () => {
         <button
           type="submit"
           onClick={() => dispatch(toggleVisible())}
-          tw="hover:bg-orchid-900 bg-orchid-700 text-white rounded-md py-2 px-4 mx-auto block my-4"
+          className="hover:bg-orchid-900 bg-orchid-700 text-white rounded-md py-2 px-4 mx-auto block my-4"
         >
           I understand
         </button>

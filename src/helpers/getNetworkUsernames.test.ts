@@ -1,13 +1,13 @@
-import faker from "faker";
+import { faker } from "@faker-js/faker/.";
 import getNetworkUsernames, { type ProfileItem } from "./getNetworkUsernames";
 
 describe("getNetworkUsernames", () => {
   test("finds network in list, returns matching username", () => {
-    const randomUsername = faker.internet.userName();
+    const randomUsername = faker.internet.username();
     const data = [
-      { network: "spotify", username: faker.internet.userName() },
+      { network: "spotify", username: faker.internet.username() },
       { network: "twitter", username: randomUsername },
-      { network: "tiktok", username: faker.internet.userName() },
+      { network: "tiktok", username: faker.internet.username() },
     ] as ProfileItem[];
 
     expect(getNetworkUsernames(data, "twitter")).toBe(randomUsername);

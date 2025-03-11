@@ -8,7 +8,7 @@ interface AddressGreetingProps {
       frontmatter: {
         recruiterFirstName: string;
         recruiterLastName: string;
-        address: string;
+        location: string;
         city: string;
         countryCode: string;
         postalCode: string;
@@ -26,26 +26,15 @@ const AddressGreeting = (): JSX.Element => {
           frontmatter {
             recruiterFirstName
             recruiterLastName
-            address
-            city
-            countryCode
-            postalCode
-            region
+            location
           }
         }
       }
     }
   `);
 
-  const {
-    recruiterFirstName,
-    recruiterLastName,
-    address,
-    city,
-    region,
-    postalCode,
-    countryCode,
-  } = letterContents.childMarkdownRemark.frontmatter;
+  const { recruiterFirstName, recruiterLastName, location } =
+    letterContents.childMarkdownRemark.frontmatter;
 
   return (
     <>
@@ -53,13 +42,7 @@ const AddressGreeting = (): JSX.Element => {
         {recruiterFirstName}{" "}
         {recruiterLastName === "_" ? null : recruiterLastName}
       </p>
-      <p tw="pb-0!">{address}</p>
-      {/* <p> */}
-      {/*   {city !== " " ? `${city}, ` : null} */}
-      {/*   {region !== " " ? `${region}, ` : null} */}
-      {/*   {postalCode !== " " ? `${postalCode}, ` : null} */}
-      {/*   {countryCode !== " " ? `${countryCode}` : null} */}
-      {/* </p> */}
+      <p tw="pb-0!">{location}</p>
 
       <h1 tw="mt-4 mb-1 font-bold text-xl">Dear {recruiterFirstName},</h1>
     </>

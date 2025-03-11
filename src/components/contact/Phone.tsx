@@ -1,34 +1,18 @@
-import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import { FiPhone } from "@react-icons/all-files/fi/FiPhone";
+import * as React from "react";
 
 interface PhoneTypes {
-  restrictDisplay?: boolean;
+  phone: string;
 }
 
-const Phone = ({ restrictDisplay = true }: PhoneTypes): JSX.Element | null => {
-  if (restrictDisplay) return null;
-
-  const { phone } = useStaticQuery(graphql`
-    {
-      num: file(extension: { eq: "json" }, name: { eq: "data" }) {
-        childDataJson {
-          basics {
-            phone
-          }
-        }
-      }
-    }
-  `).num.childDataJson.basics;
-
-  // xxx xxx xxxx
-  const formattedNum = Array.from(phone);
-  formattedNum.splice(3, 0, " ");
-  formattedNum.splice(7, 0, " ");
+const Phone = ({ phone }: PhoneTypes) => {
+  if (typeof phone !== "string" || phone.trim() === "") return null;
 
   return (
-    <li data-testid="contactPhone">
-      <FiPhone /> {formattedNum.join("")}
+    <li>
+      <a data-testid="contactEmail" href={`tel:${phone.replace(/ /gi, "")}`}>
+        <FiPhone /> {phone}
+      </a>
     </li>
   );
 };

@@ -2,8 +2,8 @@
 
 exports[`<SectionTitle /> displays title 1`] = `
 .c0 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;

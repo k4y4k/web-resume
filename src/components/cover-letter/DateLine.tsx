@@ -1,7 +1,7 @@
 import "twin.macro";
-import * as React from "react";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
+import * as React from "react";
 dayjs.extend(localizedFormat);
 
 const DateLine = (): JSX.Element => {

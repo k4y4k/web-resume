@@ -17,7 +17,7 @@ const SectionContainer = ({
   title,
   children,
   onCoverLetter = false,
-}: SectionContainerTypes): JSX.Element => (
+}: SectionContainerTypes): React.ReactElement => (
   <div data-testid="sectionContainer" css={sectionStyles}>
     <SectionTitle onCoverLetter={onCoverLetter} title={title} />
     {children}

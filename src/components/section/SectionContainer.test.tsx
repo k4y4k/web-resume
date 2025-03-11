@@ -1,5 +1,5 @@
-import * as React from "react";
 import { render, screen } from "@testing-library/react";
+import * as React from "react";
 import ItemContainer from "./ItemContainer";
 import SectionContainer from "./SectionContainer";
 
@@ -9,7 +9,9 @@ describe("<SectionContainer />", () => {
       <ItemContainer title="" subtitle="" fromDate="" toDate="" summary="" />
     );
 
-    render(<SectionContainer children={data} title="Reason #8: Regret" />);
+    render(
+      <SectionContainer title="Reason #8: Regret">{data}</SectionContainer>,
+    );
 
     const title = screen.getByText("Reason #8: Regret");
     expect(title).toBeInTheDocument();

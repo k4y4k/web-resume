@@ -9,8 +9,9 @@ exports[`<Experience /> renders OK 1`] = `
 }
 
 .c3 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -25,11 +26,12 @@ exports[`<Experience /> renders OK 1`] = `
 
 .c4 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -64,43 +66,6 @@ exports[`<Experience /> renders OK 1`] = `
         class="c3"
         data-testid="itemTitle"
       >
-        Volunteer
-      </h1>
-      <div
-        class="c4"
-        data-testid="byline"
-      >
-        <span
-          data-testid="itemSubtitle"
-        >
-          Organization
-        </span>
-         | 
-        <span
-          data-testid="sectionItemDates"
-        >
-          Mar 2016
-           - 
-          Feb 2017
-        </span>
-      </div>
-      <div
-        class="c5"
-        data-testid="sectionItemDetails"
-      >
-        <p>
-          Description...
-        </p>
-      </div>
-    </div>
-    <div
-      class="c2"
-      data-testid="sectionItemContainer"
-    >
-      <h1
-        class="c3"
-        data-testid="itemTitle"
-      >
         President
       </h1>
       <div
@@ -119,43 +84,6 @@ exports[`<Experience /> renders OK 1`] = `
           2013
            - 
           2014
-        </span>
-      </div>
-      <div
-        class="c5"
-        data-testid="sectionItemDetails"
-      >
-        <p>
-          Description...
-        </p>
-      </div>
-    </div>
-    <div
-      class="c2"
-      data-testid="sectionItemContainer"
-    >
-      <h1
-        class="c3"
-        data-testid="itemTitle"
-      >
-        Volunteer
-      </h1>
-      <div
-        class="c4"
-        data-testid="byline"
-      >
-        <span
-          data-testid="itemSubtitle"
-        >
-          Organization
-        </span>
-         | 
-        <span
-          data-testid="sectionItemDates"
-        >
-          2012
-           - 
-          2013
         </span>
       </div>
       <div

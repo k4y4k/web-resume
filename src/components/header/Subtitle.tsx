@@ -3,23 +3,18 @@ import tw from "twin.macro";
 
 interface SubtitleProps {
   subtitle: string;
-  lightmode: boolean;
-  compact: boolean;
+  isCoverLetter?: boolean;
 }
 
-const Subtitle = ({
-  subtitle,
-  lightmode,
-  compact,
-}: SubtitleProps): JSX.Element | null => {
+const Subtitle = ({ subtitle, isCoverLetter = false }: SubtitleProps) => {
   if (subtitle === "") return null;
 
   return (
     <h2
       css={[
         tw`my-2 text-2xl `,
-        lightmode ? tw`text-white` : tw`text-orchid-600`,
-        compact && tw`text-2xl`,
+        tw`text-orchid-600`,
+        isCoverLetter && tw`text-white text-xl px-6`,
       ]}
       data-testid="headerSubtitle"
     >

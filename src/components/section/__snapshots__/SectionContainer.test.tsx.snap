@@ -12,11 +12,12 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
 
 .c3 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;

@@ -2,8 +2,9 @@
 
 exports[`<ItemTitle /> displays title 1`] = `
 .c0 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 

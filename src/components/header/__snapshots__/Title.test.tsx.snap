@@ -4,15 +4,22 @@ exports[`<Title /> Handles not having any data properly 1`] = `null`;
 
 exports[`<Title /> compact 1`] = `
 .c0 {
-  margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgba(103,73,177,var(--tw-text-opacity));
-  font-size: 3rem;
-  line-height: 1;
+  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  font-family: Inconsolata,monospace;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
 }
 
 <h1
@@ -25,13 +32,22 @@ exports[`<Title /> compact 1`] = `
 
 exports[`<Title /> displays title 1`] = `
 .c0 {
-  margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
   --tw-text-opacity: 1;
   color: rgba(103,73,177,var(--tw-text-opacity));
+  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  font-family: Inconsolata,monospace;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
 }
 
 <h1
@@ -44,13 +60,22 @@ exports[`<Title /> displays title 1`] = `
 
 exports[`<Title /> lightmode 1`] = `
 .c0 {
-  margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(103,73,177,var(--tw-text-opacity));
+  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  font-family: Inconsolata,monospace;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
 }
 
 <h1
@@ -63,15 +88,22 @@ exports[`<Title /> lightmode 1`] = `
 
 exports[`<Title /> lightmode and compact 1`] = `
 .c0 {
-  margin-bottom: 0px;
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
-  font-size: 3rem;
-  line-height: 1;
+  color: rgba(103,73,177,var(--tw-text-opacity));
+  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  font-family: Inconsolata,monospace;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+@media print {
+  .c0 {
+    margin: 0px;
+    --tw-shadow: 0 0 #0000;
+    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
+  }
 }
 
 <h1

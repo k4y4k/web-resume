@@ -1,6 +1,6 @@
 import "twin.macro";
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 
 interface AddressGreetingProps {
   letterContents: {
@@ -54,12 +54,12 @@ const AddressGreeting = (): JSX.Element => {
         {recruiterLastName === "_" ? null : recruiterLastName}
       </p>
       <p tw="pb-0!">{address}</p>
-      <p>
-        {city !== " " ? `${city}, ` : null}
-        {region !== " " ? `${region}, ` : null}
-        {postalCode !== " " ? `${postalCode}, ` : null}
-        {countryCode !== " " ? `${countryCode}` : null}
-      </p>
+      {/* <p> */}
+      {/*   {city !== " " ? `${city}, ` : null} */}
+      {/*   {region !== " " ? `${region}, ` : null} */}
+      {/*   {postalCode !== " " ? `${postalCode}, ` : null} */}
+      {/*   {countryCode !== " " ? `${countryCode}` : null} */}
+      {/* </p> */}
 
       <h1 tw="mt-4 mb-1 font-bold text-xl">Dear {recruiterFirstName},</h1>
     </>

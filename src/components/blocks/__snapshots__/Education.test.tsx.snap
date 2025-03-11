@@ -2,8 +2,8 @@
 
 exports[`<PureEducation /> bails out on no data 1`] = `
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -43,8 +43,9 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 }
 
 .c3 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -59,11 +60,12 @@ exports[`<PureEducation /> handles times where you don't have a 'type' (e.g. onl
 
 .c4 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -146,8 +148,9 @@ exports[`<PureEducation /> no course details? 1`] = `
 }
 
 .c3 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -162,11 +165,12 @@ exports[`<PureEducation /> no course details? 1`] = `
 
 .c4 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -259,8 +263,9 @@ exports[`<PureEducation /> renders OK 1`] = `
 }
 
 .c3 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -275,11 +280,12 @@ exports[`<PureEducation /> renders OK 1`] = `
 
 .c4 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -362,8 +368,9 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 }
 
 .c3 {
+  margin-bottom: 0.25rem;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.25rem;
 }
 
@@ -378,11 +385,12 @@ exports[`<PureEducation /> renders array of >=1 PureEducation items 1`] = `
 
 .c4 {
   font-style: italic;
+  margin-bottom: 0.25rem;
 }
 
 .c1 {
-  font-family: Inconsolata,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
-  font-size: 1.25rem;
+  font-family: Inconsolata,monospace;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 700;
   text-transform: uppercase;

@@ -1,19 +1,25 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 import tw, { css } from "twin.macro";
 import AddressGreeting from "./AddressGreeting";
 import DateLine from "./DateLine";
-import ThanksForComingToMyTEDTalk from "./Thanks";
+import Thanks from "./Thanks";
 
 const coverLetterContentsStyles = css`
   ${tw`py-8 max-w-prose`}
 
   p {
-    ${tw`pb-4`}
+    ${tw`pb-4 last-of-type:pb-0`}
   }
 
   h1 {
     ${tw`pb-1`}
+  }
+`;
+
+const coverLetterTextStyles = css`
+  ul {
+    ${tw`list-disc mb-4`}
   }
 `;
 
@@ -31,6 +37,7 @@ const CoverLetterContents = (): JSX.Element => {
           childDataJson {
             basics {
               name
+              phone
             }
           }
         }
@@ -43,11 +50,16 @@ const CoverLetterContents = (): JSX.Element => {
       <DateLine />
       <AddressGreeting />
       <div
+        css={coverLetterTextStyles}
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
         dangerouslySetInnerHTML={{
           __html: letterContents.childMarkdownRemark.html,
         }}
       />
-      <ThanksForComingToMyTEDTalk name={jsonName.childDataJson.basics.name} />
+      <Thanks
+        number={jsonName.childDataJson.basics.phone}
+        name={jsonName.childDataJson.basics.name}
+      />
     </div>
   );
 };

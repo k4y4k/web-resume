@@ -1,7 +1,7 @@
-import * as React from "react";
-import { PureSkills, Skills } from "./Skills";
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
+import * as React from "react";
+import { PureSkills, Skills } from "./Skills";
 
 describe("<Skills />", () => {
   beforeAll(() =>

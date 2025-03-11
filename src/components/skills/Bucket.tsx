@@ -12,8 +12,10 @@ const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
       {skills.map((el) => (
         <p
           style={{
-            marginRight: "0.5rem",
+            marginRight: "0.66rem",
+            marginBottom: "0.2rem",
             display: "inline-block",
+            lineHeight: "1.15",
           }}
           key={el}
         >

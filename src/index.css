@@ -5,3 +5,10 @@ body {
   transition: ease all 800ms;
   min-height: 100vh;
 }
+
+@media print {
+  html,
+  body {
+    background: white;
+  }
+}

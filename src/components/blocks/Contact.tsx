@@ -1,15 +1,13 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
 import tw, { css } from "twin.macro";
+import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import Address from "../contact/Address";
 import Email from "../contact/Email";
-import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
 import Phone from "../contact/Phone";
 import SectionContainer from "../section/SectionContainer";
-import Twitter from "../contact/Twitter";
-import Website from "../contact/Website";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;
@@ -18,10 +16,13 @@ interface PureContactTypes {
   twitter: string | null;
   github: string | null;
   website: string;
-  linkedin: string | null;
+  linkedinUser: string | null;
+  linkedinUrl: string | null;
   city: string;
   region: string;
   countryCode: string;
+  phone: string;
+  technical: boolean;
 }
 
 interface ContactTypes {
@@ -55,7 +56,7 @@ const iconStyles = css`
   }
 
   a::after {
-    content: ' ➜';
+    content: " ➜";
     ${tw`mr-1`}
   }
 `;
@@ -91,23 +92,27 @@ export const PureContact = ({
   restrictDisplay = true,
   compact = false,
   email,
-  twitter,
   github,
-  website,
-  linkedin,
+  technical,
+  phone,
+  linkedinUser,
+  linkedinUrl,
   city,
   region,
   countryCode,
-}: PureContactTypes): JSX.Element => {
+}: PureContactTypes) => {
   return (
     <SectionContainer onCoverLetter={compact} title="Contact">
       <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
-        {compact && <Phone restrictDisplay={restrictDisplay} />}
-        {!compact && <Website url={website} />}
+        <Phone phone={phone} />
         <Email email={email} />
-        {!compact && <Twitter username={twitter} />}
-        {!compact && <GitHub username={github} />}
-        <LinkedIn username={linkedin} />
+        {technical && (
+          <>
+            {!compact && <GitHub username={github} />}
+            <LinkedIn url={linkedinUrl} username={linkedinUser} />
+          </>
+        )}
+
         <Address
           restrictDisplay={restrictDisplay}
           city={city}
@@ -119,10 +124,7 @@ export const PureContact = ({
   );
 };
 
-export const Contact = ({
-  compact,
-  restrictDisplay,
-}: ContactTypes): JSX.Element => {
+export const Contact = ({ compact, restrictDisplay }: ContactTypes) => {
   const data = useStaticQuery(graphql`
     {
       file(extension: { eq: "json" }, name: { eq: "data" }) {
@@ -130,6 +132,8 @@ export const Contact = ({
           basics {
             email
             website
+            phone
+            technical
             location {
               city
               region
@@ -138,6 +142,7 @@ export const Contact = ({
             profiles {
               network
               username
+              url
             }
           }
         }
@@ -145,26 +150,30 @@ export const Contact = ({
     }
   `);
 
-  const { email, website } = data.file.childDataJson.basics;
+  const { email, website, phone, technical } = data.file.childDataJson.basics;
 
   // extract list of networks
   const { profiles } = data.file.childDataJson.basics;
   const twitter = getNetworkUsernames(profiles, "twitter");
   const github = getNetworkUsernames(profiles, "github");
-  const linkedin = getNetworkUsernames(profiles, "linkedin");
+  const linkedin = getNetworkUsernames(profiles, "linkedin", true);
 
   const { city, countryCode, region } = data.file.childDataJson.basics.location;
 
   const props = {
     email,
     website,
+    phone,
+    technical,
     twitter,
     github,
-    linkedin,
+    linkedinUser: linkedin ? linkedin.username : null,
+    linkedinUrl: linkedin ? linkedin.url : null,
     city,
     region,
     countryCode,
   };
+
   return (
     <PureContact
       {...props}

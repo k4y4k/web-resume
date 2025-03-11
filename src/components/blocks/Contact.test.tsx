@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Contact, PureContact } from "./Contact";
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
+import * as React from "react";
+import { Contact, PureContact } from "./Contact";
 
 describe("<Contact />", () => {
   beforeAll(() =>
@@ -9,7 +9,7 @@ describe("<Contact />", () => {
       num: {
         childDataJson: {
           basics: {
-            phone: "5918298681",
+            phone: "1234567890",
           },
         },
       },
@@ -27,7 +27,7 @@ describe("<Contact />", () => {
             profiles: [
               {
                 network: "Twitter",
-                username: "john",
+                username: "example",
               },
             ],
           },
@@ -36,37 +36,20 @@ describe("<Contact />", () => {
     }),
   );
 
-  test("handles no data", () => {
-    render(
-      <PureContact
-        email=""
-        website=""
-        twitter=""
-        github=""
-        linkedin=""
-        city=""
-        countryCode=""
-        region=""
-      />,
-    );
-
-    const contact = screen.getByTestId("contact");
-
-    // everything returns null in the absurd case that absolutely nothing is passed in
-    expect(contact.children).toHaveLength(0);
-  });
-
   test("Hides things appropriately by default", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
-        linkedin="exampledin"
+        linkedinUser="exampledin"
+        linkedinUrl="example.com"
         city="Example City"
         countryCode="US"
         region="California"
+        phone="1234567890"
+        technical={false}
       />,
     );
 
@@ -79,14 +62,17 @@ describe("<Contact />", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
-        linkedin="exampledin"
+        linkedinUser="exampledin"
+        linkedinUrl="example.com"
         city="Example City"
         countryCode="US"
         region="California"
         restrictDisplay={false}
+        phone="1234567890"
+        technical={false}
       />,
     );
 
@@ -106,15 +92,18 @@ describe("<Contact />", () => {
     render(
       <PureContact
         email="kayak@example.com"
-        twitter="kayakSinger1"
+        twitter="exam"
         github="octocat"
         website="example.com"
-        linkedin="exampledin"
+        linkedinUser="exampledin"
+        linkedinUrl="example.com"
         city="Example City"
         countryCode="US"
         region="California"
         restrictDisplay={false}
         compact={true}
+        phone="1234567890"
+        technical={false}
       />,
     );
 

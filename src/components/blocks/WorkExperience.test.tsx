@@ -1,7 +1,7 @@
-import * as React from "react";
-import { Experience, PureExperience } from "./Experience";
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
+import * as React from "react";
+import { PureWorkExperience, WorkExperience } from "./WorkExperience";
 
 describe("<Experience />", () => {
   beforeAll(() =>
@@ -39,7 +39,7 @@ describe("<Experience />", () => {
   );
 
   test("bails out on no data", () => {
-    render(<PureExperience history={[]} />);
+    render(<PureWorkExperience history={[]} />);
 
     // still want the title
     expect(screen.getByTestId("experience")).toBeInTheDocument();
@@ -63,7 +63,7 @@ describe("<Experience />", () => {
       },
     ];
 
-    render(<PureExperience history={data} />);
+    render(<PureWorkExperience history={data} />);
 
     const experienceList = screen.getAllByTestId("experience");
 
@@ -71,7 +71,7 @@ describe("<Experience />", () => {
   });
 
   test("renders OK", () => {
-    render(<Experience />);
+    render(<WorkExperience />);
 
     expect(screen.getByTestId("experience")).toMatchSnapshot();
   });

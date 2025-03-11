@@ -1,13 +1,12 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import tw, { css } from "twin.macro";
-import BackgroundImage from "gatsby-background-image";
-import { convertToBgImage } from "gbimage-bridge";
-import { FiGlobe } from "@react-icons/all-files/fi/FiGlobe";
-import { FiTwitter } from "@react-icons/all-files/fi/FiTwitter";
-import { getImage } from "gatsby-plugin-image";
+import { useAppDispatch, useAppSelector } from "../../store";
+import { toggleVisible } from "../../store/modalSlice";
 
-const modalStyles = css`
+const modalStyle = css`
   p {
     ${tw`mb-2`}
   }
@@ -16,11 +15,11 @@ const modalStyles = css`
     ${tw`p-1 mx-1 underline cursor-pointer rounded-md`}
 
     &::after {
-      content: ' ➜';
+      content: " ➜";
     }
 
     &:hover {
-      ${tw`text-white bg-purple-800`}
+      ${tw`text-white bg-orchid-800`}
     }
   }
 
@@ -34,43 +33,57 @@ const modalStyles = css`
   }
 `;
 
-const modalBgStyles = css`
-  ${tw`fixed! top-0 z-40 flex justify-center text-center bg-purple-900`}
+const modalContainerStyle = css`
+  ${tw`fixed! top-0 z-10 flex justify-center text-center`}
   height: 100vh;
   width: 100%;
+  background-color: #080818;
 `;
 
-interface modalTypes {
-  modalBg: unknown;
-}
+const imageStyle = css`
+  ${tw`fixed!`}
+  height: 100vh;
+  width: 100vw;
+`;
 
-export const PureModal = ({ modalBg }: modalTypes): JSX.Element | null => {
-  const [open, isOpen] = React.useState(true);
+export const Modal = () => {
+  const modalState = useAppSelector((state) => state.modal.show);
+  const dispatch = useAppDispatch();
 
-  const showModal = process.env.GATSBY_SHOW_MODAL ?? "";
+  const data = useStaticQuery(
+    graphql`
+      {
+        placeholderImage: file(relativePath: { eq: "unsplash.jpg" }) {
+          childImageSharp {
+            gatsbyImageData(
+              placeholder: DOMINANT_COLOR
+              quality: 95
+              formats: [AUTO]
+              height: 2000
+              width: 2000
+              layout: FULL_WIDTH
+              transformOptions: { rotate: 180, fit: COVER, cropFocus: CENTER }
+            )
+          }
+        }
+      }
+    `,
+  );
 
-  if (showModal === "") return null;
+  const bgImage = getImage(data.placeholderImage);
 
-  if (!open) return null;
+  if (!modalState) return null;
 
   return (
-    <BackgroundImage
-      css={modalBgStyles}
-      Tag="div"
-      {...modalBg}
-      preserveStackingContext
-    >
+    <div css={modalContainerStyle}>
+      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStyle} />}
       <div
-        css={modalStyles}
-        tw="bg-white max-w-prose self-center p-6 rounded-md shadow-md"
+        css={modalStyle}
+        tw="bg-white max-w-prose self-center p-6 rounded-md shadow-md z-20"
       >
         <h1 tw="text-2xl font-bold font-mono text-center mb-4">Hi there 👋</h1>
         <p>
-          Looks like you've found{" "}
-          <a href="https://github.com/k4y4k/web-resume">k4y4k/web-resume</a>!
-        </p>
-        <p>
-          Please note that the following resume <strong>is not mine</strong>. In
+          Please note that the following resume <strong>is not real</strong>. In
           fact, <strong>this person does not exist</strong>.
         </p>
         <p>
@@ -82,59 +95,20 @@ export const PureModal = ({ modalBg }: modalTypes): JSX.Element | null => {
         <p>
           The accounts in the contact section may not exist. If they do, their
           inclusion in this project <strong>was not intentional</strong> and any
-          views that their owners express are not mine. Please{" "}
-          <strong>do not try to contact them</strong>. They aren't me.
-        </p>
-        <p>
-          If you do want to contact me, you can find me on Twitter:
-          <span>
-            <a href="https://twitter.com/mynameis_kayak">
-              <FiTwitter /> @mynameis_kayak
-            </a>
-          </span>
-          or view my website
-          <span>
-            <a href="https://kayak.rocks">
-              <FiGlobe /> kayak.rocks
-            </a>
-          </span>
-          .
+          views that their owners express are their own. Please{" "}
+          <strong>do not try to contact them</strong>.
         </p>
 
         <button
-          onClick={() => isOpen(false)}
-          tw="hover:bg-purple-900 bg-purple-700 text-white rounded-md py-2 px-4 mx-auto block my-4"
+          type="submit"
+          onClick={() => dispatch(toggleVisible())}
+          tw="hover:bg-orchid-900 bg-orchid-700 text-white rounded-md py-2 px-4 mx-auto block my-4"
         >
           I understand
         </button>
       </div>
-    </BackgroundImage>
+    </div>
   );
-};
-
-const Modal = (): JSX.Element | null => {
-  const { placeholderImage } = useStaticQuery(graphql`
-    {
-      placeholderImage: file(relativePath: { eq: "unsplash.jpg" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 2000
-            placeholder: BLURRED
-            formats: [AUTO, WEBP, AVIF]
-            quality: 90
-            transformOptions: {
-              duotone: { shadow: "#000000", highlight: "#ffffff", opacity: 50 }
-              rotate: 180
-            }
-          )
-        }
-      }
-    }
-  `);
-
-  const modalBg = convertToBgImage(getImage(placeholderImage));
-
-  return <PureModal modalBg={modalBg} />;
 };
 
 export default Modal;

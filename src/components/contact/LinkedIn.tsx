@@ -1,19 +1,20 @@
-import * as React from "react";
 import { FiLinkedin } from "@react-icons/all-files/fi/FiLinkedin";
+import * as React from "react";
 
 interface LinkedInTypes {
   username: string | null;
+  url: string | null;
 }
 
-const LinkedIn = ({ username }: LinkedInTypes): JSX.Element | null => {
-  if (username === "" || username === null) return null;
+const LinkedIn = ({ username, url }: LinkedInTypes): JSX.Element | null => {
+  if (!url || !username || url === "" || username === "") return null;
 
   return (
     <li>
       <a
         data-testid="contactLinkedin"
         rel="noreferrer"
-        href={`https://linkedin.com/in/${username}`}
+        href={url}
         target="_blank"
       >
         <FiLinkedin /> {username}

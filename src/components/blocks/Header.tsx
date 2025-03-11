@@ -1,44 +1,32 @@
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import * as React from "react";
+import tw from "twin.macro";
 import Subtitle from "../header/Subtitle";
 import Title from "../header/Title";
-import tw from "twin.macro";
 
 interface PureHeaderTypes {
   title: string;
   subtitle: string;
-  lightmode: boolean;
-  compact: boolean;
+  isCoverLetter: boolean;
 }
 
 interface HeaderTypes {
-  lightmode?: boolean;
-  compact?: boolean;
+  isCoverLetter?: boolean;
 }
 
 export const PureHeader = ({
   title,
   subtitle,
-  lightmode = false,
-  compact = false,
-}: PureHeaderTypes): JSX.Element => (
+  isCoverLetter,
+}: PureHeaderTypes) => (
   <div data-testid="header" tw="text-center">
-    <Title compact={compact} lightmode={lightmode} title={title} />
-    <Subtitle compact={compact} lightmode={lightmode} subtitle={subtitle} />
-    <hr
-      css={[
-        tw`block my-4`,
-        compact && tw`my-8`,
-        lightmode ? tw`bg-white` : tw`bg-black`,
-      ]}
-    />
+    <Title isCoverLetter={isCoverLetter} title={title} />
+    <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
+    <hr css={[tw`block my-4 bg-white`]} />
   </div>
 );
 
-export const Header = ({
-  lightmode = false,
-  compact = false,
-}: HeaderTypes): JSX.Element => {
+export const Header = ({ isCoverLetter = false }: HeaderTypes) => {
   const data = useStaticQuery(graphql`
     {
       text: file(extension: { eq: "json" }, name: { eq: "data" }) {
@@ -55,12 +43,7 @@ export const Header = ({
   const { name, label } = data.text.childDataJson.basics;
 
   return (
-    <PureHeader
-      title={name}
-      lightmode={lightmode}
-      subtitle={label}
-      compact={compact}
-    />
+    <PureHeader isCoverLetter={isCoverLetter} title={name} subtitle={label} />
   );
 };
 

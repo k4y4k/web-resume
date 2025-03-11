@@ -9,7 +9,7 @@ const ItemTitle = ({ title }: ItemTitleTypes): JSX.Element | null => {
   if (title === "") return null;
 
   return (
-    <h1 data-testid="itemTitle" tw="font-bold text-xl leading-5">
+    <h1 data-testid="itemTitle" tw="mb-1 font-bold text-lg leading-5">
       {title}
     </h1>
   );

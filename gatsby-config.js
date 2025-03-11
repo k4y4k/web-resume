@@ -1,21 +1,27 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require("path");
+const path = require("node:path");
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+    FAST_DEV: true,
+    PARALLEL_SOURCING: true,
+  },
+  graphqlTypegen: true,
   pathPrefix: "/web-resume",
   siteMetadata: {
-    title: "kayak's resume",
+    title: "online resume",
   },
+  trailingSlash: "always",
   plugins: [
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-helmet`,
+    "gatsby-transformer-remark",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        name: "images",
+        path: path.join(__dirname, "src", "images"),
       },
     },
     {
@@ -36,27 +42,12 @@ module.exports = {
     },
     "gatsby-transformer-json",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: `data`,
+        name: "data",
         path: path.join(__dirname, "/src/data/"),
       },
     },
-    `gatsby-plugin-styled-components`,
-    "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Resume",
-        short_name: "Resume",
-        start_url: "/",
-        background_color: "#542344",
-        theme_color: "#542344",
-        display: "standalone",
-        icon: "src/images/icon.png",
-        crossOrigin: `use-credentials`,
-      },
-    },
-    "gatsby-plugin-offline",
+    "gatsby-plugin-styled-components",
   ],
 };

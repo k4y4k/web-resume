@@ -1,7 +1,7 @@
 import "twin.macro";
 import * as React from "react";
-import Bucket from "./Bucket";
 import ItemTitle from "../section/ItemTitle";
+import Bucket from "./Bucket";
 
 interface ComposedTypes {
   heading: string;

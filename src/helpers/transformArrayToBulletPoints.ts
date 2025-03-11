@@ -1,12 +1,13 @@
 const transformArrayToBulletPoints = (courses: string[]): string => {
   let res = "";
 
-  courses.forEach((el) => {
-    // don't return empty points
-    if (el === "") return;
+  for (let i = 0; i < courses.length; i++) {
+    const el = courses[i];
 
-    return (res += `- ${el} \n`);
-  });
+    if (el === "") continue;
+
+    res += `- ${el} \n`;
+  }
 
   return res;
 };

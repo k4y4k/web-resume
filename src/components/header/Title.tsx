@@ -1,27 +1,26 @@
 import * as React from "react";
-import tw from "twin.macro";
+import tw, { css } from "twin.macro";
 
 interface TitleProps {
   title: string;
-  lightmode: boolean;
-  compact: boolean;
+  isCoverLetter?: boolean;
 }
 
-const Title = ({
-  title,
-  lightmode,
-  compact,
-}: TitleProps): JSX.Element | null => {
+const titleStyles = css`
+  ${tw`text-orchid-600 mb-0 mt-2 font-mono text-4xl font-bold`}
+
+  @media print {
+    ${tw`m-0 shadow-none m-0`}
+  }
+`;
+
+const Title = ({ title, isCoverLetter = false }: TitleProps) => {
   if (title === "") return null;
 
   return (
     <h1
       data-testid="headerTitle"
-      css={[
-        tw`mb-0 font-mono text-6xl font-bold`,
-        lightmode ? tw`text-white` : tw`text-orchid-600`,
-        compact && tw`text-5xl`,
-      ]}
+      css={[titleStyles, isCoverLetter && tw`text-white text-3xl pt-5`]}
     >
       {title}
     </h1>

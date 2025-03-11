@@ -1,0 +1,13 @@
+assert_lefthook_installed: true
+
+pre-commit:
+  parallel: true
+
+  commands:
+    lint:
+      run: bunx biome check --write
+      stage_fixed: true
+
+    test:
+      run: bun run test
+      fail_text: "🚆🐌 Test failed."

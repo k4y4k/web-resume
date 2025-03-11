@@ -1,6 +1,6 @@
+import fs from "node:fs";
 import dayjs from "dayjs";
 import { fake } from "faker";
-import fs from "node:fs";
 
 interface profileItem {
   network: string;

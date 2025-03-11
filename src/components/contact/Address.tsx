@@ -1,6 +1,6 @@
+import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
 import * as React from "react";
 import tw, { css } from "twin.macro";
-import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
 
 interface AddressTypes {
   city: string;
@@ -32,7 +32,7 @@ const Address = ({
     <li css={AddressStyles} data-testid="contactAddress" id="address">
       <FiMapPin />
       <span>
-        {city}, {region + ","} {countryCode}
+        {city}, {`${region},`} {countryCode}
       </span>
     </li>
   );

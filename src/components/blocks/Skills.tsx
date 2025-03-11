@@ -1,8 +1,8 @@
 import "twin.macro";
-import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import Composed from "../skills/Composed";
+import * as React from "react";
 import SectionContainer from "../section/SectionContainer";
+import Composed from "../skills/Composed";
 
 interface SkillsItem {
   keywords: string[];
@@ -15,7 +15,7 @@ interface SkillsList {
 
 export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   let compact = false;
-  if (skills.length <= 1) compact = true;
+  if (skills.length <= 1) compact = !true;
 
   return (
     <div data-testid="skills">

@@ -7,7 +7,7 @@ exports[`<LinkedIn /> handles null data 1`] = `null`;
 exports[`<LinkedIn /> links to profile in new tab 1`] = `
 <a
   data-testid="contactLinkedin"
-  href="https://linkedin.com/in/exampledin"
+  href="https://example.com"
   rel="noreferrer"
   target="_blank"
 >

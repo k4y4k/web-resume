@@ -1,10 +1,10 @@
 import * as React from "react";
 import tw, { css } from "twin.macro";
+import transformArrayToBulletPoints from "../../helpers/transformArrayToBulletPoints";
 import Dates from "./ItemDates";
 import Details from "./ItemDetails";
 import Subtitle from "./ItemSubtitle";
 import Title from "./ItemTitle";
-import transformArrayToBulletPoints from "../../helpers/transformArrayToBulletPoints";
 
 interface ItemContainerTypes {
   // experience
@@ -22,6 +22,7 @@ interface ItemContainerTypes {
 
   // link
   link?: string;
+  // rawDates?: string;
 }
 
 const itemStyles = css`
@@ -43,7 +44,7 @@ const ItemContainer = ({
   studyType,
   courses,
   link,
-}: ItemContainerTypes): JSX.Element => {
+}: ItemContainerTypes) => {
   let studyTitle = "";
   let studyDetails = "";
 
@@ -67,7 +68,7 @@ const ItemContainer = ({
   return (
     <div data-testid="sectionItemContainer" css={itemStyles}>
       <Title title={title ?? studyTitle} />
-      <div data-testid="byline" tw="italic">
+      <div data-testid="byline" tw="italic mb-1">
         {displaySubtitle ? (
           <>
             <Subtitle link={link} subtitle={subtitle ?? institution} />

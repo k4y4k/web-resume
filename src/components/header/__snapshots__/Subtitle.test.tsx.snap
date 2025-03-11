@@ -28,8 +28,6 @@ exports[`<Subtitle /> compact 1`] = `
   line-height: 2rem;
   --tw-text-opacity: 1;
   color: rgba(103,73,177,var(--tw-text-opacity));
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 <h2
@@ -47,7 +45,7 @@ exports[`<Subtitle /> lightmode 1`] = `
   font-size: 1.5rem;
   line-height: 2rem;
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(103,73,177,var(--tw-text-opacity));
 }
 
 <h2
@@ -65,9 +63,7 @@ exports[`<Subtitle /> lightmode and compact 1`] = `
   font-size: 1.5rem;
   line-height: 2rem;
   --tw-text-opacity: 1;
-  color: rgba(255,255,255,var(--tw-text-opacity));
-  font-size: 1.5rem;
-  line-height: 2rem;
+  color: rgba(103,73,177,var(--tw-text-opacity));
 }
 
 <h2

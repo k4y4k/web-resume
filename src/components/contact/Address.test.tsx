@@ -1,5 +1,5 @@
 import { render, screen, within } from "@testing-library/react";
-import * as React from "react";
+import React from "react";
 import Address from "./Address";
 
 describe("<Address />", () => {

@@ -74,14 +74,17 @@ interface workItem {
   summary: string;
   startDate: string;
   endDate: string;
-  link: string;
+  link?: string;
 }
 
 const createWork = (num: number): workItem[] => {
   const workList: workItem[] = [];
 
-  for (let i = 0; i < num + 1; i++) {
-    const newWork = {
+  for (let i = 0; i < num; i++) {
+    /** Handle cases where there is no link to the company */
+    const maybeAddLink = Math.random() >= 0.5;
+
+    const newWork: workItem = {
       company: faker.helpers.fake("{{company.name}}"),
       position: faker.helpers.fake("{{person.jobTitle}}"),
       summary: faker.helpers.fake(
@@ -93,8 +96,11 @@ const createWork = (num: number): workItem[] => {
       endDate: dayjs(faker.helpers.fake("{{date.future}}")).format(
         "YYYY-MM-DD",
       ),
-      link: faker.helpers.fake("{{internet.url}}"),
     };
+
+    if (maybeAddLink) {
+      newWork.link = faker.helpers.fake("{{internet.url}}");
+    }
 
     workList.push(newWork);
   }
@@ -211,7 +217,7 @@ const createSkills = (num: number): skillsItem[] => {
 export const createFakeData = (): string => {
   console.log("creating faker data");
   const basics = createBasics();
-  const work = createWork(Math.floor(Math.random() * 4));
+  const work = createWork(3);
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
   const education = createEducation(Math.floor(Math.random() * 2));
   const skills = createSkills(Math.floor(Math.random() * 5));

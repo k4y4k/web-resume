@@ -1,58 +1,22 @@
 import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
 import Contact from "../blocks/Contact";
 import Header from "../blocks/Header";
 import Skills from "../blocks/Skills";
 import Volunteer from "../blocks/Volunteer";
 import WorkExperience from "../blocks/WorkExperience";
+import { container, resumeContents, strip } from "./page-styles.module.css";
 
-const paperSizes = require("@5no/paper-sizes");
-const paperOptions = { dpi: 300, type: "mm" };
-export const a4Data = paperSizes("A4", paperOptions);
-
-const resumeContentStyles = css`
-  ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
-  max-height: calc( ${a4Data.heightToMillimeters()}mm * 0.8 );
-  grid-template-rows: content content content;
-  grid-template-areas:
-    "ex sk"
-    "ex sk"
-    "ex sk";
-`;
-
-export const pageContainerStyles = css`
-  ${tw`my-12 shadow-lg flex mx-auto `}
-  width: ${a4Data.widthToMillimeters()}mm;
-  max-width: ${a4Data.widthToMillimeters()}mm;
-  height: ${a4Data.heightToMillimeters()}mm;
-  max-height: ${a4Data.heightToMillimeters()}mm;
-
-  @media print {
-    ${tw`m-0 shadow-none m-0`}
-  }
-
-  @media screen and (min-width: 1200px) {
-    ${tw`my-12`}
-  }
-`;
-
-const imageStripStyles = css`
-  height: ${a4Data.heightToMillimeters()}mm;
-  width: 30mm;
-`;
-
-// FIXME: Netlify can't handle AVIF files at all
 const Resume = () => {
   const data = useStaticQuery(
     graphql`
       {
-        placeholderImage: file(relativePath: { eq: "unsplash.jpg" }) {
+        imageStrip: file(relativePath: { eq: "unsplash.jpg" }) {
           childImageSharp {
             gatsbyImageData(
               placeholder: BLURRED
-              quality: 90
+              quality: 95
               formats: [WEBP]
               height: 1333
               width: 200
@@ -64,14 +28,16 @@ const Resume = () => {
     `,
   );
 
-  const bgImage = getImage(data.placeholderImage);
+  const bgImage = getImage(data.imageStrip);
 
   return (
-    <section data-testid="resume-root" tw="bg-white" css={pageContainerStyles}>
-      {bgImage && <GatsbyImage image={bgImage} alt="" css={imageStripStyles} />}
-      <div tw="flex flex-col p-4">
+    <section data-testid="resume-root" className={container}>
+      {bgImage && <GatsbyImage image={bgImage} alt="" className={strip} />}
+      <div className="flex flex-col p-4">
         <Header isCoverLetter={false} />
-        <div css={resumeContentStyles}>
+        <div
+          className={`${resumeContents} border border-green-400 overflow-hidden`}
+        >
           <WorkExperience />
           <div style={{ gridArea: "sk" }}>
             <Contact />

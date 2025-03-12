@@ -1,5 +1,4 @@
-import * as React from "react";
-import tw from "twin.macro";
+import React from "react";
 
 interface SubtitleProps {
   subtitle: string;
@@ -11,11 +10,9 @@ const Subtitle = ({ subtitle, isCoverLetter = false }: SubtitleProps) => {
 
   return (
     <h2
-      css={[
-        tw`my-2 text-2xl `,
-        tw`text-orchid-600`,
-        isCoverLetter && tw`text-white text-xl px-6`,
-      ]}
+      className={`${
+        isCoverLetter ? "text-white text-xl px-6" : ""
+      } text-lg text-orchid-600`.trim()}
       data-testid="headerSubtitle"
     >
       {subtitle}

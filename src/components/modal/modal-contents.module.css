@@ -1,19 +1,21 @@
-p {
-  @apply mb-2;
-}
-
-a {
-  @apply p-1 px-2 underline cursor-pointer rounded-md;
-
-  &::after {
-    content: " ➜";
+.modal {
+  p {
+    @apply mb-2;
   }
 
-  &:hover {
-    @apply text-white bg-orchid-800;
-  }
-}
+  a {
+    @apply p-1 px-2 underline cursor-pointer rounded-md;
 
-span {
-  @apply mb-2 whitespace-nowrap;
+    &::after {
+      content: " ➜";
+    }
+
+    &:hover {
+      @apply text-white bg-orchid-800;
+    }
+  }
+
+  span {
+    @apply mb-2 whitespace-nowrap;
+  }
 }

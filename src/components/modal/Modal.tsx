@@ -34,7 +34,7 @@ export const Modal = () => {
   if (!modalState) return null;
 
   return (
-    <div className="!fixed top-0 z-10 flex justify-center text-center h-screen w-screen bg-[#080818]">
+    <div className="!fixed top-0 z-10 flex justify-center text-center h-screen w-screen bg-[#080818] modal">
       {bgImage && (
         <GatsbyImage
           image={bgImage}

@@ -1,6 +1,5 @@
 import { FiMapPin } from "@react-icons/all-files/fi/FiMapPin";
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React from "react";
 
 interface AddressTypes {
   city: string;
@@ -8,15 +7,6 @@ interface AddressTypes {
   region: string;
   restrictDisplay?: boolean;
 }
-
-const AddressStyles = css`
-  ${tw`whitespace-normal! flex flex-row flex-nowrap align-middle`}
-
-  .icon {
-    ${tw`flex-grow`}
-    margin-right: 8px;
-  }
-`;
 
 const Address = ({
   city,
@@ -29,7 +19,11 @@ const Address = ({
 
   // restricted mode enabled by default
   return (
-    <li css={AddressStyles} data-testid="contactAddress" id="address">
+    <li
+      className="!whitespace-normal flex flex-row flex-nowrap align-middle"
+      data-testid="contactAddress"
+      id="address"
+    >
       <FiMapPin />
       <span>
         {city}, {`${region},`} {countryCode}

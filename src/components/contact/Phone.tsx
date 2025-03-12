@@ -1,5 +1,5 @@
 import { FiPhone } from "@react-icons/all-files/fi/FiPhone";
-import * as React from "react";
+import React from "react";
 
 interface PhoneTypes {
   phone: string;

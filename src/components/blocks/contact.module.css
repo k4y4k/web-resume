@@ -1,0 +1,55 @@
+.block {
+  @apply p-0 mb-0;
+
+  li {
+    @apply py-1 mx-1 -ml-1 list-none whitespace-nowrap;
+
+    a {
+      @apply py-1 text-black no-underline;
+
+      &:hover {
+        @apply text-white bg-purple-800 rounded-md;
+
+        .icon {
+          color: white;
+        }
+      }
+
+      &::after {
+        @apply mr-1;
+        content: " ➜";
+      }
+    }
+  }
+}
+
+/*
+*
+
+const compactStyles = css`
+  .icon {
+    ${tw`text-white`}
+  }
+
+  a {
+    ${tw`pr-1`}
+  }
+
+  li,
+  a {
+    ${tw`text-white!`}
+  }
+
+  li {
+    ${tw`p-0 m-0 my-4`}
+
+    a::after {
+      content: none;
+    }
+  }
+
+  li:nth-of-type(1) {
+    ${tw`mt-0`}
+  }
+`;
+*/

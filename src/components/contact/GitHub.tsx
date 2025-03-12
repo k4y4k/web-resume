@@ -1,5 +1,5 @@
 import { FiGithub } from "@react-icons/all-files/fi/FiGithub";
-import * as React from "react";
+import React from "react";
 
 interface GitHubTypes {
   username: string | null;

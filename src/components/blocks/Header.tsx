@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
-import tw from "twin.macro";
+import React from "react";
 import Subtitle from "../header/Subtitle";
 import Title from "../header/Title";
 
@@ -19,10 +18,10 @@ export const PureHeader = ({
   subtitle,
   isCoverLetter,
 }: PureHeaderTypes) => (
-  <div data-testid="header" tw="text-center">
+  <div data-testid="header" className="text-center">
     <Title isCoverLetter={isCoverLetter} title={title} />
     <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
-    <hr css={[tw`block my-4 bg-white`]} />
+    <hr className="block my-2 bg-white mx-20" />
   </div>
 );
 

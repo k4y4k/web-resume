@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
+import React from "react";
 import ItemContainer from "../section/ItemContainer";
 import SectionContainer from "../section/SectionContainer";
 

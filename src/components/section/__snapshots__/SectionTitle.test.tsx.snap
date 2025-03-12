@@ -1,18 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionTitle /> displays title 1`] = `
-.c0 {
-  font-family: Inconsolata,monospace;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-}
-
 <h2
-  class="c0"
+  class="font-mono text-lg font-bold uppercase text-orchid-700"
   data-testid="sectionTitle"
 >
   Check this

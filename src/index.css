@@ -16,3 +16,14 @@ body {
     background: white;
   }
 }
+
+.icon {
+  @apply inline-block mx-1 text-base align-middle text-orchid-700;
+  margin-bottom: 0.125rem;
+  max-width: 15px;
+  color: inherit;
+}
+
+.border {
+  border-width: 0px !important;
+}

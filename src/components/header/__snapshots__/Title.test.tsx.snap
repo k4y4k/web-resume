@@ -3,27 +3,8 @@
 exports[`<Title /> Handles not having any data properly 1`] = `null`;
 
 exports[`<Title /> compact 1`] = `
-.c0 {
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  font-family: Inconsolata,monospace;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-  }
-}
-
 <h1
-  class="c0"
+  class="text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none"
   data-testid="headerTitle"
 >
   kayak kayak
@@ -31,27 +12,8 @@ exports[`<Title /> compact 1`] = `
 `;
 
 exports[`<Title /> displays title 1`] = `
-.c0 {
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  font-family: Inconsolata,monospace;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-  }
-}
-
 <h1
-  class="c0"
+  class="text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none"
   data-testid="headerTitle"
 >
   kayak kayak
@@ -59,27 +21,8 @@ exports[`<Title /> displays title 1`] = `
 `;
 
 exports[`<Title /> lightmode 1`] = `
-.c0 {
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  font-family: Inconsolata,monospace;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-  }
-}
-
 <h1
-  class="c0"
+  class="text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none"
   data-testid="headerTitle"
 >
   kayak kayak
@@ -87,27 +30,8 @@ exports[`<Title /> lightmode 1`] = `
 `;
 
 exports[`<Title /> lightmode and compact 1`] = `
-.c0 {
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-  margin-bottom: 0px;
-  margin-top: 0.5rem;
-  font-family: Inconsolata,monospace;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-}
-
-@media print {
-  .c0 {
-    margin: 0px;
-    --tw-shadow: 0 0 #0000;
-    box-shadow: var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);
-  }
-}
-
 <h1
-  class="c0"
+  class="text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none"
   data-testid="headerTitle"
 >
   kayak kayak

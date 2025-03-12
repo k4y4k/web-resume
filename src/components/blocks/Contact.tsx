@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React from "react";
 import getNetworkUsernames from "../../helpers/getNetworkUsernames";
 import Address from "../contact/Address";
 import Email from "../contact/Email";
@@ -8,6 +7,8 @@ import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
 import Phone from "../contact/Phone";
 import SectionContainer from "../section/SectionContainer";
+// @ts-ignore
+import { block } from "./contact.module.css";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;
@@ -30,64 +31,6 @@ interface ContactTypes {
   compact?: boolean;
 }
 
-const iconStyles = css`
-  ${tw`p-0 m-0`}
-
-  .icon {
-    ${tw`inline-block mx-1 text-base align-middle text-orchid-700`}
-    margin-bottom: 0.125rem;
-    max-width: 15px;
-  }
-
-  li {
-    ${tw`py-1 mx-1 -ml-1 list-none whitespace-nowrap`}
-
-    a {
-      ${tw`py-1 text-black no-underline`}
-    }
-
-    a:hover {
-      ${tw`text-white bg-purple-800 rounded-md`}
-
-      .icon {
-        color: white;
-      }
-    }
-  }
-
-  a::after {
-    content: " ➜";
-    ${tw`mr-1`}
-  }
-`;
-
-const compactStyles = css`
-  .icon {
-    ${tw`text-white`}
-  }
-
-  a {
-    ${tw`pr-1`}
-  }
-
-  li,
-  a {
-    ${tw`text-white!`}
-  }
-
-  li {
-    ${tw`p-0 m-0 my-4`}
-
-    a::after {
-      content: none;
-    }
-  }
-
-  li:nth-of-type(1) {
-    ${tw`mt-0`}
-  }
-`;
-
 export const PureContact = ({
   restrictDisplay = true,
   compact = false,
@@ -103,7 +46,7 @@ export const PureContact = ({
 }: PureContactTypes) => {
   return (
     <SectionContainer onCoverLetter={compact} title="Contact">
-      <ul css={[iconStyles, compact && compactStyles]} data-testid="contact">
+      <ul className={block} data-testid="contact">
         <Phone phone={phone} />
         <Email email={email} />
         {technical && (

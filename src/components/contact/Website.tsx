@@ -1,5 +1,5 @@
 import { FiGlobe } from "@react-icons/all-files/fi/FiGlobe";
-import * as React from "react";
+import React from "react";
 
 interface WebsiteTypes {
   url: string;

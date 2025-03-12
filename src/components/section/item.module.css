@@ -1,0 +1,20 @@
+:root {
+  --text-indent-size: 14px;
+}
+
+[data-testid="sectionItemContainer"] {
+  @apply my-4;
+
+  &:nth-of-type(1) {
+    @apply mt-2;
+  }
+}
+
+[data-testid="sectionItemDetails"] {
+  ul {
+    @apply list-disc list-inside;
+
+    text-indent: calc(var(--text-indent-size) * -1);
+    padding-left: var(--text-indent-size);
+  }
+}

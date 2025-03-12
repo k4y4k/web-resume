@@ -1,7 +1,7 @@
 import { IconContext } from "@react-icons/all-files";
 import dayjs from "dayjs";
 import { graphql } from "gatsby";
-import * as React from "react";
+import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import Modal from "../components/modal/Modal";
 import CoverLetter from "../components/pages/CoverLetter";
@@ -12,18 +12,11 @@ const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
       <ReduxProvider store={store}>
-        <main
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "place-content-evenly",
-          }}
-        >
-          <Modal />
+        <main className="flex flex-row flex-wrap content-evenly">
+          {/* <Modal /> */}
 
-          {/* <Resume /> */}
-          {/* <CoverLetter /> */}
+          <Resume />
+          <CoverLetter />
         </main>
       </ReduxProvider>
     </IconContext.Provider>

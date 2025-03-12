@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
+import React from "react";
 import ItemContainer from "../section/ItemContainer";
 import SectionContainer from "../section/SectionContainer";
 
@@ -13,18 +13,23 @@ interface ExperienceItem {
   summary: string;
   organization?: string;
   link: string;
-  // rawDates?: string;
+
+  relevant?: boolean;
 }
 
 interface two {
   history: ExperienceItem[];
 }
 
-export const PureWorkExperience = ({ history }: two): JSX.Element => {
+export const PureWorkExperience = ({ history }: two) => {
   return (
     <div data-testid="experience">
       <SectionContainer title="Volunteering">
         {history.map((el) => {
+          // `relevant` is null if unset, but can be set to `true`
+          // to exclude an entry, pass in false
+          if (el.relevant === false) return null;
+
           return (
             <ItemContainer
               key={el.organization + el.position}
@@ -34,7 +39,6 @@ export const PureWorkExperience = ({ history }: two): JSX.Element => {
               title={el.position}
               subtitle={el.company ?? el.organization}
               link={el.link}
-              // rawDates={el.rawDates}
             />
           );
         })}
@@ -43,7 +47,7 @@ export const PureWorkExperience = ({ history }: two): JSX.Element => {
   );
 };
 
-export const WorkExperience = (): JSX.Element => {
+export const WorkExperience = () => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {
@@ -55,6 +59,8 @@ export const WorkExperience = (): JSX.Element => {
             startDate
             position
             organization
+            # bool; show/hide individual experiences
+            relevant
           }
         }
       }

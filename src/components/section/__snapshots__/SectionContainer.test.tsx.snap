@@ -1,52 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SectionContainer /> composes title and >1  items 1`] = `
-.c2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.c2:nth-of-type(1) {
-  margin-top: 0.5rem;
-}
-
-.c3 {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
-.c1 {
-  font-family: Inconsolata,monospace;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  color: rgba(77,54,140,var(--tw-text-opacity));
-}
-
-.c0 {
-  padding: 1rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 <div
-  class="c0"
+  class="p-4 py-2 border-blue-400 border"
   data-testid="sectionContainer"
 >
   <h2
-    class="c1"
+    class="font-mono text-lg font-bold uppercase text-orchid-700"
     data-testid="sectionTitle"
   >
     Reason #8: Regret
   </h2>
   <div
-    class="c2"
+    class="border border-red-400"
     data-testid="sectionItemContainer"
   >
     <div
-      class="c3"
+      class="italic mb-1"
       data-testid="byline"
     />
   </div>

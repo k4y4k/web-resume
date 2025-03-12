@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import * as React from "react";
+import React from "react";
 import Title from "./Title";
 
 describe("<Title />", () => {
   test("Handles not having any data properly", () => {
-    render(<Title lightmode={false} compact={false} title="" />);
+    render(<Title title="" />);
 
     const title = screen.queryByTestId("headerTitle");
     expect(title).not.toBeInTheDocument();
@@ -12,7 +12,7 @@ describe("<Title />", () => {
   });
 
   test("displays title", () => {
-    render(<Title lightmode={false} compact={false} title="kayak kayak" />);
+    render(<Title title="kayak kayak" />);
 
     const title = screen.getByTestId("headerTitle");
     expect(title).toHaveTextContent("kayak kayak");
@@ -20,7 +20,7 @@ describe("<Title />", () => {
   });
 
   test("lightmode", () => {
-    render(<Title lightmode={true} compact={false} title="kayak kayak" />);
+    render(<Title title="kayak kayak" />);
 
     const title = screen.getByTestId("headerTitle");
     expect(title).toHaveTextContent("kayak kayak");
@@ -28,7 +28,7 @@ describe("<Title />", () => {
   });
 
   test("compact", () => {
-    render(<Title lightmode={false} compact={true} title="kayak kayak" />);
+    render(<Title title="kayak kayak" />);
 
     const title = screen.getByTestId("headerTitle");
     expect(title).toHaveTextContent("kayak kayak");
@@ -36,7 +36,7 @@ describe("<Title />", () => {
   });
 
   test("lightmode and compact", () => {
-    render(<Title lightmode={true} compact={true} title="kayak kayak" />);
+    render(<Title title="kayak kayak" />);
 
     const title = screen.getByTestId("headerTitle");
     expect(title).toHaveTextContent("kayak kayak");

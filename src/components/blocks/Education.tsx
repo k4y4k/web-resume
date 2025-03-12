@@ -1,6 +1,5 @@
-import "twin.macro";
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
+import React from "react";
 import ItemContainer from "../section/ItemContainer";
 import SectionContainer from "../section/SectionContainer";
 
@@ -17,7 +16,7 @@ interface two {
   history: EducationItem[];
 }
 
-export const PureEducation = ({ history }: two): JSX.Element => {
+export const PureEducation = ({ history }: two) => {
   return (
     <div data-testid="education">
       <SectionContainer title="Education">
@@ -39,7 +38,7 @@ export const PureEducation = ({ history }: two): JSX.Element => {
   );
 };
 
-export const Education = (): JSX.Element => {
+export const Education = () => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

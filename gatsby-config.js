@@ -1,10 +1,13 @@
 const path = require("node:path");
 
+const isDev = process.env.NODE_ENV.toLowerCase().includes("dev");
+
 module.exports = {
   flags: {
     DEV_SSR: true,
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
+    DETECT_NODE_MUTATIONS: isDev,
   },
   graphqlTypegen: true,
   pathPrefix: "/web-resume",

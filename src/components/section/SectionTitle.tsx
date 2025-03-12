@@ -1,5 +1,4 @@
-import "twin.macro";
-import * as React from "react";
+import React from "react";
 
 interface SectionTitleTypes {
   title: string;
@@ -17,7 +16,7 @@ const SectionTitle = ({
   return (
     <h2
       data-testid="sectionTitle"
-      tw="font-mono text-lg font-bold uppercase text-orchid-700"
+      className="font-mono text-lg font-bold uppercase text-orchid-700"
     >
       {title}
     </h2>

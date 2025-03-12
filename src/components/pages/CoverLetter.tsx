@@ -1,21 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React from "react";
 import Contact from "../blocks/Contact";
 import Header from "../blocks/Header";
 import CoverLetterContents from "../cover-letter/CoverLetterContents";
-import { a4Data, pageContainerStyles } from "./Resume";
-
-const coverLetterContentStyles = css`
-  ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
-  height: ${a4Data.heightToMillimeters()}mm;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "header txt";
-`;
+import { container, letterContents } from "./page-styles.module.css";
 
 // FIXME: Netlify can't handle AVIF files at all
-const CoverLetter = (): JSX.Element => {
+const CoverLetter = () => {
   const { headerImage } = useStaticQuery(graphql`
     {
       headerImage: file(relativePath: { eq: "unsplash.jpg" }) {
@@ -36,8 +28,8 @@ const CoverLetter = (): JSX.Element => {
   const hdImg = getImage(headerImage);
 
   return (
-    <div css={pageContainerStyles} tw="bg-white p-0 my-8">
-      <div css={coverLetterContentStyles}>
+    <div className={`${container} p-0 my-8`}>
+      <div className={letterContents}>
         {hdImg && (
           <GatsbyImage alt="" style={{ gridArea: "header" }} image={hdImg} />
         )}
@@ -45,7 +37,7 @@ const CoverLetter = (): JSX.Element => {
           <Header isCoverLetter />
           <Contact restrictDisplay={false} compact={true} />
         </section>
-        <div style={{ gridArea: "txt" }} tw="px-12">
+        <div style={{ gridArea: "txt" }} className="px-12">
           <CoverLetterContents />
         </div>
       </div>

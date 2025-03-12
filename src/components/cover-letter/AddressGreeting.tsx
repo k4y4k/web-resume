@@ -5,12 +5,9 @@ interface AddressGreetingProps {
   letterContents: {
     childMarkdownRemark: {
       frontmatter: {
-        recruiterFirstName: string;
-        recruiterLastName: string;
+        recruiter: string;
         company?: string;
-
         location?: string;
-
         city?: string;
         countryCode?: string;
         postalCode?: string;
@@ -27,12 +24,9 @@ const AddressGreeting = () => {
       letterContents: file(extension: { eq: "md" }, name: { eq: "letter" }) {
         childMarkdownRemark {
           frontmatter {
-            recruiterFirstName
-            recruiterLastName
+            recruiter
             company
-
             location
-
             address
             city
             countryCode
@@ -45,8 +39,7 @@ const AddressGreeting = () => {
   `);
 
   const {
-    recruiterFirstName,
-    recruiterLastName,
+    recruiter,
     location,
     city,
     countryCode,
@@ -58,22 +51,21 @@ const AddressGreeting = () => {
 
   return (
     <>
-      <p className={location ? "" : "!pb-0"}>
-        {recruiterFirstName}{" "}
-        {recruiterLastName === "_" ? null : recruiterLastName}
-      </p>
-      <p className="!pb-0">{company}</p>
+      {recruiter && <p className="!pb-0">{recruiter}</p>}
+      {company && <p className="!pb-0">{company}</p>}
       {location && <p className="pb-0">{location}</p>}
       {!location && (
         <>
-          <p className="!pb-0">{address}</p>
+          {address && <p className="!pb-0">{address}</p>}
           <p>
             {city} {countryCode} {region} {postalCode}
           </p>
         </>
       )}
 
-      <h1 className="my-2 font-bold text-xl">Dear {recruiterFirstName},</h1>
+      <h1 className="my-2 font-bold text-xl">
+        Dear {recruiter.split(" ")[0]},
+      </h1>
     </>
   );
 };

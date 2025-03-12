@@ -230,21 +230,11 @@ fs.writeFileSync("src/data/data.json", createFakeData());
 const createFakeCoverLetter = (): string => {
   console.log("creating faker cover letter...");
 
-  const decideBeg = Math.random() > 0.32;
-  let contents: string;
+  const contents = faker.helpers.fake(
+    "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
+  );
 
-  if (decideBeg) {
-    console.log("getting desperate...");
-    contents = "please ".repeat(Math.ceil(Math.random() * 30) + 1);
-  } else {
-    console.log("remaining composed...");
-    contents = faker.helpers.fake(
-      "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
-    );
-  }
-
-  const recruiterFirstName: string = faker.helpers.fake("{{person.firstName}}");
-  const recruiterLastName: string = faker.helpers.fake("{{person.lastName}}");
+  const recruiter: string = faker.helpers.fake("{{person.firstName}}");
   const location: string = faker.helpers.fake("{{location.streetAddress}}");
   const postalCode: string = faker.helpers.fake("{{location.zipCode}}");
   const city: string = faker.helpers.fake("{{location.city}}");
@@ -255,8 +245,7 @@ const createFakeCoverLetter = (): string => {
   return `---
 location: ${location}
 company: ${company}
-recruiterFirstName: ${recruiterFirstName}
-recruiterLastName: ${recruiterLastName}
+recruiter: ${recruiter}
 postalCode: ${postalCode}
 city: ${city}
 countryCode: ${countryCode}

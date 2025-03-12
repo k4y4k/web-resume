@@ -15,9 +15,9 @@ const CoverLetter = () => {
           gatsbyImageData(
             formats: [WEBP]
             placeholder: BLURRED
-            quality: 90
+            quality: 95
             height: 2000
-            width: 2000
+            width: 500
             transformOptions: { rotate: 0, fit: COVER, cropFocus: CENTER }
           )
         }

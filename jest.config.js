@@ -4,7 +4,7 @@ module.exports = {
   transform: {
     "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js",
   },
-  setupFilesAfterEnv: [path.resolve(__dirname, ".//setup-test-env.js")],
+  setupFilesAfterEnv: [path.resolve(__dirname, ".//setup-test-env.ts")],
 
   moduleNameMapper: {
     ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",

@@ -16,3 +16,4 @@ build/
 !.yarn/versions
 .pnp.*
 src/gatsby-types.d.ts
+package-lock.json

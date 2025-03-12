@@ -1,6 +1,7 @@
+// @ts-check
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       "2xl": { max: "1535px" },
@@ -24,6 +25,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        current: "currentColor",
         chestnut: {
           50: "#fcfbfa",
           100: "#faf0eb",
@@ -151,8 +153,9 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
+  content: [
+    "./src/pages/**/*.{js,jsx,ts,tsx}",
+    "./src/components/**/*.{js,jsx,ts,tsx}",
+  ],
 };

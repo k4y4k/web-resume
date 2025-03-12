@@ -1,5 +1,4 @@
-import "twin.macro";
-import * as React from "react";
+import React from "react";
 import ItemTitle from "../section/ItemTitle";
 import Bucket from "./Bucket";
 
@@ -10,13 +9,7 @@ interface ComposedTypes {
   compact: boolean;
 }
 
-const Composed = ({
-  heading,
-  bucket,
-  compact,
-}: ComposedTypes): JSX.Element | null => {
-  // switching the logic was the only way to make this work
-
+const Composed = ({ heading, bucket, compact }: ComposedTypes) => {
   if (JSON.stringify(bucket) === "[]") return null;
 
   if (JSON.stringify(bucket) === '[""]') return null;
@@ -24,13 +17,11 @@ const Composed = ({
   if (heading === "") return null;
 
   return (
-    <div data-testid="skillsComposed" tw="my-2">
+    <div data-testid="skillsComposed" className="my-2">
       {compact ? null : <ItemTitle title={heading} />}
       <Bucket skills={bucket} />
     </div>
   );
-
-  // return null
 };
 
 export default Composed;

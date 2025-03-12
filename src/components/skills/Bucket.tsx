@@ -1,10 +1,10 @@
-import * as React from "react";
+import React from "react";
 
 interface BucketTypes {
   skills: string[];
 }
 
-const Bucket = ({ skills }: BucketTypes): JSX.Element | null => {
+const Bucket = ({ skills }: BucketTypes) => {
   if (skills.length === 1 && skills[0] === "") return null;
 
   return (

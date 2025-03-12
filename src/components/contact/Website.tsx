@@ -1,11 +1,11 @@
 import { FiGlobe } from "@react-icons/all-files/fi/FiGlobe";
-import * as React from "react";
+import React from "react";
 
 interface WebsiteTypes {
   url: string;
 }
 
-const Website = ({ url }: WebsiteTypes): JSX.Element | null => {
+const Website = ({ url }: WebsiteTypes) => {
   if (url === "") return null;
 
   const stripped = url?.replace(/https?:\/\//i, "");

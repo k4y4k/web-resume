@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
-import * as React from "react";
+import React from "react";
 import { PureWorkExperience, WorkExperience } from "./WorkExperience";
 
 describe("<Experience />", () => {

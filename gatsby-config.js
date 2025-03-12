@@ -1,10 +1,13 @@
 const path = require("node:path");
 
+const isDev = process.env.NODE_ENV.toLowerCase().includes("dev");
+
 module.exports = {
   flags: {
     DEV_SSR: true,
     FAST_DEV: true,
     PARALLEL_SOURCING: true,
+    DETECT_NODE_MUTATIONS: isDev,
   },
   graphqlTypegen: true,
   pathPrefix: "/web-resume",
@@ -13,6 +16,7 @@ module.exports = {
   },
   trailingSlash: "always",
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
     "gatsby-plugin-image",
@@ -48,6 +52,5 @@ module.exports = {
         path: path.join(__dirname, "/src/data/"),
       },
     },
-    "gatsby-plugin-styled-components",
   ],
 };

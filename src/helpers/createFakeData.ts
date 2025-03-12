@@ -74,14 +74,17 @@ interface workItem {
   summary: string;
   startDate: string;
   endDate: string;
-  link: string;
+  link?: string;
 }
 
 const createWork = (num: number): workItem[] => {
   const workList: workItem[] = [];
 
-  for (let i = 0; i < num + 1; i++) {
-    const newWork = {
+  for (let i = 0; i < num; i++) {
+    /** Handle cases where there is no link to the company */
+    const maybeAddLink = Math.random() >= 0.5;
+
+    const newWork: workItem = {
       company: faker.helpers.fake("{{company.name}}"),
       position: faker.helpers.fake("{{person.jobTitle}}"),
       summary: faker.helpers.fake(
@@ -93,8 +96,11 @@ const createWork = (num: number): workItem[] => {
       endDate: dayjs(faker.helpers.fake("{{date.future}}")).format(
         "YYYY-MM-DD",
       ),
-      link: faker.helpers.fake("{{internet.url}}"),
     };
+
+    if (maybeAddLink) {
+      newWork.link = faker.helpers.fake("{{internet.url}}");
+    }
 
     workList.push(newWork);
   }
@@ -211,7 +217,7 @@ const createSkills = (num: number): skillsItem[] => {
 export const createFakeData = (): string => {
   console.log("creating faker data");
   const basics = createBasics();
-  const work = createWork(Math.floor(Math.random() * 4));
+  const work = createWork(3);
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
   const education = createEducation(Math.floor(Math.random() * 2));
   const skills = createSkills(Math.floor(Math.random() * 5));
@@ -222,19 +228,28 @@ export const createFakeData = (): string => {
 fs.writeFileSync("src/data/data.json", createFakeData());
 
 const createFakeCoverLetter = (): string => {
-  console.log("creating faker cover letter");
+  console.log("creating faker cover letter...");
 
-  const contents: string = faker.helpers.fake(
+  const contents = faker.helpers.fake(
     "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
   );
-  const recruiterFirstName: string = faker.helpers.fake("{{person.firstName}}");
-  const recruiterLastName: string = faker.helpers.fake("{{person.lastName}}");
+
+  const recruiter: string = faker.helpers.fake("{{person.firstName}}");
   const location: string = faker.helpers.fake("{{location.streetAddress}}");
+  const postalCode: string = faker.helpers.fake("{{location.zipCode}}");
+  const city: string = faker.helpers.fake("{{location.city}}");
+  const countryCode: string = faker.helpers.fake("{{location.countryCode}}");
+  const region: string = faker.helpers.fake("{{location.state}}");
+  const company: string = faker.helpers.fake("{{company.name}}");
 
   return `---
 location: ${location}
-recruiterFirstName: ${recruiterFirstName}
-recruiterLastName: ${recruiterLastName}
+company: ${company}
+recruiter: ${recruiter}
+postalCode: ${postalCode}
+city: ${city}
+countryCode: ${countryCode}
+region: ${region}
 ---
 
 ${contents}`;

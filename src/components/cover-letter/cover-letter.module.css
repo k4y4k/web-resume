@@ -1,0 +1,19 @@
+.letter-body {
+  @apply text-sm py-8 px-16 w-full;
+
+  p {
+    @apply pb-4 last-of-type:pb-0;
+  }
+
+  h1 {
+    @apply pb-1;
+  }
+
+  ul {
+    @apply list-disc mb-4;
+  }
+
+  li {
+    @apply mb-2 ml-[0.33in];
+  }
+}

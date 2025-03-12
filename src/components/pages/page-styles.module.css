@@ -1,0 +1,52 @@
+:root {
+  --strip-width: 7mm;
+}
+
+.container {
+  @apply my-12 shadow-lg flex mx-auto bg-white;
+
+  width: 210mm;
+  max-width: 210mm;
+  height: 297mm;
+  max-height: 297mm;
+}
+
+@media print {
+  .container {
+    @apply mb-0 shadow-none m-0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    @apply my-12;
+  }
+}
+
+.strip {
+  width: var(--strip-width);
+  height: 297mm;
+  flex-shrink: 0;
+}
+
+.resume-contents {
+  @apply grid grid-flow-row-dense grid-cols-2 text-sm overflow-hidden;
+
+  grid-template-rows: content content content;
+  grid-template-areas:
+    "ex sk"
+    "ex sk"
+    "ex sk";
+}
+
+.letter-contents {
+  @apply grid w-full;
+
+  height: 297mm;
+
+  grid-template-columns: var(--strip-width) auto;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "img title"
+    "img body";
+}

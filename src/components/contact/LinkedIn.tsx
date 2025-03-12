@@ -1,12 +1,12 @@
 import { FiLinkedin } from "@react-icons/all-files/fi/FiLinkedin";
-import * as React from "react";
+import React from "react";
 
 interface LinkedInTypes {
   username: string | null;
   url: string | null;
 }
 
-const LinkedIn = ({ username, url }: LinkedInTypes): JSX.Element | null => {
+const LinkedIn = ({ username, url }: LinkedInTypes) => {
   if (!url || !username || url === "" || username === "") return null;
 
   return (
@@ -17,7 +17,7 @@ const LinkedIn = ({ username, url }: LinkedInTypes): JSX.Element | null => {
         href={url}
         target="_blank"
       >
-        <FiLinkedin /> {username}
+        <FiLinkedin /> {url.replace("https://", "")}
       </a>
     </li>
   );

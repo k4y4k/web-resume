@@ -1,46 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemContainer /> conditionally add the seperator between name and date date only 1`] = `
-.c3 ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  text-indent: -21px;
-  padding-left: 21px;
-}
-
-.c1 {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-}
-
-.c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.c0:nth-of-type(1) {
-  margin-top: 0.5rem;
-}
-
-.c2 {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
+    class="mb-1 font-bold text-lg leading-5"
     data-testid="itemTitle"
   >
     President
   </h1>
   <div
-    class="c2"
+    class="italic mb-1"
     data-testid="byline"
   >
     <span
@@ -52,7 +23,6 @@ exports[`<ItemContainer /> conditionally add the seperator between name and date
     </span>
   </div>
   <div
-    class="c3"
     data-testid="sectionItemDetails"
   >
     <p>
@@ -63,46 +33,17 @@ exports[`<ItemContainer /> conditionally add the seperator between name and date
 `;
 
 exports[`<ItemContainer /> education item education item 1`] = `
-.c3 ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  text-indent: -21px;
-  padding-left: 21px;
-}
-
-.c1 {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-}
-
-.c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.c0:nth-of-type(1) {
-  margin-top: 0.5rem;
-}
-
-.c2 {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
+    class="mb-1 font-bold text-lg leading-5"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
   <div
-    class="c2"
+    class="italic mb-1"
     data-testid="byline"
   >
     <span
@@ -120,7 +61,6 @@ exports[`<ItemContainer /> education item education item 1`] = `
     </span>
   </div>
   <div
-    class="c3"
     data-testid="sectionItemDetails"
   >
     <ul>
@@ -137,39 +77,17 @@ exports[`<ItemContainer /> education item education item 1`] = `
 `;
 
 exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
-.c1 {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-}
-
-.c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.c0:nth-of-type(1) {
-  margin-top: 0.5rem;
-}
-
-.c2 {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
+    class="mb-1 font-bold text-lg leading-5"
     data-testid="itemTitle"
   >
     Bachelor of Software Development
   </h1>
   <div
-    class="c2"
+    class="italic mb-1"
     data-testid="byline"
   >
     <span
@@ -190,51 +108,22 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 `;
 
 exports[`<ItemContainer /> experience item experience item 1`] = `
-.c3 ul {
-  list-style-type: disc;
-  list-style-position: inside;
-  text-indent: -21px;
-  padding-left: 21px;
-}
-
-.c1 {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-}
-
-.c0 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.c0:nth-of-type(1) {
-  margin-top: 0.5rem;
-}
-
-.c2 {
-  font-style: italic;
-  margin-bottom: 0.25rem;
-}
-
 <div
-  class="c0"
   data-testid="sectionItemContainer"
 >
   <h1
-    class="c1"
+    class="mb-1 font-bold text-lg leading-5"
     data-testid="itemTitle"
   >
     President
   </h1>
   <div
-    class="c2"
+    class="italic mb-1"
     data-testid="byline"
   >
     <a
+      class="underline text-[#4d368c]"
       href="https://duckduckgo.com"
-      style="text-decoration: underline; color: rgb(77, 54, 140);"
     >
       <span
         data-testid="itemSubtitle"
@@ -252,7 +141,6 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
     </span>
   </div>
   <div
-    class="c3"
     data-testid="sectionItemDetails"
   >
     <p>

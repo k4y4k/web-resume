@@ -2,14 +2,14 @@ import dayjs from "dayjs";
 import customParseFormat from "dayjs/plugin/customParseFormat";
 import timezone from "dayjs/plugin/timezone";
 import utc from "dayjs/plugin/utc";
-import * as React from "react";
+import React from "react";
 
 interface ItemDatesTypes {
   to?: string;
   from: string;
 }
 
-const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
+const ItemDates = ({ to, from }: ItemDatesTypes) => {
   if (from === "") return null;
 
   dayjs.extend(customParseFormat);

@@ -1,0 +1,42 @@
+.block {
+  @apply p-0 mb-0;
+
+  li {
+    @apply py-1 mx-1 -ml-1 list-none whitespace-nowrap;
+
+    a {
+      @apply py-1 text-black no-underline;
+
+      &:hover {
+        @apply text-white bg-purple-800 rounded-md;
+
+        .icon {
+          color: white;
+        }
+      }
+
+      &::after {
+        @apply mr-1;
+        content: " ➜";
+      }
+    }
+  }
+}
+
+.cover-letter {
+  @apply text-sm flex justify-center;
+
+  li {
+    a {
+      @apply flex mx-2 items-center;
+
+      &::after {
+        @apply !hidden;
+      }
+
+      svg {
+        @apply mx-1;
+      }
+    }
+  }
+}

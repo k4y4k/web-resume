@@ -1,41 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
-<span>
+<span
+  class="ml-[3px]"
+>
   Example City
   , 
-  Example State,
-   
-  ZZ
+  Example State
 </span>
 `;
 
 exports[`<Address /> Is formatted correctly street name + number on one line 1`] = `
-.c0 {
-  white-space: normal !important;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  vertical-align: middle;
-}
-
-.c0 .icon {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-right: 8px;
-}
-
 <li
-  class="c0"
+  class="!whitespace-normal flex flex-row flex-nowrap align-middle"
   data-testid="contactAddress"
   id="address"
 >
@@ -59,42 +36,19 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
       r="3"
     />
   </svg>
-  <span>
+  <span
+    class="ml-[3px]"
+  >
     Example City
     , 
-    Example State,
-     
-    EX
+    Example State
   </span>
 </li>
 `;
 
 exports[`<Address /> Is not about to dox me only displays City / State when RESTRICT_ADDRESS env var is passed in 1`] = `
-.c0 {
-  white-space: normal !important;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  vertical-align: middle;
-}
-
-.c0 .icon {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-right: 8px;
-}
-
 <li
-  class="c0"
+  class="!whitespace-normal flex flex-row flex-nowrap align-middle"
   data-testid="contactAddress"
   id="address"
 >
@@ -118,12 +72,12 @@ exports[`<Address /> Is not about to dox me only displays City / State when REST
       r="3"
     />
   </svg>
-  <span>
+  <span
+    class="ml-[3px]"
+  >
     Example City
     , 
-    Example State,
-     
-    ZZ
+    Example State
   </span>
 </li>
 `;

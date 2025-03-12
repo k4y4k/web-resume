@@ -1,6 +1,5 @@
-import "twin.macro";
 import { graphql, useStaticQuery } from "gatsby";
-import * as React from "react";
+import React from "react";
 import SectionContainer from "../section/SectionContainer";
 import Composed from "../skills/Composed";
 
@@ -13,7 +12,7 @@ interface SkillsList {
   skills: SkillsItem[];
 }
 
-export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
+export const PureSkills = ({ skills }: SkillsList) => {
   let compact = false;
   if (skills.length <= 1) compact = !true;
 
@@ -33,7 +32,7 @@ export const PureSkills = ({ skills }: SkillsList): JSX.Element => {
   );
 };
 
-export const Skills = (): JSX.Element => {
+export const Skills = () => {
   const data = useStaticQuery(graphql`
     {
       file(name: { eq: "data" }, extension: { eq: "json" }) {

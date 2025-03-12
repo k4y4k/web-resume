@@ -1,15 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemTitle /> displays title 1`] = `
-.c0 {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.25rem;
-}
-
 <h1
-  class="c0"
+  class="mb-1 font-bold text-lg leading-5"
   data-testid="itemTitle"
 >
   My Frankly Astounding Thing

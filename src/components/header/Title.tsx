@@ -1,18 +1,9 @@
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React from "react";
 
 interface TitleProps {
   title: string;
   isCoverLetter?: boolean;
 }
-
-const titleStyles = css`
-  ${tw`text-orchid-600 mb-0 mt-2 font-mono text-4xl font-bold`}
-
-  @media print {
-    ${tw`m-0 shadow-none m-0`}
-  }
-`;
 
 const Title = ({ title, isCoverLetter = false }: TitleProps) => {
   if (title === "") return null;
@@ -20,7 +11,12 @@ const Title = ({ title, isCoverLetter = false }: TitleProps) => {
   return (
     <h1
       data-testid="headerTitle"
-      css={[titleStyles, isCoverLetter && tw`text-white text-3xl pt-5`]}
+      className={
+        // [INFO] notice that the modifiers come first, before the base styles
+        `${
+          isCoverLetter ? "text-3xl pt-5" : ""
+        } text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none`.trim()
+      }
     >
       {title}
     </h1>

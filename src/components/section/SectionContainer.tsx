@@ -1,25 +1,17 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React, { type ReactNode, type ReactElement } from "react";
 import SectionTitle from "./SectionTitle";
 
 interface SectionContainerTypes {
   title: string;
-  children: React.ReactNode;
-  onCoverLetter?: boolean;
+  children: ReactNode;
 }
-
-const sectionStyles = css`
-  ${tw`p-4 py-2`}
-`;
 
 const SectionContainer = ({
   title,
   children,
-  onCoverLetter = false,
-}: SectionContainerTypes): React.ReactElement => (
-  <div data-testid="sectionContainer" css={sectionStyles}>
-    <SectionTitle onCoverLetter={onCoverLetter} title={title} />
+}: SectionContainerTypes): ReactElement => (
+  <div data-testid="sectionContainer" className="p-4 py-2">
+    <SectionTitle title={title} />
     {children}
   </div>
 );

@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Subtitle /> Displays subtitle 1`] = `
-.c0 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-}
-
 <h2
-  class="c0"
+  class="text-lg text-orchid-600"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks
@@ -21,17 +12,8 @@ exports[`<Subtitle /> Displays subtitle 1`] = `
 exports[`<Subtitle /> Handles not having data 1`] = `null`;
 
 exports[`<Subtitle /> compact 1`] = `
-.c0 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-}
-
 <h2
-  class="c0"
+  class="text-lg text-orchid-600"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks
@@ -39,17 +21,8 @@ exports[`<Subtitle /> compact 1`] = `
 `;
 
 exports[`<Subtitle /> lightmode 1`] = `
-.c0 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-}
-
 <h2
-  class="c0"
+  class="text-lg text-orchid-600"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks
@@ -57,17 +30,8 @@ exports[`<Subtitle /> lightmode 1`] = `
 `;
 
 exports[`<Subtitle /> lightmode and compact 1`] = `
-.c0 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  --tw-text-opacity: 1;
-  color: rgba(103,73,177,var(--tw-text-opacity));
-}
-
 <h2
-  class="c0"
+  class="text-lg text-orchid-600"
   data-testid="headerSubtitle"
 >
   lead singer of kayak and the kayaks

@@ -1,30 +1,21 @@
 import { IconContext } from "@react-icons/all-files";
-import * as React from "react";
-import { GlobalStyles } from "twin.macro";
-import "../index.css";
 import dayjs from "dayjs";
 import { graphql } from "gatsby";
+import React from "react";
 import { Provider as ReduxProvider } from "react-redux";
 import Modal from "../components/modal/Modal";
 import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
 import { store } from "../store";
 
+const isDev = process.env.NODE_ENV?.toLowerCase().includes("dev");
+
 const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
       <ReduxProvider store={store}>
-        <GlobalStyles />
-
-        <main
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            justifyContent: "place-content-evenly",
-          }}
-        >
-          <Modal />
+        <main className="flex flex-row flex-wrap content-evenly">
+          {!isDev && <Modal />}
 
           <Resume />
           <CoverLetter />
@@ -53,7 +44,7 @@ export function Head({ data }) {
     <>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <title>{`${name} - Resume - ${dayjs().format("DD-MM-YYYY")}`}</title>
+      <title>{`${name} - Resume - ${dayjs().format("YYYY")}`}</title>
     </>
   );
 }

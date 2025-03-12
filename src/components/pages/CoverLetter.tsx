@@ -1,21 +1,13 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as React from "react";
-import tw, { css } from "twin.macro";
+import React from "react";
 import Contact from "../blocks/Contact";
 import Header from "../blocks/Header";
 import CoverLetterContents from "../cover-letter/CoverLetterContents";
-import { a4Data, pageContainerStyles } from "./Resume";
+import { letterBody } from "../cover-letter/cover-letter.module.css";
+import { container, letterContents } from "./page-styles.module.css";
 
-const coverLetterContentStyles = css`
-  ${tw`grid grid-flow-row-dense grid-cols-2 text-sm `}
-  height: ${a4Data.heightToMillimeters()}mm;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "header txt";
-`;
-
-// FIXME: Netlify can't handle AVIF files at all
-const CoverLetter = (): JSX.Element => {
+const CoverLetter = () => {
   const { headerImage } = useStaticQuery(graphql`
     {
       headerImage: file(relativePath: { eq: "unsplash.jpg" }) {
@@ -23,8 +15,8 @@ const CoverLetter = (): JSX.Element => {
           gatsbyImageData(
             formats: [WEBP]
             placeholder: BLURRED
-            quality: 90
-            height: 1333
+            quality: 95
+            height: 2000
             width: 500
             transformOptions: { rotate: 0, fit: COVER, cropFocus: CENTER }
           )
@@ -36,16 +28,16 @@ const CoverLetter = (): JSX.Element => {
   const hdImg = getImage(headerImage);
 
   return (
-    <div css={pageContainerStyles} tw="bg-white p-0 my-8">
-      <div css={coverLetterContentStyles}>
+    <div className={`${container} p-0 my-8`}>
+      <div className={letterContents}>
         {hdImg && (
-          <GatsbyImage alt="" style={{ gridArea: "header" }} image={hdImg} />
+          <GatsbyImage alt="" style={{ gridArea: "img" }} image={hdImg} />
         )}
-        <section style={{ gridArea: "header", zIndex: 2 }}>
+        <section style={{ gridArea: "title" }}>
           <Header isCoverLetter />
-          <Contact restrictDisplay={false} compact={true} />
+          <Contact compact={true} />
         </section>
-        <div style={{ gridArea: "txt" }} tw="px-12">
+        <div className={letterBody} style={{ gridArea: "body" }}>
           <CoverLetterContents />
         </div>
       </div>

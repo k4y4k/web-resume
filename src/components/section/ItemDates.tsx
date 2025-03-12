@@ -9,7 +9,7 @@ interface ItemDatesTypes {
   from: string;
 }
 
-const ItemDates = ({ to, from }: ItemDatesTypes): JSX.Element | null => {
+const ItemDates = ({ to, from }: ItemDatesTypes) => {
   if (from === "") return null;
 
   dayjs.extend(customParseFormat);

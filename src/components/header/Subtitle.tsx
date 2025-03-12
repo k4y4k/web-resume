@@ -11,7 +11,7 @@ const Subtitle = ({ subtitle, isCoverLetter = false }: SubtitleProps) => {
   return (
     <h2
       className={`${
-        isCoverLetter ? "text-white text-xl px-6" : ""
+        isCoverLetter ? "hidden" : ""
       } text-lg text-orchid-600`.trim()}
       data-testid="headerSubtitle"
     >

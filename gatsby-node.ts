@@ -13,6 +13,8 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
 
       type MarkdownRemarkFrontmatter implements Node {
         location: String
+        address: String
+        region: String
       }
   `);
   };

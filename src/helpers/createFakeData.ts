@@ -228,19 +228,39 @@ export const createFakeData = (): string => {
 fs.writeFileSync("src/data/data.json", createFakeData());
 
 const createFakeCoverLetter = (): string => {
-  console.log("creating faker cover letter");
+  console.log("creating faker cover letter...");
 
-  const contents: string = faker.helpers.fake(
-    "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
-  );
+  const decideBeg = Math.random() > 0.32;
+  let contents: string;
+
+  if (decideBeg) {
+    console.log("getting desperate...");
+    contents = "please ".repeat(Math.ceil(Math.random() * 30) + 1);
+  } else {
+    console.log("remaining composed...");
+    contents = faker.helpers.fake(
+      "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
+    );
+  }
+
   const recruiterFirstName: string = faker.helpers.fake("{{person.firstName}}");
   const recruiterLastName: string = faker.helpers.fake("{{person.lastName}}");
   const location: string = faker.helpers.fake("{{location.streetAddress}}");
+  const postalCode: string = faker.helpers.fake("{{location.zipCode}}");
+  const city: string = faker.helpers.fake("{{location.city}}");
+  const countryCode: string = faker.helpers.fake("{{location.countryCode}}");
+  const region: string = faker.helpers.fake("{{location.state}}");
+  const company: string = faker.helpers.fake("{{company.name}}");
 
   return `---
 location: ${location}
+company: ${company}
 recruiterFirstName: ${recruiterFirstName}
 recruiterLastName: ${recruiterLastName}
+postalCode: ${postalCode}
+city: ${city}
+countryCode: ${countryCode}
+region: ${region}
 ---
 
 ${contents}`;

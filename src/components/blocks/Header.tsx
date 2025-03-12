@@ -18,10 +18,10 @@ export const PureHeader = ({
   subtitle,
   isCoverLetter,
 }: PureHeaderTypes) => (
-  <div data-testid="header" className="text-center">
+  <div data-testid="header" className="text-center pt-4">
     <Title isCoverLetter={isCoverLetter} title={title} />
     <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
-    <hr className="block my-2 bg-white mx-20" />
+    {!isCoverLetter && <hr className="block my-2 bg-white mx-20" />}
   </div>
 );
 

@@ -5,17 +5,17 @@ exports[`<Skills /> Skills renders OK 1`] = `
   data-testid="skills"
 >
   <div
-    class="p-4 py-2 border-blue-400 border"
+    class="p-4 py-2"
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-700"
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
       data-testid="sectionTitle"
     >
       Skills
     </h2>
     <div
-      class="my-2 border border-red-400"
+      class="my-2"
       data-testid="skillsComposed"
     >
       <h1

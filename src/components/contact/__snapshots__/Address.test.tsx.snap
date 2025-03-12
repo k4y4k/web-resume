@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Address /> Is formatted correctly city, state on one line 1`] = `
-<span>
+<span
+  class="ml-[3px]"
+>
   Example City
   , 
-  Example State,
-   
-  ZZ
+  Example State
 </span>
 `;
 
@@ -36,12 +36,12 @@ exports[`<Address /> Is formatted correctly street name + number on one line 1`]
       r="3"
     />
   </svg>
-  <span>
+  <span
+    class="ml-[3px]"
+  >
     Example City
     , 
-    Example State,
-     
-    EX
+    Example State
   </span>
 </li>
 `;
@@ -72,12 +72,12 @@ exports[`<Address /> Is not about to dox me only displays City / State when REST
       r="3"
     />
   </svg>
-  <span>
+  <span
+    class="ml-[3px]"
+  >
     Example City
     , 
-    Example State,
-     
-    ZZ
+    Example State
   </span>
 </li>
 `;

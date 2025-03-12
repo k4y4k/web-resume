@@ -23,33 +23,20 @@
   }
 }
 
-/*
-*
-
-const compactStyles = css`
-  .icon {
-    ${tw`text-white`}
-  }
-
-  a {
-    ${tw`pr-1`}
-  }
-
-  li,
-  a {
-    ${tw`text-white!`}
-  }
+.cover-letter {
+  @apply text-sm flex justify-center;
 
   li {
-    ${tw`p-0 m-0 my-4`}
+    a {
+      @apply flex mx-2 items-center;
 
-    a::after {
-      content: none;
+      &::after {
+        @apply !hidden;
+      }
+
+      svg {
+        @apply mx-1;
+      }
     }
   }
-
-  li:nth-of-type(1) {
-    ${tw`mt-0`}
-  }
-`;
-*/
+}

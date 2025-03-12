@@ -5,7 +5,7 @@ interface EmailTypes {
   email: string;
 }
 
-const Email = ({ email }: EmailTypes): JSX.Element | null => {
+const Email = ({ email }: EmailTypes) => {
   if (email === "") return null;
 
   return (

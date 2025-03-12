@@ -14,7 +14,7 @@ const Title = ({ title, isCoverLetter = false }: TitleProps) => {
       className={
         // [INFO] notice that the modifiers come first, before the base styles
         `${
-          isCoverLetter ? "text-white text-3xl pt-5" : ""
+          isCoverLetter ? "text-3xl pt-5" : ""
         } text-orchid-600 font-mono text-3xl font-bold print:m-0 print:shadow-none`.trim()
       }
     >

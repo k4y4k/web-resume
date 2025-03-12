@@ -5,17 +5,16 @@ exports[`<Experience /> renders OK 1`] = `
   data-testid="experience"
 >
   <div
-    class="p-4 py-2 border-blue-400 border"
+    class="p-4 py-2"
     data-testid="sectionContainer"
   >
     <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-700"
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
       data-testid="sectionTitle"
     >
       Experience
     </h2>
     <div
-      class="border border-red-400"
       data-testid="sectionItemContainer"
     >
       <h1

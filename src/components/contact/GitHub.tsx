@@ -5,7 +5,7 @@ interface GitHubTypes {
   username: string | null;
 }
 
-const GitHub = ({ username }: GitHubTypes): JSX.Element | null => {
+const GitHub = ({ username }: GitHubTypes) => {
   if (username === "" || username === null) return null;
 
   return (

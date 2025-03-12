@@ -17,7 +17,7 @@ const Composed = ({ heading, bucket, compact }: ComposedTypes) => {
   if (heading === "") return null;
 
   return (
-    <div data-testid="skillsComposed" className="my-2 border border-red-400">
+    <div data-testid="skillsComposed" className="my-2">
       {compact ? null : <ItemTitle title={heading} />}
       <Bucket skills={bucket} />
     </div>

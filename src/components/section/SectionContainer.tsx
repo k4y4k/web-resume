@@ -4,19 +4,14 @@ import SectionTitle from "./SectionTitle";
 interface SectionContainerTypes {
   title: string;
   children: ReactNode;
-  onCoverLetter?: boolean;
 }
 
 const SectionContainer = ({
   title,
   children,
-  onCoverLetter = false,
 }: SectionContainerTypes): ReactElement => (
-  <div
-    data-testid="sectionContainer"
-    className="p-4 py-2 border-blue-400 border"
-  >
-    <SectionTitle onCoverLetter={onCoverLetter} title={title} />
+  <div data-testid="sectionContainer" className="p-4 py-2">
+    <SectionTitle title={title} />
     {children}
   </div>
 );

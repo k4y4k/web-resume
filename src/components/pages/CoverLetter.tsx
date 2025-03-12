@@ -4,9 +4,9 @@ import React from "react";
 import Contact from "../blocks/Contact";
 import Header from "../blocks/Header";
 import CoverLetterContents from "../cover-letter/CoverLetterContents";
+import { letterBody } from "../cover-letter/cover-letter.module.css";
 import { container, letterContents } from "./page-styles.module.css";
 
-// FIXME: Netlify can't handle AVIF files at all
 const CoverLetter = () => {
   const { headerImage } = useStaticQuery(graphql`
     {
@@ -16,8 +16,8 @@ const CoverLetter = () => {
             formats: [WEBP]
             placeholder: BLURRED
             quality: 90
-            height: 1333
-            width: 500
+            height: 2000
+            width: 2000
             transformOptions: { rotate: 0, fit: COVER, cropFocus: CENTER }
           )
         }
@@ -31,13 +31,13 @@ const CoverLetter = () => {
     <div className={`${container} p-0 my-8`}>
       <div className={letterContents}>
         {hdImg && (
-          <GatsbyImage alt="" style={{ gridArea: "header" }} image={hdImg} />
+          <GatsbyImage alt="" style={{ gridArea: "img" }} image={hdImg} />
         )}
-        <section style={{ gridArea: "header", zIndex: 2 }}>
+        <section style={{ gridArea: "title" }}>
           <Header isCoverLetter />
-          <Contact restrictDisplay={false} compact={true} />
+          <Contact compact={true} />
         </section>
-        <div style={{ gridArea: "txt" }} className="px-12">
+        <div className={letterBody} style={{ gridArea: "body" }}>
           <CoverLetterContents />
         </div>
       </div>

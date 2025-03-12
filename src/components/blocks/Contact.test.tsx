@@ -78,34 +78,11 @@ describe("<Contact />", () => {
 
     const address = screen.getByTestId("contactAddress");
     expect(address).toHaveTextContent(/example city/i);
-    expect(address).toHaveTextContent(/us/i);
     expect(address).toHaveTextContent(/California/i);
   });
 
   test("renders OK", () => {
     render(<Contact />);
-
-    expect(screen.getByTestId("contact")).toMatchSnapshot();
-  });
-
-  test("renders OK (compact mode)", () => {
-    render(
-      <PureContact
-        email="kayak@example.com"
-        twitter="exam"
-        github="octocat"
-        website="example.com"
-        linkedinUser="exampledin"
-        linkedinUrl="example.com"
-        city="Example City"
-        countryCode="US"
-        region="California"
-        restrictDisplay={false}
-        compact={true}
-        phone="1234567890"
-        technical={false}
-      />,
-    );
 
     expect(screen.getByTestId("contact")).toMatchSnapshot();
   });

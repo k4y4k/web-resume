@@ -4,7 +4,7 @@ interface TitleTypes {
   category: string;
 }
 
-const Title = ({ category }: TitleTypes): JSX.Element | null => {
+const Title = ({ category }: TitleTypes) => {
   if (category === "") return null;
 
   return <h2 data-testid="skillsTitle">{category}</h2>;

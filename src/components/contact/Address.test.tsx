@@ -4,7 +4,7 @@ import Address from "./Address";
 
 describe("<Address />", () => {
   test("Handles no data", () => {
-    render(<Address city="" countryCode="" region="" />);
+    render(<Address city="" region="" />);
 
     const address = screen.queryByTestId("contactAddress");
 
@@ -16,7 +16,6 @@ describe("<Address />", () => {
       render(
         <Address
           city="Example City"
-          countryCode="EX"
           region="Example State"
           restrictDisplay={false}
         />,
@@ -32,7 +31,6 @@ describe("<Address />", () => {
       render(
         <Address
           city="Example City"
-          countryCode="ZZ"
           restrictDisplay={false}
           region="Example State"
         />,
@@ -55,9 +53,7 @@ describe("<Address />", () => {
     test("only displays City / State when RESTRICT_ADDRESS env var is passed in", () => {
       process.env.RESTRICT_ADDRESS = "true";
 
-      render(
-        <Address city="Example City" countryCode="ZZ" region="Example State" />,
-      );
+      render(<Address city="Example City" region="Example State" />);
 
       const address = screen.getByTestId("contactAddress");
 

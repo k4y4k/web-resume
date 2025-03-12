@@ -8,12 +8,14 @@ import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
 import { store } from "../store";
 
+const isDev = process.env.NODE_ENV?.toLowerCase().includes("dev");
+
 const IndexRoute = () => {
   return (
     <IconContext.Provider value={{ className: "icon" }}>
       <ReduxProvider store={store}>
         <main className="flex flex-row flex-wrap content-evenly">
-          {/* <Modal /> */}
+          {!isDev && <Modal />}
 
           <Resume />
           <CoverLetter />
@@ -42,7 +44,7 @@ export function Head({ data }) {
     <>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <title>{`${name} - Resume - ${dayjs().format("DD-MM-YYYY")}`}</title>
+      <title>{`${name} - Resume - ${dayjs().format("YYYY")}`}</title>
     </>
   );
 }

@@ -7,12 +7,11 @@ import GitHub from "../contact/GitHub";
 import LinkedIn from "../contact/LinkedIn";
 import Phone from "../contact/Phone";
 import SectionContainer from "../section/SectionContainer";
-// @ts-ignore
-import { block } from "./contact.module.css";
+import { block, coverLetter } from "./contact.module.css";
 
 interface PureContactTypes {
   restrictDisplay?: boolean;
-  compact?: boolean;
+  onCoverLetter?: boolean;
   email: string;
   twitter: string | null;
   github: string | null;
@@ -33,7 +32,7 @@ interface ContactTypes {
 
 export const PureContact = ({
   restrictDisplay = true,
-  compact = false,
+  onCoverLetter = false,
   email,
   github,
   technical,
@@ -44,14 +43,24 @@ export const PureContact = ({
   region,
   countryCode,
 }: PureContactTypes) => {
+  if (onCoverLetter) {
+    return (
+      <ul className={coverLetter}>
+        <Phone phone={phone} />
+        <Email email={email} />
+        <LinkedIn url={linkedinUrl} username={linkedinUser} />
+      </ul>
+    );
+  }
+
   return (
-    <SectionContainer onCoverLetter={compact} title="Contact">
+    <SectionContainer title="Contact">
       <ul className={block} data-testid="contact">
         <Phone phone={phone} />
         <Email email={email} />
-        {technical && (
+        {technical && !onCoverLetter && (
           <>
-            {!compact && <GitHub username={github} />}
+            <GitHub username={github} />
             <LinkedIn url={linkedinUrl} username={linkedinUser} />
           </>
         )}
@@ -60,7 +69,6 @@ export const PureContact = ({
           restrictDisplay={restrictDisplay}
           city={city}
           region={region}
-          countryCode={countryCode}
         />
       </ul>
     </SectionContainer>
@@ -120,7 +128,7 @@ export const Contact = ({ compact, restrictDisplay }: ContactTypes) => {
   return (
     <PureContact
       {...props}
-      compact={compact}
+      onCoverLetter={compact}
       restrictDisplay={restrictDisplay}
     />
   );

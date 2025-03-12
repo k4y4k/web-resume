@@ -2,7 +2,6 @@
 
 exports[`<ItemContainer /> conditionally add the seperator between name and date date only 1`] = `
 <div
-  class="border border-red-400"
   data-testid="sectionItemContainer"
 >
   <h1
@@ -35,7 +34,6 @@ exports[`<ItemContainer /> conditionally add the seperator between name and date
 
 exports[`<ItemContainer /> education item education item 1`] = `
 <div
-  class="border border-red-400"
   data-testid="sectionItemContainer"
 >
   <h1
@@ -80,7 +78,6 @@ exports[`<ItemContainer /> education item education item 1`] = `
 
 exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 <div
-  class="border border-red-400"
   data-testid="sectionItemContainer"
 >
   <h1
@@ -112,7 +109,6 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
 
 exports[`<ItemContainer /> experience item experience item 1`] = `
 <div
-  class="border border-red-400"
   data-testid="sectionItemContainer"
 >
   <h1

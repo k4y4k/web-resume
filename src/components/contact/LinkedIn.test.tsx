@@ -24,7 +24,7 @@ describe("<LinkedIn />", () => {
 
     const linkedin = screen.getByTestId("contactLinkedin");
 
-    expect(linkedin).toHaveTextContent("exampledin");
+    expect(linkedin).toHaveTextContent("example.com");
     expect(linkedin).toHaveAttribute("href", "https://example.com");
 
     expect(linkedin).toHaveAttribute("target", "_blank");

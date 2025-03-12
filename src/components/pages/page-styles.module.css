@@ -1,3 +1,7 @@
+:root {
+  --strip-width: 7mm;
+}
+
 .container {
   @apply my-12 shadow-lg flex mx-auto bg-white;
 
@@ -20,13 +24,14 @@
 }
 
 .strip {
-  width: 7mm;
+  width: var(--strip-width);
   height: 297mm;
   flex-shrink: 0;
 }
 
 .resume-contents {
-  @apply grid grid-flow-row-dense grid-cols-2 text-sm border border-green-400 overflow-hidden;
+  @apply grid grid-flow-row-dense grid-cols-2 text-sm overflow-hidden;
+
   grid-template-rows: content content content;
   grid-template-areas:
     "ex sk"
@@ -35,9 +40,13 @@
 }
 
 .letter-contents {
-  @apply grid grid-flow-row-dense grid-cols-2 text-sm;
+  @apply grid w-full;
 
   height: 297mm;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "header txt";
+
+  grid-template-columns: var(--strip-width) auto;
+  grid-template-rows: min-content 1fr;
+  grid-template-areas:
+    "img title"
+    "img body";
 }

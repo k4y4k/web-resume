@@ -3,16 +3,11 @@ import React from "react";
 
 interface AddressTypes {
   city: string;
-  countryCode: string;
   region: string;
   restrictDisplay?: boolean;
 }
 
-const Address = ({
-  city,
-  countryCode,
-  region,
-}: AddressTypes): JSX.Element | null => {
+const Address = ({ city, region }: AddressTypes) => {
   // if there isn't a 123 Example Rd-type datum (non-restricted) or
   // a city (restricted), assume there's nothing else
   if (city === "") return null;
@@ -25,8 +20,8 @@ const Address = ({
       id="address"
     >
       <FiMapPin />
-      <span>
-        {city}, {`${region},`} {countryCode}
+      <span className="ml-[3px]">
+        {city}, {region}
       </span>
     </li>
   );

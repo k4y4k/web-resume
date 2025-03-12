@@ -22,7 +22,6 @@ interface ItemContainerTypes {
 
   // link
   link?: string;
-
   rawDates?: string;
 }
 
@@ -59,7 +58,7 @@ const ItemContainer = ({
   if (subtitle === "" || institution === "") displaySubtitle = false;
 
   return (
-    <div data-testid="sectionItemContainer" className="border border-red-400">
+    <div data-testid="sectionItemContainer">
       <Title title={title ?? studyTitle} />
       <div data-testid="byline" className="italic mb-1">
         {displaySubtitle ? (

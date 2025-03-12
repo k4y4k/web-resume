@@ -5,10 +5,7 @@ interface ItemSubtitleTypes {
   link: string | undefined;
 }
 
-const ItemSubtitle = ({
-  subtitle,
-  link,
-}: ItemSubtitleTypes): JSX.Element | null => {
+const ItemSubtitle = ({ subtitle, link }: ItemSubtitleTypes) => {
   if (!subtitle || subtitle === "") return null;
 
   if (!link || link === "")

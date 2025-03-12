@@ -7,11 +7,15 @@ interface AddressGreetingProps {
       frontmatter: {
         recruiterFirstName: string;
         recruiterLastName: string;
-        location: string;
-        city: string;
-        countryCode: string;
-        postalCode: string;
-        region: string;
+        company?: string;
+
+        location?: string;
+
+        city?: string;
+        countryCode?: string;
+        postalCode?: string;
+        region?: string;
+        address?: string;
       };
     };
   };
@@ -25,27 +29,51 @@ const AddressGreeting = () => {
           frontmatter {
             recruiterFirstName
             recruiterLastName
+            company
+
             location
+
+            address
+            city
+            countryCode
+            postalCode
+            region
           }
         }
       }
     }
   `);
 
-  const { recruiterFirstName, recruiterLastName, location } =
-    letterContents.childMarkdownRemark.frontmatter;
+  const {
+    recruiterFirstName,
+    recruiterLastName,
+    location,
+    city,
+    countryCode,
+    postalCode,
+    region,
+    address,
+    company,
+  } = letterContents.childMarkdownRemark.frontmatter;
 
   return (
     <>
-      <p className="pb-0!">
+      <p className={location ? "" : "!pb-0"}>
         {recruiterFirstName}{" "}
         {recruiterLastName === "_" ? null : recruiterLastName}
       </p>
-      <p className="pb-0!">{location}</p>
+      <p className="!pb-0">{company}</p>
+      {location && <p className="pb-0">{location}</p>}
+      {!location && (
+        <>
+          <p className="!pb-0">{address}</p>
+          <p>
+            {city} {countryCode} {region} {postalCode}
+          </p>
+        </>
+      )}
 
-      <h1 className="mt-4 mb-1 font-bold text-xl">
-        Dear {recruiterFirstName},
-      </h1>
+      <h1 className="my-2 font-bold text-xl">Dear {recruiterFirstName},</h1>
     </>
   );
 };

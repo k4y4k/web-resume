@@ -38,6 +38,6 @@ exports[`<LinkedIn /> links to profile in new tab 1`] = `
     />
   </svg>
    
-  exampledin
+  example.com
 </a>
 `;

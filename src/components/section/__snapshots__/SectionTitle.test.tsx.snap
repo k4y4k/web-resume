@@ -2,13 +2,11 @@
 
 exports[`<SectionTitle /> displays title 1`] = `
 <h2
-  class="font-mono text-lg font-bold uppercase text-orchid-700"
+  class="font-mono text-lg font-bold uppercase text-orchid-600"
   data-testid="sectionTitle"
 >
   Check this
 </h2>
 `;
-
-exports[`<SectionTitle /> does not display title on the cover page 1`] = `<div />`;
 
 exports[`<SectionTitle /> no data? no wakkas 1`] = `null`;

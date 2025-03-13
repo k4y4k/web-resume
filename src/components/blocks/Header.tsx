@@ -21,7 +21,6 @@ export const PureHeader = ({
   <div data-testid="header" className="text-center pt-4">
     <Title isCoverLetter={isCoverLetter} title={title} />
     <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
-    {!isCoverLetter && <hr className="block my-2 bg-white mx-20" />}
   </div>
 );
 

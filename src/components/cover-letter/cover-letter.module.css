@@ -1,5 +1,5 @@
 .letter-body {
-  @apply text-sm py-8 px-16 w-full;
+  @apply text-sm py-8 pt-6 px-16 w-full;
 
   p {
     @apply pb-4 last-of-type:pb-0;

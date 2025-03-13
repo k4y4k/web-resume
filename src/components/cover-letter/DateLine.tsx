@@ -5,10 +5,7 @@ dayjs.extend(localizedFormat);
 
 const DateLine = () => {
   return (
-    <p
-      className="text-orchid-600 font-bold uppercase text-xl font-mono"
-      style={{ fontSize: "21px" }}
-    >
+    <p className="text-orchid-600 font-bold uppercase text-xl font-mono">
       {dayjs().format("LL")}
     </p>
   );

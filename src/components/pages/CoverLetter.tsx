@@ -36,6 +36,7 @@ const CoverLetter = () => {
         <section style={{ gridArea: "title" }}>
           <Header isCoverLetter />
           <Contact compact={true} />
+          <hr className="block my-2 bg-white mx-20" />
         </section>
         <div className={letterBody} style={{ gridArea: "body" }}>
           <CoverLetterContents />

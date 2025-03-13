@@ -4,10 +4,9 @@ import ReactMarkdown from "react-markdown";
 import AddressGreeting from "./AddressGreeting";
 import DateLine from "./DateLine";
 import Thanks from "./Thanks";
-import { letterBody } from "./cover-letter.module.css";
 
 const CoverLetterContents = () => {
-  const { letterContents, jsonName } = useStaticQuery(
+  const { letterContents, file } = useStaticQuery(
     graphql`
       {
         letterContents: file(extension: { eq: "md" }, name: { eq: "letter" }) {
@@ -16,7 +15,7 @@ const CoverLetterContents = () => {
           }
         }
 
-        jsonName: file(extension: { eq: "json" }, name: { eq: "data" }) {
+        file(extension: { eq: "json" }, name: { eq: "data" }) {
           childDataJson {
             basics {
               name
@@ -37,7 +36,7 @@ const CoverLetterContents = () => {
           {letterContents.childMarkdownRemark.excerpt}
         </ReactMarkdown>
       </div>
-      <Thanks name={jsonName.childDataJson.basics.name} />
+      <Thanks name={file.childDataJson.basics.name} />
     </div>
   );
 };

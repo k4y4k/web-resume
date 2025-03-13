@@ -35,6 +35,7 @@ const Resume = () => {
       {bgImage && <GatsbyImage image={bgImage} alt="" className={strip} />}
       <div className="flex flex-col p-4">
         <Header isCoverLetter={false} />
+        <hr className="block my-2 bg-white mx-20" />
         <div className={`${resumeContents} overflow-hidden`}>
           <WorkExperience />
           <div style={{ gridArea: "sk" }}>

@@ -1,0 +1,2 @@
+[build]
+command = "bun run clean && bun run fake && bun run build"

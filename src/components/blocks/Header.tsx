@@ -21,14 +21,13 @@ export const PureHeader = ({
   <div data-testid="header" className="text-center pt-4">
     <Title isCoverLetter={isCoverLetter} title={title} />
     <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
-    {!isCoverLetter && <hr className="block my-2 bg-white mx-20" />}
   </div>
 );
 
 export const Header = ({ isCoverLetter = false }: HeaderTypes) => {
   const data = useStaticQuery(graphql`
     {
-      text: file(extension: { eq: "json" }, name: { eq: "data" }) {
+      file(extension: { eq: "json" }, name: { eq: "data" }) {
         childDataJson {
           basics {
             name
@@ -39,7 +38,7 @@ export const Header = ({ isCoverLetter = false }: HeaderTypes) => {
     }
   `);
 
-  const { name, label } = data.text.childDataJson.basics;
+  const { name, label } = data.file.childDataJson.basics;
 
   return (
     <PureHeader isCoverLetter={isCoverLetter} title={name} subtitle={label} />

@@ -16,4 +16,9 @@
   li {
     @apply mb-2 ml-[0.33in];
   }
+
+  p code {
+    @apply font-mono text-orchid-600;
+    font-size: 110%;
+  }
 }

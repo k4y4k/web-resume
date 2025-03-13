@@ -28,7 +28,7 @@ const createProfiles = (): profileItem[] => {
   ];
 };
 
-interface basics {
+interface DataBasics {
   name: string;
   label: string;
   email: string;
@@ -44,7 +44,7 @@ interface basics {
   profiles: profileItem[];
 }
 
-const createBasics = (): basics => {
+const createBasics = (): DataBasics => {
   const location = {
     location: faker.helpers.fake("{{location.streetAddress}}"),
     postalCode: faker.helpers.fake("{{location.zipCode}}"),
@@ -68,7 +68,7 @@ const createBasics = (): basics => {
   };
 };
 
-interface workItem {
+interface DataWorkItem {
   company: string;
   position: string;
   summary: string;
@@ -77,14 +77,14 @@ interface workItem {
   link?: string;
 }
 
-const createWork = (num: number): workItem[] => {
-  const workList: workItem[] = [];
+const createWork = (num: number): DataWorkItem[] => {
+  const workList: DataWorkItem[] = [];
 
   for (let i = 0; i < num; i++) {
     /** Handle cases where there is no link to the company */
     const maybeAddLink = Math.random() >= 0.5;
 
-    const newWork: workItem = {
+    const newWork: DataWorkItem = {
       company: faker.helpers.fake("{{company.name}}"),
       position: faker.helpers.fake("{{person.jobTitle}}"),
       summary: faker.helpers.fake(
@@ -108,7 +108,7 @@ const createWork = (num: number): workItem[] => {
   return workList;
 };
 
-interface volunteerItem {
+interface DataVolunteerItem {
   organization: string;
   position: string;
   summary: string;
@@ -116,8 +116,8 @@ interface volunteerItem {
   endDate: string;
 }
 
-const createVolunteer = (num: number): volunteerItem[] => {
-  const volList: volunteerItem[] = [];
+const createVolunteer = (num: number): DataVolunteerItem[] => {
+  const volList: DataVolunteerItem[] = [];
 
   for (let i = 0; i < num + 1; i++) {
     const newVol = {
@@ -140,7 +140,7 @@ const createVolunteer = (num: number): volunteerItem[] => {
   return volList;
 };
 
-interface educationItem {
+interface DataEducationItem {
   institution: string;
   area: string;
   studyType: string;
@@ -149,8 +149,8 @@ interface educationItem {
   endDate: string;
 }
 
-const createEducation = (num: number): educationItem[] => {
-  const eduList: educationItem[] = [];
+const createEducation = (num: number): DataEducationItem[] => {
+  const eduList: DataEducationItem[] = [];
 
   for (let i = 0; i < num + 1; i++) {
     const courses = [
@@ -193,13 +193,13 @@ const createEducation = (num: number): educationItem[] => {
   return eduList;
 };
 
-interface skillsItem {
+interface DataSkillsItem {
   name: string;
   keywords: string[];
 }
 
-const createSkills = (num: number): skillsItem[] => {
-  const skillsList: skillsItem[] = [];
+const createSkills = (num: number): DataSkillsItem[] => {
+  const skillsList: DataSkillsItem[] = [];
 
   for (let i = 0; i < num + 1; i++) {
     skillsList.push({
@@ -215,7 +215,8 @@ const createSkills = (num: number): skillsItem[] => {
 };
 
 export const createFakeData = (): string => {
-  console.log("creating faker data");
+  console.log("creating fake data");
+
   const basics = createBasics();
   const work = createWork(3);
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
@@ -227,14 +228,14 @@ export const createFakeData = (): string => {
 
 fs.writeFileSync("src/data/data.json", createFakeData());
 
-const createFakeCoverLetter = (): string => {
-  console.log("creating faker cover letter...");
+export const createFakeCoverLetter = (): string => {
+  console.log("creating fake cover letter...");
 
   const contents = faker.helpers.fake(
     "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
   );
 
-  const recruiter: string = faker.helpers.fake("{{person.firstName}}");
+  const recruiter: string = faker.helpers.fake("{{person.fullName}}");
   const location: string = faker.helpers.fake("{{location.streetAddress}}");
   const postalCode: string = faker.helpers.fake("{{location.zipCode}}");
   const city: string = faker.helpers.fake("{{location.city}}");
@@ -258,3 +259,10 @@ ${contents}`;
 fs.writeFileSync("src/data/letter.md", createFakeCoverLetter());
 
 export default createFakeData;
+export type {
+  DataBasics,
+  DataWorkItem,
+  DataSkillsItem,
+  DataEducationItem,
+  DataVolunteerItem,
+};

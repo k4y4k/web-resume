@@ -27,7 +27,7 @@ export const PureHeader = ({
 export const Header = ({ isCoverLetter = false }: HeaderTypes) => {
   const data = useStaticQuery(graphql`
     {
-      text: file(extension: { eq: "json" }, name: { eq: "data" }) {
+      file(extension: { eq: "json" }, name: { eq: "data" }) {
         childDataJson {
           basics {
             name
@@ -38,7 +38,7 @@ export const Header = ({ isCoverLetter = false }: HeaderTypes) => {
     }
   `);
 
-  const { name, label } = data.text.childDataJson.basics;
+  const { name, label } = data.file.childDataJson.basics;
 
   return (
     <PureHeader isCoverLetter={isCoverLetter} title={name} subtitle={label} />

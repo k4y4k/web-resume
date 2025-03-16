@@ -58,7 +58,7 @@ describe("<ItemContainer />", () => {
       expect(title).toBeInTheDocument();
 
       const byline = screen.getByTestId("byline");
-      expect(byline).toHaveTextContent("University | 2011 - 2013");
+      expect(byline).toHaveTextContent("2011 - 2013 | University");
 
       const list = screen.getByText("DB1101 - Basic SQL");
       expect(list).toBeInTheDocument();

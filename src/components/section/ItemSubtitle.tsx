@@ -2,7 +2,7 @@ import React from "react";
 
 interface ItemSubtitleTypes {
   subtitle: string | undefined;
-  link: string | undefined;
+  link?: string;
 }
 
 const ItemSubtitle = ({ subtitle, link }: ItemSubtitleTypes) => {

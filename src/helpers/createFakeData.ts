@@ -214,16 +214,55 @@ const createSkills = (num: number): DataSkillsItem[] => {
   return skillsList;
 };
 
+export interface DataOpenSourceItem {
+  forge: string;
+  userRepo: string;
+  description: string;
+  rawDate?: string;
+}
+
+const createOpenSource = (num: number): DataOpenSourceItem[] => {
+  const res: DataOpenSourceItem[] = [];
+
+  for (let i = 0; i < num; i++) {
+    res.push({
+      forge: "github",
+      userRepo: `${faker.internet.username()}/${faker.word.noun()}-${faker.word.verb()}`,
+      description: faker.word.words(),
+    });
+    num;
+  }
+
+  return res;
+};
+
+export interface ResumeData {
+  basics: DataBasics;
+  work: DataWorkItem[];
+  volunteer: DataVolunteerItem[];
+  openSource: DataOpenSourceItem[];
+  education: DataEducationItem[];
+  skills: DataSkillsItem[];
+}
+
 export const createFakeData = (): string => {
   console.log("creating fake data");
 
   const basics = createBasics();
   const work = createWork(3);
   const volunteer = createVolunteer(Math.floor(Math.random() * 2));
+  const openSource = createOpenSource(Math.floor(Math.random() * 2));
   const education = createEducation(Math.floor(Math.random() * 2));
   const skills = createSkills(Math.floor(Math.random() * 5));
 
-  return JSON.stringify({ basics, work, volunteer, education, skills });
+  return JSON.stringify({
+    basics,
+    work,
+    volunteer,
+    openSource,
+    education,
+    skills,
+  } as ResumeData);
 };
 
 fs.writeFileSync("src/data/data.json", createFakeData());

@@ -4,12 +4,14 @@ import React from "react";
 import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
 import createFakeData, {
+  type ResumeData,
   createFakeCoverLetter,
 } from "../helpers/createFakeData";
 
 describe("index route", () => {
   beforeAll(() => {
-    const rFixture = JSON.parse(createFakeData());
+    const rFixture: ResumeData = JSON.parse(createFakeData());
+    console.log(rFixture.openSource);
 
     // The frontmatter begins with a --- (start of file), and ends with
     // another --- a couple lines down, and we want everything after the

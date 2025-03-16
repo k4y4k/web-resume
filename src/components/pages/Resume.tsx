@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Contact from "../blocks/Contact";
 import Header from "../blocks/Header";
+import OpenSource from "../blocks/OpenSource";
 import Skills from "../blocks/Skills";
 import Volunteer from "../blocks/Volunteer";
 import WorkExperience from "../blocks/WorkExperience";
@@ -35,12 +36,13 @@ const Resume = () => {
       {bgImage && <GatsbyImage image={bgImage} alt="" className={strip} />}
       <div className="flex flex-col p-4">
         <Header isCoverLetter={false} />
-        <hr className="block my-2 bg-white mx-20" />
+        <hr className="block my-2 mb-4 bg-white mx-20" />
         <div className={`${resumeContents} overflow-hidden`}>
           <WorkExperience />
           <div style={{ gridArea: "sk" }}>
             <Contact />
             <Skills />
+            <OpenSource />
             <Volunteer />
           </div>
         </div>

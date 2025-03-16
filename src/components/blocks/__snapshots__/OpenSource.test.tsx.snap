@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PureOpenSource /> bails out on no data 1`] = `
+<div
+  data-testid="open-source"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      data-testid="sectionTitle"
+    >
+      Open Source
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`<PureOpenSource /> renders OK 1`] = `
+<div
+  data-testid="open-source"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      data-testid="sectionTitle"
+    >
+      Open Source
+    </h2>
+    <div
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        username/repository
+      </h1>
+      <div
+        class="italic mb-1"
+      >
+        <span>
+          https://github.com/username/repository
+        </span>
+      </div>
+      <ul>
+        
+
+        <li>
+          did stuff
+        </li>
+        
+
+        <li>
+          next dot point
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<PureOpenSource /> renders array of >=1 OpenSource items 1`] = `
+<div
+  data-testid="open-source"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      data-testid="sectionTitle"
+    >
+      Open Source
+    </h2>
+    <div
+      data-testid="sectionItemDetails"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        username/repository
+      </h1>
+      <div
+        class="italic mb-1"
+      >
+        <span>
+          https://github.com/username/repository
+        </span>
+      </div>
+      <ul>
+        
+
+        <li>
+          did stuff
+        </li>
+        
+
+        <li>
+          next dot point
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</div>
+`;

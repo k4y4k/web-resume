@@ -2,7 +2,7 @@
 
 exports[`<SectionContainer /> composes title and >1  items 1`] = `
 <div
-  class="p-4 py-2"
+  class="mx-4 mb-4"
   data-testid="sectionContainer"
 >
   <h2
@@ -17,7 +17,9 @@ exports[`<SectionContainer /> composes title and >1  items 1`] = `
     <div
       class="italic mb-1"
       data-testid="byline"
-    />
+    >
+       | 
+    </div>
   </div>
 </div>
 `;

@@ -1,14 +1,19 @@
 import fs from "node:fs";
 import { faker } from "@faker-js/faker";
 import dayjs from "dayjs";
+import type {
+  CoverLetterFrontmatter,
+  DataBasics,
+  DataEducationItem,
+  DataOpenSourceItem,
+  DataSkillsItem,
+  DataVolunteerItem,
+  DataWorkItem,
+  ProfileItem,
+  ResumeData,
+} from "../types/ResumeData";
 
-interface profileItem {
-  network: string;
-  username: string;
-  url: string;
-}
-
-const createProfiles = (): profileItem[] => {
+const createProfiles = (): ProfileItem[] => {
   return [
     {
       network: "github",
@@ -27,22 +32,6 @@ const createProfiles = (): profileItem[] => {
     },
   ];
 };
-
-interface DataBasics {
-  name: string;
-  label: string;
-  email: string;
-  phone: string;
-  website: string;
-  location: {
-    location: string;
-    postalCode: string;
-    city: string;
-    countryCode: string;
-    region: string;
-  };
-  profiles: profileItem[];
-}
 
 const createBasics = (): DataBasics => {
   const location = {
@@ -67,15 +56,6 @@ const createBasics = (): DataBasics => {
     profiles,
   };
 };
-
-interface DataWorkItem {
-  company: string;
-  position: string;
-  summary: string;
-  startDate: string;
-  endDate: string;
-  link?: string;
-}
 
 const createWork = (num: number): DataWorkItem[] => {
   const workList: DataWorkItem[] = [];
@@ -108,14 +88,6 @@ const createWork = (num: number): DataWorkItem[] => {
   return workList;
 };
 
-interface DataVolunteerItem {
-  organization: string;
-  position: string;
-  summary: string;
-  startDate: string;
-  endDate: string;
-}
-
 const createVolunteer = (num: number): DataVolunteerItem[] => {
   const volList: DataVolunteerItem[] = [];
 
@@ -139,15 +111,6 @@ const createVolunteer = (num: number): DataVolunteerItem[] => {
 
   return volList;
 };
-
-interface DataEducationItem {
-  institution: string;
-  area: string;
-  studyType: string;
-  courses: string[];
-  startDate: string;
-  endDate: string;
-}
 
 const createEducation = (num: number): DataEducationItem[] => {
   const eduList: DataEducationItem[] = [];
@@ -193,11 +156,6 @@ const createEducation = (num: number): DataEducationItem[] => {
   return eduList;
 };
 
-interface DataSkillsItem {
-  name: string;
-  keywords: string[];
-}
-
 const createSkills = (num: number): DataSkillsItem[] => {
   const skillsList: DataSkillsItem[] = [];
 
@@ -214,13 +172,6 @@ const createSkills = (num: number): DataSkillsItem[] => {
   return skillsList;
 };
 
-export interface DataOpenSourceItem {
-  forge: string;
-  userRepo: string;
-  description: string;
-  rawDate?: string;
-}
-
 const createOpenSource = (num: number): DataOpenSourceItem[] => {
   const res: DataOpenSourceItem[] = [];
 
@@ -235,15 +186,6 @@ const createOpenSource = (num: number): DataOpenSourceItem[] => {
 
   return res;
 };
-
-export interface ResumeData {
-  basics: DataBasics;
-  work: DataWorkItem[];
-  volunteer: DataVolunteerItem[];
-  openSource: DataOpenSourceItem[];
-  education: DataEducationItem[];
-  skills: DataSkillsItem[];
-}
 
 export const createFakeData = (): string => {
   console.log("creating fake data");
@@ -265,7 +207,9 @@ export const createFakeData = (): string => {
   } as ResumeData);
 };
 
-fs.writeFileSync("src/data/data.json", createFakeData());
+export const writeResume = () => {
+  return fs.writeFileSync("src/data/data.json", createFakeData());
+};
 
 export const createFakeCoverLetter = (): string => {
   console.log("creating fake cover letter...");
@@ -274,13 +218,24 @@ export const createFakeCoverLetter = (): string => {
     "{{lorem.paragraph}}\n\n{{lorem.paragraph}}\n\n{{lorem.paragraph}}",
   );
 
-  const recruiter: string = faker.helpers.fake("{{person.fullName}}");
-  const location: string = faker.helpers.fake("{{location.streetAddress}}");
-  const postalCode: string = faker.helpers.fake("{{location.zipCode}}");
-  const city: string = faker.helpers.fake("{{location.city}}");
-  const countryCode: string = faker.helpers.fake("{{location.countryCode}}");
-  const region: string = faker.helpers.fake("{{location.state}}");
-  const company: string = faker.helpers.fake("{{company.name}}");
+  const recruiter: CoverLetterFrontmatter["recruiter"] = faker.helpers.fake(
+    "{{person.fullName}}",
+  );
+  const location: CoverLetterFrontmatter["location"] = faker.helpers.fake(
+    "{{location.streetAddress}}",
+  );
+  const postalCode: CoverLetterFrontmatter["postalCode"] = faker.helpers.fake(
+    "{{location.zipCode}}",
+  );
+  const city: CoverLetterFrontmatter["city"] =
+    faker.helpers.fake("{{location.city}}");
+  const countryCode: CoverLetterFrontmatter["countryCode"] = faker.helpers.fake(
+    "{{location.countryCode}}",
+  );
+  const region: CoverLetterFrontmatter["region"] =
+    faker.helpers.fake("{{location.state}}");
+  const company: CoverLetterFrontmatter["company"] =
+    faker.helpers.fake("{{company.name}}");
 
   return `---
 location: ${location}
@@ -295,13 +250,6 @@ region: ${region}
 ${contents}`;
 };
 
-fs.writeFileSync("src/data/letter.md", createFakeCoverLetter());
-
-export default createFakeData;
-export type {
-  DataBasics,
-  DataWorkItem,
-  DataSkillsItem,
-  DataEducationItem,
-  DataVolunteerItem,
+export const writeCoverLetter = () => {
+  return fs.writeFileSync("src/data/letter.md", createFakeCoverLetter());
 };

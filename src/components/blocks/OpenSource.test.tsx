@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { useStaticQuery } from "gatsby";
 import React from "react";
-import type { DataOpenSourceItem } from "../../helpers/createFakeData";
+import type { DataOpenSourceItem } from "../../types/ResumeData";
 import OpenSource, { PureOpenSource } from "./OpenSource";
 
 describe("<PureOpenSource />", () => {
@@ -13,15 +13,15 @@ describe("<PureOpenSource />", () => {
     },
   ];
 
-  beforeAll(() =>
-    (useStaticQuery as jest.Mock).mockReturnValue({
+  beforeAll(() => {
+    return (useStaticQuery as jest.Mock).mockReturnValue({
       file: {
         childDataJson: {
           openSource: [...fixture],
         },
       },
-    }),
-  );
+    });
+  });
 
   test("bails out on no data", () => {
     render(<PureOpenSource openSource={[]} />);

@@ -18,6 +18,8 @@ export const PureOpenSource = ({
 }: {
   openSource: OpenSource[];
 }) => {
+  if (openSource.length === 0) return null;
+
   return (
     <div data-testid="open-source">
       <SectionContainer title="Open Source">

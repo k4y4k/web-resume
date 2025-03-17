@@ -1,22 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PureOpenSource /> bails out on no data 1`] = `
-<div
-  data-testid="open-source"
->
-  <div
-    class="mx-4 mb-4"
-    data-testid="sectionContainer"
-  >
-    <h2
-      class="font-mono text-lg font-bold uppercase text-orchid-600"
-      data-testid="sectionTitle"
-    >
-      Open Source
-    </h2>
-  </div>
-</div>
-`;
+exports[`<PureOpenSource /> bails out on no data 1`] = `null`;
 
 exports[`<PureOpenSource /> renders OK 1`] = `
 <div

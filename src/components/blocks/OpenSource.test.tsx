@@ -26,14 +26,9 @@ describe("<PureOpenSource />", () => {
   test("bails out on no data", () => {
     render(<PureOpenSource openSource={[]} />);
 
-    // still want the title
-    expect(screen.getByTestId("open-source")).toBeInTheDocument();
-
-    // if there's no data, we shouldn't see <ItemContainer /> render
-    expect(
-      screen.queryByTestId("sectionItemContainer"),
-    ).not.toBeInTheDocument();
-    expect(screen.getByTestId("open-source")).toMatchSnapshot();
+    // [INFO] absolutely nothing at all should render
+    expect(screen.queryByTestId("open-source")).not.toBeInTheDocument();
+    expect(screen.queryByTestId("open-source")).toMatchSnapshot();
   });
 
   test("renders array of >=1 OpenSource items", () => {

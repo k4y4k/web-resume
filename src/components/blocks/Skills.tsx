@@ -3,7 +3,7 @@ import React from "react";
 import SectionContainer from "../section/SectionContainer";
 import Composed from "../skills/Composed";
 
-interface SkillsItem {
+export interface SkillsItem {
   keywords: string[];
   name: string;
 }

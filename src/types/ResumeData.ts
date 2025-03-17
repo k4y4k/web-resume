@@ -55,7 +55,8 @@ interface DataOpenSourceItem {
   forge: string;
   userRepo: string;
   description: string;
-  rawDate?: string;
+  rawDates?: string;
+  relevant: boolean;
 }
 
 interface ResumeData {

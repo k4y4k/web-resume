@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import React from "react";
 import Contact from "../blocks/Contact";
+import Education from "../blocks/Education";
 import Header from "../blocks/Header";
 import OpenSource from "../blocks/OpenSource";
 import Skills from "../blocks/Skills";
@@ -42,6 +43,7 @@ const Resume = () => {
           <div style={{ gridArea: "sk" }}>
             <Contact />
             <Skills />
+            <Education />
             <OpenSource />
             <Volunteer />
           </div>

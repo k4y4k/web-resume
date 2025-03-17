@@ -180,6 +180,10 @@ const createOpenSource = (num: number): DataOpenSourceItem[] => {
       forge: "github",
       userRepo: `${faker.internet.username()}/${faker.word.noun()}-${faker.word.verb()}`,
       description: faker.word.words(),
+      relevant: Math.random() >= 0.5,
+      rawDates: `${dayjs(faker.date.past()).format("MMM YY")} - ${dayjs(
+        faker.date.soon(),
+      ).format("MMM YY")}`,
     });
     num;
   }

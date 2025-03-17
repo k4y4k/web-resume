@@ -14,9 +14,9 @@ describe("getNetworkUsernames", () => {
   });
 
   test("returns null if network not in list", () => {
-    const randomUsername = faker.internet.userName();
+    const randomUsername = faker.internet.username();
     const data = [
-      { network: "foo", username: faker.internet.userName() },
+      { network: "foo", username: faker.internet.username() },
     ] as ProfileItem[];
 
     expect(getNetworkUsernames(data, randomUsername)).toBeNull();

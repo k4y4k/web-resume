@@ -18,7 +18,7 @@ export const PureHeader = ({
   subtitle,
   isCoverLetter,
 }: PureHeaderTypes) => (
-  <div data-testid="header" className="text-center pt-4">
+  <div data-testid="header" className="text-center pt-0">
     <Title isCoverLetter={isCoverLetter} title={title} />
     <Subtitle isCoverLetter={isCoverLetter} subtitle={subtitle} />
   </div>

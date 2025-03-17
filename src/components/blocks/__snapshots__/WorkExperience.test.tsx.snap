@@ -5,7 +5,7 @@ exports[`<Experience /> renders OK 1`] = `
   data-testid="experience"
 >
   <div
-    class="p-4 py-2"
+    class="mx-4 mb-4"
     data-testid="sectionContainer"
   >
     <h2
@@ -28,17 +28,17 @@ exports[`<Experience /> renders OK 1`] = `
         data-testid="byline"
       >
         <span
-          data-testid="itemSubtitle"
-        >
-          Company
-        </span>
-         | 
-        <span
           data-testid="sectionItemDates"
         >
           2013
            - 
           2014
+        </span>
+         | 
+        <span
+          data-testid="itemSubtitle"
+        >
+          Company
         </span>
       </div>
       <div

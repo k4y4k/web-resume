@@ -16,7 +16,7 @@ const GitHub = ({ username }: GitHubTypes) => {
         target="_blank"
         href={`https://github.com/${username}`}
       >
-        <FiGithub /> {username}
+        <FiGithub /> github.com/{username}
       </a>
     </li>
   );

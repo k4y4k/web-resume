@@ -10,7 +10,7 @@ const SectionContainer = ({
   title,
   children,
 }: SectionContainerTypes): ReactElement => (
-  <div data-testid="sectionContainer" className="p-4 py-2">
+  <div data-testid="sectionContainer" className="mx-4 mb-4">
     <SectionTitle title={title} />
     {children}
   </div>

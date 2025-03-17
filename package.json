@@ -14,7 +14,7 @@
     "format": "biome check --apply .",
     "tsc": "tsc --noEmit --skipLibCheck",
     "test": "jest --collectCoverage --verbose",
-    "fake": "bun -b ./src/helpers/createFakeData.js"
+    "fake": "bun -b setup.ts"
   },
   "dependencies": {
     "@react-icons/all-files": "4.1.0",

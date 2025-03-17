@@ -3,13 +3,15 @@ import { useStaticQuery } from "gatsby";
 import React from "react";
 import CoverLetter from "../components/pages/CoverLetter";
 import Resume from "../components/pages/Resume";
-import createFakeData, {
+import {
   createFakeCoverLetter,
+  createFakeData,
 } from "../helpers/createFakeData";
+import type { ResumeData } from "../types/ResumeData";
 
 describe("index route", () => {
   beforeAll(() => {
-    const rFixture = JSON.parse(createFakeData());
+    const rFixture: ResumeData = JSON.parse(createFakeData());
 
     // The frontmatter begins with a --- (start of file), and ends with
     // another --- a couple lines down, and we want everything after the
@@ -18,9 +20,11 @@ describe("index route", () => {
     // but this would have to be handled otherwise
     const [frontmatter, content] = createFakeCoverLetter()
       .split("---")
+      // The first element is empty (nothing precedes the `---` at the start
+      // of the file), so we can drop that
       .slice(1);
 
-    const recruiter = frontmatter
+    const recruiterName = frontmatter
       .split("\n")
       .filter((line) => line.includes("recruiter"))[0]
       .split(":")[1];
@@ -39,7 +43,7 @@ describe("index route", () => {
           excerpt: content,
 
           frontmatter: {
-            recruiter,
+            recruiter: recruiterName,
           },
         },
       },
@@ -79,6 +83,7 @@ describe("index route", () => {
 
     const resume = screen.queryByTestId("resume-root");
     expect(resume).not.toBeFalsy();
+
     // [TODO] seeded random so the tests are consistent
     // expect(resume).toMatchSnapshot()
   });

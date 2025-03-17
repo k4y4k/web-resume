@@ -21,6 +21,7 @@ exports[`<ItemContainer /> conditionally add the seperator between name and date
        - 
       2014
     </span>
+     | 
   </div>
   <div
     data-testid="sectionItemDetails"
@@ -47,17 +48,17 @@ exports[`<ItemContainer /> education item education item 1`] = `
     data-testid="byline"
   >
     <span
-      data-testid="itemSubtitle"
-    >
-      University
-    </span>
-     | 
-    <span
       data-testid="sectionItemDates"
     >
       2011
        - 
       2013
+    </span>
+     | 
+    <span
+      data-testid="itemSubtitle"
+    >
+      University
     </span>
   </div>
   <div
@@ -91,17 +92,17 @@ exports[`<ItemContainer /> education item no courses? get nothing 1`] = `
     data-testid="byline"
   >
     <span
-      data-testid="itemSubtitle"
-    >
-      University
-    </span>
-     | 
-    <span
       data-testid="sectionItemDates"
     >
       2011
        - 
       2013
+    </span>
+     | 
+    <span
+      data-testid="itemSubtitle"
+    >
+      University
     </span>
   </div>
 </div>
@@ -121,6 +122,14 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
     class="italic mb-1"
     data-testid="byline"
   >
+    <span
+      data-testid="sectionItemDates"
+    >
+      2013
+       - 
+      2014
+    </span>
+     | 
     <a
       class="underline text-[#4d368c]"
       href="https://duckduckgo.com"
@@ -131,14 +140,6 @@ exports[`<ItemContainer /> experience item experience item 1`] = `
         Company
       </span>
     </a>
-     | 
-    <span
-      data-testid="sectionItemDates"
-    >
-      2013
-       - 
-      2014
-    </span>
   </div>
   <div
     data-testid="sectionItemDetails"

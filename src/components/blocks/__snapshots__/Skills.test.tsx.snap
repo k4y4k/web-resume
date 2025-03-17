@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Skills /> Skills renders OK 1`] = `
+exports[`<Skills /> Deduplicates skills 1`] = `
 <div
   data-testid="skills"
 >
   <div
-    class="p-4 py-2"
+    class="mx-4 mb-4"
     data-testid="sectionContainer"
   >
     <h2
@@ -15,7 +15,55 @@ exports[`<Skills /> Skills renders OK 1`] = `
       Skills
     </h2>
     <div
-      class="my-2"
+      class="my-2 first-of-type:mt-0"
+      data-testid="skillsComposed"
+    >
+      <h1
+        class="mb-1 font-bold text-lg leading-5"
+        data-testid="itemTitle"
+      >
+        Web Development
+      </h1>
+      <div
+        data-testid="skillsBucket"
+      >
+        <p
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
+        >
+          HTML
+        </p>
+        <p
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
+        >
+          CSS
+        </p>
+        <p
+          style="margin-right: 0.66rem; margin-bottom: 0.2rem; display: inline-block; line-height: 1.15;"
+        >
+          JavaScript
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Skills /> Skills renders OK 1`] = `
+<div
+  data-testid="skills"
+>
+  <div
+    class="mx-4 mb-4"
+    data-testid="sectionContainer"
+  >
+    <h2
+      class="font-mono text-lg font-bold uppercase text-orchid-600"
+      data-testid="sectionTitle"
+    >
+      Skills
+    </h2>
+    <div
+      class="my-2 first-of-type:mt-0"
       data-testid="skillsComposed"
     >
       <h1

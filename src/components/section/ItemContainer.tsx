@@ -61,14 +61,11 @@ const ItemContainer = ({
     <div data-testid="sectionItemContainer">
       <Title title={title ?? studyTitle} />
       <div data-testid="byline" className="italic mb-1">
-        {displaySubtitle ? (
-          <>
-            <Subtitle link={link} subtitle={subtitle ?? institution} />
-            {" | "}
-          </>
-        ) : null}
-
         <Dates from={fromDate} to={toDate} />
+        {" | "}
+        {displaySubtitle && (
+          <Subtitle link={link} subtitle={subtitle ?? institution} />
+        )}
       </div>
       <Details details={summary ?? studyDetails} />
     </div>

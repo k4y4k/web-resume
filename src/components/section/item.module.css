@@ -6,7 +6,7 @@
   @apply my-4;
 
   &:nth-of-type(1) {
-    @apply mt-2;
+    @apply mt-0;
   }
 }
 

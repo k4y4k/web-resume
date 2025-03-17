@@ -1,4 +1,4 @@
-import createFakeData from "./createFakeData";
+import { createFakeData } from "./createFakeData";
 
 describe("create fake data", () => {
   test("generates correct shape", () => {
